@@ -1,52 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Business</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0; 
-            padding: 0;
-            background: #f4f4f4;
-        }
-        header {
-            background: #004aad;
-            color: white;
-            padding: 2em 0;
-        }
-        section {
-            margin: 2em auto;
-            max-width: 600px;
-            background: white;
-            padding: 2em;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            margin-top: 2em;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Business Name]</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: rgba(15, 23, 42, 0.4);
+      --panel: #111827;
+      --accent: #38bdf8;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --radius: 1rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #172554, #0f172a 45%, #020617 90%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.2), rgba(3, 105, 161, 0.1));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+      padding: 1.25rem 1.5rem;
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .tagline {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 2.5rem auto 2rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-left h1 {
+      font-size: clamp(2.3rem, 5vw, 3.2rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-left p {
+      color: var(--muted);
+      max-width: 34rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      color: #0f172a;
+      padding: 0.65rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 14px 30px rgba(56, 189, 248, 0.25);
+      transition: transform 0.15s ease-out;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.2), rgba(2, 6, 23, 0.35));
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      border-radius: 1.25rem;
+      padding: 1.35rem 1.35rem 1.1rem;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 1.5rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 1.5rem;
+    }
+
+    .panel {
+      background: rgba(2, 6, 23, 0.45);
+      border: 1px solid rgba(148, 163, 184, 0.05);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.5rem 1.25rem;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .contact-item {
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-item a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem 3rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero, .section {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        text-align: left;
+      }
+      .hero-card {
+        max-width: 480px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .hero-left h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to [Your Business Name]</h1>
-        <p>Professional [Your Service] in [Your City]</p>
-    </header>
-    <section>
-        <h2>About Us</h2>
-        <p>We provide high-quality [service/product] with over X years of experience.  
-           Contact us today to learn how we can help your business or project succeed!</p>
+  <header>
+    <div class="nav">
+      <div>
+        <div class="brand">[Your Business Name]</div>
+        <div class="tagline">Professional services in [Your City]</div>
+      </div>
+      <a href="#contact" class="btn-primary">Contact us</a>
+    </div>
+  </header>
 
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:you@yourbusiness.com">you@yourbusiness.com</a></p>
-        <p>Phone: (555) 123-4567</p>
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Reliable, modern, and tailored to your needs.</h1>
+        <p>
+          We help businesses and individuals with high-quality
+          [service/product], backed by X+ years of experience and real, measurable results.
+        </p>
+        <a href="#contact" class="btn-primary">Get a quote</a>
+      </div>
+      <div class="hero-card">
+        <h2>What we do</h2>
+        <p>
+          • Consulting & implementation<br />
+          • Ongoing support<br />
+          • Flexible engagement models
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.75rem; color: #64748b;">
+          “They were fast, professional, and made everything crystal clear.”
+        </p>
+      </div>
     </section>
-    <footer>
-        <p>© 2025 [Your Business Name]. All rights reserved.</p>
-    </footer>
+
+    <section class="section" id="about">
+      <div class="panel">
+        <h2>About Us</h2>
+        <p>
+          We provide high-quality [service/product] with over X years of experience.
+          Our approach is simple: understand your goals, recommend what actually helps,
+          and execute cleanly.
+        </p>
+        <p>
+          Whether you're just getting started or scaling, we can help streamline
+          your operations and elevate your brand.
+        </p>
+      </div>
+      <div class="panel" id="contact">
+        <h2>Contact</h2>
+        <p class="contact-item">
+          Email:
+          <a href="mailto:you@yourbusiness.com">you@yourbusiness.com</a>
+        </p>
+        <p class="contact-item">Phone: (555) 123-4567</p>
+        <p class="contact-item">Location: [Your City, State]</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--muted);">
+          Mon–Fri · 9:00am – 5:00pm
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 [Your Business Name]. All rights reserved.
+  </footer>
 </body>
 </html>
