@@ -251,6 +251,73 @@
       font-size: 0.8rem;
     }
 
+    /* ===== CONTACT FORM ===== */
+    .contact-form {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .contact-form-row {
+      margin-bottom: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .contact-form label {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 0.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 0.5rem 0.6rem;
+      color: var(--text);
+      font: inherit;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
+    }
+
+    .contact-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .contact-form small {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .contact-form button {
+      margin-top: 0.5rem;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      color: #0f172a;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 22px rgba(56, 189, 248, 0.3);
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    }
+
+    .contact-form button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px rgba(56, 189, 248, 0.45);
+    }
+
     /* ===== SERVICES SECTION ===== */
 
     .services-section {
@@ -677,8 +744,54 @@
         <p class="contact-item">Availability: 7 days a week, flexible scheduling</p>
         <p class="contact-item">Standard Rate: $90/hour (varies by service level)</p>
         <p class="contact-item" style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">
-          Curious what we cover? Explore our <a href="#services">Services We Offer</a> or email us to customize a plan.
+          Prefer to reach out directly? Use the form below and we’ll get back to you within one business day.
         </p>
+
+        <!-- SIMPLE CONTACT FORM -->
+        <form class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
+          <!-- TODO: Replace the action URL with your real form endpoint when you're ready -->
+          <div class="contact-form-row">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="contact-form-row">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="contact-form-row">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+
+          <div class="contact-form-row">
+            <label for="student-level">Student Level</label>
+            <select id="student-level" name="student_level">
+              <option value="">Select one (optional)</option>
+              <option>Middle School</option>
+              <option>High School</option>
+              <option>College</option>
+              <option>Graduate / Professional</option>
+              <option>Parent Inquiring</option>
+            </select>
+          </div>
+
+          <div class="contact-form-row">
+            <label for="subject">Subject or Exam</label>
+            <input type="text" id="subject" name="subject" placeholder="e.g., SAT, Algebra II, ASVAB, Legal Writing" />
+          </div>
+
+          <div class="contact-form-row">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your goals, challenges, and timeline."></textarea>
+          </div>
+
+          <div class="contact-form-row">
+            <small>* Required fields</small>
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -698,7 +811,7 @@
         <article class="service-card testprep">
           <div class="service-tagline">Test Prep & Admissions</div>
           <div class="service-heading-row">
-            <span class="service-icon">🎓</span>
+            <span class="service-icon" aria-hidden="true">🎓</span>
             <h3>College Readiness & Test Prep Tutoring</h3>
           </div>
           <p>
@@ -717,7 +830,7 @@
         <article class="service-card private">
           <div class="service-tagline">Private School Admissions</div>
           <div class="service-heading-row">
-            <span class="service-icon">🏫</span>
+            <span class="service-icon" aria-hidden="true">🏫</span>
             <h3>Private School Admissions Coaching</h3>
           </div>
           <p>
@@ -736,7 +849,7 @@
         <article class="service-card military">
           <div class="service-tagline">Military Entrance Exams</div>
           <div class="service-heading-row">
-            <span class="service-icon">🪖</span>
+            <span class="service-icon" aria-hidden="true">🪖</span>
             <h3>ASVAB & AFOQT Prep</h3>
           </div>
           <p>
@@ -755,7 +868,7 @@
         <article class="service-card math">
           <div class="service-tagline">Math Tutoring</div>
           <div class="service-heading-row">
-            <span class="service-icon">➗</span>
+            <span class="service-icon" aria-hidden="true">➗</span>
             <h3>Middle School through College Math</h3>
           </div>
           <p>
@@ -774,7 +887,7 @@
         <article class="service-card law">
           <div class="service-tagline">Law & Legal Writing</div>
           <div class="service-heading-row">
-            <span class="service-icon">⚖️</span>
+            <span class="service-icon" aria-hidden="true">⚖️</span>
             <h3>Law School & Legal Writing Support</h3>
           </div>
           <p>
@@ -793,7 +906,7 @@
         <article class="service-card humanities">
           <div class="service-tagline">Writing & Humanities</div>
           <div class="service-heading-row">
-            <span class="service-icon">✍️</span>
+            <span class="service-icon" aria-hidden="true">✍️</span>
             <h3>Writing, English & Psychology Support</h3>
           </div>
           <p>
@@ -812,7 +925,7 @@
         <article class="service-card career">
           <div class="service-tagline">Professional Skills Coaching</div>
           <div class="service-heading-row">
-            <span class="service-icon">💼</span>
+            <span class="service-icon" aria-hidden="true">💼</span>
             <h3>Career & Communication Coaching</h3>
           </div>
           <p>
@@ -869,7 +982,8 @@
         <h3>How do I get started or schedule a free consultation?</h3>
         <p>
           The easiest way is to email us at <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a>
-          with a brief description of your goals. We’ll follow up to schedule a free 15-minute consultation and outline a plan.
+          or use the contact form above with a brief description of your goals.
+          We’ll follow up to schedule a free 15-minute consultation and outline a plan.
         </p>
       </div>
     </section>
