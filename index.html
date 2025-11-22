@@ -1,9 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Study Hygiene | Online Tutoring, Test Prep & Academic Coaching</title>
+
+  <!-- Favicon (update file paths once you upload your icons) -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.studyhygiene.com/" />
@@ -17,7 +23,7 @@
   <meta property="og:title" content="Study Hygiene | Online Tutoring & Test Prep" />
   <meta property="og:description" content="Premium online tutoring and test prep for middle school, high school, college, and professionals. SAT, ACT, GRE, ASVAB, math, law, writing, and more." />
   <meta property="og:url" content="https://www.studyhygiene.com/" />
-  <!-- You can update this to a real image URL later -->
+  <!-- Update this to a real image URL and ensure the file exists -->
   <meta property="og:image" content="https://www.studyhygiene.com/og-image.jpg" />
 
   <!-- Twitter Card -->
@@ -56,7 +62,7 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #172554, #0f172a 45%, #020617 90%);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7; /* slightly more relaxed */
     }
 
     header {
@@ -128,11 +134,11 @@
 
     .hero {
       max-width: 1100px;
-      margin: 2.5rem auto 2rem;
+      margin: 3.25rem auto 3rem;
       padding: 0 1.5rem;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 2rem;
+      gap: 2.5rem;
       align-items: center;
     }
 
@@ -198,7 +204,7 @@
       background: radial-gradient(circle at top, rgba(15, 23, 42, 0.2), rgba(2, 6, 23, 0.35));
       border: 1px solid rgba(148, 163, 184, 0.1);
       border-radius: 1.25rem;
-      padding: 1.35rem 1.35rem 1.1rem;
+      padding: 1.6rem 1.6rem 1.25rem;
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(12px);
     }
@@ -226,18 +232,18 @@
 
     .section {
       max-width: 1100px;
-      margin: 1.5rem auto;
+      margin: 3rem auto;
       padding: 0 1.5rem;
       display: grid;
       grid-template-columns: 1.3fr 0.7fr;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .panel {
       background: rgba(2, 6, 23, 0.45);
       border: 1px solid rgba(148, 163, 184, 0.05);
       border-radius: var(--radius);
-      padding: 1.5rem 1.5rem 1.25rem;
+      padding: 1.75rem 1.7rem 1.5rem;
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
     }
 
@@ -332,7 +338,7 @@
 
     .services-section {
       max-width: 1100px;
-      margin: 2.5rem auto 2rem;
+      margin: 3.25rem auto 3rem;
       padding: 0 1.5rem;
     }
 
@@ -439,7 +445,7 @@
     /* FAQ section */
     .faq-section {
       max-width: 1100px;
-      margin: 2.5rem auto 2rem;
+      margin: 3.25rem auto 3.5rem;
       padding: 0 1.5rem;
     }
 
@@ -449,18 +455,39 @@
     }
 
     .faq-item {
-      margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
       border-bottom: 1px solid rgba(148, 163, 184, 0.2);
       padding-bottom: 0.75rem;
     }
 
-    .faq-item h3 {
-      font-size: 1rem;
-      margin: 0 0 0.35rem;
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      font: inherit;
+      text-align: left;
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
     }
 
-    .faq-item p {
-      margin: 0;
+    .faq-question span:first-child {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .faq-icon {
+      margin-left: 1rem;
+      font-size: 1.1rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      margin-top: 0.4rem;
       color: var(--muted);
       font-size: 0.92rem;
     }
@@ -877,48 +904,74 @@
       </div>
     </section>
 
-    <!-- FAQ SECTION -->
+    <!-- FAQ SECTION (Collapsible) -->
     <section class="faq-section" id="faq">
       <h2>Frequently Asked Questions</h2>
 
       <div class="faq-item">
-        <h3>Do you offer online tutoring nationwide?</h3>
-        <p>
-          Yes. All of our tutoring and coaching is delivered live online, so we can work with students anywhere in the United States or abroad.
-          We regularly support students across multiple time zones.
-        </p>
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you offer online tutoring nationwide?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>
+            Yes. All of our tutoring and coaching is delivered live online, so we can work with students anywhere in the United States or abroad.
+            We regularly support students across multiple time zones.
+          </p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>What ages and levels do you work with?</h3>
-        <p>
-          We tutor middle school, high school, college, and graduate students, as well as professionals seeking test prep,
-          writing support, or career coaching. Sessions are tailored to your level and goals.
-        </p>
+        <button class="faq-question" aria-expanded="false">
+          <span>What ages and levels do you work with?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>
+            We tutor middle school, high school, college, and graduate students, as well as professionals seeking test prep,
+            writing support, or career coaching. Sessions are tailored to your level and goals.
+          </p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>How does a typical online tutoring session work?</h3>
-        <p>
-          We meet via Google Meet with screen-sharing, shared whiteboards, and digital resources.
-          We start by clarifying your goals, then work through concepts, examples, and practice problems together.
-        </p>
+        <button class="faq-question" aria-expanded="false">
+          <span>How does a typical online tutoring session work?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>
+            We meet via Google Meet with screen-sharing, shared whiteboards, and digital resources.
+            We start by clarifying your goals, then work through concepts, examples, and practice problems together.
+          </p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>Can you help me with both content and test strategy?</h3>
-        <p>
-          Absolutely. For exams like the SAT, ACT, GRE, and ASVAB, we blend content review with timing strategies,
-          test-taking techniques, and customized study plans so you don’t waste effort.
-        </p>
+        <button class="faq-question" aria-expanded="false">
+          <span>Can you help me with both content and test strategy?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>
+            Absolutely. For exams like the SAT, ACT, GRE, and ASVAB, we blend content review with timing strategies,
+            test-taking techniques, and customized study plans so you don’t waste effort.
+          </p>
+        </div>
       </div>
 
       <div class="faq-item">
-        <h3>How do I get started or schedule a free consultation?</h3>
-        <p>
-          The easiest way is to email us at <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a>
-          or use the contact form above with a brief description of your goals. We’ll follow up to schedule a free 15-minute consultation and outline a plan.
-        </p>
+        <button class="faq-question" aria-expanded="false">
+          <span>How do I get started or schedule a free consultation?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          <p>
+            The easiest way is to email us at <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a>
+            or use the contact form above with a brief description of your goals. We’ll follow up to schedule a free
+            15-minute consultation and outline a plan.
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -926,5 +979,27 @@
   <footer>
     © 2025 Study Hygiene. All rights reserved.
   </footer>
+
+  <!-- FAQ toggle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqButtons = document.querySelectorAll('.faq-question');
+
+      faqButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const answer = item.querySelector('.faq-answer');
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+          btn.setAttribute('aria-expanded', String(!expanded));
+          answer.hidden = expanded;
+
+          const icon = btn.querySelector('.faq-icon');
+          if (icon) icon.textContent = expanded ? '+' : '–';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+```
