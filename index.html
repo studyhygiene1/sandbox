@@ -229,15 +229,15 @@
       max-height: 260px;
     }
 
-    .section {
-      max-width: 1100px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 2rem;
-    }
-
+.section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 2rem;
+  align-items: flex-start; /* NEW: prevents panels from stretching to equal height */
+}
     .panel {
       background: rgba(2, 6, 23, 0.45);
       border: 1px solid rgba(148, 163, 184, 0.05);
@@ -701,14 +701,14 @@
       </div>
 
       <div class="panel" id="contact">
-        <h2>Contact & Pricing</h2>
+        <h2>Contact and Price</h2>
         <p class="contact-item">Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a></p>
-        <p class="contact-item">Text: (480) 442-4224</p>
+        <p class="contact-item">Text: 480.442.4224</p>
         <p class="contact-item">Format: live online (Google Meet)</p>
-        <p class="contact-item">Availability: 7 days a week, flexible scheduling</p>
-        <p class="contact-item">Hourly Rate: $60</p>
+        <p class="contact-item">Availability: 7 days/week, flexible scheduling</p>
+        <p class="contact-item">Hourly Rate: $70</p>
         <p class="contact-item" style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">
-          Complete and submit the form below with your inquiry and we’ll get back to you promptly.
+          Complete and submit the form below with your inquiry!
         </p>
 
         <!-- SIMPLE CONTACT FORM -->
@@ -724,19 +724,19 @@
           </div>
 
           <div class="contact-form-row">
-            <label for="phone">Phone (optional)</label>
+            <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" />
           </div>
 
           <div class="contact-form-row">
             <label for="student-level">Student Level</label>
             <select id="student-level" name="student_level">
-              <option value="">Select one (optional)</option>
+              <option value="">Select one</option>
               <option>Middle School</option>
               <option>High School</option>
               <option>College</option>
               <option>Graduate / Professional</option>
-              <option>Parent Inquiring</option>
+              <option>Other</option>
             </select>
           </div>
 
@@ -782,7 +782,7 @@
           <ul>
             <li>SAT: Math, Reading, Writing</li>
             <li>ACT: English, Reading, Math, Science</li>
-            <li>GRE: Quantitative & Verbal</li>
+            <li>GRE: Quantitative and Verbal</li>
             <li>GED: (all sections)</li>
           </ul>
         </article>
@@ -806,10 +806,10 @@
         <article class="service-card military">
           <div class="service-heading-row">
             <span class="service-icon" aria-hidden="true">🪖</span>
-            <h3>Military Recruitment Test Prep</h3>
+            <h3>Military Recruitment Prep</h3>
           </div>
           <p>
-            Targeted prep for opportunities in the U.S. armed forces.
+            Targeted test prep for opportunities in the U.S. armed forces.
           </p>
           <ul>
             <li>ASVAB (all sections)</li>
@@ -879,7 +879,7 @@
             <li>Public Speaking</li>
             <li>Interview Preparation</li>
             <li>Resume Writing</li>
-            <li>Career Planning & Development</li>
+            <li>Career Planning</li>
           </ul>
         </article>
 
