@@ -3,27 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Hygiene | Online Tutoring & Test Prep</title>
 
+  <title>Study Hygiene Tutoring | Online Test Prep & Private Tutoring</title>
   <link rel="canonical" href="https://www.studyhygiene.com/" />
-  <meta name="description" content="Study Hygiene offers private online tutoring and test prep nationwide. Math, SAT, ACT, GRE, ASVAB, law school, and writing support with experienced educators." />
+
+  <meta name="description" content="Study Hygiene offers private online tutoring and test prep nationwide. Math, SAT, ACT, GRE, ASVAB/AFQT, law school, and writing support with experienced educators." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Study Hygiene Tutoring | Online Test Prep & Private Tutoring" />
+  <meta property="og:description" content="Private online tutoring and test prep nationwide: Math, SAT, ACT, GRE, ASVAB/AFQT, law school, and writing." />
+  <meta property="og:url" content="https://www.studyhygiene.com/" />
+  <meta property="og:image" content="https://www.studyhygiene.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Study Hygiene Tutoring | Online Test Prep & Private Tutoring" />
+  <meta name="twitter:description" content="Private online tutoring and test prep nationwide: Math, SAT, ACT, GRE, ASVAB/AFQT, law school, and writing." />
+  <meta name="twitter:image" content="https://www.studyhygiene.com/og-image.jpg" />
+
+  <!-- Favicon (optional; keep if you have files) -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style>
     :root{
       /* ===== Warm Academic Palette (richer + deeper) ===== */
-      --bg-main: #f2eee7;      /* parchment */
-      --bg-soft: #e9e2d8;      /* warmer contrast */
+      --bg-main: #f2eee7;
+      --bg-soft: #e9e2d8;
+
       --panel: rgba(255,255,255,0.72);
       --panel-strong: rgba(255,255,255,0.86);
       --border: rgba(32,35,41,0.14);
 
-      --text-main: #1f232a;    /* darker charcoal for stronger legibility */
-      --text-muted: #465061;   /* less washed out */
-      --text-soft: #5c6778;
+      --text-main: #1f232a;
+      --text-muted: #465061;
 
       --accent: #2a6f73;       /* deep teal */
-      --accent-alt: #4f5f99;   /* richer indigo */
-      --accent-warm: #c07f48;  /* warmer sandstone */
+      --accent-alt: #4f5f99;   /* indigo */
+      --accent-warm: #c07f48;  /* sandstone */
       --accent-soft: rgba(42,111,115,0.14);
 
       --radius: 1.1rem;
@@ -47,7 +65,30 @@
         radial-gradient(900px 520px at 92% 0%, rgba(192,127,72,0.18), transparent 62%),
         radial-gradient(820px 480px at 50% 110%, rgba(79,95,153,0.14), transparent 58%),
         linear-gradient(180deg, var(--bg-soft), var(--bg-main));
+      position: relative;
     }
+
+    /* ===== Grain overlay (subtle) =====
+       - pointer-events none so it doesn't block clicks
+       - mix-blend-mode soft-light for a premium texture
+       - opacity tuned to be noticeable but not distracting
+    */
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+
+      /* SVG turbulence-based noise as a background */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      opacity: 0.10;            /* <-- adjust 0.06–0.14 to taste */
+      mix-blend-mode: soft-light;
+    }
+
+    /* keep actual content above grain */
+    header, main, footer{ position: relative; z-index: 1; }
 
     /* Links should look like links */
     a{
@@ -132,7 +173,6 @@
       color:#fff !important;
       box-shadow: 0 14px 30px rgba(42,111,115,0.22);
     }
-    .cta:hover{ filter: brightness(0.98); }
 
     /* ===== Main ===== */
     main{
@@ -170,7 +210,7 @@
       max-width: 62ch;
       color: var(--text-muted);
       font-size: 1.06rem;
-      font-weight: 600; /* makes text stand out more */
+      font-weight: 650;
     }
 
     .eyebrow{
@@ -235,7 +275,7 @@
     .section-note{
       color: var(--text-muted);
       max-width: 70ch;
-      font-weight: 600;
+      font-weight: 650;
     }
 
     .grid{
@@ -262,7 +302,7 @@
     ul{
       padding-left:1.1rem;
       color: var(--text-muted);
-      font-weight: 600;
+      font-weight: 650;
     }
     li{ margin:0.3rem 0; }
 
@@ -276,7 +316,7 @@
       background:none;
       border:none;
       font:inherit;
-      font-weight: 750;
+      font-weight: 780;
       cursor:pointer;
       display:flex;
       justify-content:space-between;
@@ -287,7 +327,7 @@
     .faq-a{
       margin-top:0.45rem;
       color: var(--text-muted);
-      font-weight: 600;
+      font-weight: 650;
     }
 
     /* ===== Footer ===== */
@@ -296,7 +336,7 @@
       color: var(--text-muted);
       font-size:0.9rem;
       padding:2rem 1rem;
-      font-weight: 600;
+      font-weight: 650;
     }
 
     /* ===== Mobile ===== */
@@ -307,6 +347,24 @@
       .menu-btn{ display:block; }
     }
   </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"EducationalOrganization",
+    "name":"Study Hygiene Tutoring",
+    "url":"https://www.studyhygiene.com/",
+    "description":"Private online tutoring and test prep nationwide (Math, SAT, ACT, GRE, ASVAB/AFQT, law school, and writing).",
+    "areaServed":{"@type":"Country","name":"United States"},
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"Customer Support",
+      "email":"studyhygiene1@gmail.com",
+      "telephone":"+1-480-442-4224"
+    }]
+  }
+  </script>
 </head>
 
 <body>
@@ -431,7 +489,7 @@
     btn.textContent = open ? '×' : '≡';
   });
 
-  // Simple FAQ toggle
+  // FAQ toggle
   document.querySelectorAll('.faq-item').forEach((item) => {
     const q = item.querySelector('.faq-q');
     const a = item.querySelector('.faq-a');
