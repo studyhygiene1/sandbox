@@ -5,24 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Study Hygiene | Online Tutoring, Test Prep & Academic Coaching</title>
 
-  <!-- Favicon (update file paths once you upload your icons) -->
+  <!-- Favicon (update paths once uploaded) -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <!-- Canonical URL -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://www.studyhygiene.com/" />
 
   <!-- Basic SEO -->
   <meta name="description" content="Study Hygiene provides premium online tutoring, test prep, and academic coaching nationwide. Expert help for math, SAT, ACT, GRE, ASVAB, private school admissions, law school, writing, and professional skills." />
-  <meta name="keywords" content="online tutoring, online math tutor, SAT tutor, ACT tutor, GRE tutor, ASVAB prep, AFOQT prep, private school admissions tutoring, law school tutor, legal writing tutor, online test prep, college admissions essay coach, academic coaching, professional skills coaching" />
+  <meta name="keywords" content="online tutoring, SAT tutor, ACT tutor, GRE tutor, ASVAB tutor, math tutor, law school tutor, legal writing tutor, college admissions essay coach, academic coaching" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Study Hygiene | Online Tutoring & Test Prep" />
   <meta property="og:description" content="Premium online tutoring and test prep for middle school, high school, college, and professionals. SAT, ACT, GRE, ASVAB, math, law, writing, and more." />
   <meta property="og:url" content="https://www.studyhygiene.com/" />
-  <!-- Update this to a real image URL and ensure the file exists -->
   <meta property="og:image" content="https://www.studyhygiene.com/og-image.jpg" />
 
   <!-- Twitter Card -->
@@ -32,975 +31,737 @@
   <meta name="twitter:image" content="https://www.studyhygiene.com/og-image.jpg" />
 
   <style>
-    :root {
-      --bg: #0f172a;
-      --bg-soft: rgba(15, 23, 42, 0.4);
-      --panel: #111827;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.12);
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --radius: 1rem;
-
-      /* category accent colors (still here in case you want them later) */
-      --accent-testprep: #38bdf8;
-      --accent-private: #f97316;
-      --accent-military: #22c55e;
-      --accent-math: #a855f7;
-      --accent-law: #facc15;
-      --accent-humanities: #ec4899;
-      --accent-career: #0ea5e9;
+    :root{
+      --bg: #f7fbff;
+      --bg2:#eef6ff;
+      --panel: rgba(255,255,255,0.9);
+      --panel-strong: #ffffff;
+      --border: rgba(15,23,42,0.12);
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb;
+      --accent2:#06b6d4;
+      --accentSoft: rgba(37,99,235,0.10);
+      --shadow: 0 18px 55px rgba(2,6,23,0.10);
+      --radius: 1.15rem;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #172554, #0f172a 45%, #020617 90%);
       color: var(--text);
-      line-height: 1.7; /* slightly more relaxed */
+      background:
+        radial-gradient(900px 520px at 10% 0%, rgba(37,99,235,0.12), transparent 60%),
+        radial-gradient(900px 520px at 90% 0%, rgba(6,182,212,0.14), transparent 60%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      line-height:1.7;
     }
 
-    header {
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.2), rgba(3, 105, 161, 0.1));
-      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
-      padding: 0.75rem 1.5rem 1rem;
-      backdrop-filter: blur(10px);
+    /* ===== Header / Nav ===== */
+    header{
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 50;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .wrap{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.25rem;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:0.15rem;
+      text-decoration:none;
+      color: var(--text);
+      min-width: 220px;
+    }
+    .brand .name{
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      font-size: 1.05rem;
+    }
+    .brand .tag{
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 0.9rem;
     }
 
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .nav-links{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:0.9rem;
+      justify-content:flex-end;
+    }
+    .nav-links a{
+      text-decoration:none;
+      color: var(--muted);
+      font-weight: 850;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover{ color: var(--accent); }
+
+    .nav-cta{
+      text-decoration:none;
+      font-weight: 950;
+      color: #fff !important;
+      padding: 0.55rem 0.95rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: 1px solid rgba(37,99,235,0.18);
+      box-shadow: 0 16px 34px rgba(37,99,235,0.18);
+      transition: transform 0.15s ease-out;
+      white-space: nowrap;
+    }
+    .nav-cta:hover{ transform: translateY(-1px); }
+
+    /* Mobile menu button */
+    .menu-btn{
+      display:none;
+      align-items:center;
+      justify-content:center;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.9);
+      cursor:pointer;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    /* ===== Hero ===== */
+    main{ max-width: 1120px; margin: 0 auto; padding: 1.25rem 1.25rem 3rem; }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.35rem;
+      align-items: start;
+      margin-top: 0.75rem;
+    }
+    .hero-left{
+      padding: 1.4rem 1.35rem;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:0.5rem;
+      font-weight: 950;
+      color: var(--accent);
+      background: var(--accentSoft);
+      border: 1px solid rgba(37,99,235,0.16);
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      margin-bottom: 0.75rem;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+    h1{
+      font-size: clamp(2.1rem, 4.4vw, 3.1rem);
+      line-height: 1.12;
+      margin: 0.15rem 0 0.6rem;
+      letter-spacing: -0.015em;
+    }
+    .subhead{
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 1.05rem;
+      max-width: 46rem;
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 0.75rem;
+      align-items:center;
+      margin-top: 1rem;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      border-radius: 999px;
+      text-decoration:none;
+      font-weight: 950;
+      border: 1px solid rgba(15,23,42,0.18);
+      background: rgba(255,255,255,0.85);
+      color: var(--text);
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(37,99,235,0.35); color: var(--accent); }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      border-color: rgba(37,99,235,0.18);
+      box-shadow: 0 16px 34px rgba(37,99,235,0.18);
+    }
+    .btn.primary:hover{ color:#fff; }
+
+    .hero-right{
+      display:flex;
+      flex-direction:column;
       gap: 1rem;
     }
-
-    .nav-left {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      font-size: 1.3rem;
-    }
-
-    .tagline {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    .nav-cta {
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    .nav-cta:hover {
-      border-color: var(--accent);
-    }
-
-    .hero {
-      max-width: 1100px;
-      margin: 3.25rem auto 3rem;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .hero-left h1 {
-      font-size: clamp(2.1rem, 4.5vw, 3rem);
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-left p {
-      color: var(--muted);
-      max-width: 36rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-left h3 {
-      font-weight: 500;
-      color: var(--text);
-      margin-top: 0.25rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
-      color: #0f172a;
-      padding: 0.65rem 1.25rem;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 14px 30px rgba(56, 189, 248, 0.25);
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
-      font-size: 0.95rem;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 40px rgba(56, 189, 248, 0.35);
-    }
-
-    .btn-secondary {
-      display: inline-block;
-      padding: 0.55rem 1.1rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.2), rgba(2, 6, 23, 0.35));
-      border: 1px solid rgba(148, 163, 184, 0.1);
-      border-radius: 1.25rem;
-      padding: 1.6rem 1.6rem 1.25rem;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(12px);
-    }
-
-    .hero-card h2 {
-      margin-top: 0;
-      font-size: 1.2rem;
-    }
-
-    .hero-card p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 0.7rem;
-    }
-
-    /* HERO IMAGE (optional, commented out in HTML) */
-    .hero-image {
-      width: 100%;
-      border-radius: 0.9rem;
-      margin-bottom: 1rem;
-      display: block;
-      object-fit: cover;
-      max-height: 260px;
-    }
-
-.section {
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 2rem;
-  align-items: flex-start; /* NEW: prevents panels from stretching to equal height */
-}
-    .panel {
-      background: rgba(2, 6, 23, 0.45);
-      border: 1px solid rgba(148, 163, 184, 0.05);
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.75rem 1.7rem 1.5rem;
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+      box-shadow: var(--shadow);
+      padding: 1.2rem 1.15rem;
     }
-
-    h2 {
-      margin-top: 0;
+    .card h2{
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+      letter-spacing: -0.01em;
     }
-
-    .contact-item {
-      margin-bottom: 0.6rem;
+    .card p{ margin: 0.35rem 0; color: var(--muted); font-weight: 650; }
+    .card strong{ color: var(--text); }
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.5rem;
+      margin-top: 0.7rem;
     }
-
-    .contact-item a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1.5rem 3rem;
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(15,23,42,0.12);
+      background: rgba(255,255,255,0.78);
       color: var(--muted);
-      font-size: 0.8rem;
+      font-weight: 750;
+      font-size: 0.9rem;
+    }
+    .check{
+      width:18px;height:18px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background: rgba(34,197,94,0.14);
+      border: 1px solid rgba(34,197,94,0.22);
+      color:#15803d;
+      font-weight: 900;
+      font-size: 0.85rem;
     }
 
-    /* ===== CONTACT FORM ===== */
-    .contact-form {
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(148, 163, 184, 0.3);
+    /* ===== Sections ===== */
+    .section{
+      margin-top: 1.6rem;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 1rem;
+      margin-top: 1.3rem;
+      padding: 0 0.15rem;
+    }
+    .section-title h2{
+      margin:0;
+      font-size: 1.55rem;
+      letter-spacing: -0.01em;
+    }
+    .section-title p{
+      margin:0;
+      color: var(--muted);
+      font-weight: 650;
     }
 
-    .contact-form-row {
+    .two-col{
+      display:grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1rem;
+      align-items:start;
+    }
+
+    .bullets{
+      margin: 0.5rem 0 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .bullets li{ margin: 0.3rem 0; }
+
+    .callout{
+      border-radius: var(--radius);
+      border: 1px solid rgba(37,99,235,0.18);
+      background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(6,182,212,0.10));
+      padding: 1.05rem 1.1rem;
+    }
+    .callout strong{ font-weight: 950; }
+    .callout p{ margin: 0.25rem 0; color: var(--muted); font-weight: 650; }
+
+    /* ===== FAQ ===== */
+    .faq{
+      margin-top: 0.25rem;
+    }
+    .faqitem{
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: rgba(255,255,255,0.90);
+      box-shadow: 0 12px 28px rgba(2,6,23,0.06);
       margin-bottom: 0.75rem;
-      display: flex;
-      flex-direction: column;
+      overflow:hidden;
+    }
+    .q{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding: 0.9rem 1rem;
+      cursor:pointer;
+      background:transparent;
+      border:none;
+      font: inherit;
+      font-weight: 950;
+      color: var(--text);
+      text-align:left;
+    }
+    .q span:last-child{
+      width:28px;height:28px;border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background: rgba(37,99,235,0.10);
+      border: 1px solid rgba(37,99,235,0.16);
+      color: var(--accent);
+      font-weight: 900;
+      flex-shrink:0;
+    }
+    .a{
+      padding: 0 1rem 0.95rem;
+      color: var(--muted);
+      font-weight: 650;
+    }
+    .a a{ color: var(--accent); text-decoration:none; font-weight: 900; }
+    .a a:hover{ text-decoration: underline; }
+
+    /* ===== Contact form ===== */
+    form{ margin-top: 0.85rem; }
+    .row{
+      display:flex;
+      flex-direction:column;
       gap: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+    label{ font-size: 0.9rem; color: var(--muted); font-weight: 750; }
+    input, textarea, select{
+      font: inherit;
+      padding: 0.6rem 0.65rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(15,23,42,0.18);
+      background: rgba(255,255,255,0.92);
+      color: var(--text);
+    }
+    textarea{ min-height: 110px; resize: vertical; }
+    input:focus, textarea:focus, select:focus{
+      outline:none;
+      border-color: rgba(37,99,235,0.55);
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.10);
     }
 
-    .contact-form label {
+    .fineprint{
       font-size: 0.85rem;
       color: var(--muted);
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
-      background: rgba(15, 23, 42, 0.7);
-      border-radius: 0.5rem;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      padding: 0.5rem 0.6rem;
-      color: var(--text);
-      font: inherit;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus,
-    .contact-form select:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
-    }
-
-    .contact-form textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
-
-    .contact-form small {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    .contact-form button {
+      font-weight: 650;
       margin-top: 0.5rem;
-      border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
-      color: #0f172a;
-      padding: 0.55rem 1.2rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      box-shadow: 0 10px 22px rgba(56, 189, 248, 0.3);
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
     }
 
-    .contact-form button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 32px rgba(56, 189, 248, 0.45);
-    }
-
-    /* ===== SERVICES SECTION ===== */
-
-    .services-section {
-      max-width: 1100px;
-      margin: 3.25rem auto 3rem;
-      padding: 0 1.5rem;
-    }
-
-    .services-header {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 1.75rem;
-    }
-
-    .services-header h2 {
-      font-size: 1.9rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .services-header p {
+    footer{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 2.25rem;
+      text-align:center;
       color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
-      border-radius: 1rem;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 1.25rem 1.25rem 1.1rem;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%);
-      opacity: 0.75;
-      pointer-events: none;
-      transition: opacity 0.18s ease-out;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5);
-      border-color: rgba(248, 250, 252, 0.75);
-    }
-
-    .service-card:hover::before {
-      opacity: 1;
-    }
-
-    .service-heading-row {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      position: relative;
-      margin-bottom: 0.4rem;
-    }
-
-    .service-icon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .service-card h3 {
-      margin: 0;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #f1f5f9;
-      letter-spacing: 0.01em;
-    }
-
-    .service-card p {
-      position: relative;
-      margin: 0.3rem 0 0.6rem;
-      color: var(--muted);
+      font-weight: 650;
       font-size: 0.9rem;
     }
 
-    .service-card ul {
-      position: relative;
-      list-style: none;
-      padding-left: 0;
-      margin: 0.3rem 0 0.6rem;
-      font-size: 0.88rem;
-      color: #cbd5f5;
+    /* ===== Responsive ===== */
+    @media (max-width: 980px){
+      .hero{ grid-template-columns: 1fr; }
+      .two-col{ grid-template-columns: 1fr; }
     }
-
-    .service-card li {
-      margin-bottom: 0.25rem;
-    }
-
-    .service-card li::before {
-      content: "•";
-      margin-right: 0.4rem;
-      color: var(--accent);
-    }
-
-    /* FAQ section */
-    .faq-section {
-      max-width: 1100px;
-      margin: 3.25rem auto 3.5rem;
-      padding: 0 1.5rem;
-    }
-
-    .faq-section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .faq-item {
-      margin-bottom: 1.1rem;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-      padding-bottom: 0.75rem;
-    }
-
-    .faq-question {
-      width: 100%;
-      background: transparent;
-      border: none;
-      color: var(--text);
-      font: inherit;
-      text-align: left;
-      padding: 0.5rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    .faq-question span:first-child {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .faq-icon {
-      margin-left: 1rem;
-      font-size: 1.1rem;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .faq-answer {
-      margin-top: 0.4rem;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 960px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+    @media (max-width: 720px){
+      .menu-btn{ display:inline-flex; }
+      .nav-links{
+        display:none;
+        width:100%;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--border);
       }
-
-      .hero,
-      .section {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        text-align: left;
-      }
-
-      .hero-card {
-        max-width: 480px;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links {
-        flex-wrap: wrap;
-      }
-
-      .hero-left h1 {
-        font-size: 2.1rem;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
+      .nav-links.open{ display:flex; flex-direction:column; align-items:flex-start; }
+      .nav{ align-items:flex-start; }
+      .nav-cta{ width:100%; text-align:center; }
     }
   </style>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Study Hygiene",
     "url": "https://www.studyhygiene.com/",
-    "description": "Study Hygiene provides premium online tutoring, test prep, and academic coaching nationwide for middle school, high school, college, and professionals.",
+    "description": "Study Hygiene provides premium online tutoring, test prep, and academic coaching nationwide.",
     "areaServed": {
       "@type": "Country",
       "name": "United States"
     },
-    "offers": {
-      "@type": "OfferCatalog",
-      "name": "Online Tutoring and Coaching Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Online SAT & ACT Tutoring",
-            "description": "Digital SAT and ACT prep with personalized study plans, practice exams, and strategy coaching delivered online.",
-            "areaServed": "United States"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "GRE Tutoring",
-            "description": "Online GRE quantitative and verbal prep tailored to your target programs and timeline.",
-            "areaServed": "United States"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "ASVAB & AFOQT Prep",
-            "description": "Targeted online ASVAB and AFOQT tutoring to improve your qualifying scores and expand career options.",
-            "areaServed": "United States"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Online Math Tutoring",
-            "description": "Online math tutoring from Algebra through Calculus and Business Calculus for middle school, high school, and college students.",
-            "areaServed": "United States"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Law & Legal Writing Tutoring",
-            "description": "Online law school tutoring and legal writing support from a licensed attorney.",
-            "areaServed": "United States"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Writing & Humanities Support",
-            "description": "Online tutoring for English, essay writing, psychology, and research projects.",
-            "areaServed": "United States"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Professional Skills Coaching",
-            "description": "Online coaching for public speaking, interviews, career planning, and resume writing.",
-            "areaServed": "United States"
-          }
-        }
-      ]
-    }
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "studyhygiene1@gmail.com",
+      "telephone": "+1-480-442-4224",
+      "availableLanguage": ["English"]
+    }]
   }
   </script>
 </head>
+
 <body>
   <header>
-    <div class="nav" role="navigation" aria-label="Main navigation">
-      <div class="nav-left">
-        <div class="brand">Study Hygiene Tutoring</div>
-        <div class="tagline">Private Online Tutoring, Test Prep & Academic Coaching</div>
-      </div>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a href="mailto:studyhygiene1@gmail.com?subject=Free%20Consultation%20Request" class="nav-cta">Free Consultation</a>
+    <div class="wrap">
+      <div class="nav" role="navigation" aria-label="Main navigation">
+        <a class="brand" href="/">
+          <div class="name">Study Hygiene Tutoring</div>
+          <div class="tag">Private Online Tutoring • Test Prep • Academic Coaching</div>
+        </a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" id="menuBtn">≡</button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="/asvab-tutoring/">ASVAB</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Free Consultation</a>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-label="Hero section">
       <div class="hero-left">
-        <h1>Premium Private Online Test Prep and Tutoring</h1>
-        <h3>email: studyhygiene1@gmail.com</h3>
-        <h3>text: 480.442.4224</h3>
-        <p>
-          We provide personalized one-on-one online tutoring, test prep, and coaching. Whether you’re a middle school student building foundations, a high school student preparing for college, a college student tackling advanced math, or a professional leveling up your skills, we can help.
+        <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Nationwide online tutoring • Flexible scheduling</div>
+        <h1>Premium Online Tutoring & Test Prep</h1>
+        <p class="subhead">
+          One-on-one online tutoring for middle school, high school, college, graduate students, and professionals.
+          We combine content mastery, strategy, and strong study habits—so you improve faster and keep the gains.
         </p>
+
         <div class="hero-actions">
-          <a href="mailto:studyhygiene1@gmail.com?subject=Free%20Consultation%20Request" class="btn-primary">Book a Free 15-Minute Consultation</a>
-          <a href="#services" class="btn-primary">Browse Services</a>
+          <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Book a Free 15-Minute Consultation →</a>
+          <a class="btn" href="#services">Explore Services</a>
+          <a class="btn" href="/asvab-tutoring/">ASVAB Tutoring</a>
+        </div>
+
+        <p class="fineprint" style="margin-top:0.9rem;">
+          Email: <a href="mailto:studyhygiene1@gmail.com" style="color:var(--accent); font-weight:950; text-decoration:none;">studyhygiene1@gmail.com</a>
+          &nbsp;•&nbsp;
+          Text: <a href="tel:+14804424224" style="color:var(--accent); font-weight:950; text-decoration:none;">480-442-4224</a>
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="card" aria-label="What we do">
+          <h2>What We Do</h2>
+          <p><strong>Test Prep:</strong> SAT, ACT, GRE, ASVAB, private school admissions tests, and more.</p>
+          <p><strong>Tutoring:</strong> Middle school through college, including advanced math.</p>
+          <p><strong>Writing:</strong> Admissions essays, personal statements, and academic writing.</p>
+          <div class="pillrow" aria-label="Highlights">
+            <span class="pill"><span class="check">✓</span> 1-on-1 Online</span>
+            <span class="pill"><span class="check">✓</span> Flexible</span>
+            <span class="pill"><span class="check">✓</span> Nationwide</span>
+          </div>
+        </div>
+
+        <div class="card" aria-label="Expertise and credentials">
+          <h2>Expertise</h2>
+          <p><strong>J.D.</strong> Licensed Attorney</p>
+          <p><strong>M.Sc.</strong> Electrical & Computer Engineering</p>
+          <p><strong>B.Sc.</strong> Computer Engineering</p>
+          <p><strong>Certifications:</strong> IXL + CRLA</p>
+          <p><strong>Experience:</strong> 25+ years</p>
         </div>
       </div>
-      <div class="hero-card" aria-label="Tutor qualifications and services summary">
-        <!-- Optional hero image:
-        <img
-          src="/images/study-hygiene-tutoring.jpg"
-          alt="Student working with an online tutor on a laptop"
-          class="hero-image"
-        /> -->
-        <h2>What We Do</h2>
-        <p>
-          • Test Prep: For Digital SAT, ACT, GRE, ASVAB & more<br/>
-          • Tutoring: For Middle & High School, College, Law School Courses<br/>
-          • Writing: For College Admissions Essays, Personal Statements & more<br/>
-        </p><br/>
-
-        <h2>Our Expertise</h2>
-        <p>
-          • J.D. Licensed Attorney<br/>
-          • M.Sc. Electrical and Computer Engineer<br/>
-          • B.Sc. Computer Engineer<br/>
-          • Adjunct Faculty; Department of Mathematics<br/>
-          • IXL and CRLA Certified Tutor<br/> 
-          • 25+ Years Experience
-        </p>
-      </div>
     </section>
 
-    <!-- ABOUT + CONTACT -->
-    <section class="section" id="about">
-      <div class="panel">
-        <h2>About Us</h2>
-        <p style="text-indent: 40px;">
-          We’re educators at heart, with degrees in Electrical Engineering, Computer Engineering, and Law.
-          We love what we do because it gives us the incredible opportunity to make a lasting difference in our students’ lives.</p>
-        
-          <p style="text-indent: 40px;">
-          At Study Hygiene, our teaching philosophy is holistic — blending content mastery, test-taking strategies, and learning psychology. Consistent success comes from cultivating healthy and “hygienic” study habits. We incorporate that mindset in our instruction.
-        </p>
-        <p style="text-indent: 40px;">
-          We tutor students in math, writing, and standardized tests.
-          For test prep, we use diagnostics to identify and fill gaps in essential content knowledge before diving into timed practice drills
-          and high-impact test-taking strategies. We train students to leverage tools like Desmos strategically and to approach each exam with confidence.
-          We’ve helped students score 1500+ on the SAT, 32+ on the ACT, and excel on many other standardized tests.
-        </p>
-        <p style="text-indent: 40px;">
-          We guide students through every stage of their college and graduate school essays — from brainstorming to final polish.
-          As gifted orators, we also coach public speaking, interviews, and professional presentations. In short, we can help you overcome anxiety,
-          find your voice, and communicate with confidence — in any medium.
-        </p>
-        <p style="text-indent: 40px;">
-          We know what it’s like to face challenges. We once struggled too, and we know how transformative the right guidance can be.
-          In over 25 years of tutoring, we’ve helped thousands of students. They’ve been admitted to top universities and built thriving careers as
-          engineers, doctors, lawyers, scientists, and executives. 
-        </p>
-        
-          <p style="text-indent: 40px;">
-          Message us and let’s get started on your success story.
-        </p>
-      </div>
-
-      <div class="panel" id="contact">
-        <h2>Contact and Price</h2>
-        <p class="contact-item">Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a></p>
-        <p class="contact-item">Text: 480.442.4224</p>
-        <p class="contact-item">Format: Online via Google Meet</p>
-        <p class="contact-item">Availability: 7 days/week, flexible schedule</p>
-        <p class="contact-item">Hourly Rate: $80</p>
-        <p class="contact-item" style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">
-          For inquiries: email (studyhygiene1@gmail.com) or submit the form below.
-        </p>
-
-        <!-- SIMPLE CONTACT FORM -->
-        <form class="contact-form" method="POST" action="https://formspree.io/f/mdkykvjk">
-          <div class="contact-form-row">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-
-          <div class="contact-form-row">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-
-          <div class="contact-form-row">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" />
-          </div>
-
-          <div class="contact-form-row">
-            <label for="student-level">Student Level</label>
-            <select id="student-level" name="student_level">
-              <option value="">Select one</option>
-              <option>Middle School</option>
-              <option>High School</option>
-              <option>College</option>
-              <option>Graduate / Professional</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="contact-form-row">
-            <label for="subject">Subject or Exam</label>
-            <input type="text" id="subject" name="subject" placeholder="e.g., SAT, Algebra II, ASVAB, Legal Writing" />
-          </div>
-
-          <div class="contact-form-row">
-            <label for="message">How can we help?</label>
-            <textarea id="message" name="message" placeholder="Tell us a bit about your goals, challenges, and timeline."></textarea>
-          </div>
-
-          <div class="contact-form-row">
-            <small>* Required fields</small>
-            <button type="submit">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- SERVICES (STAND-OUT, SEO-FRIENDLY) -->
-    <section class="services-section" id="services">
-      <div class="services-header">
+    <!-- SERVICES (no tiles; clean, SEO-friendly list) -->
+    <section class="section" id="services" aria-label="Services">
+      <div class="section-title">
         <h2>Services We Offer</h2>
-       
+        <p>Clear plans. Efficient improvement. Real confidence.</p>
       </div>
 
-      <div class="services-grid">
-        <!-- Card 1: College Admissions Test Prep -->
-        <article class="service-card testprep">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">🎓</span>
-            <h3>College Test Prep</h3>
-          </div>
-          <p>
-            Expert test prep blending strategy, pacing, and content review.
-          </p>
-          <ul>
-            <li>SAT: Math, Reading, Writing</li>
-            <li>ACT: English, Reading, Math, Science</li>
-            <li>GRE: Quantitative and Verbal</li>
-            <li>GED: (all sections)</li>
+      <div class="two-col">
+        <div class="card">
+          <h2>Test Prep</h2>
+          <ul class="bullets">
+            <li><strong>SAT:</strong> Math, Reading, Writing strategy + pacing</li>
+            <li><strong>ACT:</strong> English, Math, Reading, Science strategy + pacing</li>
+            <li><strong>GRE:</strong> Quant and Verbal prep</li>
+            <li><strong>ASVAB / AFQT:</strong> high-impact coaching (see the dedicated page below)</li>
+            <li><strong>Private School Admissions:</strong> ISEE, SSAT</li>
           </ul>
-        </article>
 
-        <!-- Card 2: College Admissions Consulting -->
-        <article class="service-card private">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">🧭</span>
-            <h3>College Admissions</h3>
+          <div class="callout" style="margin-top:1rem;">
+            <strong>Popular right now:</strong>
+            <p style="margin-top:0.25rem;">
+              <a href="/asvab-tutoring/" style="color:var(--accent); font-weight:950; text-decoration:none;">ASVAB Tutoring Online →</a>
+              (clean URL + dedicated page for better Google visibility)
+            </p>
           </div>
-          <p>
-            Writing support for college and grad school essays.
-          </p>
-          <ul>
-            <li>Common App Personal Statements</li>
-            <li>Supplemental Essays</li>
-          </ul>
-        </article>
+        </div>
 
-        <!-- Card 3: Military Recruitment Test Prep -->
-        <article class="service-card military">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">🪖</span>
-            <h3>Military Recruitment Prep</h3>
-          </div>
-          <p>
-            Targeted test prep for opportunities in the U.S. armed forces.
-          </p>
-          <ul>
-            <li>ASVAB</li>
-            <li>AFQT</li>
-            <li>ASTB</li>
+        <div class="card">
+          <h2>Tutoring & Coaching</h2>
+          <ul class="bullets">
+            <li><strong>Math:</strong> Pre-Algebra → Calculus (including Business Calc)</li>
+            <li><strong>Writing:</strong> essays, research writing, admissions writing</li>
+            <li><strong>Law:</strong> legal writing (IRAC/CREAC), doctrinal support</li>
+            <li><strong>Professional Skills:</strong> interviews, resumes, public speaking</li>
           </ul>
-        </article>
 
-        <!-- Card 4: Private School Admissions Test Prep -->
-        <article class="service-card private">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">🏫</span>
-            <h3>Private School Admissions Test Prep</h3>
+          <div class="callout" style="margin-top:1rem;">
+            <strong>How we teach:</strong>
+            <p>Diagnostics → skill-building → targeted drills → timed practice → feedback loop.</p>
           </div>
-          <p>
-            Support for students applying to selective private schools.
-          </p>
-          <ul>
-            <li>ISEE</li>
-            <li>SSAT</li>
-          </ul>
-        </article>
-
-        <!-- Card 5: Math Tutoring -->
-        <article class="service-card math">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">➗</span>
-            <h3>Math Tutoring</h3>
-          </div>
-          <p>
-            Clear, patient explanations for students of all ages.
-          </p>
-          <ul>
-            <li>Pre-Algebra, Algebra, Geometry, Trigonometry</li>
-            <li>Pre-Calc, Calc I, Calc II, Business Calc</li>
-            <li>AP Calc AB & AP Calc BC</li>
-          </ul>
-        </article>
-
-        <!-- Card 6: Law Tutoring -->
-        <article class="service-card law">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">⚖️</span>
-            <h3>Law Tutoring</h3>
-          </div>
-          <p>
-            Law school support from a licensed attorney.
-          </p>
-          <ul>
-            <li>Legal Writing - IRAC/CREAC/CRAC</li>
-            <li>Contract Drafting</li>
-            <li>Civil Procedure</li>
-            <li>Constitutional Law</li>
-            <li>Torts and more</li>
-          </ul>
-        </article>
-
-        <!-- Card 7: Career Development Coaching -->
-        <article class="service-card career">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">💼</span>
-            <h3>Career Development Coaching</h3>
-          </div>
-          <p>
-            Practical coaching to help you communicate with confidence.
-          </p>
-          <ul>
-            <li>Public Speaking</li>
-            <li>Interview Preparation</li>
-            <li>Resume Writing</li>
-            <li>Career Planning</li>
-          </ul>
-        </article>
-
-        <!-- Card 8: English -->
-        <article class="service-card humanities">
-          <div class="service-heading-row">
-            <span class="service-icon" aria-hidden="true">✍️</span>
-            <h3>English</h3>
-          </div>
-          <p>
-            Support for reading, writing, and analysis in demanding English courses.
-          </p>
-          <ul>
-            <li>AP English</li>
-            <li>Grammar and Standard Usage Conventions</li>
-            <li>Essay Writing</li>
-          </ul>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- FAQ SECTION (Collapsible) -->
-    <section class="faq-section" id="faq">
-      <h2>Frequently Asked Questions</h2>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>Do you offer online tutoring nationwide?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer" hidden>
-          <p>
-            Yes. All of our tutoring and coaching is delivered live online, so we can work with students anywhere in the United States or abroad.
-            We regularly support students across multiple time zones.
-          </p>
-        </div>
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-label="About">
+      <div class="section-title">
+        <h2>About Study Hygiene</h2>
+        <p>Holistic tutoring that builds lasting skills.</p>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>What ages and levels do you work with?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer" hidden>
+      <div class="two-col">
+        <div class="card">
+          <p style="margin-top:0;">
+            We’re educators at heart, with degrees in Electrical Engineering, Computer Engineering, and Law.
+            We love this work because it gives us the opportunity to make a lasting difference in students’ lives.
+          </p>
           <p>
-            We tutor middle school, high school, college, and graduate students, as well as professionals seeking test prep,
-            writing support, or career coaching. Sessions are tailored to your level and goals.
+            Our philosophy is holistic: content mastery, test-taking strategy, and learning psychology.
+            The best results come from building strong, “hygienic” study habits and a clear plan you can actually follow.
+          </p>
+          <p>
+            For test prep, we use diagnostics to identify gaps before moving into timed drills and high-impact strategy.
+            We help students use tools (like Desmos) effectively and approach exams with calm confidence.
           </p>
         </div>
-      </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>How does a typical online tutoring session work?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer" hidden>
-          <p>
-            We meet via Google Meet with screen-sharing, shared whiteboards, and digital resources.
-            We start by clarifying your goals, then work through concepts, examples, and practice problems together.
-          </p>
+        <div class="card">
+          <h2 style="margin-top:0;">What you can expect</h2>
+          <ul class="bullets">
+            <li>Clear goals and a plan from day 1</li>
+            <li>Step-by-step explanations that stick</li>
+            <li>Strategy for pacing, accuracy, and confidence</li>
+            <li>Flexible scheduling (7 days/week)</li>
+          </ul>
+
+          <div class="callout" style="margin-top:1rem;">
+            <strong>Rate:</strong>
+            <p>$80/hour • Online via Google Meet</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>Can you help me with both content and test strategy?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer" hidden>
-          <p>
-            Absolutely. For exams like the SAT, ACT, GRE, and ASVAB, we blend content review with timing strategies,
-            test-taking techniques, and customized study plans so you don’t waste effort.
-          </p>
-        </div>
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-label="FAQ">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions.</p>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">
-          <span>How do I get started or schedule a free consultation?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer" hidden>
-          <p>
-            The easiest way is to email us at <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a>
-            or use the contact form above with a brief description of your goals. We’ll follow up to schedule a free
-            15-minute consultation and outline a plan.
+      <div class="faq">
+        <div class="faqitem">
+          <button class="q" aria-expanded="false">
+            <span>Do you offer online tutoring nationwide?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="a" hidden>
+            Yes. Sessions are delivered live online, so we can work with students anywhere in the United States (and often internationally).
+          </div>
+        </div>
+
+        <div class="faqitem">
+          <button class="q" aria-expanded="false">
+            <span>What ages and levels do you work with?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="a" hidden>
+            Middle school, high school, college, graduate/professional, and working professionals. We tailor sessions to your level and goals.
+          </div>
+        </div>
+
+        <div class="faqitem">
+          <button class="q" aria-expanded="false">
+            <span>How does an online session work?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="a" hidden>
+            We meet via Google Meet. We use screen sharing, digital resources, and structured practice to build skills and confidence quickly.
+          </div>
+        </div>
+
+        <div class="faqitem">
+          <button class="q" aria-expanded="false">
+            <span>How do I get started?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="a" hidden>
+            Email <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> or text
+            <a href="tel:+14804424224">480-442-4224</a>. We’ll schedule a free 15-minute consultation and outline next steps.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-label="Contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Tell us your goal and timeline—we’ll recommend the best plan.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h2 style="margin-top:0;">Contact & Price</h2>
+          <p><strong>Email:</strong> <a href="mailto:studyhygiene1@gmail.com" style="color:var(--accent); font-weight:950; text-decoration:none;">studyhygiene1@gmail.com</a></p>
+          <p><strong>Text:</strong> <a href="tel:+14804424224" style="color:var(--accent); font-weight:950; text-decoration:none;">480-442-4224</a></p>
+          <p><strong>Format:</strong> Online via Google Meet</p>
+          <p><strong>Availability:</strong> 7 days/week • flexible schedule</p>
+          <p><strong>Hourly Rate:</strong> $80</p>
+
+          <div class="hero-actions" style="margin-top:1rem;">
+            <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Email for a Free Consultation →</a>
+            <a class="btn" href="/asvab-tutoring/">ASVAB Page</a>
+          </div>
+
+          <p class="fineprint">
+            Prefer email for scheduling. Text is great for quick questions and availability.
           </p>
+        </div>
+
+        <div class="card">
+          <h2 style="margin-top:0;">Send a message</h2>
+          <p style="margin-top:0; color:var(--muted); font-weight:650;">
+            Fill this out and we’ll get back to you with next steps.
+          </p>
+
+          <!-- Contact form (Formspree) -->
+          <form method="POST" action="https://formspree.io/f/mdkykvjk">
+            <div class="row">
+              <label for="name">Your Name *</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+
+            <div class="row">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="row">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+
+            <div class="row">
+              <label for="student_level">Student Level</label>
+              <select id="student_level" name="student_level">
+                <option value="">Select one</option>
+                <option>Middle School</option>
+                <option>High School</option>
+                <option>College</option>
+                <option>Graduate / Professional</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <label for="subject">Subject or Exam</label>
+              <input id="subject" name="subject" type="text" placeholder="e.g., ASVAB, SAT, Algebra II, Legal Writing" />
+            </div>
+
+            <div class="row">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" placeholder="Tell us your goals, challenges, and timeline."></textarea>
+            </div>
+
+            <button class="btn primary" type="submit" style="border:none; cursor:pointer;">Send Message →</button>
+            <div class="fineprint">* Required fields</div>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Study Hygiene. All rights reserved.
+    © <span id="year"></span> Study Hygiene. All rights reserved.
   </footer>
 
-  <!-- FAQ toggle script -->
   <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ accordion
     document.addEventListener('DOMContentLoaded', () => {
-      const faqButtons = document.querySelectorAll('.faq-question');
-
-      faqButtons.forEach((btn) => {
+      const buttons = document.querySelectorAll('.q');
+      buttons.forEach((btn) => {
         btn.addEventListener('click', () => {
-          const item = btn.closest('.faq-item');
-          const answer = item.querySelector('.faq-answer');
           const expanded = btn.getAttribute('aria-expanded') === 'true';
-
+          const answer = btn.parentElement.querySelector('.a');
           btn.setAttribute('aria-expanded', String(!expanded));
           answer.hidden = expanded;
 
-          const icon = btn.querySelector('.faq-icon');
+          const icon = btn.querySelector('span[aria-hidden="true"]');
           if (icon) icon.textContent = expanded ? '+' : '–';
         });
       });
     });
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        menuBtn.textContent = isOpen ? '×' : '≡';
+      });
+    }
   </script>
 </body>
 </html>
-```
