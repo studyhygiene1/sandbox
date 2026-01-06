@@ -5,153 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Study Hygiene | Online Tutoring & Test Prep</title>
 
-  <!-- Favicon (update paths once uploaded) -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="/favicon-192.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- Canonical -->
   <link rel="canonical" href="https://www.studyhygiene.com/" />
 
-  <!-- SEO -->
-  <meta name="description" content="Study Hygiene provides premium online tutoring and test prep nationwide. Expert help for math, SAT, ACT, GRE, ASVAB, private school admissions, law school, and writing." />
-  <meta name="keywords" content="online tutoring, SAT tutor, ACT tutor, GRE tutor, ASVAB tutor, math tutor, law school tutor, legal writing tutor, college admissions essay coach, academic coaching" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Study Hygiene | Online Tutoring & Test Prep" />
-  <meta property="og:description" content="Premium online tutoring and test prep for middle school through graduate/professional. SAT, ACT, GRE, ASVAB, math, law, writing, and more." />
-  <meta property="og:url" content="https://www.studyhygiene.com/" />
-  <meta property="og:image" content="https://www.studyhygiene.com/og-image.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Study Hygiene | Online Tutoring & Test Prep" />
-  <meta name="twitter:description" content="Online tutoring and test prep across the U.S. SAT, ACT, GRE, ASVAB, math, law, and writing." />
-  <meta name="twitter:image" content="https://www.studyhygiene.com/og-image.jpg" />
+  <meta name="description" content="Study Hygiene offers private online tutoring and test prep nationwide. Math, SAT, ACT, GRE, ASVAB, law school, and writing support with experienced educators." />
 
   <style>
     :root{
-      /* Soft, subtle color scheme (less white, still bright) */
-      --bg0:#f6f7ff;
-      --bg1:#eef6ff;
-      --bg2:#f3fbff;
-      --ink:#0f172a;
-      --muted:#42556c;
-      --panel: rgba(255,255,255,0.70);
-      --panel2: rgba(255,255,255,0.82);
-      --border: rgba(15,23,42,0.10);
+      /* ===== New Warm Academic Palette ===== */
+      --bg-main: #f4f1ec;      /* parchment */
+      --bg-soft: #ede9e3;
+      --panel: rgba(255,255,255,0.65);
+      --border: rgba(40,44,52,0.12);
 
-      --accent:#2563eb;   /* blue */
-      --accent2:#06b6d4;  /* cyan */
-      --accent3:#a78bfa;  /* soft violet */
+      --text-main: #2b2e34;   /* charcoal */
+      --text-muted: #5f6673;
 
-      --shadow: 0 18px 50px rgba(2,6,23,0.10);
+      --accent: #2f6f73;      /* deep teal */
+      --accent-soft: rgba(47,111,115,0.12);
+
+      --accent-alt: #5b6b9a;  /* muted indigo */
+      --accent-warm: #c08a5a; /* sandstone */
+
       --radius: 1.1rem;
-      --max: 1060px;
+      --shadow: 0 18px 40px rgba(0,0,0,0.08);
+      --max: 980px;
     }
 
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
+
     body{
       margin:0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text-main);
       line-height: 1.7;
-
-      /* Subtle, soft background (less white) */
       background:
-        radial-gradient(900px 520px at 15% 0%, rgba(37,99,235,0.12), transparent 60%),
-        radial-gradient(900px 520px at 85% 5%, rgba(6,182,212,0.14), transparent 60%),
-        radial-gradient(900px 520px at 50% 120%, rgba(167,139,250,0.16), transparent 55%),
-        linear-gradient(180deg, var(--bg1), var(--bg0));
+        radial-gradient(700px 400px at 10% 0%, rgba(47,111,115,0.12), transparent 60%),
+        radial-gradient(700px 400px at 90% 10%, rgba(192,138,90,0.14), transparent 60%),
+        linear-gradient(180deg, var(--bg-soft), var(--bg-main));
     }
 
-    /* Make links look like links */
-    a{ color: var(--accent); text-underline-offset: 3px; }
-    a:hover{ color:#1d4ed8; }
+    /* Links should look like links */
+    a{
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    a:hover{ color: #255b5e; }
 
     /* ===== Header ===== */
     header{
       position: sticky;
       top:0;
-      z-index: 50;
-      background: rgba(245,247,255,0.78);
-      backdrop-filter: blur(12px);
+      z-index:10;
+      background: rgba(244,241,236,0.85);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
+
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 0.85rem 1.1rem;
+      padding: 0.9rem 1rem;
     }
+
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap: 0.75rem;
+      gap:1rem;
     }
+
     .brand{
       text-decoration:none;
-      color: var(--ink);
-      display:flex;
-      flex-direction:column;
-      gap:0.12rem;
-      min-width: 220px;
+      color: var(--text-main);
     }
-    .brand .name{ font-weight: 850; letter-spacing: 0.01em; }
-    .brand .tag{ color: var(--muted); font-size: 0.92rem; }
+
+    .brand strong{
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span{
+      display:block;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
 
     .menu-btn{
       display:none;
-      width:44px;height:44px;
-      border-radius:999px;
       border:1px solid var(--border);
-      background: rgba(255,255,255,0.65);
+      background: var(--panel);
+      border-radius:999px;
+      width:42px;height:42px;
+      font-size:1.3rem;
       cursor:pointer;
-      font-weight:800;
-      color: var(--ink);
     }
 
-    .nav-links{
+    nav{
       display:flex;
-      gap: 0.9rem;
+      gap:0.9rem;
       align-items:center;
-      flex-wrap: wrap;
-      justify-content:flex-end;
+      flex-wrap:wrap;
     }
-    .nav-links a{
-      text-decoration: underline;
-      text-decoration-color: rgba(37,99,235,0.35);
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
-      font-weight: 650;
-      color: var(--ink);
-      opacity: 0.92;
-    }
-    .nav-links a:hover{
-      color: var(--accent);
-      text-decoration-color: rgba(37,99,235,0.70);
-      opacity: 1;
+
+    nav a{
+      font-weight: 600;
+      color: var(--text-main);
+      opacity:0.9;
     }
 
     .cta{
       text-decoration:none !important;
-      font-weight: 750 !important;
-      color: #fff !important;
-      padding: 0.55rem 0.9rem;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      border: 1px solid rgba(37,99,235,0.18);
-      box-shadow: 0 14px 30px rgba(37,99,235,0.18);
-      white-space: nowrap;
+      padding:0.5rem 0.9rem;
+      border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      color:#fff !important;
+      box-shadow: 0 10px 24px rgba(47,111,115,0.25);
     }
 
-    /* ===== Layout ===== */
+    /* ===== Main ===== */
     main{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 1.1rem 1.1rem 2.6rem;
+      padding: 1.4rem 1rem 2.8rem;
     }
 
     .panel{
@@ -159,459 +138,231 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      padding: 1.4rem 1.3rem;
+      margin-bottom: 1.2rem;
     }
 
     /* ===== Hero ===== */
-    .hero{
-      margin-top: 0.8rem;
-      padding: 1.35rem 1.25rem;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.58)),
-        radial-gradient(600px 300px at 10% 0%, rgba(37,99,235,0.10), transparent 55%),
-        radial-gradient(600px 300px at 95% 10%, rgba(6,182,212,0.12), transparent 60%);
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(37,99,235,0.08);
-      border: 1px solid rgba(37,99,235,0.14);
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-    .dot{
-      width:8px;height:8px;border-radius:999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-    }
-
-    h1{
+    .hero h1{
       font-size: clamp(2rem, 4.2vw, 2.7rem);
       line-height: 1.15;
-      margin: 0.75rem 0 0.55rem;
-      letter-spacing: -0.01em;
-      font-weight: 800;
+      margin:0.2rem 0 0.6rem;
+      font-weight: 750;
     }
-    .subhead{
-      margin: 0 0 1.1rem;
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 55ch;
+
+    .hero p{
+      max-width: 60ch;
+      color: var(--text-muted);
+      font-size:1.05rem;
     }
 
     .actions{
       display:flex;
       flex-wrap:wrap;
-      gap: 0.7rem;
-      align-items:center;
-      margin-top: 0.25rem;
+      gap:0.7rem;
+      margin-top:0.8rem;
     }
+
     .btn{
       display:inline-flex;
       align-items:center;
-      justify-content:center;
-      gap: 0.5rem;
-      padding: 0.72rem 1.05rem;
-      border-radius: 999px;
+      padding:0.65rem 1.05rem;
+      border-radius:999px;
       text-decoration:none;
-      font-weight: 750;
-      border: 1px solid rgba(15,23,42,0.14);
-      background: rgba(255,255,255,0.60);
-      color: var(--ink);
-      transition: transform 0.12s ease-out, border-color 0.12s ease-out, box-shadow 0.12s ease-out;
+      font-weight:600;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.55);
+      color: var(--text-main);
     }
-    .btn:hover{
-      transform: translateY(-1px);
-      border-color: rgba(37,99,235,0.30);
-      box-shadow: 0 12px 30px rgba(2,6,23,0.08);
-      color: var(--accent);
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-      border-color: rgba(37,99,235,0.18);
-      box-shadow: 0 14px 30px rgba(37,99,235,0.18);
-    }
-    .btn.primary:hover{ color:#fff; }
 
-    .quick{
-      margin-top: 1rem;
-      color: var(--muted);
-      font-size: 0.95rem;
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      color:#fff;
+      border:none;
     }
-    .quick a{ font-weight: 700; }
 
     /* ===== Sections ===== */
-    section{ margin-top: 1.1rem; }
-    .section-head{
-      padding: 0.95rem 1.05rem 0.2rem;
-    }
-    .section-head h2{
-      margin:0;
-      font-size: 1.45rem;
-      font-weight: 780;
-      letter-spacing: -0.01em;
-    }
-    .section-head p{
-      margin:0.25rem 0 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-      max-width: 68ch;
+    h2{
+      font-size:1.45rem;
+      margin:0 0 0.4rem;
+      font-weight:700;
     }
 
-    .content{
-      padding: 0.85rem 1.05rem 1.05rem;
+    .section-note{
+      color: var(--text-muted);
+      max-width:65ch;
     }
 
-    /* A calm, readable list style */
-    .list{
-      margin: 0.6rem 0 0;
-      padding-left: 1.1rem;
-      color: var(--muted);
-    }
-    .list li{ margin: 0.32rem 0; }
-
-    /* Two-column on desktop, single column on mobile */
-    .grid2{
+    .grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.9rem;
+      gap:1rem;
+      margin-top:0.6rem;
     }
 
-    .mini{
-      background: var(--panel2);
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      padding: 0.9rem 0.95rem;
-      box-shadow: 0 10px 28px rgba(2,6,23,0.06);
+    .card{
+      background: rgba(255,255,255,0.75);
+      border:1px solid var(--border);
+      border-radius:1rem;
+      padding:1rem;
     }
-    .mini h3{
-      margin: 0 0 0.25rem;
-      font-size: 1.05rem;
-      font-weight: 760;
+
+    ul{
+      padding-left:1.1rem;
+      color: var(--text-muted);
     }
-    .mini p{ margin:0; color: var(--muted); }
+
+    li{ margin:0.3rem 0; }
 
     /* ===== FAQ ===== */
-    .faqitem{
-      border: 1px solid var(--border);
-      border-radius: 1rem;
-      background: rgba(255,255,255,0.78);
-      box-shadow: 0 10px 26px rgba(2,6,23,0.06);
-      margin-bottom: 0.75rem;
-      overflow:hidden;
+    .faq-item{
+      border-top:1px solid var(--border);
+      padding:0.8rem 0;
     }
-    .q{
-      width:100%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 1rem;
-      padding: 0.85rem 0.95rem;
-      cursor:pointer;
-      background:transparent;
+
+    .faq-q{
+      background:none;
       border:none;
-      font: inherit;
-      text-align:left;
-      color: var(--ink);
-      font-weight: 720;
+      font:inherit;
+      font-weight:600;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      width:100%;
     }
-    .q span:last-child{
-      width:28px;height:28px;
-      border-radius:999px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background: rgba(37,99,235,0.10);
-      border: 1px solid rgba(37,99,235,0.16);
-      color: var(--accent);
-      font-weight: 900;
-      flex-shrink:0;
-    }
-    .a{
-      padding: 0 0.95rem 0.95rem;
-      color: var(--muted);
+
+    .faq-a{
+      margin-top:0.4rem;
+      color: var(--text-muted);
     }
 
     /* ===== Footer ===== */
     footer{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 1.4rem 1.1rem 2.2rem;
       text-align:center;
-      color: var(--muted);
-      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-size:0.9rem;
+      padding:2rem 1rem;
     }
 
-    /* ===== Responsive ===== */
-    @media (max-width: 860px){
-      .grid2{ grid-template-columns: 1fr; }
-    }
+    /* ===== Mobile ===== */
     @media (max-width: 720px){
-      .menu-btn{ display:inline-flex; }
-      .nav{ align-items:flex-start; }
-      .nav-links{
-        display:none;
-        width:100%;
-        padding-top: 0.8rem;
-        border-top: 1px solid var(--border);
-        flex-direction: column;
-        align-items:flex-start;
-        gap: 0.65rem;
-      }
-      .nav-links.open{ display:flex; }
-      .cta{ width:100%; text-align:center; }
-      .brand{ min-width: unset; }
+      .grid{ grid-template-columns:1fr; }
+      nav{ display:none; flex-direction:column; align-items:flex-start; }
+      nav.open{ display:flex; }
+      .menu-btn{ display:block; }
     }
   </style>
-
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Study Hygiene",
-    "url": "https://www.studyhygiene.com/",
-    "description": "Study Hygiene provides premium online tutoring, test prep, and academic coaching nationwide.",
-    "areaServed": { "@type": "Country", "name": "United States" },
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "studyhygiene1@gmail.com",
-      "telephone": "+1-480-442-4224",
-      "availableLanguage": ["English"]
-    }]
-  }
-  </script>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <div class="nav" role="navigation" aria-label="Main navigation">
-        <a class="brand" href="/">
-          <div class="name">Study Hygiene Tutoring</div>
-          <div class="tag">Online Tutoring • Test Prep • Academic Coaching</div>
-        </a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <strong>Study Hygiene Tutoring</strong>
+      <span>Online tutoring & test preparation</span>
+    </a>
 
-        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" id="menuBtn">≡</button>
+    <button class="menu-btn" id="menuBtn">≡</button>
 
-        <nav class="nav-links" id="navLinks">
-          <a href="#services">Services</a>
-          <a href="/asvab-tutoring/">ASVAB</a>
-          <a href="#about">About</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-          <a class="cta" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Free Consultation</a>
-        </nav>
+    <nav id="navLinks">
+      <a href="#services">Services</a>
+      <a href="/asvab-tutoring/">ASVAB</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation">Free Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="panel hero">
+    <h1>Private Online Tutoring & Test Prep</h1>
+    <p>
+      One-on-one online tutoring for middle school, high school, college, and graduate students.
+      Thoughtful instruction, clear explanations, and steady progress—without the noise.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation">Free Consultation</a>
+      <a class="btn" href="/asvab-tutoring/">ASVAB Tutoring</a>
+      <a class="btn" href="#services">Services</a>
+    </div>
+
+    <p style="margin-top:0.8rem;">
+      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> ·
+      Text: <a href="tel:+14804424224">480-442-4224</a>
+    </p>
+  </section>
+
+  <section class="panel" id="services">
+    <h2>Services</h2>
+    <p class="section-note">Focused help in high-impact areas.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Test Preparation</h3>
+        <ul>
+          <li>SAT & ACT</li>
+          <li>GRE</li>
+          <li><a href="/asvab-tutoring/">ASVAB / AFQT</a></li>
+          <li>ISEE & SSAT</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Tutoring & Writing</h3>
+        <ul>
+          <li>Math: Pre-Algebra → Calculus</li>
+          <li>College & graduate writing</li>
+          <li>Law school tutoring & legal writing</li>
+        </ul>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- HERO -->
-    <section class="panel hero" aria-label="Hero">
-      <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Nationwide online tutoring • Flexible scheduling</div>
-      <h1>Premium Online Tutoring & Test Prep</h1>
-      <p class="subhead">
-        One-on-one online tutoring for middle school, high school, college, and graduate/professional students.
-        We blend content mastery, efficient strategy, and better study habits—so results show up faster.
-      </p>
+  <section class="panel" id="about">
+    <h2>About</h2>
+    <p class="section-note">
+      Study Hygiene is built on the idea that strong fundamentals, good habits,
+      and calm confidence outperform frantic studying every time.
+    </p>
+  </section>
 
-      <div class="actions">
-        <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Book a Free 15-Minute Consultation</a>
-        <a class="btn" href="/asvab-tutoring/">ASVAB Tutoring</a>
-        <a class="btn" href="#services">Browse Services</a>
-      </div>
+  <section class="panel" id="faq">
+    <h2>FAQ</h2>
 
-      <div class="quick">
-        Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a>
-        &nbsp;•&nbsp;
-        Text: <a href="tel:+14804424224">480-442-4224</a>
-      </div>
-    </section>
+    <div class="faq-item">
+      <button class="faq-q">Do you work nationwide? <span>+</span></button>
+      <div class="faq-a">Yes. All sessions are live online.</div>
+    </div>
 
-    <!-- SERVICES -->
-    <section class="panel" id="services" aria-label="Services">
-      <div class="section-head">
-        <h2>Services</h2>
-        <p>
-          Choose the area you need help with, and we’ll build a simple plan: diagnostics → targeted practice → measurable progress.
-        </p>
-      </div>
+    <div class="faq-item">
+      <button class="faq-q">What levels do you tutor? <span>+</span></button>
+      <div class="faq-a">Middle school through graduate and professional.</div>
+    </div>
+  </section>
 
-      <div class="content grid2">
-        <div class="mini" aria-label="Test prep">
-          <h3>Test Prep</h3>
-          <ul class="list">
-            <li>SAT (Math, Reading, Writing)</li>
-            <li>ACT (English, Math, Reading, Science)</li>
-            <li>GRE (Quant + Verbal)</li>
-            <li><a href="/asvab-tutoring/">ASVAB / AFQT</a> (dedicated page)</li>
-            <li>Private school admissions: ISEE, SSAT</li>
-          </ul>
-        </div>
+  <section class="panel" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
+      Text: <a href="tel:+14804424224">480-442-4224</a><br/>
+      Rate: $80/hour · Free 15-minute consultation
+    </p>
+  </section>
+</main>
 
-        <div class="mini" aria-label="Tutoring and writing">
-          <h3>Tutoring & Writing</h3>
-          <ul class="list">
-            <li>Math: Pre-Algebra → Calculus (including Business Calc)</li>
-            <li>Writing: admissions essays, personal statements, academic writing</li>
-            <li>Law: legal writing (IRAC/CREAC), contracts, civil procedure, torts</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<footer>
+  © <span id="year"></span> Study Hygiene
+</footer>
 
-    <!-- ABOUT -->
-    <section class="panel" id="about" aria-label="About">
-      <div class="section-head">
-        <h2>About</h2>
-        <p>
-          We’re educators at heart, with degrees in engineering and law. Our work is focused on clarity, confidence, and consistency.
-        </p>
-      </div>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-      <div class="content grid2">
-        <div class="mini">
-          <h3>Our approach</h3>
-          <p>
-            We teach the underlying skills, then train strategy and pacing so students perform under time pressure.
-            You’ll also get a simple weekly plan you can actually follow.
-          </p>
-        </div>
-
-        <div class="mini">
-          <h3>Credentials</h3>
-          <p>
-            Licensed attorney • M.Sc. Electrical & Computer Engineering • B.Sc. Computer Engineering • CRLA & IXL certified • 25+ years experience
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="panel" id="faq" aria-label="FAQ">
-      <div class="section-head">
-        <h2>FAQ</h2>
-        <p>Quick answers to common questions.</p>
-      </div>
-
-      <div class="content">
-        <div class="faqitem">
-          <button class="q" aria-expanded="false">
-            <span>Do you offer online tutoring nationwide?</span>
-            <span aria-hidden="true">+</span>
-          </button>
-          <div class="a" hidden>
-            Yes. Sessions are live online, so we work with students anywhere in the U.S. (and often internationally).
-          </div>
-        </div>
-
-        <div class="faqitem">
-          <button class="q" aria-expanded="false">
-            <span>What levels do you work with?</span>
-            <span aria-hidden="true">+</span>
-          </button>
-          <div class="a" hidden>
-            Middle school, high school, college, and graduate/professional. We tailor sessions to your goals and timeline.
-          </div>
-        </div>
-
-        <div class="faqitem">
-          <button class="q" aria-expanded="false">
-            <span>How do sessions work online?</span>
-            <span aria-hidden="true">+</span>
-          </button>
-          <div class="a" hidden>
-            We meet via Google Meet with screen sharing and structured practice sets. You’ll leave each session knowing exactly what to do next.
-          </div>
-        </div>
-
-        <div class="faqitem">
-          <button class="q" aria-expanded="false">
-            <span>How do I get started?</span>
-            <span aria-hidden="true">+</span>
-          </button>
-          <div class="a" hidden>
-            Email <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> or text
-            <a href="tel:+14804424224">480-442-4224</a> for a free 15-minute consultation.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT (no form) -->
-    <section class="panel" id="contact" aria-label="Contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <p>
-          For scheduling, email is best. Text works great for quick availability questions.
-        </p>
-      </div>
-
-      <div class="content grid2">
-        <div class="mini">
-          <h3>Contact details</h3>
-          <p>
-            Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
-            Text: <a href="tel:+14804424224">480-442-4224</a><br/>
-            Format: Online via Google Meet<br/>
-            Availability: 7 days/week, flexible schedule
-          </p>
-        </div>
-
-        <div class="mini">
-          <h3>Pricing</h3>
-          <p>
-            Hourly Rate: <strong style="font-weight:760;">$80</strong><br/>
-            Free 15-minute consultation available.
-          </p>
-          <p style="margin-top:0.65rem;">
-            <a class="btn primary" style="display:inline-flex;" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Email for a Free Consultation</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Study Hygiene. All rights reserved.
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
-    if (menuBtn && navLinks) {
-      menuBtn.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        menuBtn.setAttribute('aria-expanded', String(isOpen));
-        menuBtn.textContent = isOpen ? '×' : '≡';
-      });
-    }
-
-    // FAQ accordion
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.q');
-      buttons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const expanded = btn.getAttribute('aria-expanded') === 'true';
-          const answer = btn.parentElement.querySelector('.a');
-          btn.setAttribute('aria-expanded', String(!expanded));
-          answer.hidden = expanded;
-
-          const icon = btn.querySelector('span[aria-hidden="true"]');
-          if (icon) icon.textContent = expanded ? '+' : '–';
-        });
-      });
-    });
-  </script>
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('navLinks');
+  btn.addEventListener('click', () => nav.classList.toggle('open'));
+</script>
 </body>
 </html>
