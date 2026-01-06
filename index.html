@@ -6,28 +6,29 @@
   <title>Study Hygiene | Online Tutoring & Test Prep</title>
 
   <link rel="canonical" href="https://www.studyhygiene.com/" />
-
   <meta name="description" content="Study Hygiene offers private online tutoring and test prep nationwide. Math, SAT, ACT, GRE, ASVAB, law school, and writing support with experienced educators." />
 
   <style>
     :root{
-      /* ===== New Warm Academic Palette ===== */
-      --bg-main: #f4f1ec;      /* parchment */
-      --bg-soft: #ede9e3;
-      --panel: rgba(255,255,255,0.65);
-      --border: rgba(40,44,52,0.12);
+      /* ===== Warm Academic Palette (richer + deeper) ===== */
+      --bg-main: #f2eee7;      /* parchment */
+      --bg-soft: #e9e2d8;      /* warmer contrast */
+      --panel: rgba(255,255,255,0.72);
+      --panel-strong: rgba(255,255,255,0.86);
+      --border: rgba(32,35,41,0.14);
 
-      --text-main: #2b2e34;   /* charcoal */
-      --text-muted: #5f6673;
+      --text-main: #1f232a;    /* darker charcoal for stronger legibility */
+      --text-muted: #465061;   /* less washed out */
+      --text-soft: #5c6778;
 
-      --accent: #2f6f73;      /* deep teal */
-      --accent-soft: rgba(47,111,115,0.12);
-
-      --accent-alt: #5b6b9a;  /* muted indigo */
-      --accent-warm: #c08a5a; /* sandstone */
+      --accent: #2a6f73;       /* deep teal */
+      --accent-alt: #4f5f99;   /* richer indigo */
+      --accent-warm: #c07f48;  /* warmer sandstone */
+      --accent-soft: rgba(42,111,115,0.14);
 
       --radius: 1.1rem;
-      --shadow: 0 18px 40px rgba(0,0,0,0.08);
+      --shadow: 0 20px 46px rgba(0,0,0,0.10);
+      --shadow-soft: 0 12px 28px rgba(0,0,0,0.08);
       --max: 980px;
     }
 
@@ -38,10 +39,13 @@
       margin:0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--text-main);
-      line-height: 1.7;
+      line-height: 1.75;
+
+      /* Richer background depth */
       background:
-        radial-gradient(700px 400px at 10% 0%, rgba(47,111,115,0.12), transparent 60%),
-        radial-gradient(700px 400px at 90% 10%, rgba(192,138,90,0.14), transparent 60%),
+        radial-gradient(900px 520px at 12% -5%, rgba(42,111,115,0.18), transparent 60%),
+        radial-gradient(900px 520px at 92% 0%, rgba(192,127,72,0.18), transparent 62%),
+        radial-gradient(820px 480px at 50% 110%, rgba(79,95,153,0.14), transparent 58%),
         linear-gradient(180deg, var(--bg-soft), var(--bg-main));
     }
 
@@ -52,14 +56,14 @@
       text-decoration-thickness: 2px;
       text-underline-offset: 4px;
     }
-    a:hover{ color: #255b5e; }
+    a:hover{ color: #215a5e; }
 
     /* ===== Header ===== */
     header{
       position: sticky;
       top:0;
       z-index:10;
-      background: rgba(244,241,236,0.85);
+      background: rgba(242,238,231,0.88);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
@@ -67,7 +71,7 @@
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 0.9rem 1rem;
+      padding: 0.95rem 1rem;
     }
 
     .nav{
@@ -83,54 +87,58 @@
     }
 
     .brand strong{
-      font-size: 1.05rem;
-      font-weight: 700;
+      font-size: 1.08rem;
+      font-weight: 800;
       letter-spacing: 0.02em;
     }
 
     .brand span{
       display:block;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-muted);
+      font-weight: 600;
     }
 
     .menu-btn{
       display:none;
       border:1px solid var(--border);
-      background: var(--panel);
+      background: rgba(255,255,255,0.68);
       border-radius:999px;
-      width:42px;height:42px;
-      font-size:1.3rem;
+      width:44px;height:44px;
+      font-size:1.35rem;
       cursor:pointer;
+      box-shadow: var(--shadow-soft);
     }
 
     nav{
       display:flex;
-      gap:0.9rem;
+      gap:0.95rem;
       align-items:center;
       flex-wrap:wrap;
     }
 
     nav a{
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text-main);
-      opacity:0.9;
+      opacity:0.92;
     }
+    nav a:hover{ opacity:1; }
 
     .cta{
       text-decoration:none !important;
-      padding:0.5rem 0.9rem;
+      padding:0.56rem 0.95rem;
       border-radius:999px;
       background: linear-gradient(135deg, var(--accent), var(--accent-alt));
       color:#fff !important;
-      box-shadow: 0 10px 24px rgba(47,111,115,0.25);
+      box-shadow: 0 14px 30px rgba(42,111,115,0.22);
     }
+    .cta:hover{ filter: brightness(0.98); }
 
     /* ===== Main ===== */
     main{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 1.4rem 1rem 2.8rem;
+      padding: 1.5rem 1rem 2.9rem;
     }
 
     .panel{
@@ -138,102 +146,148 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 1.4rem 1.3rem;
-      margin-bottom: 1.2rem;
+      padding: 1.45rem 1.35rem;
+      margin-bottom: 1.25rem;
     }
 
     /* ===== Hero ===== */
+    .hero{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.55)),
+        radial-gradient(680px 340px at 10% 0%, rgba(42,111,115,0.14), transparent 60%),
+        radial-gradient(680px 340px at 95% 10%, rgba(192,127,72,0.14), transparent 62%);
+    }
+
     .hero h1{
-      font-size: clamp(2rem, 4.2vw, 2.7rem);
-      line-height: 1.15;
-      margin:0.2rem 0 0.6rem;
-      font-weight: 750;
+      font-size: clamp(2.05rem, 4.2vw, 2.75rem);
+      line-height: 1.14;
+      margin:0.2rem 0 0.65rem;
+      font-weight: 850;
+      letter-spacing: -0.01em;
     }
 
     .hero p{
-      max-width: 60ch;
+      max-width: 62ch;
       color: var(--text-muted);
-      font-size:1.05rem;
+      font-size: 1.06rem;
+      font-weight: 600; /* makes text stand out more */
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.62rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(42,111,115,0.20);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.92rem;
+    }
+
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
     }
 
     .actions{
       display:flex;
       flex-wrap:wrap;
       gap:0.7rem;
-      margin-top:0.8rem;
+      margin-top:0.9rem;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
-      padding:0.65rem 1.05rem;
+      padding:0.68rem 1.08rem;
       border-radius:999px;
       text-decoration:none;
-      font-weight:600;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,0.55);
+      font-weight: 750;
+      border:1px solid rgba(32,35,41,0.16);
+      background: rgba(255,255,255,0.62);
       color: var(--text-main);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 18px 34px rgba(0,0,0,0.10);
     }
 
     .btn.primary{
       background: linear-gradient(135deg, var(--accent), var(--accent-alt));
       color:#fff;
       border:none;
+      box-shadow: 0 16px 34px rgba(42,111,115,0.22);
     }
 
     /* ===== Sections ===== */
     h2{
-      font-size:1.45rem;
-      margin:0 0 0.4rem;
-      font-weight:700;
+      font-size: 1.5rem;
+      margin:0 0 0.45rem;
+      font-weight: 820;
+      letter-spacing: -0.01em;
     }
 
     .section-note{
       color: var(--text-muted);
-      max-width:65ch;
+      max-width: 70ch;
+      font-weight: 600;
     }
 
     .grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:1rem;
-      margin-top:0.6rem;
+      margin-top:0.7rem;
     }
 
     .card{
-      background: rgba(255,255,255,0.75);
-      border:1px solid var(--border);
+      background: var(--panel-strong);
+      border:1px solid rgba(32,35,41,0.14);
       border-radius:1rem;
-      padding:1rem;
+      padding:1.05rem 1.05rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card h3{
+      margin:0 0 0.35rem;
+      font-size: 1.08rem;
+      font-weight: 820;
     }
 
     ul{
       padding-left:1.1rem;
       color: var(--text-muted);
+      font-weight: 600;
     }
-
     li{ margin:0.3rem 0; }
 
     /* ===== FAQ ===== */
     .faq-item{
-      border-top:1px solid var(--border);
-      padding:0.8rem 0;
+      border-top:1px solid rgba(32,35,41,0.14);
+      padding:0.85rem 0;
     }
 
     .faq-q{
       background:none;
       border:none;
       font:inherit;
-      font-weight:600;
+      font-weight: 750;
       cursor:pointer;
       display:flex;
       justify-content:space-between;
       width:100%;
+      color: var(--text-main);
     }
 
     .faq-a{
-      margin-top:0.4rem;
+      margin-top:0.45rem;
       color: var(--text-muted);
+      font-weight: 600;
     }
 
     /* ===== Footer ===== */
@@ -242,12 +296,13 @@
       color: var(--text-muted);
       font-size:0.9rem;
       padding:2rem 1rem;
+      font-weight: 600;
     }
 
     /* ===== Mobile ===== */
     @media (max-width: 720px){
       .grid{ grid-template-columns:1fr; }
-      nav{ display:none; flex-direction:column; align-items:flex-start; }
+      nav{ display:none; flex-direction:column; align-items:flex-start; gap:0.7rem; }
       nav.open{ display:flex; }
       .menu-btn{ display:block; }
     }
@@ -262,9 +317,9 @@
       <span>Online tutoring & test preparation</span>
     </a>
 
-    <button class="menu-btn" id="menuBtn">≡</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">≡</button>
 
-    <nav id="navLinks">
+    <nav id="navLinks" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="/asvab-tutoring/">ASVAB</a>
       <a href="#about">About</a>
@@ -276,10 +331,12 @@
 </header>
 
 <main>
-  <section class="panel hero">
+  <section class="panel hero" aria-label="Hero">
+    <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Nationwide online tutoring • Flexible scheduling</div>
+
     <h1>Private Online Tutoring & Test Prep</h1>
     <p>
-      One-on-one online tutoring for middle school, high school, college, and graduate students.
+      One-on-one online tutoring for middle school, high school, college, and graduate/professional students.
       Thoughtful instruction, clear explanations, and steady progress—without the noise.
     </p>
 
@@ -289,17 +346,17 @@
       <a class="btn" href="#services">Services</a>
     </div>
 
-    <p style="margin-top:0.8rem;">
+    <p style="margin-top:0.9rem;">
       Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> ·
       Text: <a href="tel:+14804424224">480-442-4224</a>
     </p>
   </section>
 
-  <section class="panel" id="services">
+  <section class="panel" id="services" aria-label="Services">
     <h2>Services</h2>
     <p class="section-note">Focused help in high-impact areas.</p>
 
-    <div class="grid">
+    <div class="grid" aria-label="Service categories">
       <div class="card">
         <h3>Test Preparation</h3>
         <ul>
@@ -321,7 +378,7 @@
     </div>
   </section>
 
-  <section class="panel" id="about">
+  <section class="panel" id="about" aria-label="About">
     <h2>About</h2>
     <p class="section-note">
       Study Hygiene is built on the idea that strong fundamentals, good habits,
@@ -329,23 +386,28 @@
     </p>
   </section>
 
-  <section class="panel" id="faq">
+  <section class="panel" id="faq" aria-label="FAQ">
     <h2>FAQ</h2>
 
     <div class="faq-item">
-      <button class="faq-q">Do you work nationwide? <span>+</span></button>
-      <div class="faq-a">Yes. All sessions are live online.</div>
+      <button class="faq-q" type="button">Do you work nationwide? <span aria-hidden="true">+</span></button>
+      <div class="faq-a" hidden>Yes. All sessions are live online.</div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-q">What levels do you tutor? <span>+</span></button>
-      <div class="faq-a">Middle school through graduate and professional.</div>
+      <button class="faq-q" type="button">What levels do you tutor? <span aria-hidden="true">+</span></button>
+      <div class="faq-a" hidden>Middle school through graduate and professional.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">How do I get started? <span aria-hidden="true">+</span></button>
+      <div class="faq-a" hidden>Email us or text us for a free 15-minute consultation.</div>
     </div>
   </section>
 
-  <section class="panel" id="contact">
+  <section class="panel" id="contact" aria-label="Contact">
     <h2>Contact</h2>
-    <p>
+    <p class="section-note">
       Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
       Text: <a href="tel:+14804424224">480-442-4224</a><br/>
       Rate: $80/hour · Free 15-minute consultation
@@ -360,9 +422,26 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Mobile menu toggle
   const btn = document.getElementById('menuBtn');
   const nav = document.getElementById('navLinks');
-  btn.addEventListener('click', () => nav.classList.toggle('open'));
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? '×' : '≡';
+  });
+
+  // Simple FAQ toggle
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    const icon = q.querySelector('span[aria-hidden="true"]');
+    q.addEventListener('click', () => {
+      const isHidden = a.hidden;
+      a.hidden = !isHidden;
+      if (icon) icon.textContent = isHidden ? '–' : '+';
+    });
+  });
 </script>
 </body>
 </html>
