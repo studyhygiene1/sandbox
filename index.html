@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Study Hygiene | Online Tutoring, Test Prep & Academic Coaching</title>
+  <title>Study Hygiene | Online Tutoring & Test Prep</title>
 
   <!-- Favicon (update paths once uploaded) -->
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -13,37 +13,42 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://www.studyhygiene.com/" />
 
-  <!-- Basic SEO -->
-  <meta name="description" content="Study Hygiene provides premium online tutoring, test prep, and academic coaching nationwide. Expert help for math, SAT, ACT, GRE, ASVAB, private school admissions, law school, writing, and professional skills." />
+  <!-- SEO -->
+  <meta name="description" content="Study Hygiene provides premium online tutoring and test prep nationwide. Expert help for math, SAT, ACT, GRE, ASVAB, private school admissions, law school, and writing." />
   <meta name="keywords" content="online tutoring, SAT tutor, ACT tutor, GRE tutor, ASVAB tutor, math tutor, law school tutor, legal writing tutor, college admissions essay coach, academic coaching" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Study Hygiene | Online Tutoring & Test Prep" />
-  <meta property="og:description" content="Premium online tutoring and test prep for middle school, high school, college, and professionals. SAT, ACT, GRE, ASVAB, math, law, writing, and more." />
+  <meta property="og:description" content="Premium online tutoring and test prep for middle school through graduate/professional. SAT, ACT, GRE, ASVAB, math, law, writing, and more." />
   <meta property="og:url" content="https://www.studyhygiene.com/" />
   <meta property="og:image" content="https://www.studyhygiene.com/og-image.jpg" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Study Hygiene | Online Tutoring & Test Prep" />
-  <meta name="twitter:description" content="Premium online tutoring and academic coaching across the U.S. for SAT, ACT, GRE, ASVAB, math, law, writing & more." />
+  <meta name="twitter:description" content="Online tutoring and test prep across the U.S. SAT, ACT, GRE, ASVAB, math, law, and writing." />
   <meta name="twitter:image" content="https://www.studyhygiene.com/og-image.jpg" />
 
   <style>
     :root{
-      --bg: #f7fbff;
-      --bg2:#eef6ff;
-      --panel: rgba(255,255,255,0.9);
-      --panel-strong: #ffffff;
-      --border: rgba(15,23,42,0.12);
-      --text: #0f172a;
-      --muted: #475569;
-      --accent: #2563eb;
-      --accent2:#06b6d4;
-      --accentSoft: rgba(37,99,235,0.10);
-      --shadow: 0 18px 55px rgba(2,6,23,0.10);
-      --radius: 1.15rem;
+      /* Soft, subtle color scheme (less white, still bright) */
+      --bg0:#f6f7ff;
+      --bg1:#eef6ff;
+      --bg2:#f3fbff;
+      --ink:#0f172a;
+      --muted:#42556c;
+      --panel: rgba(255,255,255,0.70);
+      --panel2: rgba(255,255,255,0.82);
+      --border: rgba(15,23,42,0.10);
+
+      --accent:#2563eb;   /* blue */
+      --accent2:#06b6d4;  /* cyan */
+      --accent3:#a78bfa;  /* soft violet */
+
+      --shadow: 0 18px 50px rgba(2,6,23,0.10);
+      --radius: 1.1rem;
+      --max: 1060px;
     }
 
     *{box-sizing:border-box;}
@@ -51,280 +56,251 @@
     body{
       margin:0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
+      color: var(--ink);
+      line-height: 1.7;
+
+      /* Subtle, soft background (less white) */
       background:
-        radial-gradient(900px 520px at 10% 0%, rgba(37,99,235,0.12), transparent 60%),
-        radial-gradient(900px 520px at 90% 0%, rgba(6,182,212,0.14), transparent 60%),
-        linear-gradient(180deg, var(--bg2), var(--bg));
-      line-height:1.7;
+        radial-gradient(900px 520px at 15% 0%, rgba(37,99,235,0.12), transparent 60%),
+        radial-gradient(900px 520px at 85% 5%, rgba(6,182,212,0.14), transparent 60%),
+        radial-gradient(900px 520px at 50% 120%, rgba(167,139,250,0.16), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg0));
     }
 
-    /* ===== Header / Nav ===== */
+    /* Make links look like links */
+    a{ color: var(--accent); text-underline-offset: 3px; }
+    a:hover{ color:#1d4ed8; }
+
+    /* ===== Header ===== */
     header{
       position: sticky;
-      top: 0;
+      top:0;
       z-index: 50;
-      background: rgba(255,255,255,0.82);
+      background: rgba(245,247,255,0.78);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
     .wrap{
-      max-width: 1120px;
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 0.9rem 1.25rem;
+      padding: 0.85rem 1.1rem;
     }
     .nav{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:1rem;
+      gap: 0.75rem;
     }
     .brand{
+      text-decoration:none;
+      color: var(--ink);
       display:flex;
       flex-direction:column;
-      gap:0.15rem;
-      text-decoration:none;
-      color: var(--text);
+      gap:0.12rem;
       min-width: 220px;
     }
-    .brand .name{
-      font-weight: 900;
-      letter-spacing: 0.01em;
-      font-size: 1.05rem;
-    }
-    .brand .tag{
-      color: var(--muted);
-      font-weight: 650;
-      font-size: 0.9rem;
+    .brand .name{ font-weight: 850; letter-spacing: 0.01em; }
+    .brand .tag{ color: var(--muted); font-size: 0.92rem; }
+
+    .menu-btn{
+      display:none;
+      width:44px;height:44px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.65);
+      cursor:pointer;
+      font-weight:800;
+      color: var(--ink);
     }
 
     .nav-links{
       display:flex;
+      gap: 0.9rem;
       align-items:center;
-      flex-wrap:wrap;
-      gap:0.9rem;
+      flex-wrap: wrap;
       justify-content:flex-end;
     }
     .nav-links a{
-      text-decoration:none;
-      color: var(--muted);
-      font-weight: 850;
-      font-size: 0.95rem;
+      text-decoration: underline;
+      text-decoration-color: rgba(37,99,235,0.35);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      font-weight: 650;
+      color: var(--ink);
+      opacity: 0.92;
     }
-    .nav-links a:hover{ color: var(--accent); }
+    .nav-links a:hover{
+      color: var(--accent);
+      text-decoration-color: rgba(37,99,235,0.70);
+      opacity: 1;
+    }
 
-    .nav-cta{
-      text-decoration:none;
-      font-weight: 950;
+    .cta{
+      text-decoration:none !important;
+      font-weight: 750 !important;
       color: #fff !important;
-      padding: 0.55rem 0.95rem;
+      padding: 0.55rem 0.9rem;
       border-radius: 999px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       border: 1px solid rgba(37,99,235,0.18);
-      box-shadow: 0 16px 34px rgba(37,99,235,0.18);
-      transition: transform 0.15s ease-out;
+      box-shadow: 0 14px 30px rgba(37,99,235,0.18);
       white-space: nowrap;
     }
-    .nav-cta:hover{ transform: translateY(-1px); }
 
-    /* Mobile menu button */
-    .menu-btn{
-      display:none;
-      align-items:center;
-      justify-content:center;
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
+    /* ===== Layout ===== */
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.1rem 1.1rem 2.6rem;
+    }
+
+    .panel{
+      background: var(--panel);
       border: 1px solid var(--border);
-      background: rgba(255,255,255,0.9);
-      cursor:pointer;
-      font-weight: 900;
-      color: var(--text);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     /* ===== Hero ===== */
-    main{ max-width: 1120px; margin: 0 auto; padding: 1.25rem 1.25rem 3rem; }
     .hero{
-      display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 1.35rem;
-      align-items: start;
-      margin-top: 0.75rem;
+      margin-top: 0.8rem;
+      padding: 1.35rem 1.25rem;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.58)),
+        radial-gradient(600px 300px at 10% 0%, rgba(37,99,235,0.10), transparent 55%),
+        radial-gradient(600px 300px at 95% 10%, rgba(6,182,212,0.12), transparent 60%);
     }
-    .hero-left{
-      padding: 1.4rem 1.35rem;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.78);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
+
     .eyebrow{
       display:inline-flex;
       align-items:center;
-      gap:0.5rem;
-      font-weight: 950;
-      color: var(--accent);
-      background: var(--accentSoft);
-      border: 1px solid rgba(37,99,235,0.16);
+      gap: 0.5rem;
       padding: 0.35rem 0.6rem;
       border-radius: 999px;
+      background: rgba(37,99,235,0.08);
+      border: 1px solid rgba(37,99,235,0.14);
+      color: var(--accent);
+      font-weight: 700;
       font-size: 0.92rem;
-      margin-bottom: 0.75rem;
     }
     .dot{
       width:8px;height:8px;border-radius:999px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
     }
+
     h1{
-      font-size: clamp(2.1rem, 4.4vw, 3.1rem);
-      line-height: 1.12;
-      margin: 0.15rem 0 0.6rem;
-      letter-spacing: -0.015em;
+      font-size: clamp(2rem, 4.2vw, 2.7rem);
+      line-height: 1.15;
+      margin: 0.75rem 0 0.55rem;
+      letter-spacing: -0.01em;
+      font-weight: 800;
     }
     .subhead{
-      margin: 0 0 1rem;
+      margin: 0 0 1.1rem;
       color: var(--muted);
-      font-weight: 650;
       font-size: 1.05rem;
-      max-width: 46rem;
+      max-width: 55ch;
     }
-    .hero-actions{
+
+    .actions{
       display:flex;
       flex-wrap:wrap;
-      gap: 0.75rem;
+      gap: 0.7rem;
       align-items:center;
-      margin-top: 1rem;
+      margin-top: 0.25rem;
     }
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap: 0.5rem;
-      padding: 0.75rem 1.2rem;
+      padding: 0.72rem 1.05rem;
       border-radius: 999px;
       text-decoration:none;
-      font-weight: 950;
-      border: 1px solid rgba(15,23,42,0.18);
-      background: rgba(255,255,255,0.85);
-      color: var(--text);
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
-      white-space: nowrap;
+      font-weight: 750;
+      border: 1px solid rgba(15,23,42,0.14);
+      background: rgba(255,255,255,0.60);
+      color: var(--ink);
+      transition: transform 0.12s ease-out, border-color 0.12s ease-out, box-shadow 0.12s ease-out;
     }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(37,99,235,0.35); color: var(--accent); }
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: rgba(37,99,235,0.30);
+      box-shadow: 0 12px 30px rgba(2,6,23,0.08);
+      color: var(--accent);
+    }
     .btn.primary{
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       color: #fff;
       border-color: rgba(37,99,235,0.18);
-      box-shadow: 0 16px 34px rgba(37,99,235,0.18);
+      box-shadow: 0 14px 30px rgba(37,99,235,0.18);
     }
     .btn.primary:hover{ color:#fff; }
 
-    .hero-right{
-      display:flex;
-      flex-direction:column;
-      gap: 1rem;
-    }
-    .card{
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.2rem 1.15rem;
-    }
-    .card h2{
-      margin: 0 0 0.5rem;
-      font-size: 1.2rem;
-      letter-spacing: -0.01em;
-    }
-    .card p{ margin: 0.35rem 0; color: var(--muted); font-weight: 650; }
-    .card strong{ color: var(--text); }
-    .pillrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.5rem;
-      margin-top: 0.7rem;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:0.45rem;
-      padding: 0.35rem 0.65rem;
-      border-radius: 999px;
-      border: 1px solid rgba(15,23,42,0.12);
-      background: rgba(255,255,255,0.78);
+    .quick{
+      margin-top: 1rem;
       color: var(--muted);
-      font-weight: 750;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
-    .check{
-      width:18px;height:18px;border-radius:999px;
-      display:inline-flex;align-items:center;justify-content:center;
-      background: rgba(34,197,94,0.14);
-      border: 1px solid rgba(34,197,94,0.22);
-      color:#15803d;
-      font-weight: 900;
-      font-size: 0.85rem;
-    }
+    .quick a{ font-weight: 700; }
 
     /* ===== Sections ===== */
-    .section{
-      margin-top: 1.6rem;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
+    section{ margin-top: 1.1rem; }
+    .section-head{
+      padding: 0.95rem 1.05rem 0.2rem;
     }
-    .section-title{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 1rem;
-      margin-top: 1.3rem;
-      padding: 0 0.15rem;
-    }
-    .section-title h2{
+    .section-head h2{
       margin:0;
-      font-size: 1.55rem;
+      font-size: 1.45rem;
+      font-weight: 780;
       letter-spacing: -0.01em;
     }
-    .section-title p{
-      margin:0;
+    .section-head p{
+      margin:0.25rem 0 0;
       color: var(--muted);
-      font-weight: 650;
+      font-size: 0.98rem;
+      max-width: 68ch;
     }
 
-    .two-col{
+    .content{
+      padding: 0.85rem 1.05rem 1.05rem;
+    }
+
+    /* A calm, readable list style */
+    .list{
+      margin: 0.6rem 0 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+    }
+    .list li{ margin: 0.32rem 0; }
+
+    /* Two-column on desktop, single column on mobile */
+    .grid2{
       display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 1rem;
-      align-items:start;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
     }
 
-    .bullets{
-      margin: 0.5rem 0 0;
-      padding-left: 1.15rem;
-      color: var(--muted);
-      font-weight: 650;
+    .mini{
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 0.9rem 0.95rem;
+      box-shadow: 0 10px 28px rgba(2,6,23,0.06);
     }
-    .bullets li{ margin: 0.3rem 0; }
-
-    .callout{
-      border-radius: var(--radius);
-      border: 1px solid rgba(37,99,235,0.18);
-      background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(6,182,212,0.10));
-      padding: 1.05rem 1.1rem;
+    .mini h3{
+      margin: 0 0 0.25rem;
+      font-size: 1.05rem;
+      font-weight: 760;
     }
-    .callout strong{ font-weight: 950; }
-    .callout p{ margin: 0.25rem 0; color: var(--muted); font-weight: 650; }
+    .mini p{ margin:0; color: var(--muted); }
 
     /* ===== FAQ ===== */
-    .faq{
-      margin-top: 0.25rem;
-    }
     .faqitem{
       border: 1px solid var(--border);
       border-radius: 1rem;
-      background: rgba(255,255,255,0.90);
-      box-shadow: 0 12px 28px rgba(2,6,23,0.06);
+      background: rgba(255,255,255,0.78);
+      box-shadow: 0 10px 26px rgba(2,6,23,0.06);
       margin-bottom: 0.75rem;
       overflow:hidden;
     }
@@ -333,19 +309,22 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:1rem;
-      padding: 0.9rem 1rem;
+      gap: 1rem;
+      padding: 0.85rem 0.95rem;
       cursor:pointer;
       background:transparent;
       border:none;
       font: inherit;
-      font-weight: 950;
-      color: var(--text);
       text-align:left;
+      color: var(--ink);
+      font-weight: 720;
     }
     .q span:last-child{
-      width:28px;height:28px;border-radius:999px;
-      display:inline-flex;align-items:center;justify-content:center;
+      width:28px;height:28px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       background: rgba(37,99,235,0.10);
       border: 1px solid rgba(37,99,235,0.16);
       color: var(--accent);
@@ -353,70 +332,39 @@
       flex-shrink:0;
     }
     .a{
-      padding: 0 1rem 0.95rem;
+      padding: 0 0.95rem 0.95rem;
       color: var(--muted);
-      font-weight: 650;
-    }
-    .a a{ color: var(--accent); text-decoration:none; font-weight: 900; }
-    .a a:hover{ text-decoration: underline; }
-
-    /* ===== Contact form ===== */
-    form{ margin-top: 0.85rem; }
-    .row{
-      display:flex;
-      flex-direction:column;
-      gap: 0.25rem;
-      margin-bottom: 0.75rem;
-    }
-    label{ font-size: 0.9rem; color: var(--muted); font-weight: 750; }
-    input, textarea, select{
-      font: inherit;
-      padding: 0.6rem 0.65rem;
-      border-radius: 0.75rem;
-      border: 1px solid rgba(15,23,42,0.18);
-      background: rgba(255,255,255,0.92);
-      color: var(--text);
-    }
-    textarea{ min-height: 110px; resize: vertical; }
-    input:focus, textarea:focus, select:focus{
-      outline:none;
-      border-color: rgba(37,99,235,0.55);
-      box-shadow: 0 0 0 4px rgba(37,99,235,0.10);
     }
 
-    .fineprint{
-      font-size: 0.85rem;
-      color: var(--muted);
-      font-weight: 650;
-      margin-top: 0.5rem;
-    }
-
+    /* ===== Footer ===== */
     footer{
-      max-width: 1120px;
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 1.5rem 1.25rem 2.25rem;
+      padding: 1.4rem 1.1rem 2.2rem;
       text-align:center;
       color: var(--muted);
-      font-weight: 650;
       font-size: 0.9rem;
     }
 
     /* ===== Responsive ===== */
-    @media (max-width: 980px){
-      .hero{ grid-template-columns: 1fr; }
-      .two-col{ grid-template-columns: 1fr; }
+    @media (max-width: 860px){
+      .grid2{ grid-template-columns: 1fr; }
     }
     @media (max-width: 720px){
       .menu-btn{ display:inline-flex; }
+      .nav{ align-items:flex-start; }
       .nav-links{
         display:none;
         width:100%;
-        padding-top: 0.75rem;
+        padding-top: 0.8rem;
         border-top: 1px solid var(--border);
+        flex-direction: column;
+        align-items:flex-start;
+        gap: 0.65rem;
       }
-      .nav-links.open{ display:flex; flex-direction:column; align-items:flex-start; }
-      .nav{ align-items:flex-start; }
-      .nav-cta{ width:100%; text-align:center; }
+      .nav-links.open{ display:flex; }
+      .cta{ width:100%; text-align:center; }
+      .brand{ min-width: unset; }
     }
   </style>
 
@@ -428,10 +376,7 @@
     "name": "Study Hygiene",
     "url": "https://www.studyhygiene.com/",
     "description": "Study Hygiene provides premium online tutoring, test prep, and academic coaching nationwide.",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United States"
-    },
+    "areaServed": { "@type": "Country", "name": "United States" },
     "contactPoint": [{
       "@type": "ContactPoint",
       "contactType": "Customer Support",
@@ -449,190 +394,140 @@
       <div class="nav" role="navigation" aria-label="Main navigation">
         <a class="brand" href="/">
           <div class="name">Study Hygiene Tutoring</div>
-          <div class="tag">Private Online Tutoring • Test Prep • Academic Coaching</div>
+          <div class="tag">Online Tutoring • Test Prep • Academic Coaching</div>
         </a>
 
         <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" id="menuBtn">≡</button>
 
-        <div class="nav-links" id="navLinks">
+        <nav class="nav-links" id="navLinks">
           <a href="#services">Services</a>
-          <a href="#about">About</a>
           <a href="/asvab-tutoring/">ASVAB</a>
+          <a href="#about">About</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cta" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Free Consultation</a>
-        </div>
+          <a class="cta" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Free Consultation</a>
+        </nav>
       </div>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section class="hero" aria-label="Hero section">
-      <div class="hero-left">
-        <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Nationwide online tutoring • Flexible scheduling</div>
-        <h1>Premium Online Tutoring & Test Prep</h1>
-        <p class="subhead">
-          One-on-one online tutoring for middle school, high school, college, graduate students, and professionals.
-          We combine content mastery, strategy, and strong study habits—so you improve faster and keep the gains.
-        </p>
+    <section class="panel hero" aria-label="Hero">
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Nationwide online tutoring • Flexible scheduling</div>
+      <h1>Premium Online Tutoring & Test Prep</h1>
+      <p class="subhead">
+        One-on-one online tutoring for middle school, high school, college, and graduate/professional students.
+        We blend content mastery, efficient strategy, and better study habits—so results show up faster.
+      </p>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Book a Free 15-Minute Consultation →</a>
-          <a class="btn" href="#services">Explore Services</a>
-          <a class="btn" href="/asvab-tutoring/">ASVAB Tutoring</a>
-        </div>
-
-        <p class="fineprint" style="margin-top:0.9rem;">
-          Email: <a href="mailto:studyhygiene1@gmail.com" style="color:var(--accent); font-weight:950; text-decoration:none;">studyhygiene1@gmail.com</a>
-          &nbsp;•&nbsp;
-          Text: <a href="tel:+14804424224" style="color:var(--accent); font-weight:950; text-decoration:none;">480-442-4224</a>
-        </p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Book a Free 15-Minute Consultation</a>
+        <a class="btn" href="/asvab-tutoring/">ASVAB Tutoring</a>
+        <a class="btn" href="#services">Browse Services</a>
       </div>
 
-      <div class="hero-right">
-        <div class="card" aria-label="What we do">
-          <h2>What We Do</h2>
-          <p><strong>Test Prep:</strong> SAT, ACT, GRE, ASVAB, private school admissions tests, and more.</p>
-          <p><strong>Tutoring:</strong> Middle school through college, including advanced math.</p>
-          <p><strong>Writing:</strong> Admissions essays, personal statements, and academic writing.</p>
-          <div class="pillrow" aria-label="Highlights">
-            <span class="pill"><span class="check">✓</span> 1-on-1 Online</span>
-            <span class="pill"><span class="check">✓</span> Flexible</span>
-            <span class="pill"><span class="check">✓</span> Nationwide</span>
-          </div>
-        </div>
-
-        <div class="card" aria-label="Expertise and credentials">
-          <h2>Expertise</h2>
-          <p><strong>J.D.</strong> Licensed Attorney</p>
-          <p><strong>M.Sc.</strong> Electrical & Computer Engineering</p>
-          <p><strong>B.Sc.</strong> Computer Engineering</p>
-          <p><strong>Certifications:</strong> IXL + CRLA</p>
-          <p><strong>Experience:</strong> 25+ years</p>
-        </div>
+      <div class="quick">
+        Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a>
+        &nbsp;•&nbsp;
+        Text: <a href="tel:+14804424224">480-442-4224</a>
       </div>
     </section>
 
-    <!-- SERVICES (no tiles; clean, SEO-friendly list) -->
-    <section class="section" id="services" aria-label="Services">
-      <div class="section-title">
-        <h2>Services We Offer</h2>
-        <p>Clear plans. Efficient improvement. Real confidence.</p>
+    <!-- SERVICES -->
+    <section class="panel" id="services" aria-label="Services">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p>
+          Choose the area you need help with, and we’ll build a simple plan: diagnostics → targeted practice → measurable progress.
+        </p>
       </div>
 
-      <div class="two-col">
-        <div class="card">
-          <h2>Test Prep</h2>
-          <ul class="bullets">
-            <li><strong>SAT:</strong> Math, Reading, Writing strategy + pacing</li>
-            <li><strong>ACT:</strong> English, Math, Reading, Science strategy + pacing</li>
-            <li><strong>GRE:</strong> Quant and Verbal prep</li>
-            <li><strong>ASVAB / AFQT:</strong> high-impact coaching (see the dedicated page below)</li>
-            <li><strong>Private School Admissions:</strong> ISEE, SSAT</li>
+      <div class="content grid2">
+        <div class="mini" aria-label="Test prep">
+          <h3>Test Prep</h3>
+          <ul class="list">
+            <li>SAT (Math, Reading, Writing)</li>
+            <li>ACT (English, Math, Reading, Science)</li>
+            <li>GRE (Quant + Verbal)</li>
+            <li><a href="/asvab-tutoring/">ASVAB / AFQT</a> (dedicated page)</li>
+            <li>Private school admissions: ISEE, SSAT</li>
           </ul>
-
-          <div class="callout" style="margin-top:1rem;">
-            <strong>Popular right now:</strong>
-            <p style="margin-top:0.25rem;">
-              <a href="/asvab-tutoring/" style="color:var(--accent); font-weight:950; text-decoration:none;">ASVAB Tutoring Online →</a>
-              (clean URL + dedicated page for better Google visibility)
-            </p>
-          </div>
         </div>
 
-        <div class="card">
-          <h2>Tutoring & Coaching</h2>
-          <ul class="bullets">
-            <li><strong>Math:</strong> Pre-Algebra → Calculus (including Business Calc)</li>
-            <li><strong>Writing:</strong> essays, research writing, admissions writing</li>
-            <li><strong>Law:</strong> legal writing (IRAC/CREAC), doctrinal support</li>
-            <li><strong>Professional Skills:</strong> interviews, resumes, public speaking</li>
+        <div class="mini" aria-label="Tutoring and writing">
+          <h3>Tutoring & Writing</h3>
+          <ul class="list">
+            <li>Math: Pre-Algebra → Calculus (including Business Calc)</li>
+            <li>Writing: admissions essays, personal statements, academic writing</li>
+            <li>Law: legal writing (IRAC/CREAC), contracts, civil procedure, torts</li>
           </ul>
-
-          <div class="callout" style="margin-top:1rem;">
-            <strong>How we teach:</strong>
-            <p>Diagnostics → skill-building → targeted drills → timed practice → feedback loop.</p>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="section" id="about" aria-label="About">
-      <div class="section-title">
-        <h2>About Study Hygiene</h2>
-        <p>Holistic tutoring that builds lasting skills.</p>
+    <section class="panel" id="about" aria-label="About">
+      <div class="section-head">
+        <h2>About</h2>
+        <p>
+          We’re educators at heart, with degrees in engineering and law. Our work is focused on clarity, confidence, and consistency.
+        </p>
       </div>
 
-      <div class="two-col">
-        <div class="card">
-          <p style="margin-top:0;">
-            We’re educators at heart, with degrees in Electrical Engineering, Computer Engineering, and Law.
-            We love this work because it gives us the opportunity to make a lasting difference in students’ lives.
-          </p>
+      <div class="content grid2">
+        <div class="mini">
+          <h3>Our approach</h3>
           <p>
-            Our philosophy is holistic: content mastery, test-taking strategy, and learning psychology.
-            The best results come from building strong, “hygienic” study habits and a clear plan you can actually follow.
-          </p>
-          <p>
-            For test prep, we use diagnostics to identify gaps before moving into timed drills and high-impact strategy.
-            We help students use tools (like Desmos) effectively and approach exams with calm confidence.
+            We teach the underlying skills, then train strategy and pacing so students perform under time pressure.
+            You’ll also get a simple weekly plan you can actually follow.
           </p>
         </div>
 
-        <div class="card">
-          <h2 style="margin-top:0;">What you can expect</h2>
-          <ul class="bullets">
-            <li>Clear goals and a plan from day 1</li>
-            <li>Step-by-step explanations that stick</li>
-            <li>Strategy for pacing, accuracy, and confidence</li>
-            <li>Flexible scheduling (7 days/week)</li>
-          </ul>
-
-          <div class="callout" style="margin-top:1rem;">
-            <strong>Rate:</strong>
-            <p>$80/hour • Online via Google Meet</p>
-          </div>
+        <div class="mini">
+          <h3>Credentials</h3>
+          <p>
+            Licensed attorney • M.Sc. Electrical & Computer Engineering • B.Sc. Computer Engineering • CRLA & IXL certified • 25+ years experience
+          </p>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section" id="faq" aria-label="FAQ">
-      <div class="section-title">
-        <h2>Frequently Asked Questions</h2>
+    <section class="panel" id="faq" aria-label="FAQ">
+      <div class="section-head">
+        <h2>FAQ</h2>
         <p>Quick answers to common questions.</p>
       </div>
 
-      <div class="faq">
+      <div class="content">
         <div class="faqitem">
           <button class="q" aria-expanded="false">
             <span>Do you offer online tutoring nationwide?</span>
             <span aria-hidden="true">+</span>
           </button>
           <div class="a" hidden>
-            Yes. Sessions are delivered live online, so we can work with students anywhere in the United States (and often internationally).
+            Yes. Sessions are live online, so we work with students anywhere in the U.S. (and often internationally).
           </div>
         </div>
 
         <div class="faqitem">
           <button class="q" aria-expanded="false">
-            <span>What ages and levels do you work with?</span>
+            <span>What levels do you work with?</span>
             <span aria-hidden="true">+</span>
           </button>
           <div class="a" hidden>
-            Middle school, high school, college, graduate/professional, and working professionals. We tailor sessions to your level and goals.
+            Middle school, high school, college, and graduate/professional. We tailor sessions to your goals and timeline.
           </div>
         </div>
 
         <div class="faqitem">
           <button class="q" aria-expanded="false">
-            <span>How does an online session work?</span>
+            <span>How do sessions work online?</span>
             <span aria-hidden="true">+</span>
           </button>
           <div class="a" hidden>
-            We meet via Google Meet. We use screen sharing, digital resources, and structured practice to build skills and confidence quickly.
+            We meet via Google Meet with screen sharing and structured practice sets. You’ll leave each session knowing exactly what to do next.
           </div>
         </div>
 
@@ -643,86 +538,41 @@
           </button>
           <div class="a" hidden>
             Email <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> or text
-            <a href="tel:+14804424224">480-442-4224</a>. We’ll schedule a free 15-minute consultation and outline next steps.
+            <a href="tel:+14804424224">480-442-4224</a> for a free 15-minute consultation.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact" aria-label="Contact">
-      <div class="section-title">
+    <!-- CONTACT (no form) -->
+    <section class="panel" id="contact" aria-label="Contact">
+      <div class="section-head">
         <h2>Contact</h2>
-        <p>Tell us your goal and timeline—we’ll recommend the best plan.</p>
+        <p>
+          For scheduling, email is best. Text works great for quick availability questions.
+        </p>
       </div>
 
-      <div class="two-col">
-        <div class="card">
-          <h2 style="margin-top:0;">Contact & Price</h2>
-          <p><strong>Email:</strong> <a href="mailto:studyhygiene1@gmail.com" style="color:var(--accent); font-weight:950; text-decoration:none;">studyhygiene1@gmail.com</a></p>
-          <p><strong>Text:</strong> <a href="tel:+14804424224" style="color:var(--accent); font-weight:950; text-decoration:none;">480-442-4224</a></p>
-          <p><strong>Format:</strong> Online via Google Meet</p>
-          <p><strong>Availability:</strong> 7 days/week • flexible schedule</p>
-          <p><strong>Hourly Rate:</strong> $80</p>
-
-          <div class="hero-actions" style="margin-top:1rem;">
-            <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Email for a Free Consultation →</a>
-            <a class="btn" href="/asvab-tutoring/">ASVAB Page</a>
-          </div>
-
-          <p class="fineprint">
-            Prefer email for scheduling. Text is great for quick questions and availability.
+      <div class="content grid2">
+        <div class="mini">
+          <h3>Contact details</h3>
+          <p>
+            Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
+            Text: <a href="tel:+14804424224">480-442-4224</a><br/>
+            Format: Online via Google Meet<br/>
+            Availability: 7 days/week, flexible schedule
           </p>
         </div>
 
-        <div class="card">
-          <h2 style="margin-top:0;">Send a message</h2>
-          <p style="margin-top:0; color:var(--muted); font-weight:650;">
-            Fill this out and we’ll get back to you with next steps.
+        <div class="mini">
+          <h3>Pricing</h3>
+          <p>
+            Hourly Rate: <strong style="font-weight:760;">$80</strong><br/>
+            Free 15-minute consultation available.
           </p>
-
-          <!-- Contact form (Formspree) -->
-          <form method="POST" action="https://formspree.io/f/mdkykvjk">
-            <div class="row">
-              <label for="name">Your Name *</label>
-              <input id="name" name="name" type="text" required />
-            </div>
-
-            <div class="row">
-              <label for="email">Email Address *</label>
-              <input id="email" name="email" type="email" required />
-            </div>
-
-            <div class="row">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" />
-            </div>
-
-            <div class="row">
-              <label for="student_level">Student Level</label>
-              <select id="student_level" name="student_level">
-                <option value="">Select one</option>
-                <option>Middle School</option>
-                <option>High School</option>
-                <option>College</option>
-                <option>Graduate / Professional</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div class="row">
-              <label for="subject">Subject or Exam</label>
-              <input id="subject" name="subject" type="text" placeholder="e.g., ASVAB, SAT, Algebra II, Legal Writing" />
-            </div>
-
-            <div class="row">
-              <label for="message">How can we help?</label>
-              <textarea id="message" name="message" placeholder="Tell us your goals, challenges, and timeline."></textarea>
-            </div>
-
-            <button class="btn primary" type="submit" style="border:none; cursor:pointer;">Send Message →</button>
-            <div class="fineprint">* Required fields</div>
-          </form>
+          <p style="margin-top:0.65rem;">
+            <a class="btn primary" style="display:inline-flex;" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation%20Request">Email for a Free Consultation</a>
+          </p>
         </div>
       </div>
     </section>
@@ -735,6 +585,17 @@
   <script>
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+        menuBtn.textContent = isOpen ? '×' : '≡';
+      });
+    }
 
     // FAQ accordion
     document.addEventListener('DOMContentLoaded', () => {
@@ -751,17 +612,6 @@
         });
       });
     });
-
-    // Mobile nav toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
-    if (menuBtn && navLinks) {
-      menuBtn.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        menuBtn.setAttribute('aria-expanded', String(isOpen));
-        menuBtn.textContent = isOpen ? '×' : '≡';
-      });
-    }
   </script>
 </body>
 </html>
