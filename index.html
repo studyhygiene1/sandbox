@@ -6,7 +6,6 @@
 
   <title>Study Hygiene Tutoring | Online Test Prep & Private Tutoring</title>
   <link rel="canonical" href="https://www.studyhygiene.com/" />
-
   <meta name="description" content="Study Hygiene offers private online tutoring and test prep nationwide. Math, SAT, ACT, GRE, ASVAB/AFQT, law school, and writing support with experienced educators." />
 
   <!-- Open Graph -->
@@ -28,7 +27,7 @@
 
   <style>
     :root{
-      /* ===== Warm Academic Palette (richer + deeper) ===== */
+      /* ===== Warm Academic Palette (airy/minimal + rich) ===== */
       --bg-main: #f2eee7;
       --bg-soft: #e9e2d8;
 
@@ -37,7 +36,7 @@
       --border: rgba(32,35,41,0.14);
 
       --text-main: #1f232a;
-      --text-muted: #465061;
+      --text-muted: #55637a;
 
       --accent: #2a6f73;       /* deep teal */
       --accent-alt: #4f5f99;   /* indigo */
@@ -57,9 +56,8 @@
       margin:0;
       font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       color: var(--text-main);
-      line-height: 1.75;
+      line-height: 1.8;
 
-      /* Richer background depth */
       background:
         radial-gradient(900px 520px at 12% -5%, rgba(42,111,115,0.18), transparent 60%),
         radial-gradient(900px 520px at 92% 0%, rgba(192,127,72,0.18), transparent 62%),
@@ -68,26 +66,19 @@
       position: relative;
     }
 
-    /* ===== Grain overlay (subtle) =====
-       - pointer-events none so it doesn't block clicks
-       - mix-blend-mode soft-light for a premium texture
-       - opacity tuned to be noticeable but not distracting
-    */
+    /* ===== Grain overlay (subtle) ===== */
     body::before{
       content:"";
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 0;
-
-      /* SVG turbulence-based noise as a background */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
       background-repeat: repeat;
-      opacity: 0.10;            /* <-- adjust 0.06–0.14 to taste */
+      opacity: 0.09;
       mix-blend-mode: soft-light;
     }
 
-    /* keep actual content above grain */
     header, main, footer{ position: relative; z-index: 1; }
 
     /* Links should look like links */
@@ -178,7 +169,7 @@
     main{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 1.5rem 1rem 2.9rem;
+      padding: 1.6rem 1rem 3rem;
     }
 
     .panel{
@@ -186,8 +177,8 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 1.45rem 1.35rem;
-      margin-bottom: 1.25rem;
+      padding: 1.75rem 1.65rem;
+      margin-bottom: 1.8rem;
     }
 
     /* ===== Hero ===== */
@@ -200,8 +191,8 @@
 
     .hero h1{
       font-size: clamp(2.05rem, 4.2vw, 2.75rem);
-      line-height: 1.14;
-      margin:0.2rem 0 0.65rem;
+      line-height: 1.16;
+      margin:0.25rem 0 0.8rem;
       font-weight: 850;
       letter-spacing: -0.01em;
     }
@@ -210,41 +201,25 @@
       max-width: 62ch;
       color: var(--text-muted);
       font-size: 1.06rem;
-      font-weight: 650;
-    }
-
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.62rem;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      border: 1px solid rgba(42,111,115,0.20);
-      color: var(--accent);
-      font-weight: 800;
-      font-size: 0.92rem;
-    }
-
-    .dot{
-      width:8px;height:8px;border-radius:999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      font-weight: 520;
+      line-height: 1.9;
+      margin: 0.25rem 0 0;
     }
 
     .actions{
       display:flex;
       flex-wrap:wrap;
-      gap:0.7rem;
-      margin-top:0.9rem;
+      gap:0.75rem;
+      margin-top:1.15rem;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
-      padding:0.68rem 1.08rem;
+      padding:0.7rem 1.1rem;
       border-radius:999px;
       text-decoration:none;
-      font-weight: 750;
+      font-weight: 700;
       border:1px solid rgba(32,35,41,0.16);
       background: rgba(255,255,255,0.62);
       color: var(--text-main);
@@ -267,7 +242,7 @@
     /* ===== Sections ===== */
     h2{
       font-size: 1.5rem;
-      margin:0 0 0.45rem;
+      margin:0 0 0.55rem;
       font-weight: 820;
       letter-spacing: -0.01em;
     }
@@ -275,59 +250,65 @@
     .section-note{
       color: var(--text-muted);
       max-width: 70ch;
-      font-weight: 650;
+      font-weight: 520;
+      line-height: 1.9;
+      margin: 0.2rem 0 0;
     }
 
     .grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:1rem;
-      margin-top:0.7rem;
+      margin-top:1.05rem;
     }
 
     .card{
       background: var(--panel-strong);
-      border:1px solid rgba(32,35,41,0.14);
-      border-radius:1rem;
-      padding:1.05rem 1.05rem;
+      border:1px solid rgba(32,35,41,0.12);
+      border-radius:1.1rem;
+      padding:1.35rem 1.3rem;
       box-shadow: var(--shadow-soft);
     }
 
     .card h3{
-      margin:0 0 0.35rem;
+      margin:0 0 0.55rem;
       font-size: 1.08rem;
-      font-weight: 820;
+      font-weight: 800;
     }
 
     ul{
       padding-left:1.1rem;
       color: var(--text-muted);
-      font-weight: 650;
+      font-weight: 520;
+      line-height: 1.85;
+      margin: 0.2rem 0 0;
     }
-    li{ margin:0.3rem 0; }
+    li{ margin:0.35rem 0; }
 
     /* ===== FAQ ===== */
     .faq-item{
       border-top:1px solid rgba(32,35,41,0.14);
-      padding:0.85rem 0;
+      padding:1.05rem 0;
     }
 
     .faq-q{
       background:none;
       border:none;
       font:inherit;
-      font-weight: 780;
+      font-weight: 740;
       cursor:pointer;
       display:flex;
       justify-content:space-between;
       width:100%;
       color: var(--text-main);
+      padding: 0;
     }
 
     .faq-a{
-      margin-top:0.45rem;
+      margin-top:0.55rem;
       color: var(--text-muted);
-      font-weight: 650;
+      font-weight: 520;
+      line-height: 1.9;
     }
 
     /* ===== Footer ===== */
@@ -335,16 +316,26 @@
       text-align:center;
       color: var(--text-muted);
       font-size:0.9rem;
-      padding:2rem 1rem;
-      font-weight: 650;
+      padding:2.2rem 1rem 2.6rem;
+      font-weight: 520;
     }
 
     /* ===== Mobile ===== */
     @media (max-width: 720px){
+      body{ line-height: 1.85; }
+
       .grid{ grid-template-columns:1fr; }
+
       nav{ display:none; flex-direction:column; align-items:flex-start; gap:0.7rem; }
       nav.open{ display:flex; }
       .menu-btn{ display:block; }
+
+      .panel{
+        padding: 1.45rem 1.2rem;
+        margin-bottom: 1.6rem;
+      }
+
+      .hero h1{ line-height: 1.18; }
     }
   </style>
 
@@ -390,8 +381,6 @@
 
 <main>
   <section class="panel hero" aria-label="Hero">
-    <div class="eyebrow"><span class="dot" aria-hidden="true"></span> Nationwide online tutoring • Flexible scheduling</div>
-
     <h1>Private Online Tutoring & Test Prep</h1>
     <p>
       One-on-one online tutoring for middle school, high school, college, and graduate/professional students.
@@ -404,7 +393,7 @@
       <a class="btn" href="#services">Services</a>
     </div>
 
-    <p style="margin-top:0.9rem;">
+    <p style="margin-top:1.1rem; color: var(--text-muted); font-weight:520; line-height:1.9;">
       Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> ·
       Text: <a href="tel:+14804424224">480-442-4224</a>
     </p>
@@ -459,7 +448,10 @@
 
     <div class="faq-item">
       <button class="faq-q" type="button">How do I get started? <span aria-hidden="true">+</span></button>
-      <div class="faq-a" hidden>Email us or text us for a free 15-minute consultation.</div>
+      <div class="faq-a" hidden>
+        Email <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> or text
+        <a href="tel:+14804424224">480-442-4224</a> for a free 15-minute consultation.
+      </div>
     </div>
   </section>
 
