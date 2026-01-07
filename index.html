@@ -201,19 +201,17 @@
       letter-spacing: -0.01em;
     }
 
-    /* ===== IMPORTANT CHANGE =====
-       Remove narrow centered text columns so paragraphs fill the panel.
-       This eliminates the “space on the right” feeling sitewide. */
+    /* Paragraphs fill panel width (no narrow columns) */
     .section-note{
       color: var(--text-muted);
-      max-width: none;       /* <-- changed */
+      max-width: none;
       font-weight: 520;
       line-height: 1.9;
-      margin: 0.2rem 0 0;    /* <-- changed */
+      margin: 0.2rem 0 0;
     }
 
     .hero p{
-      max-width: none;       /* <-- changed */
+      max-width: none;
       color: var(--text-muted);
       font-size: 1.06rem;
       font-weight: 520;
@@ -292,15 +290,7 @@
     }
     li{ margin:0.35rem 0; }
 
-    /* ===== About: two-column layout (wider text column) ===== */
-    .about-grid{
-      display: grid;
-      grid-template-columns: 1.7fr 0.5fr; /* <-- changed to give text more room */
-      gap: 1rem;
-      margin-top: 1.05rem;
-      align-items: start;
-    }
-
+    /* Pills list (for highlights) */
     .pills{
       list-style: none;
       padding-left: 0;
@@ -362,7 +352,6 @@
       body{ line-height: 1.85; }
 
       .grid{ grid-template-columns:1fr; }
-      .about-grid{ grid-template-columns:1fr; }
 
       nav{ display:none; flex-direction:column; align-items:flex-start; gap:0.7rem; }
       nav.open{ display:flex; }
@@ -434,14 +423,34 @@
     </div>
   </section>
 
-  <!-- CONTACT (first card below hero) -->
-  <section class="panel" id="contact" aria-label="Contact">
+  <!-- CONTACT + HIGHLIGHTS (split into two cards) -->
+  <section class="panel" id="contact" aria-label="Contact and Highlights">
     <h2>Contact</h2>
-    <p class="section-note">
-      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
-      Text: <a href="tel:+14804424224">480-442-4224</a><br/>
-      Rate: $70/hour · Free 15-minute consultation
-    </p>
+
+    <div class="grid" aria-label="Contact and highlights grid">
+      <!-- Contact card -->
+      <div class="card" aria-label="Contact details">
+        <h3>Contact Details</h3>
+        <p class="section-note">
+          Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
+          Text: <a href="tel:+14804424224">480-442-4224</a><br/>
+          Rate: $70/hour · Free 15-minute consultation
+        </p>
+      </div>
+
+      <!-- Highlights card -->
+      <div class="card" aria-label="Highlights">
+        <h3>Highlights</h3>
+        <ul class="pills" aria-label="Tutor highlights">
+          <li>25+ years teaching</li>
+          <li>J.D. (Attorney)</li>
+          <li>M.S. Electrical & Computer Eng.</li>
+          <li>B.S. Computer Engineering</li>
+          <li>Math & test prep specialist</li>
+          <li>Online 1:1 sessions</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- SERVICES -->
@@ -482,41 +491,19 @@
     </div>
   </section>
 
-  <!-- ABOUT (two-column layout) -->
+  <!-- ABOUT -->
   <section class="panel" id="about" aria-label="About Us">
     <h2>About Us</h2>
+    <p class="section-note">
+      Study Hygiene is built on the idea that strong fundamentals, good habits, and calm confidence
+      outperform frantic studying every time. We teach with structure and clarity—so students know
+      exactly what to practice, why it matters, and how to improve efficiently.
+    </p>
 
-    <div class="about-grid">
-      <div>
-        <p class="section-note">
-          Study Hygiene is built on the idea that strong fundamentals, good habits, and calm confidence
-          outperform frantic studying every time. We teach with structure and clarity—so students know
-          exactly what to practice, why it matters, and how to improve efficiently.
-        </p>
-
-        <p class="section-note" style="margin-top:0.75rem;">
-          Our tutoring is one-on-one and diagnostic-driven. We identify the highest-impact gaps first,
-          then train skills through targeted practice and strategy—so your time translates into results.
-        </p>
-      </div>
-
-      <div class="card" aria-label="Credentials and highlights">
-        <h3>Highlights</h3>
-        <ul class="pills" aria-label="Tutor highlights">
-          <li>25+ years teaching</li>
-          <li>J.D. (Attorney)</li>
-          <li>M.S. Electrical & Computer Eng.</li>
-          <li>B.S. Computer Engineering</li>
-          <li>Math & test prep specialist</li>
-          <li>Online 1:1 sessions</li>
-        </ul>
-
-        <p class="section-note" style="margin:0.85rem 0 0;">
-          We tutor students from middle school through graduate/professional levels across math, writing,
-          law coursework, and high-stakes exams.
-        </p>
-      </div>
-    </div>
+    <p class="section-note" style="margin-top:0.75rem;">
+      Our tutoring is one-on-one and diagnostic-driven. We identify the highest-impact gaps first,
+      then train skills through targeted practice and strategy—so your time translates into results.
+    </p>
   </section>
 
   <!-- FAQ -->
