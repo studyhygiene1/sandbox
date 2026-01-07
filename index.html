@@ -153,8 +153,14 @@
       font-weight: 700;
       color: var(--text-main);
       opacity:0.92;
+      text-decoration: none; /* nav looks clean */
     }
-    nav a:hover{ opacity:1; }
+    nav a:hover{
+      opacity:1;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
 
     .cta{
       text-decoration:none !important;
@@ -302,6 +308,7 @@
       width:100%;
       color: var(--text-main);
       padding: 0;
+      text-align: left;
     }
 
     .faq-a{
@@ -369,6 +376,7 @@
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">≡</button>
 
     <nav id="navLinks" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
       <a href="#services">Services</a>
       <a href="/asvab-tutoring/">ASVAB</a>
       <a href="#about">About</a>
@@ -380,6 +388,7 @@
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="panel hero" aria-label="Hero">
     <h1>Private Online Tutoring & Test Prep</h1>
     <p>
@@ -392,13 +401,19 @@
       <a class="btn" href="/asvab-tutoring/">ASVAB Tutoring</a>
       <a class="btn" href="#services">Services</a>
     </div>
+  </section>
 
-    <p style="margin-top:1.1rem; color: var(--text-muted); font-weight:520; line-height:1.9;">
-      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> ·
-      Text: <a href="tel:+14804424224">480-442-4224</a>
+  <!-- CONTACT (moved to be first card below hero) -->
+  <section class="panel" id="contact" aria-label="Contact">
+    <h2>Contact</h2>
+    <p class="section-note">
+      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
+      Text: <a href="tel:+14804424224">480-442-4224</a><br/>
+      Rate: $80/hour · Free 15-minute consultation
     </p>
   </section>
 
+  <!-- SERVICES -->
   <section class="panel" id="services" aria-label="Services">
     <h2>Services</h2>
     <p class="section-note">Focused help in high-impact areas.</p>
@@ -425,6 +440,7 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="panel" id="about" aria-label="About">
     <h2>About</h2>
     <p class="section-note">
@@ -433,6 +449,7 @@
     </p>
   </section>
 
+  <!-- FAQ -->
   <section class="panel" id="faq" aria-label="FAQ">
     <h2>FAQ</h2>
 
@@ -453,15 +470,6 @@
         <a href="tel:+14804424224">480-442-4224</a> for a free 15-minute consultation.
       </div>
     </div>
-  </section>
-
-  <section class="panel" id="contact" aria-label="Contact">
-    <h2>Contact</h2>
-    <p class="section-note">
-      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
-      Text: <a href="tel:+14804424224">480-442-4224</a><br/>
-      Rate: $80/hour · Free 15-minute consultation
-    </p>
   </section>
 </main>
 
