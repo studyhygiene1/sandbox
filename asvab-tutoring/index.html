@@ -147,8 +147,14 @@
       font-weight: 700;
       color: var(--text-main);
       opacity:0.92;
+      text-decoration: none;
     }
-    nav a:hover{ opacity:1; }
+    nav a:hover{
+      opacity:1;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
 
     .cta{
       text-decoration:none !important;
@@ -276,26 +282,6 @@
     }
     li{ margin:0.35rem 0; }
 
-    .pill-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.6rem;
-      margin-top: 0.95rem;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:0.45rem;
-      padding:0.45rem 0.7rem;
-      border-radius:999px;
-      background: rgba(42,111,115,0.10);
-      border:1px solid rgba(42,111,115,0.18);
-      color: #245e62;
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-
     .faq-item{
       border-top:1px solid rgba(32,35,41,0.14);
       padding:1.05rem 0;
@@ -312,6 +298,7 @@
       width:100%;
       color: var(--text-main);
       padding: 0;
+      text-align: left;
     }
 
     .faq-a{
@@ -331,7 +318,6 @@
 
     @media (max-width: 720px){
       body{ line-height: 1.85; }
-
       .grid{ grid-template-columns:1fr; }
 
       nav{ display:none; flex-direction:column; align-items:flex-start; gap:0.7rem; }
@@ -342,7 +328,6 @@
         padding: 1.45rem 1.2rem;
         margin-bottom: 1.6rem;
       }
-
       .hero h1{ line-height: 1.18; }
     }
   </style>
@@ -377,6 +362,8 @@
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">≡</button>
 
     <nav id="navLinks" aria-label="Primary">
+      <!-- ✅ Added Home button -->
+      <a href="/">Home</a>
       <a href="/#services">Services</a>
       <a href="/asvab-tutoring/" aria-current="page">ASVAB</a>
       <a href="/#about">About</a>
@@ -397,6 +384,7 @@
 
     <div class="actions">
       <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=ASVAB%20Free%2015-Minute%20Consultation">Free Consultation</a>
+      <a class="btn" href="/">Home</a>
       <a class="btn" href="#what-you-get">What you get</a>
       <a class="btn" href="#faq">FAQ</a>
     </div>
@@ -405,13 +393,6 @@
       Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> ·
       Text: <a href="tel:+14804424224">480-442-4224</a>
     </p>
-
-    <div class="pill-row" aria-label="Highlights">
-      <span class="pill">1:1 instruction</span>
-      <span class="pill">AFQT-focused</span>
-      <span class="pill">Math & verbal support</span>
-      <span class="pill">Test strategy</span>
-    </div>
   </section>
 
   <section class="panel" id="what-you-get" aria-label="What you get">
@@ -460,14 +441,6 @@
     </div>
   </section>
 
-  <section class="panel" aria-label="Who this is for">
-    <h2>Who this is for</h2>
-    <p class="section-note">
-      Students and applicants who want a higher AFQT score, stronger enlistment options, and a structured plan that reduces stress.
-      If you’ve been studying but not improving, we’ll identify why and fix it.
-    </p>
-  </section>
-
   <section class="panel" id="faq" aria-label="ASVAB FAQ">
     <h2>FAQ</h2>
 
@@ -506,7 +479,7 @@
     <p class="section-note">
       Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
       Text: <a href="tel:+14804424224">480-442-4224</a><br/>
-      Rate: $70/hour · Free 15-minute consultation
+      Rate: $80/hour · Free 15-minute consultation
     </p>
   </section>
 </main>
