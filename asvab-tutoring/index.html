@@ -2,386 +2,542 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>ASVAB Tutoring Online | Study Hygiene</title>
-  <meta name="description" content="Online ASVAB tutoring and AFQT prep. Improve your score with targeted math, verbal, and test strategy coaching. Flexible scheduling nationwide." />
+  <title>ASVAB Tutoring Online | Study Hygiene Tutoring</title>
   <link rel="canonical" href="https://www.studyhygiene.com/asvab-tutoring/" />
+  <meta name="description" content="ASVAB tutoring online with Study Hygiene. 1:1 prep for AFQT and ASVAB subtests with personalized study plans, practice strategies, and score improvement." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ASVAB Tutoring Online | Study Hygiene" />
-  <meta property="og:description" content="Online ASVAB tutoring and AFQT prep to raise your score fast with one-on-one coaching and proven strategies." />
+  <meta property="og:title" content="ASVAB Tutoring Online | Study Hygiene Tutoring" />
+  <meta property="og:description" content="1:1 online ASVAB/AFQT tutoring with personalized study plans, strategies, and practice." />
   <meta property="og:url" content="https://www.studyhygiene.com/asvab-tutoring/" />
   <meta property="og:image" content="https://www.studyhygiene.com/og-image.jpg" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ASVAB Tutoring Online | Study Hygiene" />
-  <meta name="twitter:description" content="Online ASVAB tutoring and AFQT prep to raise your score fast with one-on-one coaching and proven strategies." />
+  <meta name="twitter:title" content="ASVAB Tutoring Online | Study Hygiene Tutoring" />
+  <meta name="twitter:description" content="1:1 online ASVAB/AFQT tutoring with personalized study plans, strategies, and practice." />
   <meta name="twitter:image" content="https://www.studyhygiene.com/og-image.jpg" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style>
     :root{
-      --bg1:#f8fbff;
-      --bg2:#eef6ff;
-      --panel: rgba(255,255,255,0.92);
-      --border: rgba(15,23,42,0.12);
-      --text:#0f172a;
-      --muted:#475569;
-      --accent:#2563eb;
-      --accent2:#06b6d4;
-      --shadow: 0 18px 50px rgba(2,6,23,0.10);
-      --radius: 1.15rem;
+      /* ===== Warm Academic Palette (match homepage) ===== */
+      --bg-main: #f2eee7;
+      --bg-soft: #e9e2d8;
+
+      --panel: rgba(255,255,255,0.72);
+      --panel-strong: rgba(255,255,255,0.86);
+      --border: rgba(32,35,41,0.14);
+
+      --text-main: #1f232a;
+      --text-muted: #55637a;
+
+      --accent: #2a6f73;
+      --accent-alt: #4f5f99;
+      --accent-warm: #c07f48;
+      --accent-soft: rgba(42,111,115,0.14);
+
+      --radius: 1.1rem;
+      --shadow: 0 20px 46px rgba(0,0,0,0.10);
+      --shadow-soft: 0 12px 28px rgba(0,0,0,0.08);
+      --max: 980px;
     }
+
     *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
-      color:var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      line-height: 1.8;
       background:
-        radial-gradient(900px 500px at 15% 0%, rgba(37,99,235,0.10), transparent 60%),
-        radial-gradient(900px 500px at 85% 0%, rgba(6,182,212,0.12), transparent 60%),
-        linear-gradient(180deg, var(--bg2), var(--bg1));
-      line-height:1.7;
+        radial-gradient(900px 520px at 12% -5%, rgba(42,111,115,0.18), transparent 60%),
+        radial-gradient(900px 520px at 92% 0%, rgba(192,127,72,0.18), transparent 62%),
+        radial-gradient(820px 480px at 50% 110%, rgba(79,95,153,0.14), transparent 58%),
+        linear-gradient(180deg, var(--bg-soft), var(--bg-main));
+      position: relative;
     }
+
+    /* ===== Grain overlay (subtle) ===== */
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      opacity: 0.09;
+      mix-blend-mode: soft-light;
+    }
+
+    header, main, footer{ position: relative; z-index: 1; }
+
+    a{
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    a:hover{ color: #215a5e; }
+
     header{
-      position:sticky; top:0; z-index:10;
-      background: rgba(255,255,255,0.82);
-      backdrop-filter: blur(12px);
-      border-bottom:1px solid var(--border);
+      position: sticky;
+      top:0;
+      z-index:10;
+      background: rgba(242,238,231,0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
     }
-    .wrap{max-width:1100px; margin:0 auto; padding: 0.9rem 1.1rem;}
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0.95rem 1rem;
+    }
+
     .nav{
-      display:flex; align-items:center; justify-content:space-between; gap:1rem;
-    }
-    .brand{
-      display:flex; flex-direction:column; gap:0.15rem;
-      text-decoration:none; color:var(--text);
-    }
-    .brand strong{font-size:1.05rem; letter-spacing:0.01em;}
-    .brand span{font-size:0.9rem; color:var(--muted); font-weight:650;}
-    .links{
-      display:flex; flex-wrap:wrap; gap:0.85rem; align-items:center; justify-content:flex-end;
-      font-weight:800;
-    }
-    .links a{color:var(--muted); text-decoration:none;}
-    .links a:hover{color:var(--accent);}
-    .cta{
-      padding:0.55rem 0.95rem;
-      border-radius:999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color:white !important;
-      box-shadow: 0 16px 34px rgba(37,99,235,0.18);
-      border:1px solid rgba(37,99,235,0.18);
-    }
-    .cta:hover{transform:translateY(-1px);}
-    main{max-width:1100px; margin:0 auto; padding: 1.4rem 1.1rem 2.5rem;}
-    .hero{
-      display:grid; grid-template-columns: 1.1fr 0.9fr;
-      gap:1.3rem; align-items:start;
-      margin-top:1rem;
-    }
-    .card{
-      background: var(--panel);
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.25rem 1.2rem;
-    }
-    h1{font-size: clamp(2rem, 4vw, 2.6rem); margin:0.2rem 0 0.4rem; line-height:1.15;}
-    .sub{color:var(--muted); font-size:1.02rem; margin:0 0 1rem;}
-    .eyebrow{
-      display:inline-flex; align-items:center; gap:0.5rem;
-      font-weight:900; color:var(--accent);
-      background: rgba(37,99,235,0.08);
-      border: 1px solid rgba(37,99,235,0.14);
-      border-radius:999px;
-      padding:0.35rem 0.6rem;
-      font-size:0.9rem;
-    }
-    .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2));}
-    .btnrow{display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:0.9rem;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;
-      padding:0.75rem 1.15rem;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:950;
-      border:1px solid rgba(15,23,42,0.18);
-      background: rgba(255,255,255,0.85);
-      color: var(--text);
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color:#fff;
-      border-color: rgba(37,99,235,0.18);
-      box-shadow: 0 16px 34px rgba(37,99,235,0.18);
-    }
-    .btn:hover{border-color: rgba(37,99,235,0.35); color: var(--accent);}
-    .btn.primary:hover{color:#fff;}
-    .list{
-      margin:0.6rem 0 0;
-      padding-left:1.1rem;
-      color:var(--muted);
-      font-weight:700;
-    }
-    .list li{margin:0.25rem 0;}
-    h2{margin:0 0 0.5rem;}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap:1rem;
-      margin-top:1.1rem;
-    }
-    .mini{
-      background: rgba(255,255,255,0.92);
-      border:1px solid var(--border);
-      border-radius: 1rem;
-      padding: 1rem 1rem 0.9rem;
-      box-shadow: 0 12px 28px rgba(2,6,23,0.06);
-    }
-    .mini strong{display:block; margin-bottom:0.25rem;}
-    .mini p{margin:0; color:var(--muted); font-weight:650;}
-    .faq{
-      margin-top:1.5rem;
-    }
-    .faqitem{
-      border:1px solid var(--border);
-      border-radius: 1rem;
-      background: rgba(255,255,255,0.90);
-      box-shadow: 0 12px 28px rgba(2,6,23,0.06);
-      margin-bottom:0.75rem;
-      overflow:hidden;
-    }
-    .q{
-      width:100%;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:1rem;
-      padding:0.9rem 1rem;
+    }
+
+    .brand{
+      text-decoration:none;
+      color: var(--text-main);
+    }
+    .brand strong{
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+    .brand span{
+      display:block;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .menu-btn{
+      display:none;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.68);
+      border-radius:999px;
+      width:44px;height:44px;
+      font-size:1.35rem;
       cursor:pointer;
-      background:transparent;
+      box-shadow: var(--shadow-soft);
+    }
+
+    nav{
+      display:flex;
+      gap:0.95rem;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      font-weight: 700;
+      color: var(--text-main);
+      opacity:0.92;
+    }
+    nav a:hover{ opacity:1; }
+
+    .cta{
+      text-decoration:none !important;
+      padding:0.56rem 0.95rem;
+      border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      color:#fff !important;
+      box-shadow: 0 14px 30px rgba(42,111,115,0.22);
+    }
+
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.6rem 1rem 3rem;
+    }
+
+    .panel{
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.75rem 1.65rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.55)),
+        radial-gradient(680px 340px at 10% 0%, rgba(42,111,115,0.14), transparent 60%),
+        radial-gradient(680px 340px at 95% 10%, rgba(192,127,72,0.14), transparent 62%);
+    }
+
+    .hero h1{
+      font-size: clamp(2.0rem, 4.0vw, 2.55rem);
+      line-height: 1.16;
+      margin:0.25rem 0 0.8rem;
+      font-weight: 850;
+      letter-spacing: -0.01em;
+    }
+
+    .hero p{
+      max-width: 70ch;
+      color: var(--text-muted);
+      font-size: 1.06rem;
+      font-weight: 520;
+      line-height: 1.9;
+      margin: 0.25rem 0 0;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.75rem;
+      margin-top:1.15rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      padding:0.7rem 1.1rem;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight: 700;
+      border:1px solid rgba(32,35,41,0.16);
+      background: rgba(255,255,255,0.62);
+      color: var(--text-main);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 18px 34px rgba(0,0,0,0.10);
+    }
+
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
+      color:#fff;
       border:none;
-      font: inherit;
-      font-weight:950;
-      color:var(--text);
-      text-align:left;
+      box-shadow: 0 16px 34px rgba(42,111,115,0.22);
     }
-    .q span:last-child{
-      width:28px;height:28px;border-radius:999px;
-      display:inline-flex;align-items:center;justify-content:center;
-      background: rgba(37,99,235,0.10);
-      border: 1px solid rgba(37,99,235,0.16);
-      color: var(--accent);
-      font-weight:900;
-      flex-shrink:0;
+
+    h2{
+      font-size: 1.5rem;
+      margin:0 0 0.55rem;
+      font-weight: 820;
+      letter-spacing: -0.01em;
     }
-    .a{
-      padding: 0 1rem 0.95rem;
-      color: var(--muted);
-      font-weight:650;
+
+    .section-note{
+      color: var(--text-muted);
+      max-width: 80ch;
+      font-weight: 520;
+      line-height: 1.9;
+      margin: 0.2rem 0 0;
     }
-    .a a{color:var(--accent); text-decoration:none; font-weight:900;}
-    .a a:hover{text-decoration:underline;}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:1rem;
+      margin-top:1.05rem;
+    }
+
+    .card{
+      background: var(--panel-strong);
+      border:1px solid rgba(32,35,41,0.12);
+      border-radius:1.1rem;
+      padding:1.35rem 1.3rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card h3{
+      margin:0 0 0.55rem;
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    ul{
+      padding-left:1.1rem;
+      color: var(--text-muted);
+      font-weight: 520;
+      line-height: 1.85;
+      margin: 0.2rem 0 0;
+    }
+    li{ margin:0.35rem 0; }
+
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.6rem;
+      margin-top: 0.95rem;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      padding:0.45rem 0.7rem;
+      border-radius:999px;
+      background: rgba(42,111,115,0.10);
+      border:1px solid rgba(42,111,115,0.18);
+      color: #245e62;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .faq-item{
+      border-top:1px solid rgba(32,35,41,0.14);
+      padding:1.05rem 0;
+    }
+
+    .faq-q{
+      background:none;
+      border:none;
+      font:inherit;
+      font-weight: 740;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      width:100%;
+      color: var(--text-main);
+      padding: 0;
+    }
+
+    .faq-a{
+      margin-top:0.55rem;
+      color: var(--text-muted);
+      font-weight: 520;
+      line-height: 1.9;
+    }
+
     footer{
       text-align:center;
-      padding: 1.5rem 1.1rem 2.25rem;
-      color: var(--muted);
-      font-weight:650;
+      color: var(--text-muted);
+      font-size:0.9rem;
+      padding:2.2rem 1rem 2.6rem;
+      font-weight: 520;
     }
-    @media (max-width: 980px){
-      .hero{grid-template-columns:1fr;}
-      .grid{grid-template-columns:1fr;}
+
+    @media (max-width: 720px){
+      body{ line-height: 1.85; }
+
+      .grid{ grid-template-columns:1fr; }
+
+      nav{ display:none; flex-direction:column; align-items:flex-start; gap:0.7rem; }
+      nav.open{ display:flex; }
+      .menu-btn{ display:block; }
+
+      .panel{
+        padding: 1.45rem 1.2rem;
+        margin-bottom: 1.6rem;
+      }
+
+      .hero h1{ line-height: 1.18; }
     }
   </style>
 
-  <!-- JSON-LD: Service page -->
+  <!-- Structured Data: Service page -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "ASVAB Tutoring Online",
-    "provider": {
-      "@type": "EducationalOrganization",
-      "name": "Study Hygiene",
-      "url": "https://www.studyhygiene.com/"
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Online ASVAB Tutoring",
+    "provider":{
+      "@type":"EducationalOrganization",
+      "name":"Study Hygiene Tutoring",
+      "url":"https://www.studyhygiene.com/"
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United States"
-    },
-    "serviceType": "Test Preparation",
-    "description": "One-on-one online ASVAB tutoring and AFQT prep. Targeted coaching for math, verbal, and test strategy.",
-    "offers": {
-      "@type": "Offer",
-      "price": "80",
-      "priceCurrency": "USD",
-      "url": "https://www.studyhygiene.com/asvab-tutoring/"
-    }
+    "areaServed":{"@type":"Country","name":"United States"},
+    "serviceType":"Test preparation tutoring",
+    "description":"One-on-one online ASVAB/AFQT tutoring with personalized study plans, practice strategies, and targeted instruction.",
+    "url":"https://www.studyhygiene.com/asvab-tutoring/"
   }
   </script>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <div class="nav">
-        <a class="brand" href="/">
-          <strong>Study Hygiene Tutoring</strong>
-          <span>Online tutoring • Test prep • Academic coaching</span>
-        </a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <strong>Study Hygiene Tutoring</strong>
+      <span>Online tutoring & test preparation</span>
+    </a>
 
-        <div class="links">
-          <a href="/">Home</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-          <a class="cta" href="mailto:studyhygiene1@gmail.com?subject=ASVAB%20Free%2015-Minute%20Consultation%20Request">Free Consultation</a>
-        </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">≡</button>
+
+    <nav id="navLinks" aria-label="Primary">
+      <a href="/#services">Services</a>
+      <a href="/asvab-tutoring/" aria-current="page">ASVAB</a>
+      <a href="/#about">About</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a class="cta" href="mailto:studyhygiene1@gmail.com?subject=ASVAB%20Free%2015-Minute%20Consultation">Free Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="panel hero" aria-label="ASVAB tutoring hero">
+    <h1>ASVAB Tutoring (Online)</h1>
+    <p>
+      Personalized 1:1 ASVAB and AFQT prep designed to raise your score efficiently.
+      We focus on fundamentals, smart strategies, and practice that matches the test.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=ASVAB%20Free%2015-Minute%20Consultation">Free Consultation</a>
+      <a class="btn" href="#what-you-get">What you get</a>
+      <a class="btn" href="#faq">FAQ</a>
+    </div>
+
+    <p style="margin-top:1.1rem; color: var(--text-muted); font-weight:520; line-height:1.9;">
+      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> ·
+      Text: <a href="tel:+14804424224">480-442-4224</a>
+    </p>
+
+    <div class="pill-row" aria-label="Highlights">
+      <span class="pill">1:1 instruction</span>
+      <span class="pill">AFQT-focused</span>
+      <span class="pill">Math & verbal support</span>
+      <span class="pill">Test strategy</span>
+    </div>
+  </section>
+
+  <section class="panel" id="what-you-get" aria-label="What you get">
+    <h2>What you get</h2>
+    <p class="section-note">
+      A clear plan, targeted practice, and coaching that builds confidence. Sessions are live online with screen-sharing and guided practice.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Score-focused plan</h3>
+        <ul>
+          <li>Quick diagnostic to identify weak areas</li>
+          <li>Study plan built around your timeline</li>
+          <li>Efficient drills (no busywork)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>AFQT emphasis</h3>
+        <ul>
+          <li>Arithmetic Reasoning</li>
+          <li>Mathematics Knowledge</li>
+          <li>Word Knowledge</li>
+          <li>Paragraph Comprehension</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Math that actually sticks</h3>
+        <ul>
+          <li>Fractions, ratios, percent, word problems</li>
+          <li>Algebra basics that drive score gains</li>
+          <li>Speed + accuracy without rushing</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Test strategy</h3>
+        <ul>
+          <li>Pacing and educated guessing</li>
+          <li>Common trap patterns & how to avoid them</li>
+          <li>How to practice the right way</li>
+        </ul>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" aria-label="ASVAB tutoring overview">
-      <div class="card">
-        <div class="eyebrow"><span class="dot" aria-hidden="true"></span> ASVAB & AFQT prep • Online • Nationwide</div>
-        <h1>ASVAB Tutoring Online</h1>
-        <p class="sub">
-          Raise your ASVAB score with one-on-one coaching that focuses on the sections that move your score the most:
-          math, verbal, and test strategy.
-        </p>
+  <section class="panel" aria-label="Who this is for">
+    <h2>Who this is for</h2>
+    <p class="section-note">
+      Students and applicants who want a higher AFQT score, stronger enlistment options, and a structured plan that reduces stress.
+      If you’ve been studying but not improving, we’ll identify why and fix it.
+    </p>
+  </section>
 
-        <div class="btnrow">
-          <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=ASVAB%20Free%2015-Minute%20Consultation%20Request">Book a Free 15-Min Consultation →</a>
-          <a class="btn" href="#contact">Contact & Pricing</a>
-        </div>
+  <section class="panel" id="faq" aria-label="ASVAB FAQ">
+    <h2>FAQ</h2>
 
-        <ul class="list">
-          <li><strong>Format:</strong> Live online via Google Meet</li>
-          <li><strong>Schedule:</strong> Flexible, 7 days/week</li>
-          <li><strong>Rate:</strong> $80/hour</li>
-          <li><strong>Best for:</strong> enlistment goals, retakes, higher AFQT targets</li>
-        </ul>
+    <div class="faq-item">
+      <button class="faq-q" type="button">Do you tutor the full ASVAB or just AFQT? <span aria-hidden="true">+</span></button>
+      <div class="faq-a" hidden>
+        Both. Most students benefit most from AFQT improvement first, but we can also support additional subtests depending on your goals and MOS interests.
       </div>
+    </div>
 
-      <div class="card">
-        <h2>What We Focus On</h2>
-        <ul class="list">
-          <li>Arithmetic Reasoning (word problems, speed + accuracy)</li>
-          <li>Mathematics Knowledge (algebra fundamentals)</li>
-          <li>Word Knowledge + Paragraph Comprehension</li>
-          <li>AFQT strategy: pacing, guessing, and mistake reduction</li>
-        </ul>
-
-        <h2 style="margin-top:1.1rem;">How Tutoring Works</h2>
-        <ul class="list">
-          <li>Quick diagnostic → identify your highest-impact gaps</li>
-          <li>Skill lessons + targeted drills</li>
-          <li>Timed practice + review of missed questions</li>
-          <li>Weekly plan you can follow between sessions</li>
-        </ul>
+    <div class="faq-item">
+      <button class="faq-q" type="button">How many sessions do I need? <span aria-hidden="true">+</span></button>
+      <div class="faq-a" hidden>
+        It depends on your starting point and timeline. After a quick diagnostic, we’ll recommend a simple weekly plan and what to practice between sessions.
       </div>
-    </section>
+    </div>
 
-    <section class="grid" aria-label="Benefits">
-      <div class="mini">
-        <strong>Efficient score gains</strong>
-        <p>We prioritize the content and question types that drive your score fastest.</p>
+    <div class="faq-item">
+      <button class="faq-q" type="button">What platform do you use for online tutoring? <span aria-hidden="true">+</span></button>
+      <div class="faq-a" hidden>
+        Google Meet (screen-sharing + guided problem solving). It’s simple and works on phones, tablets, and laptops.
       </div>
-      <div class="mini">
-        <strong>Clear explanations</strong>
-        <p>Step-by-step instruction with repeatable methods you can reuse on test day.</p>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">How do I get started? <span aria-hidden="true">+</span></button>
+      <div class="faq-a" hidden>
+        Email <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> or text
+        <a href="tel:+14804424224">480-442-4224</a> for a free 15-minute consultation.
       </div>
-      <div class="mini">
-        <strong>Confidence + control</strong>
-        <p>Timing, accuracy, and test strategy—so you walk in calm and prepared.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="card" id="contact" style="margin-top:1.1rem;">
-      <h2>Contact & Pricing</h2>
-      <p style="margin:0.35rem 0; color:var(--muted); font-weight:750;">
-        Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
-        Text: <a href="tel:+14804424224">480-442-4224</a><br/>
-        Rate: <strong>$80/hour</strong> • Online via Google Meet
-      </p>
+  <section class="panel" aria-label="Contact">
+    <h2>Contact</h2>
+    <p class="section-note">
+      Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
+      Text: <a href="tel:+14804424224">480-442-4224</a><br/>
+      Rate: $80/hour · Free 15-minute consultation
+    </p>
+  </section>
+</main>
 
-      <div class="btnrow">
-        <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=ASVAB%20Free%2015-Minute%20Consultation%20Request">Email to Get Started →</a>
-        <a class="btn" href="tel:+14804424224">Text/Call</a>
-      </div>
-    </section>
+<footer>
+  © <span id="year"></span> Study Hygiene
+</footer>
 
-    <section class="faq" id="faq" aria-label="Frequently asked questions">
-      <h2>ASVAB Tutoring FAQ</h2>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-      <div class="faqitem">
-        <button class="q" aria-expanded="false">
-          <span>Do you help with AFQT specifically?</span>
-          <span aria-hidden="true">+</span>
-        </button>
-        <div class="a" hidden>
-          Yes. We focus heavily on the AFQT-relevant skills (math + verbal), plus pacing and accuracy tactics that improve outcomes quickly.
-        </div>
-      </div>
+  // Mobile menu toggle
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('navLinks');
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? '×' : '≡';
+  });
 
-      <div class="faqitem">
-        <button class="q" aria-expanded="false">
-          <span>How quickly can I improve my score?</span>
-          <span aria-hidden="true">+</span>
-        </button>
-        <div class="a" hidden>
-          It depends on your baseline and goals, but most students see noticeable improvement after a few sessions paired with a weekly study plan.
-        </div>
-      </div>
-
-      <div class="faqitem">
-        <button class="q" aria-expanded="false">
-          <span>What do I need for online tutoring?</span>
-          <span aria-hidden="true">+</span>
-        </button>
-        <div class="a" hidden>
-          A laptop or tablet, internet connection, and Google Meet. We use screen sharing and targeted practice sets during sessions.
-        </div>
-      </div>
-
-      <div class="faqitem">
-        <button class="q" aria-expanded="false">
-          <span>How do I schedule a free consultation?</span>
-          <span aria-hidden="true">+</span>
-        </button>
-        <div class="a" hidden>
-          Email <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> or text <a href="tel:+14804424224">480-442-4224</a>
-          and mention “ASVAB.” We’ll set up a free 15-minute consult and outline next steps.
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Study Hygiene. All rights reserved.
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // FAQ accordion
-    document.addEventListener('DOMContentLoaded', () => {
-      const qs = document.querySelectorAll('.q');
-      qs.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const expanded = btn.getAttribute('aria-expanded') === 'true';
-          const answer = btn.parentElement.querySelector('.a');
-          btn.setAttribute('aria-expanded', String(!expanded));
-          answer.hidden = expanded;
-          const icon = btn.querySelector('span[aria-hidden="true"]');
-          if (icon) icon.textContent = expanded ? '+' : '–';
-        });
-      });
+  // FAQ toggle
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    const icon = q.querySelector('span[aria-hidden="true"]');
+    q.addEventListener('click', () => {
+      const isHidden = a.hidden;
+      a.hidden = !isHidden;
+      if (icon) icon.textContent = isHidden ? '–' : '+';
     });
-  </script>
+  });
+</script>
 </body>
 </html>
