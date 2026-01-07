@@ -201,17 +201,19 @@
       letter-spacing: -0.01em;
     }
 
-    /* Center long-form text blocks for balance (Option 1) */
+    /* ===== IMPORTANT CHANGE =====
+       Remove narrow centered text columns so paragraphs fill the panel.
+       This eliminates the “space on the right” feeling sitewide. */
     .section-note{
       color: var(--text-muted);
-      max-width: 70ch;
+      max-width: none;       /* <-- changed */
       font-weight: 520;
       line-height: 1.9;
-      margin: 0.2rem auto 0;
+      margin: 0.2rem 0 0;    /* <-- changed */
     }
 
     .hero p{
-      max-width: 62ch;
+      max-width: none;       /* <-- changed */
       color: var(--text-muted);
       font-size: 1.06rem;
       font-weight: 520;
@@ -290,19 +292,13 @@
     }
     li{ margin:0.35rem 0; }
 
-    /* ===== About: two-column layout ===== */
+    /* ===== About: two-column layout (wider text column) ===== */
     .about-grid{
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
+      grid-template-columns: 1.7fr 0.5fr; /* <-- changed to give text more room */
       gap: 1rem;
       margin-top: 1.05rem;
       align-items: start;
-    }
-
-    /* Inside About, don't limit to 70ch since we're already in a 2-col layout */
-    #about .section-note{
-      max-width: none;
-      margin: 0.2rem 0 0;
     }
 
     .pills{
@@ -515,7 +511,7 @@
           <li>Online 1:1 sessions</li>
         </ul>
 
-        <p class="section-note" style="max-width:none; margin:0.85rem 0 0;">
+        <p class="section-note" style="margin:0.85rem 0 0;">
           We tutor students from middle school through graduate/professional levels across math, writing,
           law coursework, and high-stakes exams.
         </p>
