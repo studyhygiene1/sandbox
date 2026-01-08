@@ -290,7 +290,7 @@
     }
     li{ margin:0.35rem 0; }
 
-    /* Pills list (for highlights) */
+    /* Pills list (for highlights + contact items) */
     .pills{
       list-style: none;
       padding-left: 0;
@@ -309,6 +309,17 @@
       color: var(--text-main);
       font-weight: 650;
       font-size: 0.92rem;
+    }
+    /* Make pill links look nice inside pills */
+    .pills a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(42,111,115,0.35);
+      padding-bottom: 1px;
+    }
+    .pills a:hover{
+      color: var(--accent);
+      border-bottom-color: rgba(42,111,115,0.7);
     }
 
     /* ===== FAQ ===== */
@@ -412,7 +423,7 @@
   <section class="panel hero" aria-label="Hero">
     <h1>Private Tutoring & Test Preparation</h1>
     <p>
-      One-on-one online tutoring for students of all ages: middle school, high school, college, and graduate.<br>
+      One-on-one online tutoring for students of all ages: middle school, high school, college, and graduate.
       Thoughtful instruction. Clear explanations. Consistent progress.
     </p>
 
@@ -423,35 +434,34 @@
     </div>
   </section>
 
-  <!-- CONTACT + HIGHLIGHTS (split into two cards) -->
+  <!-- CONTACT + HIGHLIGHTS -->
   <section class="panel" id="contact" aria-label="Contact and Highlights">
-    <h2>Summary</h2>
+    <h2>Start Here</h2>
 
     <div class="grid" aria-label="Contact and highlights grid">
-      <!-- Contact card -->
-      <div class="card" aria-label="Contact details">
+      <!-- Contact card (now pill-style like highlights) -->
+      <div class="card" aria-label="Contact">
         <h3>Contact</h3>
-        <p class="section-note">
-          Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a><br/>
-          Text: <a href="tel:+14804424224">480-442-4224</a><br/>
-          Rate: $70/hour<br>
-          Consultation: 15-minute free
-                    <li>Online</li>
+        <ul class="pills" aria-label="Contact details">
+          <li>Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a></li>
+          <li>Text: <a href="tel:+14804424224">480-442-4224</a></li>
+          <li>Rate: $70/hour</li>
+          <li>Free 15-minute consultation</li>
+          <li>Online (Google Meet)</li>
           <li>1:1 sessions</li>
-        </p>
+        </ul>
       </div>
 
       <!-- Highlights card -->
       <div class="card" aria-label="Highlights">
         <h3>Highlights</h3>
         <ul class="pills" aria-label="Tutor highlights">
-          <li>25+ years experience</li>
-          <li>J.D. Licensed Attorney</li>
-          <li>M.S. Electrical & Computer Engineering</li>
+          <li>25+ years teaching</li>
+          <li>J.D. (Attorney)</li>
+          <li>M.S. Electrical & Computer Eng.</li>
           <li>B.S. Computer Engineering</li>
-          <li>Certified: CRLA & IXL</li>
-
-
+          <li>Math & test prep specialist</li>
+          <li>Online 1:1 sessions</li>
         </ul>
       </div>
     </div>
