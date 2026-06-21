@@ -19,6 +19,7 @@
 --accent-dark:#071d36;
 --accent-light:#e9eef5;
 --border:#dedbd5;
+--gold:#f5b335;
 --max:1050px;
 }
 
@@ -238,6 +239,72 @@ max-width:900px;
 margin-bottom:20px;
 }
 
+.rating-card{
+background:white;
+border:1px solid var(--border);
+border-radius:22px;
+padding:34px;
+box-shadow:0 10px 28px rgba(7,29,54,.08);
+max-width:760px;
+}
+
+.rating-intro{
+color:var(--muted);
+margin-top:-10px;
+margin-bottom:24px;
+font-size:1.04rem;
+}
+
+.rating-row{
+display:flex;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:22px;
+}
+
+.stars{
+color:var(--gold);
+font-size:1.6rem;
+letter-spacing:2px;
+}
+
+.rating-score{
+font-size:1.4rem;
+font-weight:800;
+color:var(--accent-dark);
+}
+
+.rating-muted{
+color:var(--muted);
+}
+
+.rating-bar-row{
+display:grid;
+grid-template-columns:75px 1fr 60px;
+gap:12px;
+align-items:center;
+margin:8px 0;
+}
+
+.rating-label{
+font-weight:700;
+color:var(--accent-dark);
+}
+
+.rating-bar{
+height:18px;
+background:#ececec;
+border-radius:999px;
+overflow:hidden;
+}
+
+.rating-fill{
+height:100%;
+background:var(--gold);
+border-radius:999px;
+}
+
 .subject-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -303,6 +370,11 @@ grid-template-columns:1fr;
 
 .profile-card{
 max-width:360px;
+}
+
+.rating-bar-row{
+grid-template-columns:65px 1fr 50px;
+font-size:.92rem;
 }
 
 }
@@ -389,6 +461,70 @@ J.D. <br>
 M.Sc. Electrical Engineering<br>
 B.Sc. Computer Engineering
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="reviews">
+
+<div class="container">
+
+<h2>Trusted by Hundreds of Students</h2>
+
+<p class="rating-intro">
+5.0 average rating from 557 student ratings.
+</p>
+
+<div class="rating-card">
+
+<div class="rating-row">
+<span class="stars">★★★★★</span>
+<span class="rating-score">5.0</span>
+<span class="rating-muted">(557 ratings)</span>
+</div>
+
+<div class="rating-bar-row">
+<div class="rating-label">5 star</div>
+<div class="rating-bar">
+<div class="rating-fill" style="width:99.6%;"></div>
+</div>
+<div class="rating-muted">(555)</div>
+</div>
+
+<div class="rating-bar-row">
+<div class="rating-label">4 star</div>
+<div class="rating-bar">
+<div class="rating-fill" style="width:0.2%;"></div>
+</div>
+<div class="rating-muted">(1)</div>
+</div>
+
+<div class="rating-bar-row">
+<div class="rating-label">3 star</div>
+<div class="rating-bar">
+<div class="rating-fill" style="width:0%;"></div>
+</div>
+<div class="rating-muted">(0)</div>
+</div>
+
+<div class="rating-bar-row">
+<div class="rating-label">2 star</div>
+<div class="rating-bar">
+<div class="rating-fill" style="width:0%;"></div>
+</div>
+<div class="rating-muted">(0)</div>
+</div>
+
+<div class="rating-bar-row">
+<div class="rating-label">1 star</div>
+<div class="rating-bar">
+<div class="rating-fill" style="width:0.2%;"></div>
+</div>
+<div class="rating-muted">(1)</div>
+</div>
 
 </div>
 
