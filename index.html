@@ -46,26 +46,6 @@ margin:auto;
 padding:0 24px;
 }
 
-.top-bar{
-background:var(--accent-dark);
-color:white;
-font-size:.95rem;
-padding:9px 0;
-}
-
-.top-bar .container{
-display:flex;
-justify-content:space-between;
-gap:16px;
-flex-wrap:wrap;
-}
-
-.top-bar a{
-color:white;
-text-decoration:none;
-font-weight:700;
-}
-
 header{
 position:sticky;
 top:0;
@@ -183,7 +163,7 @@ box-shadow:0 14px 34px rgba(7,29,54,.14);
 
 .profile-image{
 width:100%;
-max-width:280px;
+max-width:260px;
 border-radius:20px;
 border:1px solid var(--border);
 margin-bottom:18px;
@@ -242,49 +222,51 @@ margin-bottom:20px;
 .rating-card{
 background:white;
 border:1px solid var(--border);
-border-radius:22px;
-padding:34px;
-box-shadow:0 10px 28px rgba(7,29,54,.08);
-max-width:760px;
+border-radius:18px;
+padding:24px;
+box-shadow:0 8px 20px rgba(7,29,54,.06);
+max-width:620px;
 }
 
 .rating-intro{
 color:var(--muted);
-margin-top:-10px;
-margin-bottom:24px;
-font-size:1.04rem;
+margin-top:-6px;
+margin-bottom:18px;
+font-size:.95rem;
 }
 
 .rating-row{
 display:flex;
 align-items:center;
-gap:10px;
+gap:8px;
 flex-wrap:wrap;
-margin-bottom:22px;
+margin-bottom:18px;
 }
 
 .stars{
 color:var(--gold);
-font-size:1.6rem;
-letter-spacing:2px;
+font-size:1.2rem;
+letter-spacing:1px;
 }
 
 .rating-score{
-font-size:1.4rem;
+font-size:1.1rem;
 font-weight:800;
 color:var(--accent-dark);
 }
 
 .rating-muted{
 color:var(--muted);
+font-size:.9rem;
 }
 
 .rating-bar-row{
 display:grid;
-grid-template-columns:75px 1fr 60px;
-gap:12px;
+grid-template-columns:60px 1fr 45px;
+gap:10px;
 align-items:center;
-margin:8px 0;
+margin:5px 0;
+font-size:.85rem;
 }
 
 .rating-label{
@@ -293,7 +275,7 @@ color:var(--accent-dark);
 }
 
 .rating-bar{
-height:18px;
+height:12px;
 background:#ececec;
 border-radius:999px;
 overflow:hidden;
@@ -351,11 +333,6 @@ color:var(--muted);
 
 @media(max-width:800px){
 
-.top-bar .container{
-justify-content:center;
-text-align:center;
-}
-
 nav{
 display:none;
 }
@@ -369,12 +346,12 @@ grid-template-columns:1fr;
 }
 
 .profile-card{
-max-width:360px;
+max-width:340px;
 }
 
 .rating-bar-row{
-grid-template-columns:65px 1fr 50px;
-font-size:.92rem;
+grid-template-columns:55px 1fr 42px;
+font-size:.82rem;
 }
 
 }
@@ -383,13 +360,6 @@ font-size:.92rem;
 </head>
 
 <body>
-
-<div class="top-bar">
-<div class="container">
-<div>Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a></div>
-<div>Text Message: <a href="tel:4804424224">480-442-4224</a></div>
-</div>
-</div>
 
 <header>
 
@@ -472,7 +442,9 @@ B.Sc. Computer Engineering
 
 <div class="container">
 
-<h2>Trusted by Hundreds of Students</h2>
+<h2 style="font-size:1.6rem;">
+Trusted by Hundreds of Students
+</h2>
 
 <p class="rating-intro">
 5.0 average rating from 557 student ratings.
@@ -643,17 +615,10 @@ Text:
 </p>
 
 </div>
-
 </div>
-
 </section>
-
 <footer>
-
 © 2026 Study Hygiene
-
 </footer>
-
 </body>
-
 </html>
