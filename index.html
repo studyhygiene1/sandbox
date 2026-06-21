@@ -1,579 +1,363 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Study Hygiene Tutoring | Online Test Prep & Private Tutoring</title>
-  <link rel="canonical" href="https://www.studyhygiene.com/" />
-  <meta name="description" content="Study Hygiene offers private online tutoring and test prep nationwide. Math, SAT, ACT, GRE, ASVAB/AFQT, law school, writing, and admissions support with experienced educators." />
+<title>Study Hygiene | Private Tutoring & Test Prep</title>
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Study Hygiene Tutoring | Online Test Prep & Private Tutoring" />
-  <meta property="og:description" content="Private online tutoring and test prep: Math, SAT, ACT, GRE, ASVAB/AFQT, law school, writing, and admissions support." />
-  <meta property="og:url" content="https://www.studyhygiene.com/" />
-  <meta property="og:image" content="https://www.studyhygiene.com/og-image.jpg" />
+<meta name="description"
+content="Private online tutoring for SAT, ACT, ASVAB, GRE, Math, Writing, Law, College Admissions, and more. 25+ years of teaching experience.">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Study Hygiene Tutoring | Online Test Prep & Private Tutoring" />
-  <meta name="twitter:description" content="Private online tutoring and test prep: Math, SAT, ACT, GRE, ASVAB/AFQT, law school, writing, and admissions support." />
-  <meta name="twitter:image" content="https://www.studyhygiene.com/og-image.jpg" />
+<style>
 
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+:root{
+--bg:#faf9f7;
+--card:#ffffff;
+--text:#1f2937;
+--muted:#5d6675;
+--accent:#173b66;
+--border:#e7e7e7;
+--max:1050px;
+}
 
-  <style>
-    :root{
-      /* ===== Warm Academic Palette (airy/minimal + rich) ===== */
-      --bg-main: #f2eee7;
-      --bg-soft: #e9e2d8;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
-      --panel: rgba(255,255,255,0.72);
-      --panel-strong: rgba(255,255,255,0.86);
-      --border: rgba(32,35,41,0.14);
+html{
+scroll-behavior:smooth;
+}
 
-      --text-main: #1f232a;
-      --text-muted: #55637a;
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.8;
+}
 
-      --accent: #2a6f73;       /* deep teal */
-      --accent-alt: #4f5f99;   /* indigo */
-      --accent-warm: #c07f48;  /* sandstone */
+.container{
+max-width:var(--max);
+margin:auto;
+padding:0 24px;
+}
 
-      --radius: 1.1rem;
-      --shadow: 0 20px 46px rgba(0,0,0,0.10);
-      --shadow-soft: 0 12px 28px rgba(0,0,0,0.08);
-      --max: 980px;
-    }
+header{
+position:sticky;
+top:0;
+background:rgba(250,249,247,.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);
+}
 
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
 
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-      color: var(--text-main);
-      line-height: 1.8;
-      background:
-        radial-gradient(900px 520px at 12% -5%, rgba(42,111,115,0.18), transparent 60%),
-        radial-gradient(900px 520px at 92% 0%, rgba(192,127,72,0.18), transparent 62%),
-        radial-gradient(820px 480px at 50% 110%, rgba(79,95,153,0.14), transparent 58%),
-        linear-gradient(180deg, var(--bg-soft), var(--bg-main));
-      position: relative;
-    }
+.logo{
+font-weight:700;
+font-size:1.1rem;
+}
 
-    /* ===== Grain overlay (subtle) ===== */
-    body::before{
-      content:"";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      opacity: 0.09;
-      mix-blend-mode: soft-light;
-    }
+nav{
+display:flex;
+gap:28px;
+}
 
-    header, main, footer{ position: relative; z-index: 1; }
+nav a{
+text-decoration:none;
+color:var(--text);
+}
 
-    /* Links should look like links */
-    a{
-      color: var(--accent);
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
-    }
-    a:hover{ color: #215a5e; }
+.button{
+background:var(--accent);
+color:white;
+padding:12px 18px;
+border-radius:999px;
+text-decoration:none;
+}
 
-    /* ===== Header ===== */
-    header{
-      position: sticky;
-      top:0;
-      z-index:10;
-      background: rgba(242,238,231,0.88);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
+.hero{
+padding:90px 0 70px;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0.95rem 1rem;
-    }
+.hero h1{
+font-size:clamp(2.5rem,6vw,4rem);
+line-height:1.1;
+max-width:850px;
+margin-bottom:24px;
+}
 
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:1rem;
-    }
+.hero p{
+font-size:1.1rem;
+color:var(--muted);
+max-width:820px;
+}
 
-    .brand{
-      text-decoration:none;
-      color: var(--text-main);
-    }
+.actions{
+margin-top:35px;
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+}
 
-    .brand strong{
-      font-size: 1.08rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-    }
+section{
+padding:70px 0;
+}
 
-    .brand span{
-      display:block;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
+h2{
+font-size:2rem;
+margin-bottom:22px;
+}
 
-    .menu-btn{
-      display:none;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,0.68);
-      border-radius:999px;
-      width:44px;height:44px;
-      font-size:1.35rem;
-      cursor:pointer;
-      box-shadow: var(--shadow-soft);
-    }
+.bio{
+font-size:1.04rem;
+color:var(--muted);
+}
 
-    nav{
-      display:flex;
-      gap:0.95rem;
-      align-items:center;
-      flex-wrap:wrap;
-    }
+.bio p{
+margin-bottom:20px;
+}
 
-    nav a{
-      font-weight: 700;
-      color: var(--text-main);
-      opacity:0.92;
-      text-decoration: none; /* nav looks clean */
-    }
-    nav a:hover{
-      opacity:1;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
-    }
+.subject-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:14px;
+}
 
-    .cta{
-      text-decoration:none !important;
-      padding:0.56rem 0.95rem;
-      border-radius:999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
-      color:#fff !important;
-      box-shadow: 0 14px 30px rgba(42,111,115,0.22);
-    }
+.subject{
+background:var(--card);
+border:1px solid var(--border);
+padding:16px;
+border-radius:14px;
+text-align:center;
+}
 
-    /* ===== Main ===== */
-    main{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 1.6rem 1rem 3rem;
-    }
+.contact{
+background:white;
+border:1px solid var(--border);
+padding:42px;
+border-radius:18px;
+}
 
-    .panel{
-      background: rgba(255,255,255,0.72);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.75rem 1.65rem;
-      margin-bottom: 1.8rem;
-    }
+.contact p{
+margin:10px 0;
+}
 
-    /* ===== Hero ===== */
-    .hero{
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.55)),
-        radial-gradient(680px 340px at 10% 0%, rgba(42,111,115,0.14), transparent 60%),
-        radial-gradient(680px 340px at 95% 10%, rgba(192,127,72,0.14), transparent 62%);
-    }
+footer{
+padding:40px;
+text-align:center;
+color:var(--muted);
+}
 
-    .hero h1{
-      font-size: clamp(2.05rem, 4.2vw, 2.75rem);
-      line-height: 1.16;
-      margin:0.25rem 0 0.8rem;
-      font-weight: 850;
-      letter-spacing: -0.01em;
-    }
+@media(max-width:700px){
 
-    /* Paragraphs fill panel width (no narrow columns) */
-    .section-note{
-      color: var(--text-muted);
-      max-width: none;
-      font-weight: 520;
-      line-height: 1.9;
-      margin: 0.2rem 0 0;
-    }
+nav{
+display:none;
+}
 
-    .hero p{
-      max-width: none;
-      color: var(--text-muted);
-      font-size: 1.06rem;
-      font-weight: 520;
-      line-height: 1.9;
-      margin: 0.25rem 0 0;
-    }
+.hero{
+padding-top:50px;
+}
 
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.75rem;
-      margin-top:1.15rem;
-    }
+}
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      padding:0.7rem 1.1rem;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight: 700;
-      border:1px solid rgba(32,35,41,0.16);
-      background: rgba(255,255,255,0.62);
-      color: var(--text-main);
-      box-shadow: var(--shadow-soft);
-      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
-    }
-
-    .btn:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 18px 34px rgba(0,0,0,0.10);
-    }
-
-    .btn.primary{
-      background: linear-gradient(135deg, var(--accent), var(--accent-alt));
-      color:#fff;
-      border:none;
-      box-shadow: 0 16px 34px rgba(42,111,115,0.22);
-    }
-
-    /* ===== Sections ===== */
-    h2{
-      font-size: 1.5rem;
-      margin:0 0 0.55rem;
-      font-weight: 820;
-      letter-spacing: -0.01em;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:1rem;
-      margin-top:1.05rem;
-    }
-
-    .card{
-      background: var(--panel-strong);
-      border:1px solid rgba(32,35,41,0.12);
-      border-radius:1.1rem;
-      padding:1.35rem 1.3rem;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .card h3{
-      margin:0 0 0.55rem;
-      font-size: 1.08rem;
-      font-weight: 800;
-    }
-
-    ul{
-      padding-left:1.1rem;
-      color: var(--text-muted);
-      font-weight: 520;
-      line-height: 1.85;
-      margin: 0.2rem 0 0;
-    }
-    li{ margin:0.35rem 0; }
-
-    /* Pills list (for highlights + contact items) */
-    .pills{
-      list-style: none;
-      padding-left: 0;
-      margin: 0.2rem 0 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .pills li{
-      margin: 0;
-      padding: 0.45rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(32,35,41,0.14);
-      background: rgba(255,255,255,0.62);
-      box-shadow: var(--shadow-soft);
-      color: var(--text-main);
-      font-weight: 650;
-      font-size: 0.92rem;
-    }
-
-    /* Make pill links look nice inside pills */
-    .pills a{
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 2px solid rgba(42,111,115,0.35);
-      padding-bottom: 1px;
-    }
-    .pills a:hover{
-      color: var(--accent);
-      border-bottom-color: rgba(42,111,115,0.7);
-    }
-
-    /* ===== FAQ ===== */
-    .faq-item{
-      border-top:1px solid rgba(32,35,41,0.14);
-      padding:1.05rem 0;
-    }
-
-    .faq-q{
-      background:none;
-      border:none;
-      font:inherit;
-      font-weight: 740;
-      cursor:pointer;
-      display:flex;
-      justify-content:space-between;
-      width:100%;
-      color: var(--text-main);
-      padding: 0;
-      text-align: left;
-    }
-
-    .faq-a{
-      margin-top:0.55rem;
-      color: var(--text-muted);
-      font-weight: 520;
-      line-height: 1.9;
-    }
-
-    /* ===== Footer ===== */
-    footer{
-      text-align:center;
-      color: var(--text-muted);
-      font-size:0.9rem;
-      padding:2.2rem 1rem 2.6rem;
-      font-weight: 520;
-    }
-
-    /* ===== Mobile ===== */
-    @media (max-width: 720px){
-      body{ line-height: 1.85; }
-
-      .grid{ grid-template-columns:1fr; }
-
-      nav{ display:none; flex-direction:column; align-items:flex-start; gap:0.7rem; }
-      nav.open{ display:flex; }
-      .menu-btn{ display:block; }
-
-      .panel{
-        padding: 1.45rem 1.2rem;
-        margin-bottom: 1.6rem;
-      }
-
-      .hero h1{ line-height: 1.18; }
-    }
-  </style>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"EducationalOrganization",
-    "name":"Study Hygiene",
-    "url":"https://www.studyhygiene.com/",
-    "description":"Private online tutoring and test prep (Math, SAT, ACT, GRE, ASVAB/AFQT, law school, writing, and admissions support).",
-    "areaServed":{"@type":"Country","name":"United States"},
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"Customer Support",
-      "email":"studyhygiene1@gmail.com",
-      "telephone":"+1-480-442-4224"
-    }]
-  }
-  </script>
+</style>
 </head>
 
 <body>
+
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="/">
-      <strong>Study Hygiene Tutoring</strong>
-      <span>One-on-One & Online</span>
-    </a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">≡</button>
+<div class="container nav">
 
-    <nav id="navLinks" aria-label="Primary">
-      <a href="/" aria-current="page">Home</a>
-      <a href="#services">Services</a>
-      <a href="/sat-act-tutoring/">SAT &amp; ACT</a>
-      <a href="/asvab-tutoring/">ASVAB</a>
-      <a href="#about">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-      <a class="cta" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation">Free Consultation</a>
-    </nav>
-  </div>
+<div class="logo">
+Study Hygiene
+</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#subjects">Subjects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
 </header>
 
-<main>
-  <!-- HERO -->
-  <section class="panel hero" aria-label="Hero">
-    <h1>Private Tutoring & Test Preparation</h1>
-    <p>
-      One-on-one online tutoring for students of all ages: middle school, high school, college, and graduate.
-      Thoughtful instruction. Clear explanations. Consistent progress.
-    </p>
+<section class="hero">
 
-    <div class="actions">
-      <a class="btn primary" href="mailto:studyhygiene1@gmail.com?subject=Free%2015-Minute%20Consultation">Free Consultation</a>
-      <a class="btn" href="/sat-act-tutoring/">SAT &amp; ACT Tutoring</a>
-      <a class="btn" href="/asvab-tutoring/">ASVAB Tutoring</a>
-      <a class="btn" href="#services">Services</a>
-    </div>
-  </section>
+<div class="container">
 
-  <!-- CONTACT + HIGHLIGHTS -->
-  <section class="panel" id="contact" aria-label="Contact and Highlights">
-    <h2>Start Here</h2>
+<h1>
+Private Tutoring & Test Preparation
+</h1>
 
-    <div class="grid" aria-label="Contact and highlights grid">
-      <!-- Contact card -->
-      <div class="card" aria-label="Contact">
-        <h3>Contact</h3>
-        <ul class="pills" aria-label="Contact details">
-          <li>Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a></li>
-          <li>Text: <a href="tel:+14804424224">480-442-4224</a></li>
-          <li>Rate: $70/hour</li>
-          <li>Free 15-minute consultation</li>
-          <li>Online (Google Meet)</li>
-          <li>1:1 sessions</li>
-        </ul>
-      </div>
+<p>
+One-on-one online tutoring for students from elementary school through graduate and professional programs.
+Clear explanations. Structured learning. Measurable progress.
+</p>
 
-      <!-- Highlights card -->
-      <div class="card" aria-label="Highlights">
-        <h3>Highlights</h3>
-        <ul class="pills" aria-label="Tutor highlights">
-          <li>25+ years teaching</li>
-          <li>J.D. (Attorney)</li>
-          <li>M.S. Electrical & Computer Eng.</li>
-          <li>B.S. Computer Engineering</li>
-          <li>Math & test prep specialist</li>
-          <li>Online 1:1 sessions</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<div class="actions">
 
-  <!-- SERVICES -->
-  <section class="panel" id="services" aria-label="Services">
-    <h2>Services</h2>
-    <p class="section-note">Individual tutoring, customized to your unique needs based on diagnostics.</p>
+<a
+class="button"
+href="mailto:studyhygiene1@gmail.com">
+Free Consultation
+</a>
 
-    <div class="grid" aria-label="Service categories">
-      <div class="card">
-        <h3>Test Preparation</h3>
-        <ul>
-          <li><a href="/sat-act-tutoring/">SAT &amp; ACT</a></li>
-          <li>GRE</li>
-          <li><a href="/asvab-tutoring/">ASVAB, AFOQT</a></li>
-          <li>ISEE, SSAT, HSPT</li>
-          <li>GED</li>
-        </ul>
-      </div>
+<a
+class="button"
+style="background:#fff;color:#173b66;border:1px solid #173b66;"
+href="#subjects">
+View Subjects
+</a>
 
-      <div class="card">
-        <h3>Tutoring</h3>
-        <ul>
-          <li>Math: Algebra, Trigonometry, Geometry, Calculus I, II</li>
-          <li>Writing: AP-level → Graduate-level Writing</li>
-          <li>Law: Legal Writing, Doctrinal Courses</li>
-        </ul>
-      </div>
+</div>
 
-      <div class="card">
-        <h3>Admissions Support</h3>
-        <ul>
-          <li>Common App Personal Statements</li>
-          <li>Supplemental Essays</li>
-          <li>Editing: Tone, Structure, Voice</li>
-          <li>Brainstorming → Final Polish</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- ABOUT -->
-  <section class="panel" id="about" aria-label="About Us">
-    <h2>About Us</h2>
-    <p class="section-note">
-      Study Hygiene is built on the idea that strong fundamentals, good habits, and calm confidence
-      outperform frantic studying every time. We teach with structure and clarity—so students know
-      exactly what to practice, why it matters, and how to improve efficiently.
-    </p>
+</section>
 
-    <p class="section-note" style="margin-top:0.75rem;">
-      Our tutoring is one-on-one and diagnostic-driven. We identify the highest-impact gaps first,
-      then train skills through targeted practice and strategy—so your time translates into results.
-    </p>
-  </section>
+<section id="about">
 
-  <!-- FAQ -->
-  <section class="panel" id="faq" aria-label="FAQ">
-    <h2>FAQ</h2>
+<div class="container">
 
-    <div class="faq-item">
-      <button class="faq-q" type="button">Do you work nationwide? <span aria-hidden="true">+</span></button>
-      <div class="faq-a" hidden>Yes. All sessions are live online.</div>
-    </div>
+<h2>About Me</h2>
 
-    <div class="faq-item">
-      <button class="faq-q" type="button">What levels do you tutor? <span aria-hidden="true">+</span></button>
-      <div class="faq-a" hidden>Middle school through graduate and professional.</div>
-    </div>
+<div class="bio">
 
-    <div class="faq-item">
-      <button class="faq-q" type="button">How do I get started? <span aria-hidden="true">+</span></button>
-      <div class="faq-a" hidden>
-        Email <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> or text
-        <a href="tel:+14804424224">480-442-4224</a> for a free 15-minute consultation.
-      </div>
-    </div>
-  </section>
-</main>
+<p>
+Anxious about your SAT, ACT, ASVAB, or GRE? Struggling with math or writing? Need to prepare for an interview or write a personal statement that helps you stand out? I can help.
+</p>
+
+<p>
+I'm an educator with degrees and professional experience in engineering and law.
+</p>
+
+<p>
+Tutoring is my full-time passion. Motivated in part by my own early struggles in math, I’m dedicated to helping students overcome obstacles and build confidence. Focused tutoring helped me transform from a D− student into the highest scorer in my class, earning a perfect score on my math final. That experience shaped the trajectory of my academic and professional career.
+</p>
+
+<p>
+I graduated high school as valedictorian and the top scorer in my state. I later studied engineering at Loughborough University before earning a full scholarship to the University of Arizona, where I completed my B.Sc. in Computer Engineering, M.Sc. in Electrical & Computer Engineering, and J.D.
+</p>
+
+<p>
+Professionally, I have worked as a software engineer across aerospace, semiconductor, travel, and healthcare industries and am also a licensed attorney.
+</p>
+
+<p>
+I began tutoring in college and discovered a passion for helping students connect with difficult concepts through simple explanations and meaningful engagement.
+</p>
+
+<p>
+Today, with 25+ years of teaching experience, I specialize in helping students exceed their own expectations through structured, individualized instruction.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="subjects">
+
+<div class="container">
+
+<h2>Subjects</h2>
+
+<div class="subject-grid">
+
+<div class="subject">Accuplacer</div>
+<div class="subject">ACT</div>
+<div class="subject">AFOQT</div>
+<div class="subject">ASVAB</div>
+<div class="subject">SAT</div>
+<div class="subject">PSAT</div>
+<div class="subject">GRE</div>
+<div class="subject">GMAT</div>
+<div class="subject">GED</div>
+<div class="subject">ISEE</div>
+<div class="subject">SSAT</div>
+<div class="subject">HSPT</div>
+
+<div class="subject">Elementary Math</div>
+<div class="subject">Prealgebra</div>
+<div class="subject">Algebra I</div>
+<div class="subject">Algebra II</div>
+<div class="subject">Geometry</div>
+<div class="subject">Trigonometry</div>
+<div class="subject">Precalculus</div>
+<div class="subject">Calculus</div>
+<div class="subject">Physics</div>
+
+<div class="subject">English</div>
+<div class="subject">Grammar</div>
+<div class="subject">Reading</div>
+<div class="subject">Writing</div>
+<div class="subject">Essay Writing</div>
+
+<div class="subject">Law</div>
+<div class="subject">Legal Writing</div>
+
+<div class="subject">Interview Prep</div>
+<div class="subject">College Counseling</div>
+<div class="subject">Personal Statements</div>
+<div class="subject">Public Speaking</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<h2>Let's Get Started</h2>
+
+<p>
+Free 15-minute consultation
+</p>
+
+<p>
+Email:
+studyhygiene1@gmail.com
+</p>
+
+<p>
+Text:
+480-442-4224
+</p>
+
+<p>
+Online • One-on-One • Nationwide
+</p>
+
+</div>
+
+</div>
+
+</section>
 
 <footer>
-  © <span id="year"></span> Study Hygiene
+
+© 2026 Study Hygiene
+
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Mobile menu toggle
-  const btn = document.getElementById('menuBtn');
-  const nav = document.getElementById('navLinks');
-  btn.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(open));
-    btn.textContent = open ? '×' : '≡';
-  });
-
-  // FAQ toggle
-  document.querySelectorAll('.faq-item').forEach((item) => {
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
-    const icon = q.querySelector('span[aria-hidden="true"]');
-    q.addEventListener('click', () => {
-      const isHidden = a.hidden;
-      a.hidden = !isHidden;
-      if (icon) icon.textContent = isHidden ? '–' : '+';
-    });
-  });
-</script>
 </body>
+
 </html>
+```
