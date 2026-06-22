@@ -66,7 +66,6 @@ padding:18px 0;
 font-weight:800;
 font-size:1.2rem;
 color:var(--accent-dark);
-letter-spacing:.2px;
 }
 
 nav{
@@ -189,8 +188,14 @@ color:var(--accent-dark);
 padding:8px 14px;
 border-radius:999px;
 font-weight:700;
-margin-bottom:16px;
+margin-bottom:12px;
 font-size:.92rem;
+}
+
+.profile-rating{
+font-size:.95rem;
+color:var(--muted);
+margin-bottom:14px;
 }
 
 .qualifications{
@@ -219,88 +224,103 @@ max-width:900px;
 margin-bottom:20px;
 }
 
-.rating-card{
+/* Redesigned compact social proof section */
+
+.reviews{
+padding:46px 0;
+background:#fffaf2;
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+}
+
+.review-card{
 background:white;
 border:1px solid var(--border);
-border-radius:18px;
-padding:24px;
-box-shadow:0 8px 20px rgba(7,29,54,.06);
-max-width:620px;
-}
-
-.rating-intro{
-color:var(--muted);
-margin-top:-6px;
-margin-bottom:18px;
-font-size:.95rem;
-}
-
-.rating-row{
-display:flex;
+border-radius:20px;
+padding:26px 30px;
+display:grid;
+grid-template-columns:auto 1fr;
+gap:28px;
 align-items:center;
-gap:8px;
-flex-wrap:wrap;
-margin-bottom:18px;
+box-shadow:0 8px 22px rgba(7,29,54,.07);
+max-width:850px;
+}
+
+.rating-number{
+font-size:3rem;
+line-height:1;
+font-weight:900;
+color:var(--accent-dark);
 }
 
 .stars{
 color:var(--gold);
-font-size:1.2rem;
+font-size:1.25rem;
 letter-spacing:1px;
+margin-top:8px;
 }
 
-.rating-score{
-font-size:1.1rem;
-font-weight:800;
-color:var(--accent-dark);
+.review-text h2{
+font-size:1.55rem;
+margin-bottom:6px;
 }
 
-.rating-muted{
+.review-text p{
 color:var(--muted);
-font-size:.9rem;
+font-size:.98rem;
 }
 
-.rating-bar-row{
-display:grid;
-grid-template-columns:60px 1fr 45px;
-gap:10px;
-align-items:center;
-margin:5px 0;
-font-size:.85rem;
+.review-stats{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+margin-top:14px;
 }
 
-.rating-label{
-font-weight:700;
+.stat-pill{
+background:var(--accent-light);
 color:var(--accent-dark);
-}
-
-.rating-bar{
-height:12px;
-background:#ececec;
+padding:7px 12px;
 border-radius:999px;
-overflow:hidden;
+font-size:.9rem;
+font-weight:700;
 }
 
-.rating-fill{
-height:100%;
-background:var(--gold);
-border-radius:999px;
-}
+/* Subject categories */
 
-.subject-grid{
+.subject-categories{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:14px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.subject-category{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:22px;
+box-shadow:0 4px 10px rgba(7,29,54,.04);
+}
+
+.subject-category h3{
+color:var(--accent-dark);
+font-size:1.25rem;
+margin-bottom:14px;
+}
+
+.subject-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .subject{
-background:var(--card);
-border:1px solid var(--border);
-padding:16px;
-border-radius:14px;
-text-align:center;
-font-weight:600;
-box-shadow:0 4px 10px rgba(7,29,54,.04);
+background:var(--accent-light);
+color:var(--accent-dark);
+padding:8px 12px;
+border-radius:999px;
+font-size:.92rem;
+font-weight:700;
 }
 
 .contact{
@@ -349,9 +369,13 @@ grid-template-columns:1fr;
 max-width:340px;
 }
 
-.rating-bar-row{
-grid-template-columns:55px 1fr 42px;
-font-size:.82rem;
+.review-card{
+grid-template-columns:1fr;
+gap:16px;
+}
+
+.rating-number{
+font-size:2.4rem;
 }
 
 }
@@ -366,7 +390,7 @@ font-size:.82rem;
 <div class="container nav">
 
 <div class="logo">
-Private Tutoring: Online | 5-Star Rated | Over 2000 Hours Tutored Annually
+SH Tutoring
 </div>
 
 <nav>
@@ -389,17 +413,14 @@ Private Tutoring: Online | 5-Star Rated | Over 2000 Hours Tutored Annually
 Personalized Tutoring for Academic & Professional Success
 </h1>
 
-<h3>
-AP and College Courses, Standardized Test Prep</h3>
-
 <p>
-One-on-one online tutoring for students from middle school through graduate and professional programs. <br><br>
+One-on-one online tutoring for students from elementary school through graduate and professional programs. <br>
 Clear Explanations | Structured Learning | Measurable Progress
 </p>
 
 <div class="actions">
 
-<a class="button" href="mailto:haneestutors@gmail.com">
+<a class="button" href="mailto:studyhygiene1@gmail.com">
 Free 20 Min Consultation
 </a>
 
@@ -410,7 +431,7 @@ View Subjects
 </div>
 
 <p class="hero-contact">
-Email: <a href="mailto:haneestutors@gmail.com">haneestutors@gmail.com</a> · Text: <a href="tel:4804424224">(480) 442-4224</a>
+Email: <a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a> · Text: <a href="tel:4804424224">480-442-4224</a>
 </p>
 
 </div>
@@ -429,8 +450,12 @@ Engineer • Attorney • Educator
 25+ Years Teaching Experience
 </div>
 
+<p class="profile-rating">
+★★★★★ 5.0 average • 557 student ratings
+</p>
+
 <p class="qualifications">
-J.D. Licensed Attorney<br>
+J.D. <br>
 M.Sc. Electrical Engineering<br>
 B.Sc. Computer Engineering
 </p>
@@ -441,64 +466,31 @@ B.Sc. Computer Engineering
 
 </section>
 
-<section id="reviews">
+<section id="reviews" class="reviews">
 
 <div class="container">
 
-<h2 style="font-size:1.6rem;">
-Trusted by Hundreds of Students
-</h2>
+<div class="review-card">
 
-<p class="rating-intro">
-5.0 average rating from 557 student ratings.
+<div>
+<div class="rating-number">5.0</div>
+<div class="stars">★★★★★</div>
+</div>
+
+<div class="review-text">
+
+<h2>Trusted by Hundreds of Students</h2>
+
+<p>
+Consistently high-rated one-on-one tutoring for test preparation, math, writing, admissions support, and professional academic coaching.
 </p>
 
-<div class="rating-card">
-
-<div class="rating-row">
-<span class="stars">★★★★★</span>
-<span class="rating-score">5.0</span>
-<span class="rating-muted">(557 ratings)</span>
+<div class="review-stats">
+<div class="stat-pill">557 Student Ratings</div>
+<div class="stat-pill">555 Five-Star Ratings</div>
+<div class="stat-pill">25+ Years Experience</div>
 </div>
 
-<div class="rating-bar-row">
-<div class="rating-label">5 star</div>
-<div class="rating-bar">
-<div class="rating-fill" style="width:99.6%;"></div>
-</div>
-<div class="rating-muted">(555)</div>
-</div>
-
-<div class="rating-bar-row">
-<div class="rating-label">4 star</div>
-<div class="rating-bar">
-<div class="rating-fill" style="width:0.2%;"></div>
-</div>
-<div class="rating-muted">(1)</div>
-</div>
-
-<div class="rating-bar-row">
-<div class="rating-label">3 star</div>
-<div class="rating-bar">
-<div class="rating-fill" style="width:0%;"></div>
-</div>
-<div class="rating-muted">(0)</div>
-</div>
-
-<div class="rating-bar-row">
-<div class="rating-label">2 star</div>
-<div class="rating-bar">
-<div class="rating-fill" style="width:0%;"></div>
-</div>
-<div class="rating-muted">(0)</div>
-</div>
-
-<div class="rating-bar-row">
-<div class="rating-label">1 star</div>
-<div class="rating-bar">
-<div class="rating-fill" style="width:0.2%;"></div>
-</div>
-<div class="rating-muted">(1)</div>
 </div>
 
 </div>
@@ -555,31 +547,63 @@ Today, with 25+ years of teaching experience, I specialize in helping students e
 
 <h2>Subjects</h2>
 
-<div class="subject-grid">
+<div class="subject-categories">
 
-<div class="subject">PSAT / SAT</div>
+<div class="subject-category">
+<h3>Test Prep</h3>
+<div class="subject-list">
+<div class="subject">SAT</div>
 <div class="subject">ACT</div>
-<div class="subject">ASVAB / AFOQT</div>
-<div class="subject">GED</div>
-<div class="subject">ISEE / SSAT</div>
+<div class="subject">PSAT</div>
+<div class="subject">ASVAB</div>
 <div class="subject">GRE</div>
+<div class="subject">GMAT</div>
+<div class="subject">GED</div>
+<div class="subject">Accuplacer</div>
+<div class="subject">AFOQT</div>
+<div class="subject">ISEE</div>
+<div class="subject">SSAT</div>
+<div class="subject">HSPT</div>
+</div>
+</div>
 
-<div class="subject">Arithmetic</div>
-<div class="subject">Algebra I & II</div>
+<div class="subject-category">
+<h3>Math & Science</h3>
+<div class="subject-list">
+<div class="subject">Elementary Math</div>
+<div class="subject">Prealgebra</div>
+<div class="subject">Algebra I</div>
+<div class="subject">Algebra II</div>
 <div class="subject">Geometry</div>
 <div class="subject">Trigonometry</div>
-<div class="subject">Pre-Calculus</div>
-<div class="subject">Business Calculus</div>
-<div class="subject">Calculus I & II</div>
+<div class="subject">Precalculus</div>
+<div class="subject">Calculus</div>
+<div class="subject">Physics</div>
+</div>
+</div>
 
+<div class="subject-category">
+<h3>Writing</h3>
+<div class="subject-list">
 <div class="subject">Writing</div>
-<div class="subject">English & Grammar</div>
-<div class="subject">Law</div>
+<div class="subject">Essay Writing</div>
+<div class="subject">Grammar</div>
+<div class="subject">Reading</div>
+<div class="subject">English</div>
 <div class="subject">Legal Writing</div>
+</div>
+</div>
 
+<div class="subject-category">
+<h3>Admissions & Professional Prep</h3>
+<div class="subject-list">
 <div class="subject">Personal Statements</div>
+<div class="subject">College Counseling</div>
 <div class="subject">Interview Prep</div>
 <div class="subject">Public Speaking</div>
+<div class="subject">Law</div>
+</div>
+</div>
 
 </div>
 
@@ -593,16 +617,16 @@ Today, with 25+ years of teaching experience, I specialize in helping students e
 
 <div class="contact">
 
-<h2>Get Started With a Free Consultation!</h2>
+<h2>Contact</h2>
 
 <p>
 Email:
-<a href="mailto:haneestutors@gmail.com">haneestutors@gmail.com</a>
+<a href="mailto:studyhygiene1@gmail.com">studyhygiene1@gmail.com</a>
 </p>
 
 <p>
 Text:
-<a href="tel:4804424224">(480) 442-4224</a>
+<a href="tel:4804424224">480-442-4224</a>
 </p>
 
 </div>
