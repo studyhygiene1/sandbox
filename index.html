@@ -11,15 +11,15 @@
 <style>
 
 :root{
---bg:#f4f1ec;
---card:#ffffff;
---text:#18202c;
---muted:#5c6675;
---accent:#0f2f57;
---accent-dark:#071d36;
---accent-light:#e9eef5;
---border:#dedbd5;
---gold:#f5b335;
+--bg:#e9e4dc;
+--card:#fbfaf7;
+--text:#17202b;
+--muted:#4f5b68;
+--accent:#0b294d;
+--accent-dark:#05172c;
+--accent-light:#dfe7f0;
+--border:#cfc7bb;
+--gold:#d99a24;
 --max:1050px;
 }
 
@@ -49,7 +49,7 @@ padding:0 24px;
 header{
 position:sticky;
 top:0;
-background:rgba(244,241,236,.96);
+background:rgba(233,228,220,.96);
 backdrop-filter:blur(10px);
 border-bottom:1px solid var(--border);
 z-index:10;
@@ -64,7 +64,7 @@ padding:18px 0;
 
 .logo{
 font-weight:800;
-font-size:1.2rem;
+font-size:1.15rem;
 color:var(--accent-dark);
 }
 
@@ -97,7 +97,7 @@ border-radius:999px;
 text-decoration:none;
 font-weight:700;
 border:1px solid var(--accent);
-box-shadow:0 6px 16px rgba(15,47,87,.18);
+box-shadow:0 6px 16px rgba(5,23,44,.2);
 }
 
 .button:hover{
@@ -107,7 +107,7 @@ border-color:var(--accent-dark);
 
 .hero{
 padding:90px 0 75px;
-background:linear-gradient(135deg,#f4f1ec 0%,#e8e1d7 100%);
+background:linear-gradient(135deg,#e9e4dc 0%,#d7cec1 100%);
 }
 
 .hero-layout{
@@ -123,6 +123,20 @@ line-height:1.1;
 margin-bottom:24px;
 color:var(--accent-dark);
 max-width:650px;
+}
+
+.hero h2{
+font-size:1.45rem;
+line-height:1.45;
+margin-bottom:12px;
+color:var(--accent);
+}
+
+.hero h3{
+font-size:1.05rem;
+line-height:1.6;
+margin-bottom:22px;
+color:var(--muted);
 }
 
 .hero p{
@@ -157,7 +171,7 @@ border:1px solid var(--border);
 border-radius:26px;
 padding:24px;
 text-align:center;
-box-shadow:0 14px 34px rgba(7,29,54,.14);
+box-shadow:0 16px 36px rgba(5,23,44,.16);
 }
 
 .profile-image{
@@ -192,12 +206,6 @@ margin-bottom:12px;
 font-size:.92rem;
 }
 
-.profile-rating{
-font-size:.95rem;
-color:var(--muted);
-margin-bottom:14px;
-}
-
 .qualifications{
 color:var(--muted);
 font-size:.98rem;
@@ -224,17 +232,15 @@ max-width:900px;
 margin-bottom:20px;
 }
 
-/* Redesigned compact social proof section */
-
 .reviews{
 padding:46px 0;
-background:#fffaf2;
+background:#f2eee7;
 border-top:1px solid var(--border);
 border-bottom:1px solid var(--border);
 }
 
 .review-card{
-background:white;
+background:var(--card);
 border:1px solid var(--border);
 border-radius:20px;
 padding:26px 30px;
@@ -242,7 +248,7 @@ display:grid;
 grid-template-columns:auto 1fr;
 gap:28px;
 align-items:center;
-box-shadow:0 8px 22px rgba(7,29,54,.07);
+box-shadow:0 8px 22px rgba(5,23,44,.08);
 max-width:850px;
 }
 
@@ -286,20 +292,18 @@ font-size:.9rem;
 font-weight:700;
 }
 
-/* Subject categories */
-
 .subject-categories{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
 }
 
 .subject-category{
 background:var(--card);
 border:1px solid var(--border);
 border-radius:18px;
-padding:22px;
-box-shadow:0 4px 10px rgba(7,29,54,.04);
+padding:24px;
+box-shadow:0 6px 14px rgba(5,23,44,.07);
 }
 
 .subject-category h3{
@@ -328,7 +332,7 @@ background:var(--accent-dark);
 color:white;
 padding:46px;
 border-radius:22px;
-box-shadow:0 14px 34px rgba(7,29,54,.18);
+box-shadow:0 14px 34px rgba(5,23,44,.22);
 }
 
 .contact h2{
@@ -337,6 +341,7 @@ color:white;
 
 .contact p{
 margin:10px 0;
+font-size:1.05rem;
 }
 
 .contact a{
@@ -378,6 +383,10 @@ gap:16px;
 font-size:2.4rem;
 }
 
+.subject-categories{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -410,18 +419,23 @@ Private Online Tutoring by Expert Professional Tutor
 <div>
 
 <h1>
-Experienced & Effective Tutoring<br>
+Experienced & Effective Tutoring
 </h1>
 
-  <h2>Personalized Attention<br>
-    Customized Learning<br>
-    Proven Results</h2>
-<h3>Test Prep: SAT, ACT, GRE, ASVAB<br>
-AP & College: Math, Writing, English, Psychology, Law<br></h3>
+<h2>
+Personalized Attention<br>
+Customized Learning<br>
+Proven Results
+</h2>
+
+<h3>
+Test Prep: SAT, ACT, GRE, ASVAB<br>
+AP & College: Math, Writing, English, Psychology, Law
+</h3>
 
 <p>
-One-on-one online tutoring for students of all ages: middle school through college, graduate, and professional programs.<br> <br>
-  <b>Clear Explanations | Structured Learning | Measurable Progress</b>
+One-on-one online tutoring for students of all ages: middle school through college, graduate, and professional programs.<br><br>
+<b>Clear Explanations | Structured Learning | Measurable Progress</b>
 </p>
 
 <div class="actions">
@@ -432,7 +446,8 @@ Free Consultation
 
 <a class="button" href="#subjects">
 View Subjects
-</a>  
+</a>
+
 </div>
 
 <p class="hero-contact"><br>
@@ -454,11 +469,10 @@ Engineer • Attorney • Educator
 <div class="experience-badge">
 25+ Years Experience
 </div>
+
 <div class="experience-badge">
 Rate: $80/hour
-  </div>
-
-
+</div>
 
 <p class="qualifications">
 J.D. Law<br>
@@ -489,7 +503,7 @@ CRLA® & IXL® Certified
 <h2>Trusted by Thousands of Students Over 25 Years</h2>
 
 <p>
-Consistently high-rated, well-reviewed, one-on-one tutoring by expert tutor for test preparation, math, writing, admissions support, and professional academic coaching.
+Consistently high-rated, well-reviewed, one-on-one tutoring by an expert tutor for test preparation, math, writing, admissions support, and professional academic coaching.
 </p>
 
 <div class="review-stats">
@@ -514,17 +528,17 @@ Consistently high-rated, well-reviewed, one-on-one tutoring by expert tutor for 
 
 <div class="bio">
 
-<p>Hi! My name is Hanees and I'm an educator with degrees and professional experiences in engineering and law.</p>
+<p>Hi! My name is Hanees and I'm an educator with degrees and professional experience in engineering and law.</p>
 
-<p>Anxious about your SAT, ACT, ASVAB, or GRE? Struggling with math or writing? Need to prepare for an interview or write a personal statement that helps you stand out? I can help!</p> 
+<p>Anxious about your SAT, ACT, ASVAB, or GRE? Struggling with math or writing? Need to prepare for an interview or write a personal statement that helps you stand out? I can help!</p>
 
 <p>Tutoring is my full-time passion. Motivated, in part, by my own early struggles in math, I'm dedicated to helping students overcome obstacles and build confidence. Focused tutoring helped me transform from a "D-" student into the highest scorer in my class, earning a 100% on my math final. That experience shaped the trajectory of my academic and professional career.</p>
 
 <p>I graduated high school not only as valedictorian but also as the top scorer in my state. I later studied engineering at Loughborough University in the UK before earning a full scholarship to the University of Arizona, where I completed my B.Sc. in Computer Engineering, M.Sc. in Electrical & Computer Engineering, and J.D.</p>
 
-</p>Professionally, I've worked as a software engineer across the aerospace, semiconductor, travel, and healthcare industries and am also a licensed attorney.</p>
+<p>Professionally, I've worked as a software engineer across the aerospace, semiconductor, travel, and healthcare industries and am also a licensed attorney.</p>
 
-<p>I began tutoring in college, where I discovered a talent for connecting with students, breaking down complex topics into simpler concepts, and increasing engagement by helping students connect what they were learning to their own interests. Over 25 years, I've helped thousands of students </p>
+<p>I began tutoring in college, where I discovered a talent for connecting with students, breaking down complex topics into simpler concepts, and increasing engagement by helping students connect what they were learning to their own interests. Over 25 years, I've helped thousands of students.</p>
 
 <p>With my systematic approach to tutoring, backed by 25 years of experience, many of my students often exceed their own expectations. I specialize in test prep for the SAT, ACT, ASVAB, GRE, and GED. I also tutor all levels of Math, Writing, Law, and English. Additionally, I guide students through every step of writing personal statements and supplemental essays for college. My background in public speaking and legal advocacy—including competition success from elementary school through law school at regional and national levels—informs my approach to effective, persuasive communication.</p>
 
@@ -566,7 +580,7 @@ Consistently high-rated, well-reviewed, one-on-one tutoring by expert tutor for 
 <div class="subject">Geometry</div>
 <div class="subject">Trigonometry</div>
 <div class="subject">Pre-Calculus</div>
-<div class="subject">Business Calculus</div>  
+<div class="subject">Business Calculus</div>
 <div class="subject">Calculus I & II</div>
 </div>
 </div>
@@ -591,6 +605,34 @@ Consistently high-rated, well-reviewed, one-on-one tutoring by expert tutor for 
 <div class="subject">Public Speaking</div>
 </div>
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<h2>Contact</h2>
+
+<p>
+Email:
+<a href="mailto:haneestutors@gmail.com">haneestutors@gmail.com</a>
+</p>
+
+<p>
+Text:
+<a href="tel:4804424224">(480) 442-4224</a>
+</p>
+
+<p>
+Online • One-on-One • Nationwide
+</p>
 
 </div>
 
