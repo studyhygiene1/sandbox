@@ -48,8 +48,7 @@
 "@type":"AggregateRating",
 "ratingValue":"5.0",
 "reviewCount":"557"
-},
-"sameAs":[]
+}
 }
 </script>
 
@@ -173,21 +172,22 @@ max-width:700px;
 .hero h2{
 font-size:1.45rem;
 line-height:1.45;
-margin-bottom:12px;
+margin-bottom:18px;
 color:var(--accent);
-}
-
-.hero h3{
-font-size:1.05rem;
-line-height:1.6;
-margin-bottom:22px;
-color:var(--muted);
 }
 
 .hero p{
 font-size:1.12rem;
 color:var(--muted);
 max-width:760px;
+}
+
+.hero-services{
+font-size:1.05rem;
+line-height:1.6;
+margin-bottom:22px;
+color:var(--muted);
+font-weight:600;
 }
 
 .actions{
@@ -326,6 +326,7 @@ display:flex;
 gap:16px;
 flex-wrap:wrap;
 margin-top:14px;
+margin-bottom:18px;
 }
 
 .stat-pill{
@@ -335,6 +336,50 @@ padding:7px 12px;
 border-radius:999px;
 font-size:.9rem;
 font-weight:700;
+}
+
+.secondary-button{
+display:inline-block;
+background:white;
+color:var(--accent-dark);
+border:1px solid var(--accent);
+padding:10px 16px;
+border-radius:999px;
+text-decoration:none;
+font-weight:800;
+}
+
+.secondary-button:hover{
+background:var(--accent-light);
+}
+
+.who-help{
+background:var(--bg);
+}
+
+.help-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.help-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:18px;
+padding:22px;
+box-shadow:0 6px 14px rgba(5,23,44,.06);
+}
+
+.help-card h3{
+color:var(--accent-dark);
+font-size:1.15rem;
+margin-bottom:8px;
+}
+
+.help-card p{
+color:var(--muted);
+font-size:.98rem;
 }
 
 .subject-categories{
@@ -420,6 +465,12 @@ font-weight:700;
 text-decoration:none;
 }
 
+.contact-note{
+margin-top:20px;
+font-size:1.05rem;
+font-weight:700;
+}
+
 footer{
 padding:40px;
 text-align:center;
@@ -451,6 +502,10 @@ gap:16px;
 
 .rating-number{
 font-size:2.4rem;
+}
+
+.help-grid{
+grid-template-columns:1fr;
 }
 
 .subject-categories{
@@ -496,21 +551,24 @@ Online SAT, ACT, GRE, ASVAB, Math & Writing Tutoring
 </h1>
 
 <h2>
-Personalized Attention Leading to Proven Results<br>
+Personalized Attention Leading to Proven Results
 </h2>
 
-<h3>
+<div class="hero-services">
+Test Prep: SAT, ACT, GRE, ASVAB, GED<br>
+AP & College: Math, Writing, English, Psychology, Law
+</div>
+
 <p>
 One-on-one online tutoring for students of all ages: middle school through college, graduate, and professional programs.<br>
-Serving students throughout the US, Canada, UK, China, and the Middle East.<br></h3>
-
+Serving students throughout the US, Canada, UK, China, and the Middle East.<br>
 <b>Clear Explanations | Structured Learning | Measurable Progress</b>
 </p>
 
 <div class="actions">
 
 <a class="button" href="mailto:haneestutors@gmail.com">
-Free Tutoring Consult
+Schedule a Free Tutoring Consultation
 </a>
 
 <a class="button" href="#subjects">
@@ -520,7 +578,7 @@ View Tutoring Subjects
 </div>
 
 <p class="hero-contact"><br>
-Email: <a href="mailto:haneestutors@gmail.com">haneestutors@gmail.com</a>  Text: <a href="tel:4804424224">(480) 442-4224</a>
+Email: <a href="mailto:haneestutors@gmail.com">haneestutors@gmail.com</a> &nbsp; Text: <a href="tel:4804424224">(480) 442-4224</a>
 </p>
 
 </div>
@@ -577,11 +635,50 @@ Consistently high-rated, well-reviewed, one-on-one online tutoring for SAT, ACT,
 
 <div class="review-stats">
 <div class="stat-pill">17K+ Hours Lifetime</div>
-<div class="stat-pill">2K+ Hours Annually</div><br>
+<div class="stat-pill">2K+ Hours Annually</div>
 <div class="stat-pill">557 Student Ratings</div>
 <div class="stat-pill">555 Five-Star Ratings</div>
 </div>
 
+<a class="secondary-button" href="https://www.wyzant.com/" target="_blank" rel="noopener">
+View Reviews on Wyzant
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="who-help" class="who-help">
+
+<div class="container">
+
+<h2>Who I Help</h2>
+
+<div class="help-grid">
+
+<div class="help-card">
+<h3>Students Seeking Higher Scores</h3>
+<p>
+Structured SAT, ACT, GRE, ASVAB, and GED preparation focused on strategy, timing, accuracy, and confidence.
+</p>
+</div>
+
+<div class="help-card">
+<h3>Students Struggling in Math or Writing</h3>
+<p>
+Clear explanations, step-by-step support, and targeted practice for students who want stronger fundamentals.
+</p>
+</div>
+
+<div class="help-card">
+<h3>Applicants and Professionals</h3>
+<p>
+Support with personal statements, admissions essays, interview preparation, legal writing, and public speaking.
+</p>
 </div>
 
 </div>
@@ -600,7 +697,7 @@ Consistently high-rated, well-reviewed, one-on-one online tutoring for SAT, ACT,
 
 <p>Hi! My name is Hanees; I'm an educator with degrees and professional experience in engineering and law.</p>
 
-<p>Anxious about your SAT, ACT, ASVAB, GRE, or GED? Struggling with math or writing? Need to prepare for an interview or write a personal statement that helps you stand out? I can help.</p>
+<p>I help students improve scores, build confidence, and finally understand difficult material. Whether you are preparing for a major exam, trying to strengthen your math or writing skills, or working on an important application, I can help you build a clear plan and make measurable progress.</p>
 
 <p>Tutoring is my full-time passion. Motivated, in part, by my own early struggles in math, I'm dedicated to helping students overcome obstacles and build confidence. Focused tutoring helped me transform from a "D-" student into the highest scorer in my class, earning a 100% on my math final. That experience shaped the trajectory of my academic and professional career.</p>
 
@@ -653,7 +750,6 @@ Consistently high-rated, well-reviewed, one-on-one online tutoring for SAT, ACT,
 <div class="subject">Business Calculus</div>
 <div class="subject">Calculus I & II</div>
 <div class="subject">AP & College Courses</div>
-
 </div>
 </div>
 
@@ -666,7 +762,6 @@ Consistently high-rated, well-reviewed, one-on-one online tutoring for SAT, ACT,
 <div class="subject">Reading</div>
 <div class="subject">English</div>
 <div class="subject">AP & College Courses</div>
-
 </div>
 </div>
 
@@ -694,12 +789,12 @@ Consistently high-rated, well-reviewed, one-on-one online tutoring for SAT, ACT,
 
 <div class="faq-item">
 <h3>Do you offer in-person tutoring?</h3>
-<p>No, but I'm available to tutor 7 days a week, from 8 am - 8 pm pacific time.</p>
+<p>No. I offer one-on-one online tutoring and am available seven days a week from 8 AM to 8 PM Pacific Time.</p>
 </div>
 
 <div class="faq-item">
 <h3>How do we meet? Will I need any special software?</h3>
-<p>We'll meet online using Google Meets. All you need is a laptop and a browser (like Chrome, FireFox, or Edge) in order for you to sign in and connect to our lesson. I use a webcam, an electronic white board, and screensharing.</p>
+<p>Lessons are held online using Google Meet. You only need a laptop and a browser such as Chrome, Firefox, Edge, or Safari. I use a webcam, electronic whiteboard, and screen sharing.</p>
 </div>
 
 <div class="faq-item">
@@ -709,10 +804,9 @@ Consistently high-rated, well-reviewed, one-on-one online tutoring for SAT, ACT,
 
 <div class="faq-item">
 <h3>How do I schedule a lesson?</h3>
-<p>Please email (haneestutors@gmail.com) or text (480.442.4224) with your desired date and time, to schedule a lesson.</p>
+<p>Please email haneestutors@gmail.com or text (480) 442-4224 with the subject, student goal, and desired meeting times.</p>
 </div>
 
-  
 <div class="faq-item">
 <h3>Do you help with college admissions essays and personal statements?</h3>
 <p>Yes. I help students brainstorm, structure, revise, and polish personal statements, supplemental essays, and admissions materials.</p>
@@ -733,7 +827,7 @@ Consistently high-rated, well-reviewed, one-on-one online tutoring for SAT, ACT,
 
 <div class="contact">
 
-<h2>Contact Hanees for a Free Tutoring Consult</h2>
+<h2>Contact Hanees for a Free Tutoring Consultation</h2>
 
 <p>
 Email:
@@ -747,6 +841,10 @@ Text:
 
 <p>
 Online tutoring available throughout the US, Canada, UK, China, and the Middle East.
+</p>
+
+<p class="contact-note">
+Ready to get started? Email or text me with the student’s subject, goal, and availability.
 </p>
   
 </div>
