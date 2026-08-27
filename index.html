@@ -84,6 +84,10 @@ color:var(--text);
 line-height:1.7;
 }
 
+body.modal-open{
+overflow:hidden;
+}
+
 .container{
 max-width:var(--max);
 margin:auto;
@@ -639,7 +643,7 @@ color:#dce5ef;
 }
 
 
-/* PHOTO NOW LIVES HERE */
+/* PHOTO */
 
 .tutor-photo{
 width:100%;
@@ -726,27 +730,126 @@ font-size:.95rem;
 
 
 /* =========================
-   INTAKE FORM
+   CONTACT
 ========================= */
 
-.intake-section{
-background:var(--blue-light);
-border-top:1px solid #c8d5e3;
+.contact-section{
+padding-top:25px;
+padding-bottom:70px;
 }
 
-.intake-box{
-max-width:850px;
-margin:auto;
+.contact{
+background:var(--navy-dark);
+color:white;
+border-radius:25px;
+padding:48px;
+text-align:center;
+box-shadow:0 16px 35px rgba(5,23,44,.2);
+}
+
+.contact h2{
+color:white;
+font-size:2.25rem;
+line-height:1.2;
+margin-bottom:12px;
+}
+
+.contact p{
+color:#dce5ef;
+margin:8px 0;
+}
+
+.contact a{
+color:white;
+font-weight:800;
+text-decoration:none;
+}
+
+.contact .actions{
+justify-content:center;
+margin-top:25px;
+}
+
+.contact .button{
+background:var(--gold);
+border-color:var(--gold);
+color:#171717;
+box-shadow:none;
+}
+
+
+/* =========================
+   INTAKE MODAL
+========================= */
+
+.modal{
+position:fixed;
+inset:0;
+z-index:1000;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:25px;
+background:rgba(5,23,44,.72);
+backdrop-filter:blur(7px);
+opacity:0;
+visibility:hidden;
+pointer-events:none;
+transition:opacity .25s ease,visibility .25s ease;
+}
+
+.modal.active{
+opacity:1;
+visibility:visible;
+pointer-events:auto;
+}
+
+.modal-content{
+position:relative;
+width:min(850px,100%);
+max-height:92vh;
+overflow-y:auto;
 background:white;
 border:1px solid #c8d5e3;
 border-radius:24px;
 padding:38px;
-box-shadow:0 12px 28px rgba(5,23,44,.09);
+box-shadow:0 25px 70px rgba(0,0,0,.30);
+transform:translateY(18px) scale(.98);
+transition:transform .25s ease;
+}
+
+.modal.active .modal-content{
+transform:translateY(0) scale(1);
+}
+
+.modal-close{
+position:absolute;
+top:14px;
+right:16px;
+width:42px;
+height:42px;
+border:0;
+border-radius:50%;
+background:var(--blue-light);
+color:var(--navy-dark);
+font-size:1.8rem;
+line-height:1;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:.2s ease;
+}
+
+.modal-close:hover{
+background:var(--navy);
+color:white;
 }
 
 .intake-header{
 text-align:center;
 margin-bottom:30px;
+padding-right:25px;
 }
 
 .intake-header h2{
@@ -844,55 +947,6 @@ font-weight:800;
 
 
 /* =========================
-   CONTACT
-========================= */
-
-.contact-section{
-padding-top:25px;
-padding-bottom:70px;
-}
-
-.contact{
-background:var(--navy-dark);
-color:white;
-border-radius:25px;
-padding:48px;
-text-align:center;
-box-shadow:0 16px 35px rgba(5,23,44,.2);
-}
-
-.contact h2{
-color:white;
-font-size:2.25rem;
-line-height:1.2;
-margin-bottom:12px;
-}
-
-.contact p{
-color:#dce5ef;
-margin:8px 0;
-}
-
-.contact a{
-color:white;
-font-weight:800;
-text-decoration:none;
-}
-
-.contact .actions{
-justify-content:center;
-margin-top:25px;
-}
-
-.contact .button{
-background:var(--gold);
-border-color:var(--gold);
-color:#171717;
-box-shadow:none;
-}
-
-
-/* =========================
    FOOTER
 ========================= */
 
@@ -985,8 +1039,32 @@ padding:34px 22px;
 font-size:1.85rem;
 }
 
-.intake-box{
-padding:25px 20px;
+.modal{
+padding:10px;
+align-items:flex-start;
+}
+
+.modal-content{
+max-height:96vh;
+margin-top:10px;
+padding:27px 20px 25px;
+border-radius:20px;
+}
+
+.modal-close{
+top:10px;
+right:10px;
+width:38px;
+height:38px;
+}
+
+.intake-header{
+margin-bottom:22px;
+padding-right:35px;
+}
+
+.intake-header h2{
+font-size:1.85rem;
 }
 
 .form-row{
@@ -994,8 +1072,21 @@ grid-template-columns:1fr;
 gap:0;
 }
 
-.intake-header h2{
-font-size:1.85rem;
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+html{
+scroll-behavior:auto;
+}
+
+*{
+transition:none !important;
 }
 
 }
@@ -1028,7 +1119,9 @@ Private Online ASVAB Tutoring
 
 <a href="#faq">FAQ</a>
 
-<a href="#intake">Get Started</a>
+<a href="#intake" class="open-intake">
+Get Started
+</a>
 
 </nav>
 
@@ -1556,9 +1649,6 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 <div class="container about-grid">
 
 
-<!-- LEFT COLUMN:
-     PHOTO + INFO MOVED HERE -->
-
 <div class="about-summary">
 
 <h2>
@@ -1613,8 +1703,6 @@ CRLA® & IXL® Certified
 
 </div>
 
-
-<!-- RIGHT COLUMN -->
 
 <div class="about-copy">
 
@@ -1758,7 +1846,7 @@ How do I get started?
 </h3>
 
 <p>
-Complete the intake form below. Once I receive your information, I'll review it and contact you directly to discuss the next steps, payment, and scheduling.
+Click any of the Get Started or package buttons on this page. A short intake form will open in a popup. Once I receive your information, I'll review it and contact you directly to discuss the next steps, payment, and scheduling.
 </p>
 
 </div>
@@ -1785,18 +1873,98 @@ Payment is handled directly rather than through an automated checkout system. Av
 
 
 <!-- =========================
-     ONE INTAKE FORM
+     CONTACT
 ========================= -->
 
-<section id="intake" class="intake-section">
+<section id="contact" class="contact-section">
 
 <div class="container">
 
-<div class="intake-box">
+<div class="contact">
+
+<h2>
+Ready to Start Your ASVAB Preparation?
+</h2>
+
+<p>
+Complete the intake form and I'll contact you personally to discuss your next steps.
+</p>
+
+<p>
+Email:
+<a href="mailto:haneestutors@gmail.com">
+haneestutors@gmail.com
+</a>
+</p>
+
+<p>
+Text:
+<a href="tel:4804424224">
+(480) 442-4224
+</a>
+</p>
+
+<div class="actions">
+
+<a
+class="button open-intake"
+href="#intake"
+>
+Complete Intake Form
+</a>
+
+<a
+class="button"
+href="mailto:haneestutors@gmail.com?subject=ASVAB%20Tutoring%20Inquiry"
+>
+Contact Hanees
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+© 2026 Hanees H. ASVAB Tutoring
+</footer>
+
+
+<!-- =====================================================
+     INTAKE FORM MODAL
+===================================================== -->
+
+<div
+id="intakeModal"
+class="modal"
+role="dialog"
+aria-modal="true"
+aria-labelledby="intakeTitle"
+aria-hidden="true"
+>
+
+<div class="modal-content">
+
+<button
+type="button"
+class="modal-close"
+id="closeModal"
+aria-label="Close intake form"
+>
+&times;
+</button>
+
 
 <div class="intake-header">
 
-<h2>
+<h2 id="intakeTitle">
 Get Started
 </h2>
 
@@ -2096,116 +2264,112 @@ After you submit the form, your information will be sent securely through Formsp
 
 </div>
 
-</section>
-
 
 <!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact" class="contact-section">
-
-<div class="container">
-
-<div class="contact">
-
-<h2>
-Ready to Start Your ASVAB Preparation?
-</h2>
-
-<p>
-Complete the intake form and I'll contact you personally to discuss your next steps.
-</p>
-
-<p>
-Email:
-<a href="mailto:haneestutors@gmail.com">
-haneestutors@gmail.com
-</a>
-</p>
-
-<p>
-Text:
-<a href="tel:4804424224">
-(480) 442-4224
-</a>
-</p>
-
-<div class="actions">
-
-<a class="button" href="#intake">
-Complete Intake Form
-</a>
-
-<a class="button" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Tutoring%20Inquiry">
-Contact Hanees
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-<footer>
-© 2026 Hanees H. ASVAB Tutoring
-</footer>
-
-
-<!-- =========================
-     PACKAGE SELECTION SCRIPT
+     MODAL / PACKAGE SCRIPT
 ========================= -->
 
 <script>
 
+const modal = document.getElementById("intakeModal");
+const closeModalButton = document.getElementById("closeModal");
+
 const packageButtons = document.querySelectorAll(".package-button");
+const openIntakeButtons = document.querySelectorAll(".open-intake");
 
 const packageSelect = document.getElementById("package");
-
 const hiddenPackage = document.getElementById("selectedPackage");
-
 const selectedPackageBox = document.getElementById("selectedPackageBox");
 
+let lastFocusedElement = null;
 
-packageButtons.forEach(function(button){
 
-button.addEventListener("click", function(){
+/* =========================
+   OPEN MODAL
+========================= */
 
-const selected = button.getAttribute("data-package");
+function openModal(selectedPackage = ""){
 
-if(!selected){
-return;
+lastFocusedElement = document.activeElement;
+
+modal.classList.add("active");
+modal.setAttribute("aria-hidden","false");
+
+document.body.classList.add("modal-open");
+
+
+if(selectedPackage){
+
+setSelectedPackage(selectedPackage);
+
+}else{
+
+setSelectedPackage("");
+
 }
 
-hiddenPackage.value = selected;
 
-selectedPackageBox.textContent =
-"Selected package: " + selected;
+/* Focus first useful field */
+
+setTimeout(function(){
 
 if(packageSelect){
+
+packageSelect.focus();
+
+}
+
+},100);
+
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+function closeModal(){
+
+modal.classList.remove("active");
+modal.setAttribute("aria-hidden","true");
+
+document.body.classList.remove("modal-open");
+
+
+/* Remove #intake from URL if present */
+
+if(window.location.hash === "#intake"){
+
+history.replaceState(
+null,
+"",
+window.location.pathname + window.location.search
+);
+
+}
+
+
+/* Return focus */
+
+if(lastFocusedElement){
+
+lastFocusedElement.focus();
+
+}
+
+}
+
+
+/* =========================
+   SET PACKAGE
+========================= */
+
+function setSelectedPackage(selected){
+
+hiddenPackage.value = selected;
 
 packageSelect.value = selected;
 
-}
-
-});
-
-});
-
-
-if(packageSelect){
-
-packageSelect.addEventListener("change", function(){
-
-const selected = packageSelect.value;
-
-hiddenPackage.value = selected;
 
 if(selected){
 
@@ -2219,7 +2383,105 @@ selectedPackageBox.textContent =
 
 }
 
+}
+
+
+/* =========================
+   PACKAGE BUTTONS
+========================= */
+
+packageButtons.forEach(function(button){
+
+button.addEventListener("click",function(event){
+
+event.preventDefault();
+
+const selected =
+button.getAttribute("data-package");
+
+openModal(selected);
+
 });
+
+});
+
+
+/* =========================
+   GENERIC GET STARTED BUTTONS
+========================= */
+
+openIntakeButtons.forEach(function(button){
+
+button.addEventListener("click",function(event){
+
+event.preventDefault();
+
+openModal();
+
+});
+
+});
+
+
+/* =========================
+   PACKAGE SELECT
+========================= */
+
+packageSelect.addEventListener("change",function(){
+
+setSelectedPackage(packageSelect.value);
+
+});
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+closeModalButton.addEventListener("click",function(){
+
+closeModal();
+
+});
+
+
+/* =========================
+   CLICK OUTSIDE MODAL
+========================= */
+
+modal.addEventListener("click",function(event){
+
+if(event.target === modal){
+
+closeModal();
+
+}
+
+});
+
+
+/* =========================
+   ESCAPE KEY
+========================= */
+
+document.addEventListener("keydown",function(event){
+
+if(event.key === "Escape" && modal.classList.contains("active")){
+
+closeModal();
+
+}
+
+});
+
+
+/* =========================
+   HANDLE #intake LINKS
+========================= */
+
+if(window.location.hash === "#intake"){
+
+openModal();
 
 }
 
