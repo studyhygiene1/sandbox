@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>ASVAB Tutoring | Hanees H.</title>
 
-<meta name="description" content="One-on-one online ASVAB tutoring with Hanees H. Choose from a diagnostic consultation, intensive 2-week ASVAB course, or comprehensive 4-week course.">
+<meta name="description" content="One-on-one online ASVAB tutoring with Hanees H. Choose from a $50 diagnostic consultation, $685 intensive two-week course, or $1,190 four-week course.">
 
 <meta name="robots" content="index, follow">
 <meta name="author" content="Hanees H.">
-<meta name="keywords" content="ASVAB tutor, ASVAB tutoring, ASVAB test prep, ASVAB classes, online ASVAB tutor, military test prep">
+<meta name="keywords" content="ASVAB tutor, ASVAB tutoring, ASVAB test prep, online ASVAB tutor, ASVAB course, military test preparation">
 
 <meta property="og:title" content="ASVAB Tutoring | Hanees H.">
-<meta property="og:description" content="Personalized one-on-one online ASVAB tutoring with flexible scheduling.">
+<meta property="og:description" content="Personalized one-on-one online ASVAB tutoring with flexible scheduling and structured preparation.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="profile.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ASVAB Tutoring | Hanees H.">
 <meta name="twitter:description" content="Personalized one-on-one online ASVAB tutoring with flexible scheduling.">
+
 
 <style>
 
@@ -34,7 +35,6 @@
 --border:#cfc7bb;
 --gold:#d99a24;
 --green:#286b4b;
---green-light:#e3f0e8;
 --max:1050px;
 }
 
@@ -52,7 +52,7 @@ body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 background:var(--bg);
 color:var(--text);
-line-height:1.7;
+line-height:1.8;
 }
 
 .container{
@@ -87,7 +87,7 @@ color:var(--accent-dark);
 
 nav{
 display:flex;
-gap:10px;
+gap:12px;
 align-items:center;
 }
 
@@ -111,10 +111,10 @@ color:white;
 display:inline-block;
 background:var(--accent);
 color:white;
-padding:14px 24px;
+padding:13px 22px;
 border-radius:999px;
 text-decoration:none;
-font-weight:800;
+font-weight:700;
 border:1px solid var(--accent);
 box-shadow:0 6px 16px rgba(5,23,44,.2);
 transition:.2s ease;
@@ -124,7 +124,6 @@ cursor:pointer;
 .button:hover{
 background:var(--accent-dark);
 border-color:var(--accent-dark);
-transform:translateY(-1px);
 }
 
 .secondary-button{
@@ -132,7 +131,7 @@ display:inline-block;
 background:white;
 color:var(--accent-dark);
 border:1px solid var(--accent);
-padding:12px 20px;
+padding:11px 18px;
 border-radius:999px;
 text-decoration:none;
 font-weight:800;
@@ -146,49 +145,100 @@ background:var(--accent-light);
 /* HERO */
 
 .hero{
-padding:90px 0 70px;
+padding:85px 0 70px;
 background:linear-gradient(135deg,#e9e4dc 0%,#d7cec1 100%);
-text-align:center;
+}
+
+.hero-layout{
+display:grid;
+grid-template-columns:1.35fr .85fr;
+gap:50px;
+align-items:center;
 }
 
 .hero h1{
-font-size:clamp(2.5rem,6vw,4.2rem);
-line-height:1.05;
-margin-bottom:22px;
+font-size:clamp(2.3rem,5vw,3.5rem);
+line-height:1.1;
+margin-bottom:20px;
 color:var(--accent-dark);
 }
 
 .hero h2{
-font-size:1.35rem;
-line-height:1.5;
-margin:0 auto 18px;
+font-size:1.4rem;
+line-height:1.45;
+margin-bottom:18px;
 color:var(--accent);
-max-width:760px;
 }
 
 .hero p{
-font-size:1.1rem;
+font-size:1.08rem;
 color:var(--muted);
 max-width:720px;
-margin:0 auto;
 }
 
 .hero-highlight{
-display:inline-block;
 margin-top:22px;
-background:var(--accent-light);
+font-size:1rem;
+font-weight:700;
 color:var(--accent-dark);
-padding:9px 16px;
-border-radius:999px;
-font-weight:800;
 }
 
-.hero-actions{
-margin-top:32px;
+.actions{
+margin-top:30px;
 display:flex;
-justify-content:center;
 gap:14px;
 flex-wrap:wrap;
+}
+
+.hero-contact{
+margin-top:22px;
+font-size:.98rem !important;
+}
+
+.hero-contact a{
+color:var(--accent-dark);
+text-decoration:none;
+font-weight:700;
+}
+
+/* HERO CARD */
+
+.hero-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:24px;
+padding:30px;
+box-shadow:0 16px 36px rgba(5,23,44,.14);
+}
+
+.hero-card h3{
+font-size:1.45rem;
+color:var(--accent-dark);
+margin-bottom:15px;
+}
+
+.hero-card p{
+font-size:.98rem;
+margin-bottom:16px;
+}
+
+.hero-card ul{
+list-style:none;
+}
+
+.hero-card li{
+position:relative;
+padding-left:24px;
+margin-bottom:9px;
+color:var(--muted);
+}
+
+.hero-card li::before{
+content:"✓";
+position:absolute;
+left:0;
+color:var(--green);
+font-weight:900;
 }
 
 /* GENERAL SECTIONS */
@@ -198,16 +248,16 @@ padding:70px 0;
 }
 
 section h2{
-font-size:2.1rem;
-margin-bottom:14px;
+font-size:2rem;
+margin-bottom:18px;
 color:var(--accent-dark);
 }
 
 .section-intro{
 color:var(--muted);
-font-size:1.05rem;
-max-width:760px;
+max-width:820px;
 margin-bottom:30px;
+font-size:1.04rem;
 }
 
 /* PACKAGES */
@@ -222,68 +272,58 @@ border-bottom:1px solid var(--border);
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:20px;
-align-items:stretch;
 }
 
 .package{
 background:var(--card);
 border:1px solid var(--border);
-border-radius:22px;
+border-radius:20px;
 padding:28px;
 display:flex;
 flex-direction:column;
-box-shadow:0 8px 20px rgba(5,23,44,.08);
-position:relative;
+box-shadow:0 7px 18px rgba(5,23,44,.07);
 }
 
 .package.featured{
 border:2px solid var(--accent);
-box-shadow:0 12px 28px rgba(5,23,44,.16);
-transform:translateY(-6px);
+box-shadow:0 12px 26px rgba(5,23,44,.13);
 }
 
 .package-badge{
-position:absolute;
-top:-14px;
-left:50%;
-transform:translateX(-50%);
+display:inline-block;
+align-self:flex-start;
 background:var(--accent);
 color:white;
-padding:6px 15px;
+padding:6px 12px;
 border-radius:999px;
-font-size:.82rem;
+font-size:.78rem;
 font-weight:800;
-white-space:nowrap;
+margin-bottom:15px;
 }
 
 .package h3{
-font-size:1.35rem;
+font-size:1.3rem;
 color:var(--accent-dark);
-margin-bottom:8px;
+margin-bottom:5px;
 }
 
-.package-price{
-font-size:2.45rem;
-line-height:1;
+.price{
+font-size:2.5rem;
 font-weight:900;
+line-height:1.15;
 color:var(--accent-dark);
-margin:12px 0 6px;
-}
-
-.package-price small{
-font-size:.95rem;
-font-weight:600;
-color:var(--muted);
+margin:10px 0 4px;
 }
 
 .package-subtitle{
 font-weight:700;
 color:var(--accent);
-margin-bottom:18px;
+margin-bottom:15px;
 }
 
-.package-description{
+.package p{
 color:var(--muted);
+font-size:.96rem;
 margin-bottom:18px;
 }
 
@@ -293,10 +333,11 @@ margin-bottom:24px;
 }
 
 .package li{
-margin-bottom:10px;
-padding-left:24px;
 position:relative;
-color:var(--text);
+padding-left:23px;
+margin-bottom:8px;
+color:var(--muted);
+font-size:.95rem;
 }
 
 .package li::before{
@@ -308,9 +349,9 @@ font-weight:900;
 }
 
 .package .button{
-margin-top:auto;
-text-align:center;
 width:100%;
+text-align:center;
+margin-top:auto;
 }
 
 /* HOW IT WORKS */
@@ -329,7 +370,7 @@ gap:20px;
 background:var(--card);
 border:1px solid var(--border);
 border-radius:18px;
-padding:25px;
+padding:24px;
 }
 
 .step-number{
@@ -338,20 +379,21 @@ height:38px;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:50%;
 background:var(--accent);
 color:white;
+border-radius:50%;
 font-weight:900;
-margin-bottom:15px;
+margin-bottom:14px;
 }
 
 .step h3{
 color:var(--accent-dark);
-margin-bottom:8px;
+margin-bottom:7px;
 }
 
 .step p{
 color:var(--muted);
+font-size:.96rem;
 }
 
 /* PAYMENT */
@@ -372,13 +414,12 @@ max-width:850px;
 
 .payment-box h3{
 color:var(--accent-dark);
-margin-bottom:10px;
-font-size:1.3rem;
+font-size:1.35rem;
+margin-bottom:8px;
 }
 
 .payment-box p{
 color:var(--muted);
-margin-bottom:12px;
 }
 
 .payment-methods{
@@ -389,43 +430,11 @@ margin:18px 0;
 }
 
 .payment-method{
-background:var(--green-light);
-color:var(--green);
-padding:8px 14px;
+background:var(--accent-light);
+color:var(--accent-dark);
+padding:7px 14px;
 border-radius:999px;
 font-weight:800;
-}
-
-.payment-note{
-font-size:.95rem;
-}
-
-/* WHAT YOU GET */
-
-.what-you-get{
-background:var(--bg);
-}
-
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
-}
-
-.feature{
-background:var(--card);
-border:1px solid var(--border);
-border-radius:18px;
-padding:22px;
-}
-
-.feature h3{
-color:var(--accent-dark);
-margin-bottom:7px;
-}
-
-.feature p{
-color:var(--muted);
 }
 
 /* REVIEWS */
@@ -433,7 +442,6 @@ color:var(--muted);
 .reviews{
 padding:46px 0;
 background:#f2eee7;
-border-top:1px solid var(--border);
 border-bottom:1px solid var(--border);
 }
 
@@ -486,7 +494,7 @@ background:var(--accent-light);
 color:var(--accent-dark);
 padding:7px 12px;
 border-radius:999px;
-font-size:.9rem;
+font-size:.88rem;
 font-weight:700;
 }
 
@@ -502,13 +510,8 @@ border-bottom:1px solid var(--border);
 background:var(--card);
 border:1px solid var(--border);
 border-radius:16px;
-padding:22px;
-margin-bottom:16px;
-box-shadow:0 4px 10px rgba(5,23,44,.05);
-}
-
-.faq-item:last-child{
-margin-bottom:0;
+padding:21px;
+margin-bottom:15px;
 }
 
 .faq-item h3{
@@ -521,7 +524,7 @@ margin-bottom:7px;
 color:var(--muted);
 }
 
-/* MEET YOUR TUTOR */
+/* TUTOR */
 
 .tutor{
 background:var(--bg);
@@ -537,51 +540,47 @@ align-items:center;
 .profile-card{
 background:var(--card);
 border:1px solid var(--border);
-border-radius:26px;
-padding:24px;
+border-radius:25px;
+padding:25px;
 text-align:center;
-box-shadow:0 16px 36px rgba(5,23,44,.13);
+box-shadow:0 14px 32px rgba(5,23,44,.12);
 }
 
 .profile-image{
 width:100%;
-max-width:300px;
+max-width:290px;
 border-radius:20px;
 border:1px solid var(--border);
 }
 
 .profile-card h3{
-font-size:1.65rem;
-margin-top:18px;
+font-size:1.7rem;
 color:var(--accent-dark);
+margin-top:17px;
 }
 
 .profile-tagline{
 color:var(--accent);
 font-weight:700;
-margin:4px 0 15px;
+margin-bottom:12px;
 }
 
 .experience-badge{
 display:inline-block;
 background:var(--accent-light);
 color:var(--accent-dark);
-padding:7px 13px;
+padding:7px 12px;
 border-radius:999px;
+font-size:.87rem;
 font-weight:700;
 margin:3px;
-font-size:.88rem;
 }
 
 .qualifications{
-margin-top:15px;
 color:var(--muted);
 font-size:.95rem;
+margin-top:13px;
 line-height:1.7;
-}
-
-.tutor-bio h2{
-margin-bottom:20px;
 }
 
 .tutor-bio p{
@@ -589,16 +588,16 @@ color:var(--muted);
 margin-bottom:18px;
 }
 
-/* CONTACT */
-
-.contact-section{
-padding-top:30px;
+.tutor-bio h2{
+margin-bottom:20px;
 }
+
+/* CONTACT */
 
 .contact{
 background:var(--accent-dark);
 color:white;
-padding:46px;
+padding:45px;
 border-radius:22px;
 box-shadow:0 14px 34px rgba(5,23,44,.22);
 }
@@ -608,8 +607,8 @@ color:white;
 }
 
 .contact p{
-margin:10px 0;
-font-size:1.05rem;
+margin:9px 0;
+font-size:1.04rem;
 }
 
 .contact a{
@@ -618,13 +617,7 @@ font-weight:700;
 text-decoration:none;
 }
 
-.contact-note{
-margin-top:20px;
-font-size:1.05rem;
-font-weight:700;
-}
-
-/* INTAKE FORM MODAL */
+/* MODAL */
 
 .modal{
 display:none;
@@ -633,7 +626,7 @@ inset:0;
 background:rgba(5,23,44,.72);
 z-index:1000;
 overflow-y:auto;
-padding:30px 15px;
+padding:25px 15px;
 }
 
 .modal.active{
@@ -641,58 +634,53 @@ display:block;
 }
 
 .modal-content{
-background:var(--card);
-max-width:760px;
-margin:30px auto;
-border-radius:24px;
-padding:35px;
-box-shadow:0 20px 60px rgba(0,0,0,.25);
 position:relative;
+max-width:760px;
+margin:20px auto;
+background:var(--card);
+border-radius:22px;
+padding:32px;
+box-shadow:0 20px 60px rgba(0,0,0,.3);
 }
 
 .close-modal{
 position:absolute;
-right:20px;
-top:15px;
+right:18px;
+top:13px;
 background:none;
 border:none;
 font-size:30px;
 color:var(--muted);
 cursor:pointer;
-line-height:1;
-}
-
-.close-modal:hover{
-color:var(--accent-dark);
 }
 
 .modal h2{
-margin-bottom:7px;
 padding-right:35px;
+margin-bottom:7px;
 }
 
 .modal-intro{
 color:var(--muted);
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .selected-package{
 background:var(--accent-light);
-border-radius:12px;
-padding:12px 15px;
-margin-bottom:25px;
 color:var(--accent-dark);
+padding:12px 15px;
+border-radius:10px;
 font-weight:800;
+margin-bottom:23px;
 }
 
 .form-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:18px;
+gap:17px;
 }
 
 .form-group{
-margin-bottom:18px;
+margin-bottom:4px;
 }
 
 .form-group.full{
@@ -703,24 +691,24 @@ grid-column:1 / -1;
 display:block;
 font-weight:800;
 color:var(--accent-dark);
-margin-bottom:6px;
+margin-bottom:5px;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea{
 width:100%;
-padding:12px 13px;
+padding:11px 12px;
 border:1px solid var(--border);
-border-radius:10px;
-background:white;
-color:var(--text);
+border-radius:9px;
 font-family:inherit;
 font-size:1rem;
+background:white;
+color:var(--text);
 }
 
 .form-group textarea{
-min-height:110px;
+min-height:105px;
 resize:vertical;
 }
 
@@ -734,9 +722,9 @@ box-shadow:0 0 0 3px rgba(11,41,77,.1);
 
 .form-note{
 background:#f2eee7;
-border-radius:12px;
-padding:15px;
-margin:5px 0 20px;
+border-radius:11px;
+padding:14px;
+margin:20px 0;
 font-size:.92rem;
 color:var(--muted);
 }
@@ -745,20 +733,36 @@ color:var(--muted);
 width:100%;
 border:none;
 font-size:1rem;
-margin-top:5px;
 }
 
-.no-payment{
+.form-disclaimer{
 text-align:center;
-font-size:.88rem;
+font-size:.85rem;
 color:var(--muted);
-margin-top:12px;
+margin-top:9px;
+}
+
+/* SUCCESS MESSAGE */
+
+.success-message{
+display:none;
+text-align:center;
+padding:25px 10px;
+}
+
+.success-message h2{
+color:var(--accent-dark);
+}
+
+.success-message p{
+color:var(--muted);
+margin-bottom:20px;
 }
 
 /* FOOTER */
 
 footer{
-padding:40px;
+padding:38px 20px;
 text-align:center;
 color:var(--muted);
 }
@@ -772,7 +776,15 @@ display:none;
 }
 
 .hero{
-padding-top:60px;
+padding:60px 0;
+}
+
+.hero-layout{
+grid-template-columns:1fr;
+}
+
+.hero-card{
+max-width:500px;
 }
 
 .package-grid{
@@ -781,14 +793,9 @@ grid-template-columns:1fr;
 
 .package.featured{
 transform:none;
-margin-top:8px;
 }
 
 .steps{
-grid-template-columns:1fr;
-}
-
-.feature-grid{
 grid-template-columns:1fr;
 }
 
@@ -803,11 +810,7 @@ margin:auto;
 
 .review-card{
 grid-template-columns:1fr;
-gap:16px;
-}
-
-.rating-number{
-font-size:2.4rem;
+gap:15px;
 }
 
 .form-grid{
@@ -820,13 +823,17 @@ grid-column:auto;
 
 .modal-content{
 padding:28px 20px;
-margin:10px auto;
+}
+
+.contact{
+padding:32px 25px;
 }
 
 }
 
 </style>
 </head>
+
 
 <body>
 
@@ -839,41 +846,49 @@ ASVAB Tutoring | Hanees H.
 </div>
 
 <nav aria-label="Main navigation">
+
 <a href="#packages">Packages</a>
 <a href="#how-it-works">How It Works</a>
 <a href="#faq">FAQ</a>
 <a href="#tutor">Meet Your Tutor</a>
+
 </nav>
 
 </div>
 
 </header>
 
+
 <main>
+
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="container">
+<div class="container hero-layout">
+
+<div>
 
 <h1>
-ASVAB Tutoring That Gets You Ready
+ASVAB Tutoring
 </h1>
 
 <h2>
-Personalized, one-on-one online preparation for the ASVAB — with a structured plan, targeted practice, and direct instruction.
+Personalized One-on-One Online ASVAB Preparation
 </h2>
 
 <p>
-Choose the level of support that fits your goal. I handle the scheduling personally so we can build your lessons around your availability and preparation timeline.
+Whether you're just getting started or have a specific test date approaching, I'll help you build the knowledge, strategy, and confidence you need to perform your best on the ASVAB.
 </p>
 
-<div class="hero-highlight">
-One-on-One Online Tutoring • Flexible Scheduling • 25+ Years of Experience
-</div>
+<p class="hero-highlight">
+Clear Explanations &nbsp;|&nbsp;
+Structured Learning &nbsp;|&nbsp;
+Personalized Attention
+</p>
 
-<div class="hero-actions">
+<div class="actions">
 
 <a class="button" href="#packages">
 View ASVAB Packages
@@ -882,6 +897,48 @@ View ASVAB Packages
 <a class="secondary-button" href="#how-it-works">
 How It Works
 </a>
+
+</div>
+
+<p class="hero-contact">
+Questions? Email
+<a href="mailto:haneestutors@gmail.com">
+haneestutors@gmail.com
+</a>
+or text
+<a href="tel:4804424224">
+(480) 442-4224
+</a>
+</p>
+
+</div>
+
+
+<div class="hero-card">
+
+<h3>
+Prepare With a Plan
+</h3>
+
+<p>
+Every student starts from a different place. Your tutoring is tailored to your current level, goals, and available preparation time.
+</p>
+
+<ul>
+
+<li>One-on-one online instruction</li>
+
+<li>Targeted ASVAB preparation</li>
+
+<li>Personalized study strategy</li>
+
+<li>Math and verbal reasoning support</li>
+
+<li>Test-taking and timing strategies</li>
+
+<li>Flexible scheduling arranged personally</li>
+
+</ul>
 
 </div>
 
@@ -896,52 +953,64 @@ How It Works
 
 <div class="container">
 
-<h2>Choose Your ASVAB Tutoring Package</h2>
+<h2>
+ASVAB Tutoring Packages
+</h2>
 
 <p class="section-intro">
-Start with an assessment and personalized plan, or jump directly into a structured course. All tutoring is one-on-one and scheduled personally with me.
+Choose the level of preparation that fits your goals. Complete a short intake form and I'll personally follow up with you to discuss payment and scheduling.
 </p>
+
 
 <div class="package-grid">
 
 
-<!-- DIAGNOSTIC -->
+<!-- $50 -->
 
 <div class="package">
 
-<h3>Diagnostic & Consultation</h3>
+<h3>
+Diagnostic & Consultation
+</h3>
 
-<div class="package-price">
+<div class="price">
 $50
 </div>
 
 <div class="package-subtitle">
-Find out where you stand.
+Start with a clear plan.
 </div>
 
-<p class="package-description">
-A focused starting session designed to identify strengths, weaknesses, and the areas that deserve the most attention.
+<p>
+A focused session to determine where you stand and what you should work on next.
 </p>
 
 <ul>
-<li>ASVAB diagnostic assessment</li>
+
+<li>Diagnostic assessment</li>
+
 <li>Review of strengths and weaknesses</li>
-<li>Discussion of your score goals</li>
-<li>Personalized study recommendations</li>
-<li>Recommended tutoring strategy</li>
+
+<li>Discussion of score goals</li>
+
+<li>Personalized recommendations</li>
+
+<li>Suggested study strategy</li>
+
 </ul>
 
 <button
 class="button"
 type="button"
-onclick="openForm('Diagnostic & Consultation','$50')">
+onclick="openForm('Diagnostic & Consultation','$50')"
+>
 Start Diagnostic Intake
 </button>
 
 </div>
 
 
-<!-- INTENSIVE -->
+<!-- $685 -->
 
 <div class="package featured">
 
@@ -949,9 +1018,11 @@ Start Diagnostic Intake
 MOST POPULAR
 </div>
 
-<h3>ASVAB Intensive Course</h3>
+<h3>
+ASVAB Intensive Course
+</h3>
 
-<div class="package-price">
+<div class="price">
 $685
 </div>
 
@@ -959,37 +1030,48 @@ $685
 7 lessons over 2 weeks
 </div>
 
-<p class="package-description">
-A concentrated preparation program for students who have a specific test date or want an accelerated path to improvement.
+<p>
+A concentrated program for students with a specific test date or a need for accelerated preparation.
 </p>
 
 <ul>
+
 <li>7 private one-on-one lessons</li>
-<li>Two-week intensive schedule</li>
-<li>Targeted ASVAB preparation</li>
-<li>Math & verbal reasoning strategies</li>
-<li>Timed practice and test-taking strategies</li>
+
+<li>Two-week intensive preparation</li>
+
+<li>Targeted skill development</li>
+
+<li>Math and verbal reasoning strategies</li>
+
+<li>Timed practice</li>
+
+<li>Test-taking strategies</li>
+
 <li>Personalized instruction</li>
-<li>Progress-focused preparation</li>
+
 </ul>
 
 <button
 class="button"
 type="button"
-onclick="openForm('ASVAB Intensive Course','$685')">
+onclick="openForm('ASVAB Intensive Course','$685')"
+>
 Start Intensive Intake
 </button>
 
 </div>
 
 
-<!-- FOUR WEEK -->
+<!-- $1190 -->
 
 <div class="package">
 
-<h3>ASVAB 4-Week Course</h3>
+<h3>
+ASVAB 4-Week Course
+</h3>
 
-<div class="package-price">
+<div class="price">
 $1,190
 </div>
 
@@ -997,25 +1079,35 @@ $1,190
 Comprehensive preparation
 </div>
 
-<p class="package-description">
-A longer, more comprehensive program for students who want additional time to build skills, practice, and improve confidence.
+<p>
+A longer program for students who want additional time to build skills, practice, review, and improve confidence.
 </p>
 
 <ul>
+
 <li>Four-week structured program</li>
+
 <li>One-on-one private instruction</li>
+
 <li>Personalized study plan</li>
+
 <li>Targeted skill development</li>
+
 <li>Practice and review</li>
+
 <li>Test-taking strategies</li>
+
 <li>Progress monitoring</li>
+
 <li>Flexible scheduling</li>
+
 </ul>
 
 <button
 class="button"
 type="button"
-onclick="openForm('ASVAB 4-Week Course','$1,190')">
+onclick="openForm('ASVAB 4-Week Course','$1,190')"
+>
 Start 4-Week Intake
 </button>
 
@@ -1034,46 +1126,63 @@ Start 4-Week Intake
 
 <div class="container">
 
-<h2>How It Works</h2>
+<h2>
+How It Works
+</h2>
 
 <p class="section-intro">
-There is no automated calendar to work around. You contact me, we discuss your goals and availability, and I personally arrange your tutoring schedule.
+I keep the process simple and personal. There is no automated scheduling calendar. I work directly with each student to arrange the best schedule.
 </p>
 
 <div class="steps">
 
+
 <div class="step">
 
-<div class="step-number">1</div>
+<div class="step-number">
+1
+</div>
 
-<h3>Choose a Package</h3>
+<h3>
+Choose a Package
+</h3>
 
 <p>
-Select the diagnostic, 2-week intensive, or 4-week course that best fits your needs.
+Select the diagnostic, intensive two-week course, or comprehensive four-week course.
 </p>
 
 </div>
 
+
 <div class="step">
 
-<div class="step-number">2</div>
+<div class="step-number">
+2
+</div>
 
-<h3>Complete the Intake</h3>
+<h3>
+Complete the Intake
+</h3>
 
 <p>
-Tell me about your goals, test date, previous experience, and availability.
+Tell me about your ASVAB goals, test date, previous experience, areas of difficulty, and availability.
 </p>
 
 </div>
 
+
 <div class="step">
 
-<div class="step-number">3</div>
+<div class="step-number">
+3
+</div>
 
-<h3>I Contact You</h3>
+<h3>
+I Contact You
+</h3>
 
 <p>
-I'll review your information, answer any questions, provide payment instructions, and personally arrange your lesson schedule.
+I'll review your information, answer questions, arrange payment, and personally schedule your lessons.
 </p>
 
 </div>
@@ -1093,85 +1202,36 @@ I'll review your information, answer any questions, provide payment instructions
 
 <div class="payment-box">
 
-<h3>Simple, Direct Payment</h3>
+<h3>
+Simple Direct Payment
+</h3>
 
 <p>
-I accept payment directly rather than through a third-party payment processor.
+I accept payment directly through:
 </p>
 
 <div class="payment-methods">
 
-<div class="payment-method">Venmo</div>
-<div class="payment-method">Cash App</div>
-<div class="payment-method">Zelle</div>
-
+<div class="payment-method">
+Venmo
 </div>
 
-<p class="payment-note">
-<strong>No payment is required to submit the intake form.</strong>
-I'll review your information first and contact you directly with payment instructions and scheduling details.
-</p>
+<div class="payment-method">
+Cash App
+</div>
 
-<p class="payment-note">
-No Stripe or Calendly is required. This allows me to maintain maximum flexibility over scheduling and work directly with each student.
-</p>
-
+<div class="payment-method">
+Zelle
 </div>
 
 </div>
-
-</section>
-
-
-<!-- WHAT YOU GET -->
-
-<section class="what-you-get">
-
-<div class="container">
-
-<h2>What Your Tutoring Includes</h2>
-
-<div class="feature-grid">
-
-<div class="feature">
-
-<h3>Personalized Instruction</h3>
 
 <p>
-Lessons are tailored to your current ability, goals, weaknesses, and target ASVAB score.
+<strong>
+No payment is required when you submit the intake form.
+</strong>
+I'll review your information first and then contact you personally with payment and scheduling details.
 </p>
-
-</div>
-
-<div class="feature">
-
-<h3>Clear Explanations</h3>
-
-<p>
-Complex concepts are broken down into understandable steps rather than simply giving you formulas to memorize.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>Test-Taking Strategy</h3>
-
-<p>
-Learn how to approach questions efficiently, manage your time, recognize common traps, and work strategically under test conditions.
-</p>
-
-</div>
-
-<div class="feature">
-
-<h3>Focused Practice</h3>
-
-<p>
-Your preparation emphasizes the areas where additional practice is most likely to make a difference.
-</p>
-
-</div>
 
 </div>
 
@@ -1190,9 +1250,11 @@ Your preparation emphasizes the areas where additional practice is most likely t
 
 <div>
 
-<div class="rating-number">5.0</div>
+<div class="rating-number">
+5.0
+</div>
 
-<div class="stars" aria-label="Five star rating">
+<div class="stars">
 ★★★★★
 </div>
 
@@ -1200,7 +1262,9 @@ Your preparation emphasizes the areas where additional practice is most likely t
 
 <div class="review-text">
 
-<h2>Trusted by Students for 25+ Years</h2>
+<h2>
+Trusted by Students for 25+ Years
+</h2>
 
 <p>
 Consistently highly-rated, personalized one-on-one online tutoring.
@@ -1241,11 +1305,16 @@ Consistently highly-rated, personalized one-on-one online tutoring.
 
 <div class="container">
 
-<h2>Frequently Asked Questions</h2>
+<h2>
+Frequently Asked Questions
+</h2>
+
 
 <div class="faq-item">
 
-<h3>Do you offer in-person tutoring?</h3>
+<h3>
+Do you offer in-person tutoring?
+</h3>
 
 <p>
 No. I offer one-on-one online ASVAB tutoring.
@@ -1253,9 +1322,12 @@ No. I offer one-on-one online ASVAB tutoring.
 
 </div>
 
+
 <div class="faq-item">
 
-<h3>How do we meet?</h3>
+<h3>
+How do we meet?
+</h3>
 
 <p>
 Lessons are conducted online using Google Meet. You only need a computer or laptop and a standard web browser.
@@ -1263,42 +1335,54 @@ Lessons are conducted online using Google Meet. You only need a computer or lapt
 
 </div>
 
+
 <div class="faq-item">
 
-<h3>How do I schedule my lessons?</h3>
+<h3>
+How do I schedule my lessons?
+</h3>
 
 <p>
-You don't have to select a time through an automated calendar. After you submit the intake form, I'll contact you personally to coordinate your lesson schedule.
+You don't select a time through an automated calendar. After you submit the intake form, I'll contact you personally and we'll coordinate a schedule that works.
 </p>
 
 </div>
 
+
 <div class="faq-item">
 
-<h3>When should I start?</h3>
+<h3>
+How do I pay?
+</h3>
 
 <p>
-Ideally, start early enough to allow time for practice and improvement. However, the intensive two-week course is specifically designed for students working with a shorter preparation timeline.
+I accept Venmo, Cash App, and Zelle. I'll provide payment instructions after reviewing your intake information.
 </p>
 
 </div>
 
+
 <div class="faq-item">
 
-<h3>Can I start with the $50 diagnostic?</h3>
+<h3>
+Can I start with the $50 diagnostic?
+</h3>
 
 <p>
-Yes. The diagnostic and consultation is an excellent way to determine your current level and decide which preparation approach makes the most sense for you.
+Yes. The diagnostic is a good starting point if you're unsure of your current level or which tutoring package is right for you.
 </p>
 
 </div>
 
+
 <div class="faq-item">
 
-<h3>Do I have to use Stripe or Calendly?</h3>
+<h3>
+What if I have a test date coming up soon?
+</h3>
 
 <p>
-No. Payment is handled directly through Venmo, Cash App, or Zelle, and I personally arrange lesson times.
+The two-week intensive course is designed for students who need a concentrated preparation schedule.
 </p>
 
 </div>
@@ -1327,7 +1411,9 @@ alt="Hanees H. ASVAB tutor"
 class="profile-image"
 >
 
-<h3>Hanees H.</h3>
+<h3>
+Hanees H.
+</h3>
 
 <p class="profile-tagline">
 Engineer • Attorney • Educator
@@ -1346,10 +1432,15 @@ Engineer • Attorney • Educator
 </div>
 
 <p class="qualifications">
+
 J.D. Law<br>
+
 M.Sc. Electrical Engineering<br>
+
 B.Sc. Computer Engineering<br>
+
 CRLA® & IXL® Certified
+
 </p>
 
 </div>
@@ -1359,7 +1450,9 @@ CRLA® & IXL® Certified
 
 <div class="tutor-bio">
 
-<h2>Meet Your Tutor</h2>
+<h2>
+Meet Your Tutor
+</h2>
 
 <p>
 Hi! My name is Hanees. I'm an educator with degrees and professional experience in engineering and law, and I've been tutoring students for more than 25 years.
@@ -1378,11 +1471,11 @@ I later studied engineering at Loughborough University in the UK before earning 
 </p>
 
 <p>
-Professionally, I've worked as a software engineer in aerospace, semiconductor, travel, and healthcare industries, and I'm also a licensed attorney.
+Professionally, I've worked as a software engineer across the aerospace, semiconductor, travel, and healthcare industries and am also a licensed attorney.
 </p>
 
 <p>
-Today, tutoring is my full-time passion. My goal is simple: help you understand the material, develop effective test-taking strategies, and walk into the ASVAB feeling prepared and confident.
+Today, tutoring is my full-time passion. My goal is to help you understand the material, develop effective test-taking strategies, and walk into the ASVAB feeling prepared and confident.
 </p>
 
 </div>
@@ -1396,16 +1489,22 @@ Today, tutoring is my full-time passion. My goal is simple: help you understand 
 
 <!-- CONTACT -->
 
-<section id="contact" class="contact-section">
+<section id="contact">
 
 <div class="container">
 
 <div class="contact">
 
-<h2>Ready to Get Started?</h2>
+<h2>
+Ready to Get Started?
+</h2>
 
 <p>
-Choose a package above and complete the short intake form. I'll personally follow up with you.
+Choose one of the packages above and complete the short intake form.
+</p>
+
+<p>
+I'll personally review your information and contact you about payment and scheduling.
 </p>
 
 <p>
@@ -1422,19 +1521,12 @@ Text:
 </a>
 </p>
 
-<p>
-Online ASVAB tutoring available throughout the United States and abroad.
-</p>
-
-<p class="contact-note">
-No automated scheduling. No third-party payment processor. Just direct, personalized tutoring.
-</p>
-
 </div>
 
 </div>
 
 </section>
+
 
 </main>
 
@@ -1447,7 +1539,7 @@ No automated scheduling. No third-party payment processor. Just direct, personal
 
 
 <!-- ========================= -->
-<!-- INTAKE FORM MODAL -->
+<!-- INTAKE FORM -->
 <!-- ========================= -->
 
 <div
@@ -1462,29 +1554,42 @@ aria-hidden="true"
 class="close-modal"
 type="button"
 onclick="closeForm()"
-aria-label="Close intake form"
+aria-label="Close"
 >
 &times;
 </button>
 
-<h2>ASVAB Tutoring Intake</h2>
+
+<div id="formArea">
+
+<h2>
+ASVAB Tutoring Intake
+</h2>
 
 <p class="modal-intro">
-Tell me a little about yourself and your ASVAB goals. I'll review your information and contact you personally to discuss the next steps.
+Please provide a little information about yourself and your ASVAB goals. I'll review your submission and contact you personally.
 </p>
 
+
 <div class="selected-package">
+
 Selected Package:
-<span id="selectedPackage">
-</span>
+<span id="selectedPackage"></span>
+
 </div>
 
 
 <form
 id="intakeForm"
-action="mailto:haneestutors@gmail.com"
-method="post"
-enctype="text/plain"
+action="https://formspree.io/f/mdkykvjk"
+method="POST"
+>
+
+
+<input
+type="hidden"
+name="_subject"
+value="New ASVAB Tutoring Intake"
 >
 
 <input
@@ -1684,7 +1789,7 @@ What areas are you struggling with?
 <textarea
 id="weaknesses"
 name="Areas of Difficulty"
-placeholder="For example: math, arithmetic reasoning, word knowledge, paragraph comprehension, mechanical concepts, etc."
+placeholder="For example: Arithmetic Reasoning, Mathematics Knowledge, Word Knowledge, Paragraph Comprehension, Mechanical Concepts, etc."
 ></textarea>
 
 </div>
@@ -1699,7 +1804,7 @@ Preferred Days & Times
 <textarea
 id="availability"
 name="Preferred Days and Times"
-placeholder="Tell me generally when you're available. I'll personally coordinate the schedule with you."
+placeholder="Tell me generally when you're available."
 ></textarea>
 
 </div>
@@ -1714,7 +1819,7 @@ Anything else I should know?
 <textarea
 id="message"
 name="Additional Information"
-placeholder="Tell me anything else that would help me understand your goals or situation."
+placeholder="Any other information about your goals or preparation."
 ></textarea>
 
 </div>
@@ -1724,9 +1829,9 @@ placeholder="Tell me anything else that would help me understand your goals or s
 
 <div class="form-note">
 
-<strong>What happens next?</strong><br>
+<strong>What happens next?</strong>
 
-After you submit this form, I'll review your information and contact you personally. We'll confirm the package, discuss any questions, arrange payment through Venmo, Cash App, or Zelle, and schedule your lessons directly.
+After you submit this form, I'll review your information and contact you personally. We'll confirm the package, arrange payment through Venmo, Cash App, or Zelle, and schedule your lessons directly.
 
 </div>
 
@@ -1738,11 +1843,39 @@ class="button form-submit"
 Submit Intake Form
 </button>
 
-<p class="no-payment">
+<p class="form-disclaimer">
 No payment is required to submit this form.
 </p>
 
 </form>
+
+</div>
+
+
+<!-- SUCCESS -->
+
+<div
+id="successMessage"
+class="success-message"
+>
+
+<h2>
+Thank You!
+</h2>
+
+<p>
+Your intake form has been submitted successfully. I'll review your information and contact you personally regarding payment and scheduling.
+</p>
+
+<button
+type="button"
+class="button"
+onclick="closeForm()"
+>
+Close
+</button>
+
+</div>
 
 </div>
 
@@ -1752,76 +1885,159 @@ No payment is required to submit this form.
 <script>
 
 /* =========================
-   INTAKE FORM FUNCTIONS
+   PACKAGE / INTAKE FORM
    ========================= */
 
 function openForm(packageName, price){
 
-    const modal = document.getElementById("intakeModal");
+const modal =
+document.getElementById("intakeModal");
 
-    const selectedPackage =
-        document.getElementById("selectedPackage");
+const packageText =
+document.getElementById("selectedPackage");
 
-    const packageField =
-        document.getElementById("packageField");
+const packageField =
+document.getElementById("packageField");
 
-    selectedPackage.textContent =
-        packageName + " — " + price;
+packageText.textContent =
+packageName + " — " + price;
 
-    packageField.value =
-        packageName + " — " + price;
+packageField.value =
+packageName + " — " + price;
 
-    modal.classList.add("active");
+document.getElementById("formArea").style.display = "block";
 
-    modal.setAttribute("aria-hidden","false");
+document.getElementById("successMessage").style.display = "none";
 
-    document.body.style.overflow = "hidden";
+modal.classList.add("active");
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+modal.setAttribute("aria-hidden","false");
+
+document.body.style.overflow = "hidden";
+
 }
 
 
 function closeForm(){
 
-    const modal =
-        document.getElementById("intakeModal");
+const modal =
+document.getElementById("intakeModal");
 
-    modal.classList.remove("active");
+modal.classList.remove("active");
 
-    modal.setAttribute("aria-hidden","true");
+modal.setAttribute("aria-hidden","true");
 
-    document.body.style.overflow = "";
+document.body.style.overflow = "";
+
 }
 
 
-/* Close if user clicks outside form */
+/* Close when clicking outside */
 
-document.getElementById("intakeModal").addEventListener(
-    "click",
-    function(event){
+document
+.getElementById("intakeModal")
+.addEventListener(
+"click",
+function(event){
 
-        if(event.target === this){
-            closeForm();
-        }
+if(event.target === this){
 
-    }
+closeForm();
+
+}
+
+}
 );
 
 
-/* Close with Escape key */
+/* Close with Escape */
 
 document.addEventListener(
-    "keydown",
-    function(event){
+"keydown",
+function(event){
 
-        if(event.key === "Escape"){
-            closeForm();
-        }
+if(event.key === "Escape"){
 
-    }
+closeForm();
+
+}
+
+}
+);
+
+
+/* =========================
+   FORM SUBMISSION
+   ========================= */
+
+const form =
+document.getElementById("intakeForm");
+
+form.addEventListener(
+"submit",
+async function(event){
+
+event.preventDefault();
+
+const submitButton =
+form.querySelector("button[type='submit']");
+
+submitButton.disabled = true;
+
+submitButton.textContent =
+"Submitting...";
+
+try{
+
+const response =
+await fetch(
+form.action,
+{
+method:"POST",
+body:new FormData(form),
+headers:{
+"Accept":"application/json"
+}
+}
+);
+
+if(response.ok){
+
+document.getElementById("formArea").style.display = "none";
+
+document.getElementById("successMessage").style.display = "block";
+
+}
+
+else{
+
+alert(
+"There was a problem submitting the form. Please email haneestutors@gmail.com or text (480) 442-4224."
+);
+
+submitButton.disabled = false;
+
+submitButton.textContent =
+"Submit Intake Form";
+
+}
+
+}
+
+catch(error){
+
+alert(
+"There was a problem submitting the form. Please email haneestutors@gmail.com or text (480) 442-4224."
+);
+
+submitButton.disabled = false;
+
+submitButton.textContent =
+"Submit Intake Form";
+
+}
+
+}
 );
 
 </script>
