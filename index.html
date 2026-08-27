@@ -6,7 +6,7 @@
 
 <title>ASVAB Tutoring | Private Online ASVAB Prep with Hanees H.</title>
 
-<meta name="description" content="Private online ASVAB tutoring with Hanees H., J.D., M.Sc. Electrical Engineering. Choose from a $50 ASVAB diagnostic and consultation, 7-lesson intensive course, or 4-week ASVAB preparation course.">
+<meta name="description" content="Private online ASVAB tutoring with Hanees H., J.D., M.Sc. Electrical Engineering. Choose from a $50 ASVAB diagnostic and consultation, a 7-lesson intensive course, or a comprehensive 4-week ASVAB preparation program.">
 
 <meta name="robots" content="index, follow">
 <meta name="author" content="Hanees H.">
@@ -59,6 +59,7 @@
 --gold:#d99a24;
 --gold-light:#fff4d9;
 --green:#176b4d;
+--red:#a53a3a;
 --max:1120px;
 }
 
@@ -79,16 +80,22 @@ color:var(--text);
 line-height:1.7;
 }
 
+body.modal-open{
+overflow:hidden;
+}
+
 .container{
 max-width:var(--max);
 margin:auto;
 padding:0 24px;
 }
 
+/* HEADER */
+
 header{
 position:sticky;
 top:0;
-background:rgba(244,241,235,.96);
+background:rgba(244,241,235,.97);
 backdrop-filter:blur(12px);
 border-bottom:1px solid var(--border);
 z-index:20;
@@ -127,6 +134,8 @@ background:var(--navy);
 color:white;
 }
 
+/* BUTTONS */
+
 .button{
 display:inline-block;
 background:var(--navy);
@@ -138,6 +147,8 @@ font-weight:800;
 border:1px solid var(--navy);
 box-shadow:0 7px 18px rgba(5,23,44,.18);
 transition:.2s ease;
+cursor:pointer;
+text-align:center;
 }
 
 .button:hover{
@@ -161,6 +172,8 @@ color:var(--navy);
 border-color:var(--navy);
 box-shadow:none;
 }
+
+/* HERO */
 
 .hero{
 padding:86px 0 78px;
@@ -295,6 +308,8 @@ font-size:.94rem;
 line-height:1.65;
 }
 
+/* GENERAL SECTIONS */
+
 section{
 padding:78px 0;
 }
@@ -316,6 +331,8 @@ margin-bottom:12px;
 font-size:1.08rem;
 color:var(--muted);
 }
+
+/* PACKAGES */
 
 .packages{
 background:#fff;
@@ -422,9 +439,10 @@ color:var(--green);
 }
 
 .package .button{
-text-align:center;
 width:100%;
 }
+
+/* DIAGNOSTIC */
 
 .diagnostic{
 background:var(--blue-light);
@@ -504,6 +522,8 @@ color:#171717;
 box-shadow:none;
 }
 
+/* WHY */
+
 .why{
 background:var(--bg);
 }
@@ -545,6 +565,66 @@ margin-bottom:8px;
 font-size:.92rem;
 color:var(--muted);
 }
+
+/* RESULTS */
+
+.results{
+background:#f2eee7;
+}
+
+.results-card{
+background:white;
+border:1px solid var(--border);
+border-radius:22px;
+padding:28px 32px;
+display:grid;
+grid-template-columns:auto 1fr;
+gap:28px;
+align-items:center;
+box-shadow:0 8px 20px rgba(5,23,44,.06);
+}
+
+.rating{
+font-size:3rem;
+font-weight:950;
+line-height:1;
+color:var(--navy-dark);
+}
+
+.stars{
+color:var(--gold);
+font-size:1.2rem;
+letter-spacing:2px;
+margin-top:5px;
+}
+
+.results h2{
+font-size:1.55rem;
+color:var(--navy-dark);
+margin-bottom:5px;
+}
+
+.results p{
+color:var(--muted);
+}
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:14px;
+}
+
+.stat{
+background:var(--blue-light);
+color:var(--navy);
+padding:7px 11px;
+border-radius:999px;
+font-size:.85rem;
+font-weight:800;
+}
+
+/* ABOUT */
 
 .about{
 background:#fff;
@@ -604,61 +684,7 @@ color:var(--muted);
 margin-bottom:18px;
 }
 
-.results{
-background:#f2eee7;
-}
-
-.results-card{
-background:white;
-border:1px solid var(--border);
-border-radius:22px;
-padding:28px 32px;
-display:grid;
-grid-template-columns:auto 1fr;
-gap:28px;
-align-items:center;
-box-shadow:0 8px 20px rgba(5,23,44,.06);
-}
-
-.rating{
-font-size:3rem;
-font-weight:950;
-line-height:1;
-color:var(--navy-dark);
-}
-
-.stars{
-color:var(--gold);
-font-size:1.2rem;
-letter-spacing:2px;
-margin-top:5px;
-}
-
-.results h2{
-font-size:1.55rem;
-color:var(--navy-dark);
-margin-bottom:5px;
-}
-
-.results p{
-color:var(--muted);
-}
-
-.stats{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:14px;
-}
-
-.stat{
-background:var(--blue-light);
-color:var(--navy);
-padding:7px 11px;
-border-radius:999px;
-font-size:.85rem;
-font-weight:800;
-}
+/* FAQ */
 
 .faq{
 background:#fff;
@@ -687,6 +713,8 @@ margin-bottom:7px;
 color:var(--muted);
 font-size:.95rem;
 }
+
+/* CONTACT */
 
 .contact-section{
 padding-top:25px;
@@ -732,12 +760,331 @@ color:#171717;
 box-shadow:none;
 }
 
+/* MODAL */
+
+.modal-overlay{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(5,23,44,.72);
+z-index:100;
+padding:20px;
+overflow-y:auto;
+}
+
+.modal-overlay.active{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.modal{
+background:white;
+width:100%;
+max-width:760px;
+max-height:92vh;
+overflow-y:auto;
+border-radius:24px;
+box-shadow:0 25px 70px rgba(0,0,0,.3);
+position:relative;
+}
+
+.modal-header{
+background:var(--navy-dark);
+color:white;
+padding:28px 32px;
+border-radius:24px 24px 0 0;
+position:relative;
+}
+
+.modal-header h2{
+color:white;
+font-size:1.85rem;
+line-height:1.2;
+margin-bottom:5px;
+padding-right:40px;
+}
+
+.modal-header p{
+color:#dce5ef;
+font-size:.94rem;
+}
+
+.close-modal{
+position:absolute;
+right:20px;
+top:18px;
+width:38px;
+height:38px;
+border:0;
+border-radius:50%;
+background:rgba(255,255,255,.12);
+color:white;
+font-size:1.5rem;
+cursor:pointer;
+line-height:1;
+}
+
+.close-modal:hover{
+background:rgba(255,255,255,.22);
+}
+
+.modal-body{
+padding:30px 32px 35px;
+}
+
+.enrollment-price{
+background:var(--gold-light);
+border:1px solid #ead39b;
+border-radius:14px;
+padding:15px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.enrollment-price strong{
+color:var(--navy-dark);
+font-size:1.05rem;
+}
+
+.enrollment-price span{
+font-size:1.55rem;
+font-weight:950;
+color:var(--navy-dark);
+}
+
+.form-section{
+margin-bottom:27px;
+}
+
+.form-section h3{
+color:var(--navy-dark);
+font-size:1.15rem;
+margin-bottom:13px;
+}
+
+.form-note{
+font-size:.88rem;
+color:var(--muted);
+margin-bottom:15px;
+}
+
+.payment-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.payment-option{
+position:relative;
+}
+
+.payment-option input{
+position:absolute;
+opacity:0;
+pointer-events:none;
+}
+
+.payment-option label{
+display:block;
+background:var(--bg);
+border:2px solid var(--border);
+border-radius:13px;
+padding:14px 10px;
+text-align:center;
+font-weight:900;
+color:var(--navy);
+cursor:pointer;
+transition:.2s ease;
+}
+
+.payment-option input:checked + label{
+background:var(--blue-light);
+border-color:var(--navy);
+box-shadow:0 0 0 2px rgba(11,41,77,.08);
+}
+
+.payment-instructions{
+display:none;
+margin-top:13px;
+padding:17px;
+background:#f7f8fa;
+border:1px solid var(--border);
+border-radius:13px;
+}
+
+.payment-instructions.active{
+display:block;
+}
+
+.payment-instructions strong{
+display:block;
+color:var(--navy-dark);
+margin-bottom:4px;
+}
+
+.payment-handle{
+font-size:1.05rem;
+font-weight:900;
+color:var(--navy);
+word-break:break-word;
+}
+
+.copy-button{
+background:white;
+border:1px solid var(--border);
+color:var(--navy);
+border-radius:8px;
+padding:6px 10px;
+font-size:.8rem;
+font-weight:800;
+cursor:pointer;
+margin-top:8px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.form-group{
+margin-bottom:15px;
+}
+
+.form-group.full{
+grid-column:1 / -1;
+}
+
+.form-group label{
+display:block;
+font-weight:800;
+font-size:.9rem;
+color:var(--navy-dark);
+margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+width:100%;
+padding:12px 13px;
+border:1px solid var(--border);
+border-radius:10px;
+font:inherit;
+color:var(--text);
+background:white;
+outline:none;
+transition:.2s ease;
+}
+
+.form-group textarea{
+min-height:95px;
+resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+border-color:var(--navy);
+box-shadow:0 0 0 3px rgba(11,41,77,.08);
+}
+
+.required{
+color:var(--red);
+}
+
+.confirmation-box{
+background:#f7f8fa;
+border:1px solid var(--border);
+border-radius:14px;
+padding:17px;
+margin-top:5px;
+}
+
+.confirmation-box label{
+display:flex;
+gap:10px;
+align-items:flex-start;
+font-size:.9rem;
+font-weight:700;
+color:var(--navy-dark);
+cursor:pointer;
+}
+
+.confirmation-box input{
+margin-top:5px;
+accent-color:var(--navy);
+}
+
+.submit-area{
+margin-top:23px;
+}
+
+.submit-area .button{
+width:100%;
+font-size:1rem;
+}
+
+.form-disclaimer{
+font-size:.78rem;
+line-height:1.5;
+color:var(--muted);
+text-align:center;
+margin-top:10px;
+}
+
+.success-message{
+display:none;
+text-align:center;
+padding:35px 15px 20px;
+}
+
+.success-icon{
+width:65px;
+height:65px;
+border-radius:50%;
+background:#e3f3eb;
+color:var(--green);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2rem;
+font-weight:900;
+margin:0 auto 18px;
+}
+
+.success-message h2{
+color:var(--navy-dark);
+margin-bottom:10px;
+}
+
+.success-message p{
+color:var(--muted);
+margin-bottom:10px;
+}
+
+.success-contact{
+background:var(--blue-light);
+padding:14px;
+border-radius:12px;
+margin:20px 0;
+color:var(--navy-dark);
+font-weight:800;
+}
+
+/* FOOTER */
+
 footer{
 padding:32px 24px;
 text-align:center;
 color:var(--muted);
 font-size:.9rem;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -821,6 +1168,43 @@ padding:34px 22px;
 font-size:1.85rem;
 }
 
+.modal-overlay{
+padding:8px;
+}
+
+.modal{
+max-height:96vh;
+border-radius:18px;
+}
+
+.modal-header{
+padding:24px 20px;
+border-radius:18px 18px 0 0;
+}
+
+.modal-body{
+padding:23px 20px 28px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+gap:0;
+}
+
+.form-group.full{
+grid-column:auto;
+}
+
+.payment-grid{
+grid-template-columns:1fr;
+}
+
+.enrollment-price{
+align-items:flex-start;
+gap:10px;
+flex-direction:column;
+}
+
 }
 
 </style>
@@ -871,14 +1255,18 @@ Focused ASVAB tutoring designed around your current skill level, your target sco
 </p>
 
 <div class="hero-points">
+
 <div class="hero-point">✓ One-on-One Instruction</div>
 <div class="hero-point">✓ Online From Anywhere</div>
 <div class="hero-point">✓ Personalized Study Plan</div>
 <div class="hero-point">✓ Math & Verbal Strategy</div>
+
 </div>
 
 <p class="hero-lead" style="font-size:1rem;">
+
 Choose the level of support that fits your goal — from a $50 diagnostic and consultation to an intensive two-week course or a comprehensive four-week program.
+
 </p>
 
 <div class="actions">
@@ -887,18 +1275,26 @@ Choose the level of support that fits your goal — from a $50 diagnostic and co
 View ASVAB Packages
 </a>
 
-<a class="button secondary" href="mailto:haneestutors@gmail.com">
-Ask a Question
+<a class="button secondary" href="#contact">
+Contact Hanees
 </a>
 
 </div>
 
 <p class="hero-contact">
+
 Email:
-<a href="mailto:haneestutors@gmail.com">haneestutors@gmail.com</a>
+<a href="mailto:haneestutors@gmail.com">
+haneestutors@gmail.com
+</a>
+
 &nbsp; | &nbsp;
+
 Text:
-<a href="tel:4804424224">(480) 442-4224</a>
+<a href="tel:4804424224">
+(480) 442-4224
+</a>
+
 </p>
 
 </div>
@@ -918,15 +1314,24 @@ Engineer • Attorney • Educator
 </p>
 
 <div>
-<span class="experience-badge">25+ Years Experience</span>
-<span class="experience-badge">17K+ Tutoring Hours</span>
+
+<span class="experience-badge">
+25+ Years Experience
+</span>
+
+<span class="experience-badge">
+17K+ Tutoring Hours
+</span>
+
 </div>
 
 <p class="qualifications">
+
 J.D. Law<br>
 M.Sc. Electrical Engineering<br>
 B.Sc. Computer Engineering<br>
 CRLA® & IXL® Certified
+
 </p>
 
 </div>
@@ -944,10 +1349,12 @@ CRLA® & IXL® Certified
 
 <div class="section-heading">
 
-<h2>Choose Your ASVAB Preparation Package</h2>
+<h2>
+Choose Your ASVAB Preparation Package
+</h2>
 
 <p>
-Start with an assessment or jump directly into structured one-on-one preparation. Every package is designed to make your study time focused, efficient, and purposeful.
+Choose the level of preparation that fits your timeline and goals. Payment is made directly through Venmo, Cash App, or Zelle, and your lesson schedule is arranged personally with Hanees.
 </p>
 
 </div>
@@ -995,9 +1402,12 @@ Find out where you stand before committing to a full preparation program.
 
 </ul>
 
-<a class="button secondary" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Diagnostic%20%2450">
+<button
+class="button secondary"
+onclick="openEnrollment('Diagnostic & Consultation','$50')"
+>
 Book Diagnostic — $50
-</a>
+</button>
 
 </div>
 
@@ -1048,9 +1458,12 @@ A concentrated program for students who want structured preparation on an accele
 
 </ul>
 
-<a class="button gold" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Intensive%20Course">
-Start Intensive Course — $685
-</a>
+<button
+class="button gold"
+onclick="openEnrollment('Intensive ASVAB Course','$685')"
+>
+Enroll in Intensive — $685
+</button>
 
 </div>
 
@@ -1097,9 +1510,12 @@ More time to build fundamentals, address weaknesses, practice extensively, and d
 
 </ul>
 
-<a class="button" href="mailto:haneestutors@gmail.com?subject=ASVAB%204-Week%20Course">
-Start 4-Week Course — $1,190
-</a>
+<button
+class="button"
+onclick="openEnrollment('4-Week ASVAB Course','$1,190')"
+>
+Enroll in 4-Week — $1,190
+</button>
 
 </div>
 
@@ -1125,18 +1541,26 @@ Not Sure Which Package You Need?
 </h2>
 
 <p>
-Start with the $50 Diagnostic & Consultation. We'll identify your current strengths and weaknesses, discuss your target score, and determine which preparation approach makes the most sense for you.
+Start with the $50 Diagnostic & Consultation. We'll assess your current preparation, discuss your target score, identify areas for improvement, and determine which preparation approach makes the most sense for you.
 </p>
 
 <div class="diagnostic-features">
 
-<div class="diagnostic-feature">✓ Assess Your Starting Point</div>
+<div class="diagnostic-feature">
+✓ Assess Your Starting Point
+</div>
 
-<div class="diagnostic-feature">✓ Identify Weak Areas</div>
+<div class="diagnostic-feature">
+✓ Identify Weak Areas
+</div>
 
-<div class="diagnostic-feature">✓ Discuss Your Goal</div>
+<div class="diagnostic-feature">
+✓ Discuss Your Goal
+</div>
 
-<div class="diagnostic-feature">✓ Build a Study Strategy</div>
+<div class="diagnostic-feature">
+✓ Build a Study Strategy
+</div>
 
 </div>
 
@@ -1156,9 +1580,12 @@ $50
 One focused session to help you determine your next step.
 </p>
 
-<a class="button" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Diagnostic%20%2450">
+<button
+class="button"
+onclick="openEnrollment('Diagnostic & Consultation','$50')"
+>
 Book Your Diagnostic
-</a>
+</button>
 
 </div>
 
@@ -1285,11 +1712,8 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 <div class="stats">
 
 <div class="stat">17K+ Tutoring Hours</div>
-
 <div class="stat">2.5K+ Hours Annually</div>
-
 <div class="stat">600 Student Ratings</div>
-
 <div class="stat">555 Five-Star Ratings</div>
 
 </div>
@@ -1397,6 +1821,30 @@ Everything you need to know before getting started.
 <div class="faq-item">
 
 <h3>
+How do I enroll?
+</h3>
+
+<p>
+Choose a package above and complete the enrollment form. You'll be given instructions for paying by Venmo, Cash App, or Zelle. Once payment is received and verified, Hanees will contact you directly to arrange your lesson schedule.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Do I schedule my own lessons?
+</h3>
+
+<p>
+No. To provide maximum flexibility, lesson scheduling is handled personally by Hanees. After your payment is confirmed, you'll discuss your availability and establish a schedule that works for you.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
 Are these ASVAB courses one-on-one?
 </h3>
 
@@ -1457,23 +1905,11 @@ The two-week Intensive Course is designed for accelerated preparation. The four-
 <div class="faq-item">
 
 <h3>
-Do I need to know my target score before starting?
-</h3>
-
-<p>
-No. If you aren't sure what score you should be targeting or where you currently stand, the $50 Diagnostic & Consultation is a good place to begin.
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>
 How do I get started?
 </h3>
 
 <p>
-Email haneestutors@gmail.com or text (480) 442-4224. Include your name, approximate test date, and which package you're interested in.
+Choose your package above or email haneestutors@gmail.com or text (480) 442-4224 if you have questions before enrolling.
 </p>
 
 </div>
@@ -1498,7 +1934,7 @@ Ready to Start Your ASVAB Preparation?
 </h2>
 
 <p>
-Choose your package and take the next step toward a more focused preparation plan.
+Choose your package and submit your enrollment information. Payment is handled directly through Venmo, Cash App, or Zelle, and your schedule is arranged personally with Hanees.
 </p>
 
 <p>
@@ -1521,8 +1957,8 @@ Text:
 View Packages
 </a>
 
-<a class="button" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Tutoring%20Inquiry">
-Contact Hanees
+<a class="button secondary" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Tutoring%20Question">
+Ask a Question
 </a>
 
 </div>
@@ -1535,9 +1971,845 @@ Contact Hanees
 
 </main>
 
+
+<!-- ENROLLMENT MODAL -->
+
+<div
+id="enrollmentModal"
+class="modal-overlay"
+role="dialog"
+aria-modal="true"
+aria-labelledby="modalTitle"
+>
+
+<div class="modal">
+
+<div class="modal-header">
+
+<button
+class="close-modal"
+onclick="closeEnrollment()"
+aria-label="Close enrollment form"
+>
+×
+</button>
+
+<h2 id="modalTitle">
+ASVAB Enrollment
+</h2>
+
+<p id="modalSubtitle">
+Complete the information below to get started.
+</p>
+
+</div>
+
+<div class="modal-body">
+
+<div id="enrollmentFormContainer">
+
+<div class="enrollment-price">
+
+<strong id="selectedPackage">
+Selected Package
+</strong>
+
+<span id="selectedPrice">
+$0
+</span>
+
+</div>
+
+
+<form id="enrollmentForm">
+
+
+<!-- PAYMENT -->
+
+<div class="form-section">
+
+<h3>
+1. Choose Your Payment Method
+</h3>
+
+<p class="form-note">
+Send payment using one of the methods below. After submitting this form, your payment will be manually verified before your enrollment is finalized.
+</p>
+
+<div class="payment-grid">
+
+<div class="payment-option">
+
+<input
+type="radio"
+id="paymentVenmo"
+name="paymentMethod"
+value="Venmo"
+required
+>
+
+<label for="paymentVenmo">
+Venmo
+</label>
+
+</div>
+
+<div class="payment-option">
+
+<input
+type="radio"
+id="paymentCashApp"
+name="paymentMethod"
+value="Cash App"
+>
+
+<label for="paymentCashApp">
+Cash App
+</label>
+
+</div>
+
+<div class="payment-option">
+
+<input
+type="radio"
+id="paymentZelle"
+name="paymentMethod"
+value="Zelle"
+>
+
+<label for="paymentZelle">
+Zelle
+</label>
+
+</div>
+
+</div>
+
+
+<!-- REPLACE THESE THREE PLACEHOLDERS -->
+
+<div
+id="venmoInstructions"
+class="payment-instructions"
+>
+
+<strong>Pay with Venmo</strong>
+
+<div class="payment-handle">
+YOUR_VENMO_USERNAME
+</div>
+
+<button
+type="button"
+class="copy-button"
+onclick="copyPayment('YOUR_VENMO_USERNAME')"
+>
+Copy
+</button>
+
+<p class="form-note" style="margin-top:8px;margin-bottom:0;">
+Please include the student's name in the payment note.
+</p>
+
+</div>
+
+
+<div
+id="cashappInstructions"
+class="payment-instructions"
+>
+
+<strong>Pay with Cash App</strong>
+
+<div class="payment-handle">
+YOUR_CASHAPP_CASHTAG
+</div>
+
+<button
+type="button"
+class="copy-button"
+onclick="copyPayment('YOUR_CASHAPP_CASHTAG')"
+>
+Copy
+</button>
+
+<p class="form-note" style="margin-top:8px;margin-bottom:0;">
+Please include the student's name in the payment note.
+</p>
+
+</div>
+
+
+<div
+id="zelleInstructions"
+class="payment-instructions"
+>
+
+<strong>Pay with Zelle</strong>
+
+<div class="payment-handle">
+YOUR_ZELLE_INFORMATION
+</div>
+
+<button
+type="button"
+class="copy-button"
+onclick="copyPayment('YOUR_ZELLE_INFORMATION')"
+>
+Copy
+</button>
+
+<p class="form-note" style="margin-top:8px;margin-bottom:0;">
+Please include the student's name in the payment note.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- STUDENT -->
+
+<div class="form-section">
+
+<h3>
+2. Student Information
+</h3>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label for="studentName">
+Student Name <span class="required">*</span>
+</label>
+
+<input
+type="text"
+id="studentName"
+name="studentName"
+required
+autocomplete="name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="studentEmail">
+Student Email <span class="required">*</span>
+</label>
+
+<input
+type="email"
+id="studentEmail"
+name="studentEmail"
+required
+autocomplete="email"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="phone">
+Phone Number <span class="required">*</span>
+</label>
+
+<input
+type="tel"
+id="phone"
+name="phone"
+required
+autocomplete="tel"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="testDate">
+Approximate ASVAB Test Date
+</label>
+
+<input
+type="date"
+id="testDate"
+name="testDate"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="previousTest">
+Have You Taken the ASVAB Before?
+</label>
+
+<select id="previousTest" name="previousTest">
+
+<option value="">
+Select one
+</option>
+
+<option value="No">
+No
+</option>
+
+<option value="Yes">
+Yes
+</option>
+
+<option value="Not sure">
+Not sure
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="targetScore">
+Target Score
+</label>
+
+<input
+type="text"
+id="targetScore"
+name="targetScore"
+placeholder="If known"
+>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="weakAreas">
+What areas are most difficult?
+</label>
+
+<textarea
+id="weakAreas"
+name="weakAreas"
+placeholder="For example: arithmetic reasoning, mathematics knowledge, word knowledge, paragraph comprehension, mechanical concepts, etc."
+></textarea>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- AVAILABILITY -->
+
+<div class="form-section">
+
+<h3>
+3. Your Availability
+</h3>
+
+<p class="form-note">
+Scheduling is handled personally by Hanees. Give your general availability below; specific lesson times will be arranged after payment is verified.
+</p>
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label for="timezone">
+Time Zone <span class="required">*</span>
+</label>
+
+<select
+id="timezone"
+name="timezone"
+required
+>
+
+<option value="">
+Select your time zone
+</option>
+
+<option value="Eastern">
+Eastern Time
+</option>
+
+<option value="Central">
+Central Time
+</option>
+
+<option value="Mountain">
+Mountain Time
+</option>
+
+<option value="Pacific">
+Pacific Time
+</option>
+
+<option value="Alaska">
+Alaska Time
+</option>
+
+<option value="Hawaii">
+Hawaii Time
+</option>
+
+<option value="Other">
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="preferredDays">
+Preferred Days
+</label>
+
+<input
+type="text"
+id="preferredDays"
+name="preferredDays"
+placeholder="Example: Mon, Wed, Sat"
+>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="availability">
+Preferred Times / Availability
+</label>
+
+<textarea
+id="availability"
+name="availability"
+placeholder="Example: Weekdays after 5 PM; Saturday mornings"
+></textarea>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAYMENT CONFIRMATION -->
+
+<div class="form-section">
+
+<h3>
+4. Payment Confirmation
+</h3>
+
+<div class="confirmation-box">
+
+<label>
+
+<input
+type="checkbox"
+id="paymentSent"
+name="paymentSent"
+required
+>
+
+<span>
+I have sent the full payment for the selected package using the payment method selected above. I understand that my enrollment is subject to payment verification and that lesson scheduling will be arranged personally with Hanees.
+</span>
+
+</label>
+
+</div>
+
+</div>
+
+
+<div class="submit-area">
+
+<button
+type="submit"
+class="button gold"
+>
+Submit Enrollment Request
+</button>
+
+<p class="form-disclaimer">
+Your information is used to process your tutoring enrollment and arrange your lessons. No automated scheduling is used.
+</p>
+
+</div>
+
+</form>
+
+</div>
+
+
+<!-- SUCCESS -->
+
+<div
+id="successMessage"
+class="success-message"
+>
+
+<div class="success-icon">
+✓
+</div>
+
+<h2>
+Enrollment Request Received
+</h2>
+
+<p>
+Thank you. Your enrollment information has been submitted.
+</p>
+
+<div class="success-contact">
+
+Please allow time for payment verification. Hanees will contact you directly to confirm your enrollment and arrange your lesson schedule.
+
+</div>
+
+<p>
+Questions? Email
+<a href="mailto:haneestutors@gmail.com">
+haneestutors@gmail.com
+</a>
+or text
+<a href="tel:4804424224">
+(480) 442-4224
+</a>.
+</p>
+
+<br>
+
+<button
+class="button"
+onclick="closeEnrollment()"
+>
+Close
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
 <footer>
+
 © 2026 Hanees H. ASVAB Tutoring
+
 </footer>
+
+
+<script>
+
+/*
+====================================================
+ASVAB ENROLLMENT SYSTEM
+====================================================
+
+This version keeps payment and scheduling under
+your personal control.
+
+IMPORTANT:
+Replace these three placeholders with your actual
+payment information before publishing:
+
+YOUR_VENMO_USERNAME
+YOUR_CASHAPP_CASHTAG
+YOUR_ZELLE_INFORMATION
+
+The form currently displays a confirmation message
+in the browser. To actually receive submissions,
+connect the form to your preferred form-processing
+service or website backend.
+====================================================
+*/
+
+
+let currentPackage = "";
+let currentPrice = "";
+
+
+/* OPEN ENROLLMENT MODAL */
+
+function openEnrollment(packageName, price){
+
+currentPackage = packageName;
+currentPrice = price;
+
+document.getElementById("selectedPackage").textContent = packageName;
+
+document.getElementById("selectedPrice").textContent = price;
+
+document.getElementById("modalTitle").textContent =
+"Enroll in " + packageName;
+
+document.getElementById("modalSubtitle").textContent =
+"Complete the form below and arrange payment by Venmo, Cash App, or Zelle.";
+
+document.getElementById("enrollmentModal").classList.add("active");
+
+document.body.classList.add("modal-open");
+
+document.getElementById("enrollmentFormContainer").style.display = "block";
+
+document.getElementById("successMessage").style.display = "none";
+
+window.setTimeout(function(){
+
+document.getElementById("studentName").focus();
+
+},100);
+
+}
+
+
+/* CLOSE MODAL */
+
+function closeEnrollment(){
+
+document.getElementById("enrollmentModal").classList.remove("active");
+
+document.body.classList.remove("modal-open");
+
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE MODAL */
+
+document.getElementById("enrollmentModal").addEventListener("click",function(event){
+
+if(event.target === this){
+
+closeEnrollment();
+
+}
+
+});
+
+
+/* ESCAPE KEY */
+
+document.addEventListener("keydown",function(event){
+
+if(event.key === "Escape"){
+
+closeEnrollment();
+
+}
+
+});
+
+
+/* PAYMENT METHOD DISPLAY */
+
+const paymentInputs =
+document.querySelectorAll('input[name="paymentMethod"]');
+
+paymentInputs.forEach(function(input){
+
+input.addEventListener("change",function(){
+
+document.querySelectorAll(".payment-instructions").forEach(function(box){
+
+box.classList.remove("active");
+
+});
+
+if(this.value === "Venmo"){
+
+document
+.getElementById("venmoInstructions")
+.classList.add("active");
+
+}
+
+if(this.value === "Cash App"){
+
+document
+.getElementById("cashappInstructions")
+.classList.add("active");
+
+}
+
+if(this.value === "Zelle"){
+
+document
+.getElementById("zelleInstructions")
+.classList.add("active");
+
+}
+
+});
+
+});
+
+
+/* COPY PAYMENT INFORMATION */
+
+function copyPayment(value){
+
+if(navigator.clipboard){
+
+navigator.clipboard.writeText(value).then(function(){
+
+alert("Payment information copied.");
+
+});
+
+}else{
+
+alert("Payment information: " + value);
+
+}
+
+}
+
+
+/*
+====================================================
+FORM SUBMISSION
+
+IMPORTANT:
+
+This demo currently shows a success message but
+does NOT transmit the form data anywhere.
+
+For a production site, replace the code in the
+submit handler with your preferred form backend.
+
+Examples include:
+- Your web host's form handler
+- Formspree
+- Netlify Forms
+- A custom PHP endpoint
+- Your own server/API
+
+The package, payment method, student information,
+availability, and payment confirmation should be
+sent to you securely.
+====================================================
+*/
+
+document
+.getElementById("enrollmentForm")
+.addEventListener("submit",function(event){
+
+event.preventDefault();
+
+
+/*
+The following object shows the information that
+should be sent to your backend.
+*/
+
+const enrollmentData = {
+
+package: currentPackage,
+
+price: currentPrice,
+
+paymentMethod:
+document.querySelector(
+'input[name="paymentMethod"]:checked'
+)?.value,
+
+studentName:
+document.getElementById("studentName").value,
+
+studentEmail:
+document.getElementById("studentEmail").value,
+
+phone:
+document.getElementById("phone").value,
+
+testDate:
+document.getElementById("testDate").value,
+
+previousTest:
+document.getElementById("previousTest").value,
+
+targetScore:
+document.getElementById("targetScore").value,
+
+weakAreas:
+document.getElementById("weakAreas").value,
+
+timezone:
+document.getElementById("timezone").value,
+
+preferredDays:
+document.getElementById("preferredDays").value,
+
+availability:
+document.getElementById("availability").value,
+
+paymentSent:
+document.getElementById("paymentSent").checked
+
+};
+
+
+/*
+For now, log the enrollment information so
+you can test the form locally.
+Remove this line once connected to a backend.
+*/
+
+console.log("ASVAB Enrollment:", enrollmentData);
+
+
+/*
+Show success message.
+*/
+
+document.getElementById("enrollmentFormContainer").style.display =
+"none";
+
+document.getElementById("successMessage").style.display =
+"block";
+
+});
+
+
+/* PREVENT PAST DATES FOR TEST DATE */
+
+const testDateInput =
+document.getElementById("testDate");
+
+if(testDateInput){
+
+const today = new Date();
+
+const year = today.getFullYear();
+
+const month = String(today.getMonth()+1).padStart(2,"0");
+
+const day = String(today.getDate()).padStart(2,"0");
+
+testDateInput.min = year + "-" + month + "-" + day;
+
+}
+
+</script>
 
 </body>
 </html>
