@@ -194,11 +194,27 @@ radial-gradient(circle at 85% 15%,rgba(217,154,36,.18),transparent 28%),
 linear-gradient(135deg,#f4f1eb 0%,#ded7cb 100%);
 }
 
+/*
+   HERO SPACE FIX:
+   The original hero used a two-column grid,
+   but the second column was empty. The hero
+   now uses the full available width.
+*/
+
 .hero-layout{
-display:grid;
-grid-template-columns:1.25fr .75fr;
-gap:55px;
-align-items:center;
+display:block;
+}
+
+.hero > .container{
+max-width:1200px;
+}
+
+.hero .hero-lead{
+max-width:900px;
+}
+
+.hero .hero-points{
+max-width:1050px;
 }
 
 .eyebrow{
@@ -220,7 +236,7 @@ line-height:1.04;
 letter-spacing:-.035em;
 color:var(--navy-dark);
 margin-bottom:22px;
-max-width:750px;
+max-width:900px;
 }
 
 .hero h1 span{
@@ -231,7 +247,7 @@ color:var(--gold);
 font-size:1.25rem;
 line-height:1.6;
 color:var(--muted);
-max-width:720px;
+max-width:900px;
 margin-bottom:25px;
 }
 
@@ -254,7 +270,7 @@ box-shadow:0 3px 8px rgba(5,23,44,.05);
 }
 
 .actions{
-margin-top:30px;
+margin-top:32px;
 display:flex;
 gap:13px;
 flex-wrap:wrap;
@@ -642,9 +658,6 @@ margin-bottom:14px;
 color:#dce5ef;
 }
 
-
-/* PHOTO */
-
 .tutor-photo{
 width:100%;
 max-width:270px;
@@ -964,10 +977,6 @@ font-size:.9rem;
 
 @media(max-width:900px){
 
-.hero-layout{
-grid-template-columns:1fr;
-}
-
 .package-grid{
 grid-template-columns:1fr;
 max-width:600px;
@@ -1074,10 +1083,6 @@ gap:0;
 
 }
 
-
-/* =========================
-   ACCESSIBILITY
-========================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -1241,8 +1246,6 @@ Start with an assessment or jump directly into structured one-on-one preparation
 <div class="package-grid">
 
 
-<!-- DIAGNOSTIC -->
-
 <div class="package">
 
 <div class="package-label">
@@ -1291,8 +1294,6 @@ Book Diagnostic — $50
 
 </div>
 
-
-<!-- INTENSIVE -->
 
 <div class="package featured">
 
@@ -1348,8 +1349,6 @@ Start Intensive Course — $685
 
 </div>
 
-
-<!-- FOUR WEEK -->
 
 <div class="package">
 
@@ -1408,10 +1407,6 @@ Start 4-Week Course — $1,190
 
 </section>
 
-
-<!-- =========================
-     DIAGNOSTIC CALLOUT
-========================= -->
 
 <section class="diagnostic">
 
@@ -1481,10 +1476,6 @@ Book Your Diagnostic
 
 </section>
 
-
-<!-- =========================
-     WHY
-========================= -->
 
 <section class="why">
 
@@ -1579,10 +1570,6 @@ Learn how to approach questions efficiently, manage your time, and avoid common 
 </section>
 
 
-<!-- =========================
-     RESULTS
-========================= -->
-
 <section class="results">
 
 <div class="container">
@@ -1640,14 +1627,9 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 </section>
 
 
-<!-- =========================
-     ABOUT / MEET YOUR TUTOR
-========================= -->
-
 <section id="about" class="about">
 
 <div class="container about-grid">
-
 
 <div class="about-summary">
 
@@ -1737,10 +1719,6 @@ ASVAB preparation is now the sole focus of this tutoring program, allowing the i
 </section>
 
 
-<!-- =========================
-     FAQ
-========================= -->
-
 <section id="faq" class="faq">
 
 <div class="container">
@@ -1759,7 +1737,6 @@ Everything you need to know before getting started.
 
 
 <div class="faq-list">
-
 
 <div class="faq-item">
 
@@ -1864,17 +1841,12 @@ Payment is handled directly rather than through an automated checkout system. Av
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
 
-
-<!-- =========================
-     CONTACT
-========================= -->
 
 <section id="contact" class="contact-section">
 
@@ -1937,9 +1909,9 @@ Contact Hanees
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================
      INTAKE FORM MODAL
-===================================================== -->
+========================= -->
 
 <div
 id="intakeModal"
@@ -1996,7 +1968,6 @@ value=""
 
 <div class="form-row">
 
-
 <div class="form-group">
 
 <label for="name">
@@ -2034,7 +2005,6 @@ autocomplete="email"
 
 
 <div class="form-row">
-
 
 <div class="form-group">
 
@@ -2105,7 +2075,6 @@ Intensive ASVAB Course — $685
 
 
 <div class="form-row">
-
 
 <div class="form-group">
 
@@ -2265,10 +2234,6 @@ After you submit the form, your information will be sent securely through Formsp
 </div>
 
 
-<!-- =========================
-     MODAL / PACKAGE SCRIPT
-========================= -->
-
 <script>
 
 const modal = document.getElementById("intakeModal");
@@ -2297,7 +2262,6 @@ modal.setAttribute("aria-hidden","false");
 
 document.body.classList.add("modal-open");
 
-
 if(selectedPackage){
 
 setSelectedPackage(selectedPackage);
@@ -2307,9 +2271,6 @@ setSelectedPackage(selectedPackage);
 setSelectedPackage("");
 
 }
-
-
-/* Focus first useful field */
 
 setTimeout(function(){
 
@@ -2335,9 +2296,6 @@ modal.setAttribute("aria-hidden","true");
 
 document.body.classList.remove("modal-open");
 
-
-/* Remove #intake from URL if present */
-
 if(window.location.hash === "#intake"){
 
 history.replaceState(
@@ -2347,9 +2305,6 @@ window.location.pathname + window.location.search
 );
 
 }
-
-
-/* Return focus */
 
 if(lastFocusedElement){
 
@@ -2369,7 +2324,6 @@ function setSelectedPackage(selected){
 hiddenPackage.value = selected;
 
 packageSelect.value = selected;
-
 
 if(selected){
 
@@ -2407,7 +2361,7 @@ openModal(selected);
 
 
 /* =========================
-   GENERIC GET STARTED BUTTONS
+   GET STARTED BUTTONS
 ========================= */
 
 openIntakeButtons.forEach(function(button){
@@ -2476,7 +2430,7 @@ closeModal();
 
 
 /* =========================
-   HANDLE #intake LINKS
+   HANDLE #intake
 ========================= */
 
 if(window.location.hash === "#intake"){
