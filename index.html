@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -47,6 +48,10 @@
 
 <style>
 
+/* =========================
+   COLOR / GLOBAL SETTINGS
+========================= */
+
 :root{
 --bg:#f4f1eb;
 --card:#ffffff;
@@ -84,6 +89,11 @@ max-width:var(--max);
 margin:auto;
 padding:0 24px;
 }
+
+
+/* =========================
+   HEADER
+========================= */
 
 header{
 position:sticky;
@@ -127,6 +137,11 @@ background:var(--navy);
 color:white;
 }
 
+
+/* =========================
+   BUTTONS
+========================= */
+
 .button{
 display:inline-block;
 background:var(--navy);
@@ -138,6 +153,7 @@ font-weight:800;
 border:1px solid var(--navy);
 box-shadow:0 7px 18px rgba(5,23,44,.18);
 transition:.2s ease;
+cursor:pointer;
 }
 
 .button:hover{
@@ -161,6 +177,11 @@ color:var(--navy);
 border-color:var(--navy);
 box-shadow:none;
 }
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
 padding:86px 0 78px;
@@ -247,53 +268,10 @@ color:var(--navy);
 text-decoration:none;
 }
 
-.profile-card{
-background:rgba(255,255,255,.94);
-border:1px solid var(--border);
-border-radius:28px;
-padding:25px;
-text-align:center;
-box-shadow:0 20px 45px rgba(5,23,44,.15);
-}
 
-.profile-image{
-width:100%;
-max-width:270px;
-border-radius:20px;
-border:1px solid var(--border);
-margin-bottom:16px;
-}
-
-.profile-card h2{
-font-size:1.8rem;
-line-height:1.2;
-color:var(--navy-dark);
-margin-bottom:3px;
-}
-
-.profile-tagline{
-color:var(--navy);
-font-weight:800;
-margin-bottom:13px;
-}
-
-.experience-badge{
-display:inline-block;
-background:var(--blue-light);
-color:var(--navy-dark);
-padding:7px 12px;
-border-radius:999px;
-font-weight:800;
-font-size:.86rem;
-margin:3px;
-}
-
-.qualifications{
-margin-top:15px;
-color:var(--muted);
-font-size:.94rem;
-line-height:1.65;
-}
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section{
 padding:78px 0;
@@ -316,6 +294,11 @@ margin-bottom:12px;
 font-size:1.08rem;
 color:var(--muted);
 }
+
+
+/* =========================
+   PACKAGES
+========================= */
 
 .packages{
 background:#fff;
@@ -426,6 +409,11 @@ text-align:center;
 width:100%;
 }
 
+
+/* =========================
+   DIAGNOSTIC CALLOUT
+========================= */
+
 .diagnostic{
 background:var(--blue-light);
 }
@@ -504,6 +492,11 @@ color:#171717;
 box-shadow:none;
 }
 
+
+/* =========================
+   WHY
+========================= */
+
 .why{
 background:var(--bg);
 }
@@ -546,63 +539,10 @@ font-size:.92rem;
 color:var(--muted);
 }
 
-.about{
-background:#fff;
-border-top:1px solid var(--border);
-border-bottom:1px solid var(--border);
-}
 
-.about-grid{
-display:grid;
-grid-template-columns:.75fr 1.25fr;
-gap:55px;
-align-items:start;
-}
-
-.about-summary{
-background:var(--navy-dark);
-color:white;
-border-radius:23px;
-padding:30px;
-position:sticky;
-top:100px;
-}
-
-.about-summary h2{
-color:white;
-font-size:1.8rem;
-line-height:1.2;
-margin-bottom:14px;
-}
-
-.about-summary p{
-color:#dce5ef;
-}
-
-.credentials{
-margin-top:22px;
-display:grid;
-gap:9px;
-}
-
-.credential{
-background:rgba(255,255,255,.09);
-padding:10px 12px;
-border-radius:10px;
-font-size:.9rem;
-font-weight:700;
-}
-
-.about-copy h2{
-font-size:2.2rem;
-color:var(--navy-dark);
-margin-bottom:20px;
-}
-
-.about-copy p{
-color:var(--muted);
-margin-bottom:18px;
-}
+/* =========================
+   RESULTS
+========================= */
 
 .results{
 background:#f2eee7;
@@ -660,6 +600,102 @@ font-size:.85rem;
 font-weight:800;
 }
 
+
+/* =========================
+   ABOUT / MEET YOUR TUTOR
+========================= */
+
+.about{
+background:#fff;
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:.75fr 1.25fr;
+gap:55px;
+align-items:start;
+}
+
+.about-summary{
+background:var(--navy-dark);
+color:white;
+border-radius:23px;
+padding:30px;
+position:sticky;
+top:100px;
+}
+
+.about-summary h2{
+color:white;
+font-size:1.8rem;
+line-height:1.2;
+margin-bottom:14px;
+}
+
+.about-summary p{
+color:#dce5ef;
+}
+
+
+/* PHOTO NOW LIVES HERE */
+
+.tutor-photo{
+width:100%;
+max-width:270px;
+display:block;
+margin:24px auto 22px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.18);
+box-shadow:0 10px 25px rgba(0,0,0,.22);
+}
+
+.tutor-name{
+text-align:center;
+font-size:1.55rem;
+font-weight:900;
+color:white;
+margin-bottom:3px;
+}
+
+.tutor-title{
+text-align:center;
+color:#dce5ef;
+font-weight:800;
+margin-bottom:18px;
+}
+
+.credentials{
+margin-top:22px;
+display:grid;
+gap:9px;
+}
+
+.credential{
+background:rgba(255,255,255,.09);
+padding:10px 12px;
+border-radius:10px;
+font-size:.9rem;
+font-weight:700;
+}
+
+.about-copy h2{
+font-size:2.2rem;
+color:var(--navy-dark);
+margin-bottom:20px;
+}
+
+.about-copy p{
+color:var(--muted);
+margin-bottom:18px;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
 .faq{
 background:#fff;
 }
@@ -687,6 +723,129 @@ margin-bottom:7px;
 color:var(--muted);
 font-size:.95rem;
 }
+
+
+/* =========================
+   INTAKE FORM
+========================= */
+
+.intake-section{
+background:var(--blue-light);
+border-top:1px solid #c8d5e3;
+}
+
+.intake-box{
+max-width:850px;
+margin:auto;
+background:white;
+border:1px solid #c8d5e3;
+border-radius:24px;
+padding:38px;
+box-shadow:0 12px 28px rgba(5,23,44,.09);
+}
+
+.intake-header{
+text-align:center;
+margin-bottom:30px;
+}
+
+.intake-header h2{
+font-size:2.25rem;
+line-height:1.2;
+color:var(--navy-dark);
+margin-bottom:10px;
+}
+
+.intake-header p{
+color:var(--muted);
+}
+
+.form-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.form-group{
+margin-bottom:18px;
+}
+
+.form-group label{
+display:block;
+font-weight:800;
+color:var(--navy-dark);
+font-size:.92rem;
+margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+width:100%;
+padding:12px 14px;
+font:inherit;
+color:var(--text);
+background:#fff;
+border:1px solid var(--border);
+border-radius:10px;
+outline:none;
+transition:.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+border-color:var(--navy);
+box-shadow:0 0 0 3px rgba(11,41,77,.08);
+}
+
+.form-group textarea{
+min-height:125px;
+resize:vertical;
+}
+
+.form-help{
+font-size:.82rem;
+color:var(--muted);
+margin-top:5px;
+}
+
+.required{
+color:#b42318;
+}
+
+.form-submit{
+text-align:center;
+margin-top:10px;
+}
+
+.form-submit .button{
+min-width:230px;
+}
+
+.form-note{
+text-align:center;
+font-size:.84rem;
+color:var(--muted);
+margin-top:15px;
+line-height:1.6;
+}
+
+.selected-package{
+background:var(--gold-light);
+border:1px solid #ead49a;
+border-radius:12px;
+padding:13px 15px;
+margin-bottom:22px;
+color:#4d3b0d;
+font-size:.92rem;
+font-weight:800;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact-section{
 padding-top:25px;
@@ -732,12 +891,22 @@ color:#171717;
 box-shadow:none;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
 padding:32px 24px;
 text-align:center;
 color:var(--muted);
 font-size:.9rem;
 }
+
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:900px){
 
@@ -791,11 +960,6 @@ font-size:2.55rem;
 font-size:1.08rem;
 }
 
-.profile-card{
-max-width:360px;
-margin:auto;
-}
-
 section{
 padding:60px 0;
 }
@@ -821,12 +985,32 @@ padding:34px 22px;
 font-size:1.85rem;
 }
 
+.intake-box{
+padding:25px 20px;
+}
+
+.form-row{
+grid-template-columns:1fr;
+gap:0;
+}
+
+.intake-header h2{
+font-size:1.85rem;
+}
+
 }
 
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -837,19 +1021,28 @@ Private Online ASVAB Tutoring
 </div>
 
 <nav aria-label="Main navigation">
+
 <a href="#packages">Packages</a>
+
 <a href="#about">About</a>
+
 <a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
+
+<a href="#intake">Get Started</a>
+
 </nav>
 
 </div>
 
 </header>
 
+
 <main>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -871,14 +1064,29 @@ Focused ASVAB tutoring designed around your current skill level, your target sco
 </p>
 
 <div class="hero-points">
-<div class="hero-point">✓ One-on-One Instruction</div>
-<div class="hero-point">✓ Online From Anywhere</div>
-<div class="hero-point">✓ Personalized Study Plan</div>
-<div class="hero-point">✓ Math & Verbal Strategy</div>
+
+<div class="hero-point">
+✓ One-on-One Instruction
+</div>
+
+<div class="hero-point">
+✓ Online From Anywhere
+</div>
+
+<div class="hero-point">
+✓ Personalized Study Plan
+</div>
+
+<div class="hero-point">
+✓ Math & Verbal Strategy
+</div>
+
 </div>
 
 <p class="hero-lead" style="font-size:1rem;">
+
 Choose the level of support that fits your goal — from a $50 diagnostic and consultation to an intensive two-week course or a comprehensive four-week program.
+
 </p>
 
 <div class="actions">
@@ -894,39 +1102,19 @@ Ask a Question
 </div>
 
 <p class="hero-contact">
+
 Email:
-<a href="mailto:haneestutors@gmail.com">haneestutors@gmail.com</a>
+<a href="mailto:haneestutors@gmail.com">
+haneestutors@gmail.com
+</a>
+
 &nbsp; | &nbsp;
+
 Text:
-<a href="tel:4804424224">(480) 442-4224</a>
-</p>
+<a href="tel:4804424224">
+(480) 442-4224
+</a>
 
-</div>
-
-<div class="profile-card">
-
-<img
-src="profile.jpg"
-alt="Hanees H. private online ASVAB tutor"
-class="profile-image"
->
-
-<h2>Hanees H.</h2>
-
-<p class="profile-tagline">
-Engineer • Attorney • Educator
-</p>
-
-<div>
-<span class="experience-badge">25+ Years Experience</span>
-<span class="experience-badge">17K+ Tutoring Hours</span>
-</div>
-
-<p class="qualifications">
-J.D. Law<br>
-M.Sc. Electrical Engineering<br>
-B.Sc. Computer Engineering<br>
-CRLA® & IXL® Certified
 </p>
 
 </div>
@@ -936,7 +1124,9 @@ CRLA® & IXL® Certified
 </section>
 
 
-<!-- PACKAGES -->
+<!-- =========================
+     PACKAGES
+========================= -->
 
 <section id="packages" class="packages">
 
@@ -944,13 +1134,16 @@ CRLA® & IXL® Certified
 
 <div class="section-heading">
 
-<h2>Choose Your ASVAB Preparation Package</h2>
+<h2>
+Choose Your ASVAB Preparation Package
+</h2>
 
 <p>
 Start with an assessment or jump directly into structured one-on-one preparation. Every package is designed to make your study time focused, efficient, and purposeful.
 </p>
 
 </div>
+
 
 <div class="package-grid">
 
@@ -995,7 +1188,11 @@ Find out where you stand before committing to a full preparation program.
 
 </ul>
 
-<a class="button secondary" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Diagnostic%20%2450">
+<a
+class="button secondary package-button"
+href="#intake"
+data-package="Diagnostic & Consultation — $50"
+>
 Book Diagnostic — $50
 </a>
 
@@ -1048,7 +1245,11 @@ A concentrated program for students who want structured preparation on an accele
 
 </ul>
 
-<a class="button gold" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Intensive%20Course">
+<a
+class="button gold package-button"
+href="#intake"
+data-package="Intensive ASVAB Course — $685"
+>
 Start Intensive Course — $685
 </a>
 
@@ -1097,11 +1298,16 @@ More time to build fundamentals, address weaknesses, practice extensively, and d
 
 </ul>
 
-<a class="button" href="mailto:haneestutors@gmail.com?subject=ASVAB%204-Week%20Course">
+<a
+class="button package-button"
+href="#intake"
+data-package="4-Week ASVAB Course — $1,190"
+>
 Start 4-Week Course — $1,190
 </a>
 
 </div>
+
 
 </div>
 
@@ -1110,7 +1316,9 @@ Start 4-Week Course — $1,190
 </section>
 
 
-<!-- DIAGNOSTIC CALLOUT -->
+<!-- =========================
+     DIAGNOSTIC CALLOUT
+========================= -->
 
 <section class="diagnostic">
 
@@ -1130,13 +1338,21 @@ Start with the $50 Diagnostic & Consultation. We'll identify your current streng
 
 <div class="diagnostic-features">
 
-<div class="diagnostic-feature">✓ Assess Your Starting Point</div>
+<div class="diagnostic-feature">
+✓ Assess Your Starting Point
+</div>
 
-<div class="diagnostic-feature">✓ Identify Weak Areas</div>
+<div class="diagnostic-feature">
+✓ Identify Weak Areas
+</div>
 
-<div class="diagnostic-feature">✓ Discuss Your Goal</div>
+<div class="diagnostic-feature">
+✓ Discuss Your Goal
+</div>
 
-<div class="diagnostic-feature">✓ Build a Study Strategy</div>
+<div class="diagnostic-feature">
+✓ Build a Study Strategy
+</div>
 
 </div>
 
@@ -1156,7 +1372,11 @@ $50
 One focused session to help you determine your next step.
 </p>
 
-<a class="button" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Diagnostic%20%2450">
+<a
+class="button package-button"
+href="#intake"
+data-package="Diagnostic & Consultation — $50"
+>
 Book Your Diagnostic
 </a>
 
@@ -1169,7 +1389,9 @@ Book Your Diagnostic
 </section>
 
 
-<!-- WHY -->
+<!-- =========================
+     WHY
+========================= -->
 
 <section class="why">
 
@@ -1187,11 +1409,14 @@ Instead of spending hours studying everything, focus your preparation where it c
 
 </div>
 
+
 <div class="why-grid">
 
 <div class="why-card">
 
-<div class="why-icon">1</div>
+<div class="why-icon">
+1
+</div>
 
 <h3>
 Personalized Instruction
@@ -1203,9 +1428,12 @@ Lessons are adapted to your current knowledge, learning style, and score goals.
 
 </div>
 
+
 <div class="why-card">
 
-<div class="why-icon">2</div>
+<div class="why-icon">
+2
+</div>
 
 <h3>
 Targeted Practice
@@ -1217,9 +1445,12 @@ Spend more time on the subjects and question types that are holding your score b
 
 </div>
 
+
 <div class="why-card">
 
-<div class="why-icon">3</div>
+<div class="why-icon">
+3
+</div>
 
 <h3>
 Clear Explanations
@@ -1231,9 +1462,12 @@ Complex math and verbal concepts are broken down into understandable, practical 
 
 </div>
 
+
 <div class="why-card">
 
-<div class="why-icon">4</div>
+<div class="why-icon">
+4
+</div>
 
 <h3>
 Test Strategy
@@ -1252,7 +1486,9 @@ Learn how to approach questions efficiently, manage your time, and avoid common 
 </section>
 
 
-<!-- RESULTS -->
+<!-- =========================
+     RESULTS
+========================= -->
 
 <section class="results">
 
@@ -1284,13 +1520,21 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 
 <div class="stats">
 
-<div class="stat">17K+ Tutoring Hours</div>
+<div class="stat">
+17K+ Tutoring Hours
+</div>
 
-<div class="stat">2.5K+ Hours Annually</div>
+<div class="stat">
+2.5K+ Hours Annually
+</div>
 
-<div class="stat">600 Student Ratings</div>
+<div class="stat">
+600 Student Ratings
+</div>
 
-<div class="stat">555 Five-Star Ratings</div>
+<div class="stat">
+555 Five-Star Ratings
+</div>
 
 </div>
 
@@ -1303,11 +1547,17 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT / MEET YOUR TUTOR
+========================= -->
 
 <section id="about" class="about">
 
 <div class="container about-grid">
+
+
+<!-- LEFT COLUMN:
+     PHOTO + INFO MOVED HERE -->
 
 <div class="about-summary">
 
@@ -1318,6 +1568,20 @@ Meet Your Tutor
 <p>
 Hanees combines an engineering background, legal education, and more than 25 years of tutoring experience to provide structured, analytical, and highly personalized instruction.
 </p>
+
+<img
+src="profile.jpg"
+alt="Hanees H. private online ASVAB tutor"
+class="tutor-photo"
+>
+
+<div class="tutor-name">
+Hanees H.
+</div>
+
+<div class="tutor-title">
+Engineer • Attorney • Educator
+</div>
 
 <div class="credentials">
 
@@ -1337,9 +1601,20 @@ J.D. Law
 25+ Years Tutoring Experience
 </div>
 
+<div class="credential">
+17K+ Tutoring Hours
+</div>
+
+<div class="credential">
+CRLA® & IXL® Certified
 </div>
 
 </div>
+
+</div>
+
+
+<!-- RIGHT COLUMN -->
 
 <div class="about-copy">
 
@@ -1374,7 +1649,9 @@ ASVAB preparation is now the sole focus of this tutoring program, allowing the i
 </section>
 
 
-<!-- FAQ -->
+<!-- =========================
+     FAQ
+========================= -->
 
 <section id="faq" class="faq">
 
@@ -1392,7 +1669,9 @@ Everything you need to know before getting started.
 
 </div>
 
+
 <div class="faq-list">
+
 
 <div class="faq-item">
 
@@ -1406,6 +1685,7 @@ Yes. All tutoring is private, one-on-one online instruction.
 
 </div>
 
+
 <div class="faq-item">
 
 <h3>
@@ -1417,6 +1697,7 @@ Lessons are conducted online using Google Meet. You only need a computer or lapt
 </p>
 
 </div>
+
 
 <div class="faq-item">
 
@@ -1430,6 +1711,7 @@ If you're unsure, start with the $50 Diagnostic & Consultation. It is designed t
 
 </div>
 
+
 <div class="faq-item">
 
 <h3>
@@ -1441,6 +1723,7 @@ The Intensive Course includes seven private lessons delivered over two weeks, wi
 </p>
 
 </div>
+
 
 <div class="faq-item">
 
@@ -1454,6 +1737,7 @@ The two-week Intensive Course is designed for accelerated preparation. The four-
 
 </div>
 
+
 <div class="faq-item">
 
 <h3>
@@ -1466,6 +1750,7 @@ No. If you aren't sure what score you should be targeting or where you currently
 
 </div>
 
+
 <div class="faq-item">
 
 <h3>
@@ -1473,10 +1758,24 @@ How do I get started?
 </h3>
 
 <p>
-Email haneestutors@gmail.com or text (480) 442-4224. Include your name, approximate test date, and which package you're interested in.
+Complete the intake form below. Once I receive your information, I'll review it and contact you directly to discuss the next steps, payment, and scheduling.
 </p>
 
 </div>
+
+
+<div class="faq-item">
+
+<h3>
+How do I pay?
+</h3>
+
+<p>
+Payment is handled directly rather than through an automated checkout system. Available payment methods include Venmo, Cash App, and Zelle. Payment instructions will be provided when we arrange your tutoring.
+</p>
+
+</div>
+
 
 </div>
 
@@ -1485,7 +1784,324 @@ Email haneestutors@gmail.com or text (480) 442-4224. Include your name, approxim
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     ONE INTAKE FORM
+========================= -->
+
+<section id="intake" class="intake-section">
+
+<div class="container">
+
+<div class="intake-box">
+
+<div class="intake-header">
+
+<h2>
+Get Started
+</h2>
+
+<p>
+Complete the short intake form below. I'll review your information and contact you personally to discuss your preparation needs, payment, and scheduling.
+</p>
+
+</div>
+
+
+<form
+action="https://formspree.io/f/mdkykvjk"
+method="POST"
+>
+
+
+<div id="selectedPackageBox" class="selected-package">
+Selected package: Please choose a package below.
+</div>
+
+
+<input
+type="hidden"
+id="selectedPackage"
+name="Selected Package"
+value=""
+>
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label for="name">
+Student Name <span class="required">*</span>
+</label>
+
+<input
+type="text"
+id="name"
+name="Student Name"
+required
+autocomplete="name"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="email">
+Email <span class="required">*</span>
+</label>
+
+<input
+type="email"
+id="email"
+name="Email"
+required
+autocomplete="email"
+>
+
+</div>
+
+</div>
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label for="phone">
+Phone / Text Number
+</label>
+
+<input
+type="tel"
+id="phone"
+name="Phone"
+autocomplete="tel"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="age">
+Student Age
+</label>
+
+<input
+type="number"
+id="age"
+name="Student Age"
+min="10"
+max="100"
+>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="package">
+Package <span class="required">*</span>
+</label>
+
+<select
+id="package"
+name="Package"
+required
+>
+
+<option value="">
+Please select a package
+</option>
+
+<option value="Diagnostic & Consultation — $50">
+Diagnostic & Consultation — $50
+</option>
+
+<option value="Intensive ASVAB Course — $685">
+Intensive ASVAB Course — $685
+</option>
+
+<option value="4-Week ASVAB Course — $1,190">
+4-Week ASVAB Course — $1,190
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label for="testDate">
+Approximate ASVAB Test Date
+</label>
+
+<input
+type="date"
+id="testDate"
+name="Approximate ASVAB Test Date"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="targetScore">
+Target Score
+</label>
+
+<input
+type="text"
+id="targetScore"
+name="Target Score"
+placeholder="If known"
+>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="previousExperience">
+Have you taken the ASVAB before?
+</label>
+
+<select
+id="previousExperience"
+name="Previous ASVAB Experience"
+>
+
+<option value="">
+Please select
+</option>
+
+<option value="No, this will be my first time">
+No, this will be my first time
+</option>
+
+<option value="Yes, I have taken it before">
+Yes, I have taken it before
+</option>
+
+<option value="I am not sure">
+I'm not sure
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="score">
+Previous ASVAB Score
+</label>
+
+<input
+type="text"
+id="score"
+name="Previous ASVAB Score"
+placeholder="If known"
+>
+
+<div class="form-help">
+If you've taken the ASVAB before, enter your score if you know it.
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="goals">
+What are your goals or biggest areas of concern?
+</label>
+
+<textarea
+id="goals"
+name="Goals and Areas of Concern"
+placeholder="For example: improving math, raising AFQT score, preparing for a specific military job, improving test-taking confidence, etc."
+></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="availability">
+General Availability
+</label>
+
+<textarea
+id="availability"
+name="General Availability"
+placeholder="For example: weekday evenings, Saturday mornings, flexible, etc."
+></textarea>
+
+<div class="form-help">
+This helps me determine whether I can accommodate your preferred schedule.
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="message">
+Anything else you'd like me to know?
+</label>
+
+<textarea
+id="message"
+name="Additional Information"
+placeholder="Optional"
+></textarea>
+
+</div>
+
+
+<div class="form-submit">
+
+<button
+type="submit"
+class="button gold"
+>
+Submit Intake Form
+</button>
+
+</div>
+
+
+<p class="form-note">
+After you submit the form, your information will be sent securely through Formspree. I will review your information and contact you directly regarding payment and scheduling.
+</p>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact" class="contact-section">
 
@@ -1498,7 +2114,7 @@ Ready to Start Your ASVAB Preparation?
 </h2>
 
 <p>
-Choose your package and take the next step toward a more focused preparation plan.
+Complete the intake form and I'll contact you personally to discuss your next steps.
 </p>
 
 <p>
@@ -1517,8 +2133,8 @@ Text:
 
 <div class="actions">
 
-<a class="button" href="#packages">
-View Packages
+<a class="button" href="#intake">
+Complete Intake Form
 </a>
 
 <a class="button" href="mailto:haneestutors@gmail.com?subject=ASVAB%20Tutoring%20Inquiry">
@@ -1533,11 +2149,82 @@ Contact Hanees
 
 </section>
 
+
 </main>
+
 
 <footer>
 © 2026 Hanees H. ASVAB Tutoring
 </footer>
+
+
+<!-- =========================
+     PACKAGE SELECTION SCRIPT
+========================= -->
+
+<script>
+
+const packageButtons = document.querySelectorAll(".package-button");
+
+const packageSelect = document.getElementById("package");
+
+const hiddenPackage = document.getElementById("selectedPackage");
+
+const selectedPackageBox = document.getElementById("selectedPackageBox");
+
+
+packageButtons.forEach(function(button){
+
+button.addEventListener("click", function(){
+
+const selected = button.getAttribute("data-package");
+
+if(!selected){
+return;
+}
+
+hiddenPackage.value = selected;
+
+selectedPackageBox.textContent =
+"Selected package: " + selected;
+
+if(packageSelect){
+
+packageSelect.value = selected;
+
+}
+
+});
+
+});
+
+
+if(packageSelect){
+
+packageSelect.addEventListener("change", function(){
+
+const selected = packageSelect.value;
+
+hiddenPackage.value = selected;
+
+if(selected){
+
+selectedPackageBox.textContent =
+"Selected package: " + selected;
+
+}else{
+
+selectedPackageBox.textContent =
+"Selected package: Please choose a package below.";
+
+}
+
+});
+
+}
+
+</script>
+
 
 </body>
 </html>
