@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1116,6 +1117,58 @@ transition:none !important;
     }
 }
 
+
+
+
+/* Streamlined free consultation section */
+.consultation-section {
+    padding: 56px 0;
+}
+
+.consultation-inline {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+}
+
+.consultation-inline .eyebrow {
+    margin-bottom: 10px;
+}
+
+.consultation-inline h2 {
+    margin: 0 0 10px;
+}
+
+.consultation-inline p {
+    margin: 0;
+    max-width: 680px;
+}
+
+.consultation-inline .button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+    .consultation-section {
+        padding: 48px 0;
+    }
+
+    .consultation-inline {
+        display: block;
+    }
+
+    .consultation-inline .button {
+        margin-top: 24px;
+        white-space: normal;
+        width: 100%;
+    }
+}
+
 </style>
 
 </head>
@@ -1312,15 +1365,41 @@ Text:
 </div>
 </section>
 
-<section id="consultation" class="diagnostic">
-<div class="container"><div class="diagnostic-box">
-<div><h2>Free Consultation or In-Depth Diagnostic?</h2>
-<p>If you have questions or are still deciding, start with a free 15-minute consultation. If you want a more detailed evaluation of your strengths, weaknesses, goals, and preparation strategy, book an ASVAB Diagnostic & Strategy Session.</p>
-<div class="diagnostic-features"><div class="diagnostic-feature">✓ Free 15-Minute Consultation</div><div class="diagnostic-feature">✓ No Obligation to Enroll</div><div class="diagnostic-feature">✓ Identify Strengths & Weaknesses</div><div class="diagnostic-feature">✓ Personalized Study Strategy</div></div>
+<section id="consultation" class="consultation-section">
+<div class="container">
+<div class="consultation-inline">
+<div>
+<div class="eyebrow">Start Here</div>
+<h2>Free 15-Minute Consultation</h2>
+<p>Have questions or want to discuss your goals and testing timeline before choosing a preparation option? Schedule a brief, no-obligation consultation.</p>
 </div>
-<div class="price-card"><div class="small">ASVAB Diagnostic & Strategy Session</div><div class="big-price">$40</div><p>Introductory pricing for a limited time. Regularly $80. A focused session to evaluate your starting point and recommend the right preparation strategy.</p>
-<a class="button package-button" href="#intake" data-package="ASVAB Diagnostic & Strategy Session — $40 introductory price (regularly $80)">Book Your Diagnostic — $40</a></div>
-</div></div>
+<a class="button package-button" href="#intake" data-package="Free 15-Minute Consultation">Schedule Your Free Consultation</a>
+</div>
+</div>
+</section>
+
+<section id="diagnostic" class="diagnostic">
+<div class="container">
+<div class="diagnostic-box">
+<div>
+<div class="eyebrow">In-Depth Assessment</div>
+<h2>ASVAB Diagnostic & Strategy Session</h2>
+<p>A focused session for students who want a more detailed evaluation of their strengths, weaknesses, goals, and preparation strategy before beginning tutoring.</p>
+<div class="diagnostic-features">
+<div class="diagnostic-feature">✓ Identify Strengths & Weaknesses</div>
+<div class="diagnostic-feature">✓ Personalized Study Strategy</div>
+<div class="diagnostic-feature">✓ Discuss Target Scores and Goals</div>
+<div class="diagnostic-feature">✓ Recommended Preparation Plan</div>
+</div>
+</div>
+<div class="price-card">
+<div class="small">Introductory Pricing</div>
+<div class="big-price">$40</div>
+<p>Regularly $80. A detailed starting-point evaluation and personalized strategy session.</p>
+<a class="button package-button" href="#intake" data-package="ASVAB Diagnostic & Strategy Session — $40 introductory price (regularly $80)">Book Your Diagnostic — $40</a>
+</div>
+</div>
+</div>
 </section>
 
 
