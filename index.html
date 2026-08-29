@@ -1096,6 +1096,26 @@ transition:none !important;
 
 }
 
+
+/* Two-card service rows: remove the empty third-column space left by removed tiles */
+.package-grid.package-grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.package-grid.package-grid-two .package {
+    height: 100%;
+}
+
+@media (max-width: 760px) {
+    .package-grid.package-grid-two {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+}
+
 </style>
 
 </head>
@@ -1239,7 +1259,7 @@ Text:
 <p>For most students, I recommend allowing approximately 4–8 weeks of preparation whenever possible. This gives you time to build skills, address weaknesses, and practice consistently.</p>
 </div>
 
-<div class="package-grid">
+<div class="package-grid package-grid-two">
 <div class="package">
 <div class="package-label">Flexible Support</div>
 <h3>Individual 1-on-1 Tutoring</h3>
@@ -1255,20 +1275,10 @@ Text:
 <div class="package-label">Comprehensive Preparation</div>
 <h3>Weekly ASVAB Preparation</h3>
 <div class="price">$420</div>
-<div class="price-note">Per week · 4 private lessons · $105 per lesson</div>
+<div class="price-note">Per week · 4 private lessons</div>
 <p class="package-description">Consistent, personalized instruction for students who want enough time to build skills, practice, and prepare thoroughly.</p>
 <ul><li>4 private one-on-one lessons per week</li><li>Personalized study plan and instruction</li><li>Targeted practice between lessons</li><li>Ongoing progress monitoring</li><li>Flexible week-to-week enrollment</li><li>No long-term contract</li></ul>
 <a class="button gold package-button" href="#intake" data-package="Weekly ASVAB Preparation — $420 per week">Start Weekly Preparation — $420</a>
-</div>
-
-<div class="package">
-<div class="package-label">Planning Guide</div>
-<h3>Recommended Preparation Timeline</h3>
-<div class="price" style="font-size:2rem;">4–8 Weeks</div>
-<div class="price-note">Most students benefit from consistent preparation</div>
-<p class="package-description">Your ideal timeline depends on your starting point, target score, schedule, and test date. Weekly preparation can continue for as long as it is useful.</p>
-<ul><li>4 weeks: 16 lessons · $1,680</li><li>6 weeks: 24 lessons · $2,520</li><li>8 weeks: 32 lessons · $3,360</li><li>Billed weekly at $420</li><li>Adjust your timeline as your needs change</li></ul>
-<a class="button" href="#consultation">Discuss Your Timeline</a>
 </div>
 </div>
 
@@ -1278,12 +1288,12 @@ Text:
 <p>These concentrated programs are designed for students whose ASVAB test date cannot be extended. Whenever possible, I recommend allowing 4–8 weeks of preparation instead.</p>
 </div>
 
-<div class="package-grid">
+<div class="package-grid package-grid-two">
 <div class="package">
 <div class="package-label">Accelerated Option</div>
 <h3>7-Day ASVAB Crash Course</h3>
 <div class="price">$875</div>
-<div class="price-note">7 private lessons in 7 days · $125 per lesson</div>
+<div class="price-note">7 private lessons in 7 days</div>
 <p class="package-description">Focused, personalized preparation for students with an immediate testing deadline and limited time to prepare.</p>
 <ul><li>7 private one-on-one online lessons</li><li>7-day concentrated schedule</li><li>Customized instruction</li><li>Focus on priority areas</li><li>Targeted practice between lessons</li><li>ASVAB test-taking strategies</li></ul>
 <a class="button secondary package-button" href="#intake" data-package="7-Day ASVAB Crash Course — $875">Ask About Availability — $875</a>
@@ -1293,20 +1303,10 @@ Text:
 <div class="package-label">Accelerated Option</div>
 <h3>2-Week ASVAB Intensive</h3>
 <div class="price">$1,380</div>
-<div class="price-note">12 private lessons over 2 weeks · $115 per lesson</div>
+<div class="price-note">12 private lessons over 2 weeks</div>
 <p class="package-description">A concentrated program for students with a strict testing deadline who need intensive, high-frequency preparation.</p>
 <ul><li>12 private one-on-one online lessons</li><li>Concentrated two-week schedule</li><li>Personalized study strategy</li><li>Focused instruction on weak areas</li><li>Targeted practice and assignments</li><li>ASVAB test-taking strategies</li><li>Ongoing adjustments based on progress</li></ul>
 <a class="button package-button" href="#intake" data-package="2-Week ASVAB Intensive — $1,380">Ask About Availability — $1,380</a>
-</div>
-
-<div class="package">
-<div class="package-label">Not Sure?</div>
-<h3>Start With a Free Consultation</h3>
-<div class="price">Free</div>
-<div class="price-note">15-minute, no-obligation consultation</div>
-<p class="package-description">Ask questions, discuss your goals and testing timeline, and determine whether personalized ASVAB tutoring is the right fit.</p>
-<ul><li>Discuss your testing timeline</li><li>Ask questions about tutoring</li><li>Talk through your preparation goals</li><li>Learn which option may fit your situation</li><li>No obligation to enroll</li></ul>
-<a class="button package-button" href="#intake" data-package="Free 15-Minute Consultation">Schedule a Free Consultation</a>
 </div>
 </div>
 </div>
