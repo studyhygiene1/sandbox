@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -195,13 +194,6 @@ background:
 radial-gradient(circle at 85% 15%,rgba(217,154,36,.18),transparent 28%),
 linear-gradient(135deg,#f4f1eb 0%,#ded7cb 100%);
 }
-
-/*
-   HERO SPACE FIX:
-   The original hero used a two-column grid,
-   but the second column was empty. The hero
-   now uses the full available width.
-*/
 
 .hero-layout{
 display:block;
@@ -525,7 +517,7 @@ background:var(--bg);
 
 .why-grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
 gap:17px;
 }
 
@@ -534,6 +526,21 @@ background:white;
 border:1px solid var(--border);
 border-radius:18px;
 padding:23px;
+}
+
+.why-card.why-card-highlight{
+background:var(--navy-dark);
+border:2px solid var(--gold);
+}
+
+.why-card.why-card-highlight h3,
+.why-card.why-card-highlight p{
+color:#fff;
+}
+
+.why-card.why-card-highlight .why-icon{
+background:var(--gold);
+color:var(--navy-dark);
 }
 
 .why-icon{
@@ -1219,6 +1226,121 @@ transition:none !important;
         width: 100%;
     }
 }
+
+/* Consultation section moved above packages — softer intro treatment */
+.consultation-section.consultation-top {
+    padding-top: 64px;
+    padding-bottom: 40px;
+}
+
+.consultation-section.consultation-top .consultation-inline {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 34px 38px;
+    box-shadow: 0 9px 22px rgba(5,23,44,.06);
+}
+
+@media (max-width: 760px) {
+    .consultation-section.consultation-top .consultation-inline {
+        padding: 28px 22px;
+    }
+}
+
+/* Start Here — paired Free Consultation + $40 Diagnostic */
+.start-here-section {
+    padding: 64px 0 40px;
+}
+
+.start-here-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.start-here-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 9px 22px rgba(5,23,44,.07);
+    display: flex;
+    flex-direction: column;
+}
+
+.start-here-card h3 {
+    font-size: 1.4rem;
+    line-height: 1.25;
+    color: var(--navy-dark);
+    margin-bottom: 6px;
+}
+
+.start-here-card .price {
+    font-size: 2.7rem;
+    font-weight: 950;
+    line-height: 1;
+    color: var(--navy-dark);
+    margin: 12px 0 4px;
+}
+
+.start-here-card .price-note {
+    color: var(--muted);
+    font-size: .9rem;
+    margin-bottom: 16px;
+}
+
+.start-here-card .package-description {
+    color: var(--muted);
+    font-size: .95rem;
+    margin-bottom: 16px;
+    min-height: auto;
+}
+
+.start-here-card ul {
+    list-style: none;
+    margin: 0 0 22px;
+    flex: 1;
+}
+
+.start-here-card li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 9px;
+    font-size: .92rem;
+    color: var(--text);
+}
+
+.start-here-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 900;
+    color: var(--green);
+}
+
+.start-here-card .button {
+    text-align: center;
+    width: 100%;
+}
+
+.start-here-card.featured {
+    border: 2px solid var(--gold);
+    box-shadow: 0 14px 30px rgba(217,154,36,.17);
+}
+
+@media (max-width: 760px) {
+    .start-here-section {
+        padding: 48px 0 24px;
+    }
+    .start-here-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 
 </head>
@@ -1335,6 +1457,169 @@ Ask a Question
 
 
 <!-- =========================
+     WHY US — moved above Start Here, rewritten around the
+     live 1-on-1 vs. recorded/self-guided distinction
+========================= -->
+
+<section class="why" id="why-us">
+
+<div class="container">
+
+<div class="section-heading">
+
+<h2>
+Not a Course. Not a Recording. Real One-on-One Support.
+</h2>
+
+<p>
+Most ASVAB prep is recorded video lectures, workbooks, or self-guided apps you work through alone. Hanees Tutors is built differently — every session is live, one-on-one, and shaped entirely around what you personally need to improve.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card why-card-highlight">
+
+<div class="why-icon">
+★
+</div>
+
+<h3>
+Live &amp; One-on-One — Never Recorded
+</h3>
+
+<p>
+No pre-recorded lectures. No generic self-help guides. Every lesson is live, real-time instruction directly with Hanees — the highest level of support available for ASVAB prep.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<div class="why-icon">
+1
+</div>
+
+<h3>
+Personalized Instruction
+</h3>
+
+<p>
+Lessons are adapted to your current knowledge, learning style, and score goals — not a fixed syllabus everyone follows.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+2
+</div>
+
+<h3>
+Targeted Practice
+</h3>
+
+<p>
+Spend more time on the subjects and question types that are holding your score back, not material you've already mastered.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+3
+</div>
+
+<h3>
+Clear Explanations
+</h3>
+
+<p>
+Complex math and verbal concepts are broken down into understandable, practical steps — with someone there to explain <em>why</em>, in the moment.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+4
+</div>
+
+<h3>
+Test Strategy
+</h3>
+
+<p>
+Learn how to approach questions efficiently, manage your time, and avoid common mistakes — adjusted as you improve.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     START HERE — Free Consultation + $40 Diagnostic, paired
+========================= -->
+
+<section id="start-here" class="start-here-section">
+<div class="container">
+<div class="section-heading" style="margin-bottom:32px;">
+<div class="eyebrow">Not Sure Where to Start?</div>
+<h2 style="font-size:clamp(1.9rem,3.4vw,2.4rem);">Two Ways to Get Oriented Before You Choose a Program</h2>
+<p>Talk through your goals in a quick free call, or get a full evaluation of your current strengths and weaknesses — either way, you'll leave knowing which preparation option fits you best.</p>
+</div>
+
+<div class="start-here-grid">
+
+<div class="start-here-card">
+<div class="package-label">Quick &amp; Free</div>
+<h3>Free 15-Minute Consultation</h3>
+<div class="price" style="font-size:2rem;">No Cost</div>
+<div class="price-note">15-minute call</div>
+<p class="package-description">Talk through your goals, testing timeline, and questions before choosing a preparation option. No obligation.</p>
+<ul>
+<li>Discuss your target score and timeline</li>
+<li>Get your questions answered</li>
+<li>Walk away knowing what to do next</li>
+</ul>
+<a class="button gold package-button" href="#intake" data-package="Free 15-Minute Consultation">Schedule Your Free Consultation</a>
+</div>
+
+<div class="start-here-card featured">
+<div class="package-badge">In-Depth</div>
+<div class="package-label">Full Evaluation</div>
+<h3>ASVAB Diagnostic &amp; Strategy Session</h3>
+<div class="price">$40</div>
+<div class="price-note">Introductory price · regularly $80</div>
+<p class="package-description">A detailed evaluation of your strengths, weaknesses, goals, and preparation strategy before beginning tutoring.</p>
+<ul>
+<li>Identify strengths &amp; weaknesses</li>
+<li>Personalized study strategy</li>
+<li>Discuss target scores and goals</li>
+<li>Recommended preparation plan</li>
+</ul>
+<a class="button package-button" href="#intake" data-package="ASVAB Diagnostic & Strategy Session — $40 introductory price (regularly $80)">Book Your Diagnostic — $40</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- =========================
      PACKAGES
 ========================= -->
 
@@ -1403,137 +1688,6 @@ Ask a Question
 </div>
 </div>
 </section>
-
-<section id="consultation" class="consultation-section">
-<div class="container">
-<div class="consultation-inline">
-<div>
-<div class="eyebrow">Start Here</div>
-<h2>Free 15-Minute Consultation</h2>
-<p>Have questions or want to discuss your goals and testing timeline before choosing a preparation option? Schedule a brief, no-obligation consultation.</p>
-</div>
-<a class="button package-button" href="#intake" data-package="Free 15-Minute Consultation">Schedule Your Free Consultation</a>
-</div>
-</div>
-</section>
-
-<section id="diagnostic" class="diagnostic">
-<div class="container">
-<div class="diagnostic-box">
-<div>
-<div class="eyebrow">In-Depth Assessment</div>
-<h2>ASVAB Diagnostic & Strategy Session</h2>
-<p>A focused session for students who want a more detailed evaluation of their strengths, weaknesses, goals, and preparation strategy before beginning tutoring.</p>
-<div class="diagnostic-features">
-<div class="diagnostic-feature">✓ Identify Strengths & Weaknesses</div>
-<div class="diagnostic-feature">✓ Personalized Study Strategy</div>
-<div class="diagnostic-feature">✓ Discuss Target Scores and Goals</div>
-<div class="diagnostic-feature">✓ Recommended Preparation Plan</div>
-</div>
-</div>
-<div class="price-card">
-<div class="small">Introductory Pricing</div>
-<div class="big-price">$40</div>
-<p>Regularly $80. A detailed starting-point evaluation and personalized strategy session.</p>
-<a class="button package-button" href="#intake" data-package="ASVAB Diagnostic & Strategy Session — $40 introductory price (regularly $80)">Book Your Diagnostic — $40</a>
-</div>
-</div>
-</div>
-</section>
-
-
-<section class="why">
-
-<div class="container">
-
-<div class="section-heading">
-
-<h2>
-Why Private ASVAB Tutoring?
-</h2>
-
-<p>
-Instead of spending hours studying everything, focus your preparation where it can make the biggest difference.
-</p>
-
-</div>
-
-
-<div class="why-grid">
-
-<div class="why-card">
-
-<div class="why-icon">
-1
-</div>
-
-<h3>
-Personalized Instruction
-</h3>
-
-<p>
-Lessons are adapted to your current knowledge, learning style, and score goals.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="why-icon">
-2
-</div>
-
-<h3>
-Targeted Practice
-</h3>
-
-<p>
-Spend more time on the subjects and question types that are holding your score back.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="why-icon">
-3
-</div>
-
-<h3>
-Clear Explanations
-</h3>
-
-<p>
-Complex math and verbal concepts are broken down into understandable, practical steps.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<div class="why-icon">
-4
-</div>
-
-<h3>
-Test Strategy
-</h3>
-
-<p>
-Learn how to approach questions efficiently, manage your time, and avoid common mistakes.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 
 <section class="results">
 
