@@ -34,23 +34,12 @@
   "founder":{
     "@type":"Person",
     "name":"Hanees H.",
-    "jobTitle":"ASVAB Tutor, Attorney, Engineer, Educator",
-    "hasCredential":[
-      "J.D.",
-      "M.Sc. Electrical Engineering",
-      "B.Sc. Computer Engineering",
-      "CRLA Certified",
-      "IXL Certified"
-    ]
+    "jobTitle":"ASVAB Tutor, Attorney, Engineer, Educator"
   }
 }
 </script>
 
 <style>
-
-/* =========================
-   COLOR / GLOBAL SETTINGS
-========================= */
 
 :root{
 --bg:#f4f1eb;
@@ -95,9 +84,7 @@ padding:0 24px;
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
 position:sticky;
@@ -142,12 +129,12 @@ color:white;
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTONS */
 
 .button{
-display:inline-block;
+display:inline-flex;
+align-items:center;
+justify-content:center;
 background:var(--navy);
 color:white;
 padding:14px 23px;
@@ -183,9 +170,7 @@ box-shadow:none;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
 padding:86px 0 78px;
@@ -262,29 +247,53 @@ color:var(--navy);
 box-shadow:0 3px 8px rgba(5,23,44,.05);
 }
 
-.actions{
-margin-top:32px;
+
+/* HERO BUTTON ROW */
+
+.hero-actions{
 display:flex;
-gap:13px;
-flex-wrap:wrap;
+align-items:stretch;
+gap:12px;
+margin-top:32px;
+flex-wrap:nowrap;
 }
 
-.hero-contact{
-margin-top:24px;
-font-size:.96rem;
-font-weight:700;
-color:var(--muted);
+.hero-actions .button,
+.hero-actions .hero-contact-button{
+white-space:nowrap;
 }
 
-.hero-contact a{
+
+/* EMAIL + TEXT HERO BUTTONS */
+
+.hero-contact-button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:14px 24px;
+border:1px solid var(--gold);
+font-size:1rem;
+border-radius:999px;
+background:var(--gold);
 color:var(--navy);
+font-weight:800;
 text-decoration:none;
+transition:transform .2s ease,background .2s ease;
+}
+
+.hero-contact-button:hover{
+background:rgba(201,161,74,.85);
+transform:translateY(-1px);
+}
+
+.hero-contact-label{
+color:var(--navy);
+font-weight:900;
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+/* GENERAL SECTIONS */
 
 section{
 padding:78px 0;
@@ -309,9 +318,7 @@ color:var(--muted);
 }
 
 
-/* =========================
-   PACKAGES
-========================= */
+/* PACKAGES */
 
 .packages{
 background:#fff;
@@ -423,92 +430,7 @@ width:100%;
 }
 
 
-/* =========================
-   DIAGNOSTIC CALLOUT
-========================= */
-
-.diagnostic{
-background:var(--blue-light);
-}
-
-.diagnostic-box{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-align-items:center;
-background:white;
-border:1px solid #c8d5e3;
-border-radius:24px;
-padding:35px;
-box-shadow:0 10px 24px rgba(5,23,44,.07);
-}
-
-.diagnostic-box h2{
-font-size:2rem;
-line-height:1.2;
-color:var(--navy-dark);
-margin-bottom:13px;
-}
-
-.diagnostic-box p{
-color:var(--muted);
-}
-
-.diagnostic-features{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:11px;
-margin-top:20px;
-}
-
-.diagnostic-feature{
-background:var(--bg);
-padding:12px 14px;
-border-radius:12px;
-font-size:.9rem;
-font-weight:800;
-color:var(--navy);
-}
-
-.price-card{
-background:var(--navy-dark);
-color:white;
-border-radius:20px;
-padding:30px;
-text-align:center;
-}
-
-.price-card .small{
-text-transform:uppercase;
-font-size:.8rem;
-font-weight:900;
-letter-spacing:.06em;
-opacity:.75;
-}
-
-.price-card .big-price{
-font-size:3.5rem;
-font-weight:950;
-line-height:1;
-margin:10px 0 8px;
-}
-
-.price-card p{
-color:#d9e2ec;
-margin-bottom:20px;
-}
-
-.price-card .button{
-background:var(--gold);
-border-color:var(--gold);
-color:#171717;
-box-shadow:none;
-}
-
-
-/* =========================
-   WHY
-========================= */
+/* WHY */
 
 .why{
 background:var(--bg);
@@ -568,9 +490,49 @@ color:var(--muted);
 }
 
 
-/* =========================
-   RESULTS
-========================= */
+/* TWO CARD GRIDS */
+
+.package-grid.package-grid-two{
+grid-template-columns:repeat(2,minmax(0,1fr));
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+
+
+/* START HERE */
+
+.start-here-section{
+padding:64px 0 40px;
+}
+
+.start-here-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:20px;
+max-width:900px;
+margin:0 auto;
+align-items:stretch;
+}
+
+.start-here-card{
+position:relative;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:22px;
+padding:28px;
+box-shadow:0 9px 22px rgba(5,23,44,.07);
+display:flex;
+flex-direction:column;
+}
+
+.start-here-card.featured{
+border:2px solid var(--gold);
+box-shadow:0 14px 30px rgba(217,154,36,.17);
+}
+
+
+/* RESULTS */
 
 .results{
 background:#f2eee7;
@@ -629,9 +591,7 @@ font-weight:800;
 }
 
 
-/* =========================
-   ABOUT / MEET YOUR TUTOR
-========================= */
+/* ABOUT */
 
 .about{
 background:#fff;
@@ -717,9 +677,7 @@ margin-bottom:18px;
 }
 
 
-/* =========================
-   FAQ
-========================= */
+/* FAQ */
 
 .faq{
 background:#fff;
@@ -750,9 +708,7 @@ font-size:.95rem;
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact-section{
 padding-top:25px;
@@ -786,9 +742,15 @@ font-weight:800;
 text-decoration:none;
 }
 
+.actions{
+margin-top:25px;
+display:flex;
+gap:13px;
+flex-wrap:wrap;
+}
+
 .contact .actions{
 justify-content:center;
-margin-top:25px;
 }
 
 .contact .button{
@@ -799,9 +761,7 @@ box-shadow:none;
 }
 
 
-/* =========================
-   INTAKE MODAL
-========================= */
+/* INTAKE MODAL */
 
 .modal{
 position:fixed;
@@ -835,12 +795,6 @@ border:1px solid #c8d5e3;
 border-radius:24px;
 padding:38px;
 box-shadow:0 25px 70px rgba(0,0,0,.30);
-transform:translateY(18px) scale(.98);
-transition:transform .25s ease;
-}
-
-.modal.active .modal-content{
-transform:translateY(0) scale(1);
 }
 
 .modal-close{
@@ -854,17 +808,7 @@ border-radius:50%;
 background:var(--blue-light);
 color:var(--navy-dark);
 font-size:1.8rem;
-line-height:1;
 cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:center;
-transition:.2s ease;
-}
-
-.modal-close:hover{
-background:var(--navy);
-color:white;
 }
 
 .intake-header{
@@ -912,26 +856,11 @@ color:var(--text);
 background:#fff;
 border:1px solid var(--border);
 border-radius:10px;
-outline:none;
-transition:.2s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-border-color:var(--navy);
-box-shadow:0 0 0 3px rgba(11,41,77,.08);
 }
 
 .form-group textarea{
 min-height:125px;
 resize:vertical;
-}
-
-.form-help{
-font-size:.82rem;
-color:var(--muted);
-margin-top:5px;
 }
 
 .required{
@@ -943,16 +872,11 @@ text-align:center;
 margin-top:10px;
 }
 
-.form-submit .button{
-min-width:230px;
-}
-
 .form-note{
 text-align:center;
 font-size:.84rem;
 color:var(--muted);
 margin-top:15px;
-line-height:1.6;
 }
 
 .selected-package{
@@ -967,9 +891,7 @@ font-weight:800;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
 padding:32px 24px;
@@ -979,9 +901,7 @@ font-size:.9rem;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -995,10 +915,6 @@ margin:auto;
 transform:none;
 }
 
-.why-grid{
-grid-template-columns:1fr 1fr;
-}
-
 .about-grid{
 grid-template-columns:1fr;
 }
@@ -1007,8 +923,27 @@ grid-template-columns:1fr;
 position:static;
 }
 
-.diagnostic-box{
+}
+
+@media(max-width:760px){
+
+.hero-actions{
+flex-wrap:wrap;
+}
+
+.hero-actions .button,
+.hero-actions .hero-contact-button{
+flex:1 1 auto;
+}
+
+.package-grid.package-grid-two,
+.start-here-grid{
 grid-template-columns:1fr;
+}
+
+.form-row{
+grid-template-columns:1fr;
+gap:0;
 }
 
 }
@@ -1035,14 +970,6 @@ section{
 padding:60px 0;
 }
 
-.why-grid{
-grid-template-columns:1fr;
-}
-
-.diagnostic-features{
-grid-template-columns:1fr;
-}
-
 .results-card{
 grid-template-columns:1fr;
 gap:15px;
@@ -1050,10 +977,6 @@ gap:15px;
 
 .contact{
 padding:34px 22px;
-}
-
-.contact h2{
-font-size:1.85rem;
 }
 
 .modal{
@@ -1068,25 +991,18 @@ padding:27px 20px 25px;
 border-radius:20px;
 }
 
-.modal-close{
-top:10px;
-right:10px;
-width:38px;
-height:38px;
 }
 
-.intake-header{
-margin-bottom:22px;
-padding-right:35px;
+@media(max-width:600px){
+
+.hero-actions{
+flex-direction:column;
+align-items:stretch;
 }
 
-.intake-header h2{
-font-size:1.85rem;
-}
-
-.form-row{
-grid-template-columns:1fr;
-gap:0;
+.hero-actions .button,
+.hero-actions .hero-contact-button{
+width:100%;
 }
 
 }
@@ -1103,253 +1019,11 @@ transition:none !important;
 
 }
 
-
-/* Two-card service rows: remove the empty third-column space left by removed tiles */
-.package-grid.package-grid-two {
-grid-template-columns: repeat(2, minmax(0, 1fr));
-max-width: 900px;
-margin-left: auto;
-margin-right: auto;
-}
-
-.package-grid.package-grid-two .package {
-height: 100%;
-}
-
-@media (max-width: 760px) {
-.package-grid.package-grid-two {
-grid-template-columns: 1fr;
-max-width: none;
-}
-}
-
-
-/* Streamlined free consultation section */
-.consultation-section {
-padding: 56px 0;
-}
-
-.consultation-inline {
-max-width: 1000px;
-margin: 0 auto;
-padding: 0;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 42px;
-}
-
-.consultation-inline .eyebrow {
-margin-bottom: 10px;
-}
-
-.consultation-inline h2 {
-margin: 0 0 10px;
-}
-
-.consultation-inline p {
-margin: 0;
-max-width: 680px;
-}
-
-.consultation-inline .button {
-flex: 0 0 auto;
-white-space: nowrap;
-}
-
-@media (max-width: 760px) {
-.consultation-section {
-padding: 48px 0;
-}
-
-.consultation-inline {
-display: block;
-}
-
-.consultation-inline .button {
-margin-top: 24px;
-white-space: normal;
-width: 100%;
-}
-}
-
-
-/* Prominent hero contact links — matching the site's oval button style */
-.hero-contact-links {
-display: flex;
-flex-wrap: wrap;
-gap: 12px;
-margin-top: 18px;
-}
-
-.hero-contact-button {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-padding: 14px 24px;
-border: 1px solid var(--gold);
-font-size: 1.05rem;
-border-radius: 999px;
-background: var(--gold);
-color: var(--navy);
-font-weight: 800;
-text-decoration: none;
-transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.hero-contact-button:hover {
-background: rgba(201, 161, 74, 0.85);
-transform: translateY(-1px);
-}
-
-.hero-contact-label {
-color: var(--navy);
-font-size: 1.0rem;
-font-weight: 800;
-letter-spacing: 0.08em;
-text-transform: none;
-}
-
-@media (max-width: 600px) {
-.hero-contact-links {
-flex-direction: column;
-align-items: flex-start;
-}
-
-.hero-contact-button {
-width: 100%;
-}
-}
-
-
-/* Consultation section moved above packages — softer intro treatment */
-.consultation-section.consultation-top {
-padding-top: 64px;
-padding-bottom: 40px;
-}
-
-.consultation-section.consultation-top .consultation-inline {
-background: white;
-border: 1px solid var(--border);
-border-radius: 24px;
-padding: 34px 38px;
-box-shadow: 0 9px 22px rgba(5,23,44,.06);
-}
-
-@media (max-width: 760px) {
-.consultation-section.consultation-top .consultation-inline {
-padding: 28px 22px;
-}
-}
-
-
-/* Start Here — paired Free Consultation + $40 Diagnostic */
-.start-here-section {
-padding: 64px 0 40px;
-}
-
-.start-here-grid {
-display: grid;
-grid-template-columns: repeat(2, minmax(0, 1fr));
-gap: 20px;
-max-width: 900px;
-margin: 0 auto;
-align-items: stretch;
-}
-
-.start-here-card {
-position: relative;
-background: var(--card);
-border: 1px solid var(--border);
-border-radius: 22px;
-padding: 28px;
-box-shadow: 0 9px 22px rgba(5,23,44,.07);
-display: flex;
-flex-direction: column;
-}
-
-.start-here-card h3 {
-font-size: 1.4rem;
-line-height: 1.25;
-color: var(--navy-dark);
-margin-bottom: 6px;
-}
-
-.start-here-card .price {
-font-size: 2.7rem;
-font-weight: 950;
-line-height: 1;
-color: var(--navy-dark);
-margin: 12px 0 4px;
-}
-
-.start-here-card .price-note {
-color: var(--muted);
-font-size: .9rem;
-margin-bottom: 16px;
-}
-
-.start-here-card .package-description {
-color: var(--muted);
-font-size: .95rem;
-margin-bottom: 16px;
-min-height: auto;
-}
-
-.start-here-card ul {
-list-style: none;
-margin: 0 0 22px;
-flex: 1;
-}
-
-.start-here-card li {
-position: relative;
-padding-left: 25px;
-margin-bottom: 9px;
-font-size: .92rem;
-color: var(--text);
-}
-
-.start-here-card li::before {
-content: "✓";
-position: absolute;
-left: 0;
-top: 0;
-font-weight: 900;
-color: var(--green);
-}
-
-.start-here-card .button {
-text-align: center;
-width: 100%;
-}
-
-.start-here-card.featured {
-border: 2px solid var(--gold);
-box-shadow: 0 14px 30px rgba(217,154,36,.17);
-}
-
-@media (max-width: 760px) {
-.start-here-section {
-padding: 48px 0 24px;
-}
-
-.start-here-grid {
-grid-template-columns: 1fr;
-}
-}
-
 </style>
 
 </head>
 
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
@@ -1362,9 +1036,7 @@ Private Online ASVAB Tutoring
 <nav aria-label="Main navigation">
 
 <a href="#packages">Packages</a>
-
 <a href="#about">About</a>
-
 <a href="#faq">FAQ</a>
 
 <a href="#intake" class="open-intake">
@@ -1377,13 +1049,10 @@ Get Started
 
 </header>
 
-
 <main>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -1406,39 +1075,25 @@ Online ASVAB tutoring designed around your current skill level, your target scor
 
 <div class="hero-points">
 
-<div class="hero-point">
-✓ One-on-One
-</div>
-
-<div class="hero-point">
-✓ Online
-</div>
-
-<div class="hero-point">
-✓ Live
-</div>
-
-<div class="hero-point">
-✓ Expert Guidance
-</div>
+<div class="hero-point">✓ One-on-One</div>
+<div class="hero-point">✓ Online</div>
+<div class="hero-point">✓ Live</div>
+<div class="hero-point">✓ Expert Guidance</div>
 
 </div>
 
 <p class="hero-lead" style="font-size:1rem;">
-
 Choose flexible weekly preparation or individual lessons, or an accelerated program if you have a strict, non-negotiable testing timeline.
-
 </p>
 
-<div class="actions">
+
+<!-- ALL THREE HERO BUTTONS ON ONE ROW -->
+
+<div class="hero-actions">
 
 <a class="button secondary" href="#packages">
 View ASVAB Packages
 </a>
-
-</div>
-
-<div class="hero-contact-links">
 
 <a class="hero-contact-button" href="mailto:haneestutors@gmail.com">
 <span class="hero-contact-label">Email</span>
@@ -1459,9 +1114,7 @@ View ASVAB Packages
 </section>
 
 
-<!-- =========================
-     WHY US
-========================= -->
+<!-- WHY US -->
 
 <section class="why" id="why-us">
 
@@ -1470,11 +1123,13 @@ View ASVAB Packages
 <div class="section-heading">
 
 <h2>
-Real Support from an ASVAB Expert. <br>Not a Self-Help Course. <br>Not a Recording.
+Real Support from an ASVAB Expert.<br>
+Not a Self-Help Course.<br>
+Not a Recording.
 </h2>
 
 <p>
-Most ASVAB prep is pre-recorded lectures, or self-help workbooks you work through alone. <br>
+Most ASVAB prep is pre-recorded lectures, or self-help workbooks you work through alone.<br>
 Hanees Tutors is built differently — every session is live, one-on-one, and shaped entirely around what you personally need to improve.
 </p>
 
@@ -1484,87 +1139,27 @@ Hanees Tutors is built differently — every session is live, one-on-one, and sh
 
 <div class="why-card why-card-highlight">
 
-<div class="why-icon">
-★
-</div>
+<div class="why-icon">★</div>
 
-<h3>
-Live &amp; One-on-One — Never Recorded
-</h3>
+<h3>Live &amp; One-on-One — Never Recorded</h3>
 
 <p>
-No pre-recorded lectures. No generic, outdated self-help guides. Every lesson is live, real-time instruction directly with your tutor — the highest level of support available anywhere for your ASVAB prep.
+No pre-recorded lectures. No generic, outdated self-help guides. Every lesson is live, real-time instruction directly with your tutor.
 </p>
 
 </div>
 
 <div class="why-card">
 
-<div class="why-icon">
-★
-</div>
+<div class="why-icon">★</div>
 
-<h3>
-Personalized Instruction
-</h3>
+<h3>Personalized Instruction</h3>
 
 <p>
-Your lessons are designed for your needs and continually adapted to your learning style, progress, and goals. You progress through your ASVAB prep at your pace -- speeding through material you're already familiar with, and taking as much time as needed through the material you find challenging.
+Your lessons are designed for your needs and continually adapted to your learning style, progress, and goals.
 </p>
 
 </div>
-
-<!--
-<div class="why-card">
-
-<div class="why-icon">
-★
-</div>
-
-<h3>
-Targeted Practice
-</h3>
-
-<p>
-Spend more time on the subjects and question types that are holding your score back, not material you've already mastered.
-</p>
-
-</div>
-
-<div class="why-card">
-
-<div class="why-icon">
-★
-</div>
-
-<h3>
-Clear Explanations
-</h3>
-
-<p>
-Complex math and verbal concepts are broken down into understandable, practical steps — with someone there to explain <em>why</em>, in the moment.
-</p>
-
-</div>
--->
-
-<!--
-<div class="why-card">
-
-<div class="why-icon">
-4
-</div>
-
-<h3>
-Test Strategy
-</h3>
-
-<p>
-Learn how to approach questions efficiently, manage your time, and avoid common mistakes — adjusted as you improve.
-</p>
-
-</div>
--->
 
 </div>
 
@@ -1573,9 +1168,7 @@ Learn how to approach questions efficiently, manage your time, and avoid common 
 </section>
 
 
-<!-- =========================
-     START HERE
-========================= -->
+<!-- START HERE -->
 
 <section id="start-here" class="start-here-section">
 
@@ -1592,7 +1185,7 @@ Two Ways to Get Oriented Before You Choose a Program
 </h2>
 
 <p>
-Talk through your goals in a quick free call, or get a full evaluation of your current strengths and weaknesses — either way, you'll leave knowing what your next steps should be.
+Talk through your goals in a quick free call, or get a full evaluation of your current strengths and weaknesses.
 </p>
 
 </div>
@@ -1613,10 +1206,8 @@ Quick &amp; Free
 Free
 </div>
 
-<div class="price-note"></div>
-
 <p class="package-description">
-Talk through your goals, testing timeline, and questions before choosing a preparation option. No obligation.
+Talk through your goals, testing timeline, and questions before choosing a preparation option.
 </p>
 
 <ul>
@@ -1625,12 +1216,13 @@ Talk through your goals, testing timeline, and questions before choosing a prepa
 <li>Walk away knowing what to do next</li>
 </ul>
 
-<a class="button gold package-button" href="#intake" data-package="Free 15-Minute Consultation">
+<a class="button gold package-button"
+href="#intake"
+data-package="Free 15-Minute Consultation">
 Schedule Your Free Consultation
 </a>
 
 </div>
-
 
 <div class="start-here-card featured">
 
@@ -1646,11 +1238,7 @@ Full Evaluation
 ASVAB Diagnostic &amp; Strategy Session
 </h3>
 
-<div class="price">
-$40
-</div>
-
-<div class="price-note"></div>
+<div class="price">$40</div>
 
 <p class="package-description">
 A detailed evaluation of your strengths, weaknesses, goals, and preparation strategy before beginning tutoring.
@@ -1663,7 +1251,9 @@ A detailed evaluation of your strengths, weaknesses, goals, and preparation stra
 <li>Recommended preparation plan</li>
 </ul>
 
-<a class="button package-button" href="#intake" data-package="ASVAB Diagnostic & Strategy Session — $40 introductory price (regularly $80)">
+<a class="button package-button"
+href="#intake"
+data-package="ASVAB Diagnostic & Strategy Session — $40 introductory price (regularly $80)">
 Book Your Diagnostic — $40
 </a>
 
@@ -1676,9 +1266,7 @@ Book Your Diagnostic — $40
 </section>
 
 
-<!-- =========================
-     PACKAGES
-========================= -->
+<!-- PACKAGES -->
 
 <section id="packages" class="packages">
 
@@ -1708,7 +1296,7 @@ Prepare at a Pace That Fits Your Schedule
 </h2>
 
 <p>
-For most students, we recommend approximately 4–8 weeks of preparation to build skills, address weaknesses, and practice consistently to guarantee the student's best possible score.
+For most students, we recommend approximately 4–8 weeks of preparation.
 </p>
 
 </div>
@@ -1726,27 +1314,27 @@ Flexible Support On Your Terms
 Private 1-on-1 Tutoring
 </h3>
 
-<div class="price">
-$135
-</div>
+<div class="price">$135</div>
 
 <div class="price-note">
 Per private lesson
 </div>
 
 <p class="package-description">
-Personalized ASVAB tutoring for students who want targeted support and the flexibility to schedule lessons as needed.
+Personalized ASVAB tutoring for students who want targeted support and flexibility.
 </p>
 
 <ul>
 <li>Private one-on-one online instruction</li>
-<li>Flexible scheduling based on availability</li>
+<li>Flexible scheduling</li>
 <li>Targeted help with specific subjects</li>
 <li>Personalized explanations and strategies</li>
-<li>Focused support for individual weak areas</li>
+<li>Focused support for weak areas</li>
 </ul>
 
-<a class="button secondary package-button" href="#intake" data-package="Individual 1-on-1 Tutoring — $135 per lesson">
+<a class="button secondary package-button"
+href="#intake"
+data-package="Individual 1-on-1 Tutoring — $135 per lesson">
 Book a Lesson — $135
 </a>
 
@@ -1767,28 +1355,28 @@ Comprehensive Preparation
 Weekly ASVAB Preparation
 </h3>
 
-<div class="price">
-$420
-</div>
+<div class="price">$420</div>
 
 <div class="price-note">
 Per week · 4 private lessons
 </div>
 
 <p class="package-description">
-Consistent, personalized instruction for students who want enough time to build skills, practice, and prepare thoroughly.
+Consistent, personalized instruction for students who want enough time to prepare thoroughly.
 </p>
 
 <ul>
 <li>4 private one-on-one lessons per week</li>
-<li>Personalized study plan and instruction</li>
-<li>Targeted practice between lessons</li>
+<li>Personalized study plan</li>
+<li>Targeted practice</li>
 <li>Ongoing progress monitoring</li>
 <li>Flexible week-to-week enrollment</li>
 <li>No long-term contract</li>
 </ul>
 
-<a class="button gold package-button" href="#intake" data-package="Weekly ASVAB Preparation — $420 per week">
+<a class="button gold package-button"
+href="#intake"
+data-package="Weekly ASVAB Preparation — $420 per week">
 Start Weekly Preparation — $420
 </a>
 
@@ -1808,7 +1396,7 @@ For Non-Negotiable Testing Timelines
 </h2>
 
 <p>
-These concentrated programs are designed for students whose ASVAB test date cannot be extended. We highly recommend allowing 4–8 weeks of preparation for best results.
+These concentrated programs are designed for students whose ASVAB test date cannot be extended.
 </p>
 
 </div>
@@ -1826,16 +1414,14 @@ Accelerated Option 1
 7-Day ASVAB Crash Course
 </h3>
 
-<div class="price">
-$875
-</div>
+<div class="price">$875</div>
 
 <div class="price-note">
 7 private lessons over 7 days
 </div>
 
 <p class="package-description">
-Focused, personalized preparation for students with an immediate testing deadline and limited time to prepare.
+Focused preparation for students with an immediate testing deadline.
 </p>
 
 <ul>
@@ -1843,11 +1429,13 @@ Focused, personalized preparation for students with an immediate testing deadlin
 <li>7-day concentrated schedule</li>
 <li>Customized instruction</li>
 <li>Focus on priority areas</li>
-<li>Targeted practice between lessons</li>
+<li>Targeted practice</li>
 <li>ASVAB test-taking strategies</li>
 </ul>
 
-<a class="button secondary package-button" href="#intake" data-package="7-Day ASVAB Crash Course — $875">
+<a class="button secondary package-button"
+href="#intake"
+data-package="7-Day ASVAB Crash Course — $875">
 Ask About Availability — $875
 </a>
 
@@ -1864,16 +1452,14 @@ Accelerated Option 2
 2-Week ASVAB Intensive
 </h3>
 
-<div class="price">
-$1,380
-</div>
+<div class="price">$1,380</div>
 
 <div class="price-note">
 12 private lessons over 2 weeks
 </div>
 
 <p class="package-description">
-A concentrated program for students with a strict testing deadline who have a little more time to prepare.
+A concentrated program for students with a strict testing deadline.
 </p>
 
 <ul>
@@ -1886,7 +1472,9 @@ A concentrated program for students with a strict testing deadline who have a li
 <li>Ongoing adjustments based on progress</li>
 </ul>
 
-<a class="button package-button" href="#intake" data-package="2-Week ASVAB Intensive — $1,380">
+<a class="button package-button"
+href="#intake"
+data-package="2-Week ASVAB Intensive — $1,380">
 Ask About Availability — $1,380
 </a>
 
@@ -1899,9 +1487,7 @@ Ask About Availability — $1,380
 </section>
 
 
-<!-- =========================
-     RESULTS
-========================= -->
+<!-- RESULTS -->
 
 <section class="results">
 
@@ -1911,9 +1497,7 @@ Ask About Availability — $1,380
 
 <div>
 
-<div class="rating">
-5.0
-</div>
+<div class="rating">5.0</div>
 
 <div class="stars" aria-label="Five star rating">
 ★★★★★
@@ -1933,21 +1517,10 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 
 <div class="stats">
 
-<div class="stat">
-17K+ Tutoring Hours
-</div>
-
-<div class="stat">
-2.5K+ Hours Annually
-</div>
-
-<div class="stat">
-600 Student Ratings
-</div>
-
-<div class="stat">
-589 Five-Star Ratings
-</div>
+<div class="stat">17K+ Tutoring Hours</div>
+<div class="stat">2.5K+ Hours Annually</div>
+<div class="stat">600 Student Ratings</div>
+<div class="stat">589 Five-Star Ratings</div>
 
 </div>
 
@@ -1960,9 +1533,7 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section id="about" class="about">
 
@@ -1970,12 +1541,10 @@ Thousands of students have worked with Hanees through personalized one-on-one on
 
 <div class="about-summary">
 
-<h2>
-Meet Your Tutor
-</h2>
+<h2>Meet Your Tutor</h2>
 
 <p>
-Hanees combines an engineering background, legal education, and more than 25 years of tutoring experience to provide structured, analytical, and highly personalized instruction.
+Hanees combines an engineering background, legal education, and more than 25 years of tutoring experience.
 </p>
 
 <img
@@ -1994,29 +1563,12 @@ Engineer • Attorney • Educator
 
 <div class="credentials">
 
-<div class="credential">
-M.Sc. Electrical Engineering
-</div>
-
-<div class="credential">
-B.Sc. Computer Engineering
-</div>
-
-<div class="credential">
-J.D. Law
-</div>
-
-<div class="credential">
-25+ Years Tutoring Experience
-</div>
-
-<div class="credential">
-17K+ Tutoring Hours
-</div>
-
-<div class="credential">
-CRLA® & IXL® Certified
-</div>
+<div class="credential">M.Sc. Electrical Engineering</div>
+<div class="credential">B.Sc. Computer Engineering</div>
+<div class="credential">J.D. Law</div>
+<div class="credential">25+ Years Tutoring Experience</div>
+<div class="credential">17K+ Tutoring Hours</div>
+<div class="credential">CRLA® &amp; IXL® Certified</div>
 
 </div>
 
@@ -2056,9 +1608,7 @@ ASVAB preparation is now the sole focus of this tutoring program, allowing the i
 </section>
 
 
-<!-- =========================
-     FAQ
-========================= -->
+<!-- FAQ -->
 
 <section id="faq" class="faq">
 
@@ -2085,42 +1635,42 @@ Everything you need to know before getting started.
 
 <div class="faq-item">
 <h3>Where are lessons held?</h3>
-<p>Lessons are conducted online using Google Meet. You only need a computer or laptop and a modern web browser.</p>
+<p>Lessons are conducted online using Google Meet.</p>
 </div>
 
 <div class="faq-item">
 <h3>Which preparation option should I choose?</h3>
-<p>If you're unsure, start with a free 15-minute consultation. If you want a detailed assessment of your current strengths, weaknesses, and recommended study strategy, the ASVAB Diagnostic & Strategy Session is currently $40, regularly $80.</p>
+<p>If you're unsure, start with a free 15-minute consultation. If you want a detailed assessment, the ASVAB Diagnostic &amp; Strategy Session is currently $40.</p>
 </div>
 
 <div class="faq-item">
 <h3>How much preparation time do you recommend?</h3>
-<p>Whenever possible, I recommend allowing approximately 4–8 weeks for preparation. This gives students time to build skills, address weaknesses, practice consistently, and develop confidence before testing.</p>
+<p>Whenever possible, I recommend allowing approximately 4–8 weeks for preparation.</p>
 </div>
 
 <div class="faq-item">
 <h3>What if my ASVAB test date is strict and cannot be moved?</h3>
-<p>Accelerated options are available for students with non-negotiable testing timelines: a 7-Day ASVAB Crash Course with 7 private lessons for $875 and a 2-Week ASVAB Intensive with 12 private lessons for $1,380.</p>
+<p>Accelerated options are available, including a 7-Day ASVAB Crash Course and a 2-Week ASVAB Intensive.</p>
 </div>
 
 <div class="faq-item">
 <h3>How does weekly preparation work?</h3>
-<p>Weekly ASVAB Preparation includes 4 private lessons per week for $420. Enrollment is billed week-to-week with no long-term contract, allowing the preparation timeline to be adjusted based on your needs and progress.</p>
+<p>Weekly ASVAB Preparation includes 4 private lessons per week for $420.</p>
 </div>
 
 <div class="faq-item">
 <h3>Do I need to know my target score before starting?</h3>
-<p>No. We can discuss your goals, current situation, and testing timeline during a free consultation or explore them in greater depth during the diagnostic session.</p>
+<p>No. We can discuss your goals and testing timeline during a consultation or diagnostic session.</p>
 </div>
 
 <div class="faq-item">
 <h3>How do I get started?</h3>
-<p>Click any of the Get Started or package buttons on this page. A short intake form will open in a popup. Once I receive your information, I'll review it and contact you directly to discuss the next steps, payment, and scheduling.</p>
+<p>Click any of the Get Started or package buttons on this page. A short intake form will open.</p>
 </div>
 
 <div class="faq-item">
 <h3>How do I pay?</h3>
-<p>Payment is handled directly rather than through an automated checkout system. Available payment methods include Venmo, Cash App, and Zelle. Payment instructions will be provided when we arrange your tutoring.</p>
+<p>Payment is handled directly. Available payment methods include Venmo, Cash App, and Zelle.</p>
 </div>
 
 </div>
@@ -2130,9 +1680,7 @@ Everything you need to know before getting started.
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section id="contact" class="contact-section">
 
@@ -2164,10 +1712,7 @@ Text:
 
 <div class="actions">
 
-<a
-class="button open-intake"
-href="#intake"
->
+<a class="button open-intake" href="#intake">
 Complete Intake Form
 </a>
 
@@ -2194,9 +1739,7 @@ Contact Hanees
 </footer>
 
 
-<!-- =========================
-     INTAKE FORM MODAL
-========================= -->
+<!-- INTAKE MODAL -->
 
 <div
 id="intakeModal"
@@ -2218,7 +1761,6 @@ aria-label="Close intake form"
 &times;
 </button>
 
-
 <div class="intake-header">
 
 <h2 id="intakeTitle">
@@ -2230,7 +1772,6 @@ Complete the short intake form below. I'll review your information and contact y
 </p>
 
 </div>
-
 
 <form
 action="https://formspree.io/f/mdkykvjk"
@@ -2247,7 +1788,6 @@ id="selectedPackage"
 name="Selected Package"
 value=""
 >
-
 
 <div class="form-row">
 
@@ -2267,7 +1807,6 @@ autocomplete="name"
 
 </div>
 
-
 <div class="form-group">
 
 <label for="email">
@@ -2286,7 +1825,6 @@ autocomplete="email"
 
 </div>
 
-
 <div class="form-row">
 
 <div class="form-group">
@@ -2303,7 +1841,6 @@ autocomplete="tel"
 >
 
 </div>
-
 
 <div class="form-group">
 
@@ -2322,7 +1859,6 @@ max="100"
 </div>
 
 </div>
-
 
 <div class="form-group">
 
@@ -2368,7 +1904,6 @@ Weekly ASVAB Preparation — $420 per week
 
 </div>
 
-
 <div class="form-row">
 
 <div class="form-group">
@@ -2384,7 +1919,6 @@ name="Approximate ASVAB Test Date"
 >
 
 </div>
-
 
 <div class="form-group">
 
@@ -2403,7 +1937,6 @@ placeholder="If known"
 
 </div>
 
-
 <div class="form-group">
 
 <label for="previousExperience">
@@ -2415,26 +1948,14 @@ id="previousExperience"
 name="Previous ASVAB Experience"
 >
 
-<option value="">
-Please select
-</option>
-
-<option value="No, this will be my first time">
-No, this will be my first time
-</option>
-
-<option value="Yes, I have taken it before">
-Yes, I have taken it before
-</option>
-
-<option value="I am not sure">
-I'm not sure
-</option>
+<option value="">Please select</option>
+<option value="No, this will be my first time">No, this will be my first time</option>
+<option value="Yes, I have taken it before">Yes, I have taken it before</option>
+<option value="I am not sure">I'm not sure</option>
 
 </select>
 
 </div>
-
 
 <div class="form-group">
 
@@ -2449,12 +1970,7 @@ name="Previous ASVAB Score"
 placeholder="If known"
 >
 
-<div class="form-help">
-If you've taken the ASVAB before, enter your score if you know it.
 </div>
-
-</div>
-
 
 <div class="form-group">
 
@@ -2470,7 +1986,6 @@ placeholder="For example: improving math, raising AFQT score, preparing for a sp
 
 </div>
 
-
 <div class="form-group">
 
 <label for="availability">
@@ -2483,12 +1998,7 @@ name="General Availability"
 placeholder="For example: weekday evenings, Saturday mornings, flexible, etc."
 ></textarea>
 
-<div class="form-help">
-This helps me determine whether I can accommodate your preferred schedule.
 </div>
-
-</div>
-
 
 <div class="form-group">
 
@@ -2504,18 +2014,13 @@ placeholder="Optional"
 
 </div>
 
-
 <div class="form-submit">
 
-<button
-type="submit"
-class="button gold"
->
+<button type="submit" class="button gold">
 Submit Intake Form
 </button>
 
 </div>
-
 
 <p class="form-note">
 After you submit the form, your information will be sent securely through Formspree. I will review your information and contact you directly regarding payment and scheduling.
@@ -2542,11 +2047,6 @@ const selectedPackageBox = document.getElementById("selectedPackageBox");
 
 let lastFocusedElement = null;
 
-
-/* =========================
-   OPEN MODAL
-========================= */
-
 function openModal(selectedPackage = ""){
 
 lastFocusedElement = document.activeElement;
@@ -2556,32 +2056,17 @@ modal.setAttribute("aria-hidden","false");
 
 document.body.classList.add("modal-open");
 
-if(selectedPackage){
-
 setSelectedPackage(selectedPackage);
-
-}else{
-
-setSelectedPackage("");
-
-}
 
 setTimeout(function(){
 
 if(packageSelect){
-
 packageSelect.focus();
-
 }
 
 },100);
 
 }
-
-
-/* =========================
-   CLOSE MODAL
-========================= */
 
 function closeModal(){
 
@@ -2601,22 +2086,14 @@ window.location.pathname + window.location.search
 }
 
 if(lastFocusedElement){
-
 lastFocusedElement.focus();
-
 }
 
 }
-
-
-/* =========================
-   SET PACKAGE
-========================= */
 
 function setSelectedPackage(selected){
 
 hiddenPackage.value = selected;
-
 packageSelect.value = selected;
 
 if(selected){
@@ -2633,11 +2110,6 @@ selectedPackageBox.textContent =
 
 }
 
-
-/* =========================
-   PACKAGE BUTTONS
-========================= */
-
 packageButtons.forEach(function(button){
 
 button.addEventListener("click",function(event){
@@ -2653,11 +2125,6 @@ openModal(selected);
 
 });
 
-
-/* =========================
-   GET STARTED BUTTONS
-========================= */
-
 openIntakeButtons.forEach(function(button){
 
 button.addEventListener("click",function(event){
@@ -2670,21 +2137,11 @@ openModal();
 
 });
 
-
-/* =========================
-   PACKAGE SELECT
-========================= */
-
 packageSelect.addEventListener("change",function(){
 
 setSelectedPackage(packageSelect.value);
 
 });
-
-
-/* =========================
-   CLOSE BUTTON
-========================= */
 
 closeModalButton.addEventListener("click",function(){
 
@@ -2692,45 +2149,27 @@ closeModal();
 
 });
 
-
-/* =========================
-   CLICK OUTSIDE MODAL
-========================= */
-
 modal.addEventListener("click",function(event){
 
 if(event.target === modal){
-
 closeModal();
-
 }
 
 });
-
-
-/* =========================
-   ESCAPE KEY
-========================= */
 
 document.addEventListener("keydown",function(event){
 
-if(event.key === "Escape" && modal.classList.contains("active")){
-
+if(
+event.key === "Escape" &&
+modal.classList.contains("active")
+){
 closeModal();
-
 }
 
 });
 
-
-/* =========================
-   HANDLE #intake
-========================= */
-
 if(window.location.hash === "#intake"){
-
 openModal();
-
 }
 
 </script>
