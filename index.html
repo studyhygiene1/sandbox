@@ -53,6 +53,8 @@
 --gold:#d99a24;
 --gold-light:#fff4d9;
 --green:#176b4d;
+--green-light:#e7f5ee;
+--green-border:#b9dfcd;
 --max:1120px;
 }
 
@@ -427,6 +429,29 @@ color:var(--green);
 .package .button{
 text-align:center;
 width:100%;
+}
+
+
+/* SAVINGS */
+
+.savings{
+display:inline-block;
+align-self:flex-start;
+background:var(--green-light);
+color:var(--green);
+border:1px solid var(--green-border);
+padding:6px 11px;
+border-radius:999px;
+font-size:.82rem;
+font-weight:900;
+margin:7px 0 12px;
+}
+
+.hourly-comparison{
+color:var(--muted);
+font-size:.82rem;
+line-height:1.4;
+margin-top:4px;
 }
 
 
@@ -1088,8 +1113,6 @@ Choose flexible weekly or hourly lesson plans, or an accelerated one or two-week
 </p>
 
 
-<!-- ALL THREE HERO BUTTONS ON ONE ROW -->
-
 <div class="hero-actions">
 
 <a class="button secondary" href="#packages">
@@ -1305,6 +1328,8 @@ For most students, we recommend approximately 4–8 weeks of preparation.
 
 <div class="package-grid package-grid-two">
 
+<!-- INDIVIDUAL -->
+
 <div class="package">
 
 <div class="package-label">
@@ -1342,10 +1367,12 @@ Book a Lesson — $115
 </div>
 
 
+<!-- WEEKLY -->
+
 <div class="package featured">
 
 <div class="package-badge">
-Recommended
+Best Value
 </div>
 
 <div class="package-label">
@@ -1357,6 +1384,14 @@ Weekly ASVAB Preparation
 </h3>
 
 <div class="price">$360</div>
+
+<div class="hourly-comparison">
+$460 at the individual lesson rate
+</div>
+
+<div class="savings">
+SAVE $100
+</div>
 
 <div class="price-note">
 Per week · 4 private lessons
@@ -1377,7 +1412,7 @@ Consistent, personalized instruction for students who want enough time to prepar
 
 <a class="button gold package-button"
 href="#intake"
-data-package="Weekly ASVAB Preparation — $360 per week">
+data-package="Weekly ASVAB Preparation — $360 per week — Save $100">
 Start Weekly Preparation — $360
 </a>
 
@@ -1405,6 +1440,8 @@ These concentrated programs are designed for students whose ASVAB test date cann
 
 <div class="package-grid package-grid-two">
 
+<!-- 7 DAY -->
+
 <div class="package">
 
 <div class="package-label">
@@ -1416,6 +1453,14 @@ Accelerated Option 1
 </h3>
 
 <div class="price">$735</div>
+
+<div class="hourly-comparison">
+$805 at the individual lesson rate
+</div>
+
+<div class="savings">
+SAVE $70
+</div>
 
 <div class="price-note">
 7 private lessons over 7 days
@@ -1436,12 +1481,14 @@ Focused preparation for students with an immediate testing deadline.
 
 <a class="button secondary package-button"
 href="#intake"
-data-package="7-Day ASVAB Crash Course — $735">
+data-package="7-Day ASVAB Crash Course — $735 — Save $70">
 Ask About Availability — $735
 </a>
 
 </div>
 
+
+<!-- 2 WEEK -->
 
 <div class="package">
 
@@ -1454,6 +1501,14 @@ Accelerated Option 2
 </h3>
 
 <div class="price">$1,140</div>
+
+<div class="hourly-comparison">
+$1,380 at the individual lesson rate
+</div>
+
+<div class="savings">
+SAVE $240
+</div>
 
 <div class="price-note">
 12 private lessons over 2 weeks
@@ -1475,7 +1530,7 @@ A concentrated program for students with a strict testing deadline.
 
 <a class="button package-button"
 href="#intake"
-data-package="2-Week ASVAB Intensive — $1,140">
+data-package="2-Week ASVAB Intensive — $1,140 — Save $240">
 Ask About Availability — $1,140
 </a>
 
@@ -1651,12 +1706,12 @@ Everything you need to know before getting started.
 
 <div class="faq-item">
 <h3>What if my ASVAB test date is strict and cannot be moved?</h3>
-<p>Accelerated options are available, including a 7-Day ASVAB Crash Course and a 2-Week ASVAB Intensive.</p>
+<p>Accelerated options are available, including a 7-Day ASVAB Crash Course for $735 and a 2-Week ASVAB Intensive for $1,140.</p>
 </div>
 
 <div class="faq-item">
 <h3>How does weekly preparation work?</h3>
-<p>Weekly ASVAB Preparation includes 4 private lessons per week for $360.</p>
+<p>Weekly ASVAB Preparation includes 4 private lessons per week for $360, saving $100 compared with the individual lesson rate.</p>
 </div>
 
 <div class="faq-item">
@@ -1889,16 +1944,16 @@ ASVAB Diagnostic & Strategy Session — $40 introductory price
 Individual 1-on-1 Tutoring — $115 per lesson
 </option>
 
-<option value="Weekly ASVAB Preparation — $360 per week">
-Weekly ASVAB Preparation — $360 per week
+<option value="Weekly ASVAB Preparation — $360 per week — Save $100">
+Weekly ASVAB Preparation — $360 per week — Save $100
 </option>
 
-<option value="7-Day ASVAB Crash Course — $735">
-7-Day ASVAB Crash Course — $735
+<option value="7-Day ASVAB Crash Course — $735 — Save $70">
+7-Day ASVAB Crash Course — $735 — Save $70
 </option>
 
-<option value="2-Week ASVAB Intensive — $1,140">
-2-Week ASVAB Intensive — $1,140
+<option value="2-Week ASVAB Intensive — $1,140 — Save $240">
+2-Week ASVAB Intensive — $1,140 — Save $240
 </option>
 
 </select>
