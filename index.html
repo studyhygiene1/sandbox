@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="theme-color" content="#05172c">
 
 <title>Hanees Tutors | Private Online ASVAB Tutoring</title>
 
@@ -30,6 +34,7 @@
   "name":"Hanees Tutors",
   "description":"Private online one-on-one ASVAB tutoring and test preparation.",
   "image":"profile.jpg",
+  "logo":"https://haneestutors.com/logo.png",
   "email":"haneestutors@gmail.com",
   "telephone":"+1-480-442-4224",
   "areaServed":"United States, Online",
@@ -103,14 +108,31 @@ z-index:20;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:16px 0;
+padding:12px 0;
+min-height:78px;
 }
 
 .logo{
-font-weight:900;
-font-size:1.28rem;
-letter-spacing:-.02em;
-color:var(--navy-dark);
+display:inline-flex;
+align-items:center;
+flex-shrink:0;
+text-decoration:none;
+line-height:0;
+}
+
+.logo img{
+display:block;
+width:320px;
+height:auto;
+max-height:none;
+object-fit:contain;
+object-position:left center;
+transition:opacity .2s ease,transform .2s ease;
+}
+
+.logo:hover img{
+opacity:.88;
+transform:translateY(-1px);
 }
 
 nav{
@@ -978,6 +1000,11 @@ gap:0;
 
 @media(max-width:700px){
 
+.logo img{
+width:260px;
+max-height:none;
+}
+
 nav{
 display:none;
 }
@@ -1023,6 +1050,11 @@ border-radius:20px;
 
 @media(max-width:600px){
 
+.logo img{
+width:220px;
+max-height:none;
+}
+
 .hero-actions{
 flex-direction:column;
 align-items:stretch;
@@ -1051,15 +1083,15 @@ transition:none !important;
 
 </head>
 
-<body>
+<body id="top">
 
 <header>
 
 <div class="container nav">
 
-<div class="logo">
-Hanees Tutors
-</div>
+<a class="logo" href="#top" aria-label="Hanees Tutors home">
+<img src="logo.png" alt="Hanees Tutors">
+</a>
 
 <nav aria-label="Main navigation">
 
@@ -2234,3 +2266,4 @@ openModal();
 
 </body>
 </html>
+
