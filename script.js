@@ -1,0 +1,136 @@
+const modal = document.getElementById("intakeModal");
+const closeModalButton = document.getElementById("closeModal");
+
+const packageButtons = document.querySelectorAll(".package-button");
+const openIntakeButtons = document.querySelectorAll(".open-intake");
+
+const packageSelect = document.getElementById("package");
+const hiddenPackage = document.getElementById("selectedPackage");
+const selectedPackageBox = document.getElementById("selectedPackageBox");
+
+let lastFocusedElement = null;
+
+function openModal(selectedPackage = ""){
+
+lastFocusedElement = document.activeElement;
+
+modal.classList.add("active");
+modal.setAttribute("aria-hidden","false");
+
+document.body.classList.add("modal-open");
+
+setSelectedPackage(selectedPackage);
+
+setTimeout(function(){
+
+if(packageSelect){
+packageSelect.focus();
+}
+
+},100);
+
+}
+
+function closeModal(){
+
+modal.classList.remove("active");
+modal.setAttribute("aria-hidden","true");
+
+document.body.classList.remove("modal-open");
+
+if(window.location.hash === "#intake"){
+
+history.replaceState(
+null,
+"",
+window.location.pathname + window.location.search
+);
+
+}
+
+if(lastFocusedElement){
+lastFocusedElement.focus();
+}
+
+}
+
+function setSelectedPackage(selected){
+
+hiddenPackage.value = selected;
+packageSelect.value = selected;
+
+if(selected){
+
+selectedPackageBox.textContent =
+"Selected package: " + selected;
+
+}else{
+
+selectedPackageBox.textContent =
+"Selected package: Please choose a package below.";
+
+}
+
+}
+
+packageButtons.forEach(function(button){
+
+button.addEventListener("click",function(event){
+
+event.preventDefault();
+
+const selected =
+button.getAttribute("data-package");
+
+openModal(selected);
+
+});
+
+});
+
+openIntakeButtons.forEach(function(button){
+
+button.addEventListener("click",function(event){
+
+event.preventDefault();
+
+openModal();
+
+});
+
+});
+
+packageSelect.addEventListener("change",function(){
+
+setSelectedPackage(packageSelect.value);
+
+});
+
+closeModalButton.addEventListener("click",function(){
+
+closeModal();
+
+});
+
+modal.addEventListener("click",function(event){
+
+if(event.target === modal){
+closeModal();
+}
+
+});
+
+document.addEventListener("keydown",function(event){
+
+if(
+event.key === "Escape" &&
+modal.classList.contains("active")
+){
+closeModal();
+}
+
+});
+
+if(window.location.hash === "#intake"){
+openModal();
+}
