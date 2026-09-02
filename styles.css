@@ -766,6 +766,73 @@ margin-top:10px;
 }
 
 
+/* TUTOR STRIP (compact about teaser on subject pages) */
+
+.tutor-strip-section{
+background:#fff;
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+padding:56px 0;
+}
+
+.tutor-strip{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:22px;
+padding:26px 32px;
+display:flex;
+align-items:center;
+gap:24px;
+box-shadow:0 9px 22px rgba(5,23,44,.07);
+}
+
+.tutor-strip img{
+width:88px;
+height:88px;
+border-radius:50%;
+object-fit:cover;
+flex-shrink:0;
+border:2px solid var(--border);
+}
+
+.tutor-strip-info{
+flex:1;
+}
+
+.tutor-strip-info h3{
+font-size:1.2rem;
+color:var(--navy-dark);
+margin-bottom:2px;
+}
+
+.tutor-strip-title{
+color:var(--navy);
+font-weight:800;
+font-size:.88rem;
+margin-bottom:7px;
+}
+
+.tutor-strip-info p{
+color:var(--muted);
+font-size:.94rem;
+}
+
+.tutor-strip .button{
+flex-shrink:0;
+white-space:nowrap;
+}
+
+@media(max-width:700px){
+
+.tutor-strip{
+flex-direction:column;
+text-align:center;
+padding:28px 22px;
+}
+
+}
+
+
 /* FAQ */
 
 .faq{
