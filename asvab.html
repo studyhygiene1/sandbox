@@ -359,7 +359,7 @@ Best option for students who want maximum flexibility.
 
 <a class="button secondary package-button"
 href="#intake"
-data-package="Individual 1-on-1 Tutoring — $120 per lesson">
+data-package="ASVAB Individual 1-on-1 Tutoring — $120 per lesson">
 Book a Lesson — $120
 </a>
 
@@ -412,7 +412,7 @@ Our most popular option and the choice we recommend for most students.
 
 <a class="button gold package-button"
 href="#intake"
-data-package="Weekly ASVAB Preparation — $360 per week — Save $100">
+data-package="ASVAB Weekly Preparation — $360 per week — Save $120">
 Start Weekly Preparation — $360
 </a>
 
@@ -480,7 +480,7 @@ Focused preparation for students with an immediate testing deadline.
 
 <a class="button secondary package-button"
 href="#intake"
-data-package="7-Day ASVAB Crash Course — $735 — Save $70">
+data-package="ASVAB 7-Day Crash Course — $735 — Save $105">
 Ask About Availability — $735
 </a>
 
@@ -525,7 +525,7 @@ A concentrated program for students with a strict testing deadline.
 
 <a class="button package-button"
 href="#intake"
-data-package="2-Week ASVAB Intensive — $1,140 — Save $240">
+data-package="ASVAB 2-Week Intensive — $1,140 — Save $300">
 Ask About Availability — $1,140
 </a>
 
@@ -753,305 +753,7 @@ Contact Hanees Tutors
 </footer>
 
 
-<!-- INTAKE MODAL -->
-
-<div
-id="intakeModal"
-class="modal"
-role="dialog"
-aria-modal="true"
-aria-labelledby="intakeTitle"
-aria-hidden="true"
->
-
-<div class="modal-content">
-
-<button
-type="button"
-class="modal-close"
-id="closeModal"
-aria-label="Close intake form"
->
-&times;
-</button>
-
-<div class="intake-header">
-
-<h2 id="intakeTitle">
-Get Started
-</h2>
-
-<p>
-Complete the short intake form below. We'll review your information and contact you directly to discuss your preparation needs, payment, and scheduling.
-</p>
-
-</div>
-
-<form
-action="https://formspree.io/f/mdkykvjk"
-method="POST"
->
-
-<input
-type="hidden"
-name="_next"
-value="https://haneestutors.com/thank-you-form.html"
->
-
-<div id="selectedPackageBox" class="selected-package">
-Selected package: Please choose a package below.
-</div>
-
-<input
-type="hidden"
-id="selectedPackage"
-name="Selected Package"
-value=""
->
-
-<div class="form-row">
-
-<div class="form-group">
-
-<label for="name">
-Student Name <span class="required">*</span>
-</label>
-
-<input
-type="text"
-id="name"
-name="Student Name"
-required
-autocomplete="name"
->
-
-</div>
-
-<div class="form-group">
-
-<label for="email">
-Email <span class="required">*</span>
-</label>
-
-<input
-type="email"
-id="email"
-name="Email"
-required
-autocomplete="email"
->
-
-</div>
-
-</div>
-
-<div class="form-row">
-
-<div class="form-group">
-
-<label for="phone">
-Phone / Text Number
-</label>
-
-<input
-type="tel"
-id="phone"
-name="Phone"
-autocomplete="tel"
->
-
-</div>
-
-<div class="form-group">
-
-<label for="age">
-Student Age
-</label>
-
-<input
-type="number"
-id="age"
-name="Student Age"
-min="10"
-max="100"
->
-
-</div>
-
-</div>
-
-<div class="form-group">
-
-<label for="package">
-Package <span class="required">*</span>
-</label>
-
-<select
-id="package"
-name="Package"
-required
->
-
-<option value="">
-Please select a package
-</option>
-
-<option value="Free 15-Minute Consultation">
-Free 15-Minute Consultation
-</option>
-
-<option value="ASVAB Diagnostic & Strategy Session — $40 (regularly $80)">
-ASVAB Diagnostic & Strategy Session — $40
-</option>
-
-<option value="Individual 1-on-1 Tutoring — $120 per lesson">
-Individual 1-on-1 Tutoring — $120 per lesson
-</option>
-
-<option value="Weekly ASVAB Preparation — $360 per week — Save $100">
-Weekly ASVAB Preparation — $360 per week — Save $100
-</option>
-
-<option value="7-Day ASVAB Crash Course — $735 — Save $70">
-7-Day ASVAB Crash Course — $735 — Save $70
-</option>
-
-<option value="2-Week ASVAB Intensive — $1,140 — Save $240">
-2-Week ASVAB Intensive — $1,140 — Save $240
-</option>
-
-</select>
-
-</div>
-
-<div class="form-row">
-
-<div class="form-group">
-
-<label for="testDate">
-Approximate ASVAB Test Date
-</label>
-
-<input
-type="date"
-id="testDate"
-name="Approximate ASVAB Test Date"
->
-
-</div>
-
-<div class="form-group">
-
-<label for="targetScore">
-Target Score
-</label>
-
-<input
-type="text"
-id="targetScore"
-name="Target Score"
-placeholder="If known"
->
-
-</div>
-
-</div>
-
-<div class="form-group">
-
-<label for="previousExperience">
-Have you taken the ASVAB before?
-</label>
-
-<select
-id="previousExperience"
-name="Previous ASVAB Experience"
->
-
-<option value="">Please select</option>
-<option value="No, this will be my first time">No, this will be my first time</option>
-<option value="Yes, I have taken it before">Yes, I have taken it before</option>
-<option value="I am not sure">I'm not sure</option>
-
-</select>
-
-</div>
-
-<div class="form-group">
-
-<label for="score">
-Previous ASVAB Score
-</label>
-
-<input
-type="text"
-id="score"
-name="Previous ASVAB Score"
-placeholder="If known"
->
-
-</div>
-
-<div class="form-group">
-
-<label for="goals">
-What are your goals or biggest areas of concern?
-</label>
-
-<textarea
-id="goals"
-name="Goals and Areas of Concern"
-placeholder="For example: improving math, raising AFQT score, preparing for a specific military job, improving test-taking confidence, etc."
-></textarea>
-
-</div>
-
-<div class="form-group">
-
-<label for="availability">
-General Availability
-</label>
-
-<textarea
-id="availability"
-name="General Availability"
-placeholder="For example: weekday evenings, Saturday mornings, flexible, etc."
-></textarea>
-
-</div>
-
-<div class="form-group">
-
-<label for="message">
-Anything else you'd like me to know?
-</label>
-
-<textarea
-id="message"
-name="Additional Information"
-placeholder="Optional"
-></textarea>
-
-</div>
-
-<div class="form-submit">
-
-<button type="submit" class="button gold">
-Submit Intake Form
-</button>
-
-</div>
-
-<p class="form-note">
-After you submit the form, we'll review your information and contact you directly regarding payment and scheduling. Typical response time is about 1 hour.
-</p>
-
-</form>
-
-</div>
-
-</div>
-
+<div id="intake-modal-root"></div>
 <script src="script.js"></script>
 
 </body>

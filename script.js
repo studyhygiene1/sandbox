@@ -1,3 +1,31 @@
+async function loadIntakeModal(){
+
+const root = document.getElementById("intake-modal-root");
+
+if(!root){
+return;
+}
+
+try{
+
+const response = await fetch("intake-modal.html");
+const html = await response.text();
+
+root.innerHTML = html;
+
+}catch(err){
+
+console.error("Failed to load intake modal:",err);
+return;
+
+}
+
+initIntakeModal();
+
+}
+
+function initIntakeModal(){
+
 const modal = document.getElementById("intakeModal");
 const closeModalButton = document.getElementById("closeModal");
 
@@ -7,6 +35,10 @@ const openIntakeButtons = document.querySelectorAll(".open-intake");
 const packageSelect = document.getElementById("package");
 const hiddenPackage = document.getElementById("selectedPackage");
 const selectedPackageBox = document.getElementById("selectedPackageBox");
+
+if(!modal || !closeModalButton || !packageSelect){
+return;
+}
 
 let lastFocusedElement = null;
 
@@ -134,3 +166,7 @@ closeModal();
 if(window.location.hash === "#intake"){
 openModal();
 }
+
+}
+
+document.addEventListener("DOMContentLoaded",loadIntakeModal);
