@@ -170,3 +170,38 @@ openModal();
 }
 
 document.addEventListener("DOMContentLoaded",loadIntakeModal);
+
+function initMobileNav(){
+
+const navToggle = document.getElementById("navToggle");
+const siteNav = document.getElementById("siteNav");
+
+if(!navToggle || !siteNav){
+return;
+}
+
+function closeNav(){
+siteNav.classList.remove("nav-open");
+navToggle.setAttribute("aria-expanded","false");
+}
+
+function toggleNav(){
+const isOpen = siteNav.classList.toggle("nav-open");
+navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+}
+
+navToggle.addEventListener("click",toggleNav);
+
+siteNav.querySelectorAll("a").forEach(function(link){
+link.addEventListener("click",closeNav);
+});
+
+document.addEventListener("keydown",function(event){
+if(event.key === "Escape"){
+closeNav();
+}
+});
+
+}
+
+document.addEventListener("DOMContentLoaded",initMobileNav);
