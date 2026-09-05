@@ -851,32 +851,103 @@ gap:20px;
 }
 
 .testimonial-card{
+position:relative;
 background:white;
 border:1px solid var(--border);
 border-radius:18px;
-padding:26px;
+padding:28px 26px 24px;
 box-shadow:0 8px 20px rgba(5,23,44,.06);
 display:flex;
 flex-direction:column;
+overflow:hidden;
+}
+
+.testimonial-card::before{
+content:"\201C";
+position:absolute;
+top:-18px;
+right:18px;
+font-family:Georgia,"Times New Roman",serif;
+font-size:6rem;
+line-height:1;
+color:var(--gold);
+opacity:.16;
+pointer-events:none;
+}
+
+.testimonial-badge{
+display:inline-flex;
+align-items:center;
+gap:5px;
+align-self:flex-start;
+background:var(--green-light);
+color:var(--green);
+border:1px solid var(--green-border);
+padding:4px 11px;
+border-radius:999px;
+font-size:.74rem;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:.03em;
+margin-bottom:14px;
+}
+
+.testimonial-stars{
+color:var(--gold);
+font-size:.95rem;
+letter-spacing:2px;
+margin-bottom:12px;
 }
 
 .testimonial-quote{
+position:relative;
 color:var(--text);
-font-size:.98rem;
+font-family:Georgia,"Times New Roman",serif;
+font-style:italic;
+font-size:1.02rem;
 line-height:1.65;
-margin-bottom:16px;
+margin-bottom:20px;
 flex:1;
 }
 
+.testimonial-footer{
+display:flex;
+align-items:center;
+gap:12px;
+margin-top:auto;
+padding-top:16px;
+border-top:1px solid var(--border);
+}
+
+.testimonial-avatar{
+width:42px;
+height:42px;
+border-radius:50%;
+background:var(--navy);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+font-style:normal;
+font-weight:900;
+font-size:1.05rem;
+flex-shrink:0;
+}
+
 .testimonial-attribution{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+font-style:normal;
 font-weight:800;
 color:var(--navy-dark);
 font-size:.92rem;
 }
 
 .testimonial-location{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+font-style:normal;
 color:var(--muted);
-font-size:.85rem;
+font-size:.83rem;
 }
 
 
