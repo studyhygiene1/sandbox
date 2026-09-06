@@ -228,6 +228,13 @@ return;
 
 }
 
+// Script tags inserted via innerHTML do not execute automatically,
+// so the TidyCal embed script must be created and appended manually.
+const tidycalScript = document.createElement("script");
+tidycalScript.src = "https://asset-tidycal.b-cdn.net/js/embed.js";
+tidycalScript.async = true;
+document.body.appendChild(tidycalScript);
+
 initBookingModals();
 
 }
