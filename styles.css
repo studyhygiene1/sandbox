@@ -1097,6 +1097,10 @@ padding:38px;
 box-shadow:0 25px 70px rgba(0,0,0,.30);
 }
 
+.tidycal-embed{
+min-height:600px;
+}
+
 .modal-close{
 position:absolute;
 top:14px;
